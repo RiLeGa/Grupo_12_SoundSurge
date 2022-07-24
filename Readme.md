@@ -64,3 +64,8 @@ ________________________________________________________________________________
 # Logo de la pagina:
 [![logo-3.png](https://i.postimg.cc/CMDmDNvv/logo-3.png)](https://postimg.cc/c6xRGQGY)
 
+________________________________________________________________________________
+
+### Link al tablero de Trello.
+![Trello](https://trello.com/b/eMPnRInH/proyectogrupo12)
+

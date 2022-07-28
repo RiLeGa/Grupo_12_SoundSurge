@@ -1,0 +1,136 @@
+/* Mobile y tablet */
+.login{
+    background-image:url(/images/FondoMovil.jpg) ;
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-size: 100vw 100vh;
+    background-color: var(--colorFondo);
+    font-family: var(--fuenteGral);
+}
+
+.login .logo-login{
+    text-align: center;
+}
+
+.login .logo-login img{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.login main{
+    width: 350px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.login main h1,h3,h4{
+    color: var(--colorNegro);
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    
+}
+
+.login main button{
+    text-align: center;
+    padding-bottom: 7px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 15.5%;
+    font-family: var(--fuenteGral);
+   /* background-color: aqua; */
+}
+
+.login main .face{
+    background-color: var(--colorVioleta);
+    color:var(--colorBlanco);  
+    
+}
+
+.login main .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: var(--colorBlanco);
+}
+
+ 
+.login main .container label{
+    text-align: center;
+    width: 100%;
+    padding: 3px;
+    font-family: var(--fuenteGral);
+    font-weight: 400;
+    color: var(--colorNegro);
+
+}
+
+.login main .container input{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.login main .mostrar{
+    text-align: center;
+    font-size: 15px;
+    color: var(--colorBlanco);    
+}
+
+.login main .mostrar a{
+    margin-left: 100px;
+    color: var(--colorBlanco);
+}
+
+.login main .inicio{
+    background-color: var(--colorGris);
+    color: var(--colorBlanco);
+    
+}
+
+.login h3{
+    color: var(--colorBlanco);
+    font-size: 15px;
+}
+
+.login h3 a{
+    color: var(--colorRojo);
+    margin-left: 15px;
+}
+
+/* Tablet */
+
+@media(min-width:769px){
+    .login{
+        background-image:url('../images/Fondo.jpg') ;
+        background-repeat: no-repeat;
+        background-position: right 0;
+        background-size: 55vw 100vh;
+    }
+
+    .login .logo-login img{
+        width: 45%;
+    }
+
+    .login main{
+        width: 45%;
+        margin: 0 1.5px;
+        padding-bottom: 50px;
+    }
+
+    .login main h1,h4{
+        color: var(--colorBlanco);
+    }
+
+    .login main .container label{
+        color: var(--colorBlanco);
+    }
+}
+   

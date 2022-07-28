@@ -61,7 +61,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 100vw;
-    height: 50vh;
+    height: 40vh;
 }
 .home-detalle header .navegacion nav ul li,
 .home header .navegacion nav ul li{
@@ -201,6 +201,11 @@
         position: inherit;
     }
 
+    .home-detalle header .navegacion nav.opcionesDePerfil,
+    .home header .navegacion nav.opcionesDePerfil{
+        display: none;
+    }
+
     .home-detalle header .navegacion nav ul,
     .home header .navegacion nav ul{
         display: flex;
@@ -208,6 +213,7 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 30vw;
+        height: 50vh;
         height: auto;
         color: white;
     }
@@ -242,6 +248,8 @@
         margin-top: 3px;
         padding: 1px 10px;
     }
+    .home-detalle header .navegacion label.perfil,
+    .home header .navegacion label.perfil,
     .home-detalle header .navegacion .btn-neon,
     .home header .navegacion .btn-neon{
         position: relative;
@@ -250,8 +258,77 @@
         transition: 0.2s;
         border-radius: 10%;
     }
-    .home-detalle header .navegacion .btn-neon:hover,
+    .home-detalle header .navegacion label.perfil:hover,
+    .home header .navegacion label.perfil:hover,
+    .home-detalle header .navegacion .btn-neon:hover, 
     .home header .navegacion .btn-neon:hover{
         background: #8d1888;
     }
+
+    /*usuario*/
+
+    .home-detalle header .navegacion label.perfil i.fas .fa-user-circle,
+    .home header .navegacion label.perfil i.fas .fa-user-circle{
+        width: 2vw;
+        color: #8d1888;
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+    .home-detalle header .navegacion input#perfil,
+    .home header .navegacion input#perfil{
+        display: none;
+    }
+    .home-detalle header .navegacion input#perfil:checked ~ nav.opcionesDePerfil ,
+    .home header .navegacion input#perfil:checked ~ nav.opcionesDePerfil {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .home-detalle header .navegacion nav.opcionesDePerfil,
+    .home header .navegacion nav.opcionesDePerfil{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 15vw;
+        left: 85vw;
+        margin-top: 0;
+        position: inherit;
+    }
+    
+    .home-detalle header .navegacion nav.opcionesDePerfil,
+    .home header .navegacion nav.opcionesDePerfil{
+        display: none;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+    }
+
+    .home-detalle header .navegacion nav.opcionesDePerfil ul,
+    .home header .navegacion nav.opcionesDePerfil ul{
+        display: flex;
+        background-color: #000000;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 15vw;
+        height: 45vh;
+    }
+    .home-detalle header .navegacion nav.opcionesDePerfil ul li,
+    .home header .navegacion nav.opcionesDePerfil ul li{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background-color: black;
+        height: 50px;
+    }
+    .home-detalle header .navegacion nav.opcionesDePerfil ul li a,
+    .home header .navegacion nav.opcionesDePerfil ul li a{
+        color: white;
+        font-size: 20px;
+    }
+
 }

@@ -1,0 +1,289 @@
+.carrito header{
+    display: flex;
+}
+
+.carrito header .navegacion {
+    background-color: rgb(0, 0, 0);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width:  100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.carrito header .navegacion .logo{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    margin-left: 20px;
+}
+.carrito header .navegacion label.burguer i{
+    width: 2vw;
+    color: #8d1888;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.carrito header .navegacion input{
+    display: none;
+}
+.carrito header .navegacion input:checked ~ nav {
+    display: block;
+}
+.carrito header .navegacion .busqueda{
+    display: flex;
+    padding: 0 10px;
+}
+.carrito header .navegacion .busqueda input{
+    display: none;
+}
+.carrito header .navegacion nav{
+    display: none;
+    align-items: center;
+    margin-top: 60px;
+    position: absolute;
+}
+
+.carrito header .navegacion nav ul{
+    display: flex;
+    background-color: #8d1888;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 40vh;
+}
+.carrito header .navegacion nav ul li{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    height: 50px;
+}
+.carrito header .navegacion nav ul li a{
+    color: white;
+    font-size: 20px;
+}
+
+.carrito header .navegacion .busqueda i.fas.fa-search{
+    display: block;
+    color: #8d1888;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 0 5px;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+.carrito header .navegacion .carro i.fas.fa-shopping-cart{
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.carrito header .navegacion .usuario i.fas.fa-user-circle{
+    display: none;
+}
+
+
+/*Tablet*/
+
+@media (min-width: 461px){
+    .carrito header section{
+        background-color: black;
+        width:  100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .carrito header .navegacion label.burguer i{
+        width: 2vw;
+        color: #8d1888;
+        font-size: 20px;
+        margin-top: 20px;
+        padding-left: 25px;
+    }
+
+    .carrito header .navegacion .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .carrito header .navegacion img{
+        display: block;
+        width: 100px;
+        padding-right: 3px;
+    }
+    .carrito header .navegacion .busqueda {
+        display: flex;
+        margin-top: 4px;
+        margin-right: 10px;
+    }
+
+    .carrito header .navegacion .busqueda input{
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+        width: 30vw;
+        height: 20px;
+        margin-top: 18px;
+        border: none;
+    }
+    .carrito header .navegacion .busqueda i.fas.fa-search{
+        display: flex;
+        color: #8d1888;
+        font-size: 20px;
+        margin: 18px 10px 0 5px;
+        padding: 0 5px;
+    }
+
+    .carrito header .navegacion .carro i.fas.fa-shopping-cart{
+        color: #ffffff;
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 795px) {
+    .carrito header{
+        background-color: black;
+        width:  100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .carrito header .navegacion .burguer{
+        display: none;
+    }
+    .carrito header img{
+        display: block;
+        width: 110px;
+        padding: 0 10px;
+    }
+    .carrito header .navegacion nav{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 35vw;
+        margin-top: 0;
+        position: inherit;
+    }
+
+    .carrito header .navegacion nav.opcionesDePerfil{
+        display: none;
+    }
+
+    .carrito header .navegacion nav ul{
+        display: flex;
+        background-color: black;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 30vw;
+        height: 50vh;
+        height: auto;
+        color: white;
+    }
+    .carrito header .navegacion nav ul li{
+        display: flex;
+        height: 45px;
+    }
+    .carrito header .navegacion nav ul li a{
+        color: white;
+        font-size: 18px;
+        padding-right: 30px;
+    }
+    .carrito header .navegacion .burguer{
+         display: none;
+    }
+
+    .carrito header .navegacion .carro i.fas.fa-shopping-cart{
+        color: #ffffff;
+        font-size: 20px;
+        margin-top: 3px;
+        padding: 0 10px;
+    }
+    .carrito header .navegacion .usuario i.fas.fa-user-circle{
+        display: block;
+        color: #fbfbfb;
+        font-size: 20px;
+        margin-top: 3px;
+        padding: 1px 10px;
+    }
+    .carrito header .navegacion label.perfil,
+    .carrito header .navegacion .btn-neon{
+        position: relative;
+        display: inline-block;
+        padding: 17px 12px;
+        transition: 0.2s;
+        border-radius: 10%;
+    }
+    .carrito header .navegacion label.perfil:hover,
+    .carrito header .navegacion .btn-neon:hover{
+        background: #8d1888;
+    }
+
+    /*usuario*/
+
+
+    .carrito header .navegacion label.perfil i.fas .fa-user-circle{
+        width: 2vw;
+        color: #8d1888;
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+    .carrito header .navegacion input#perfil{
+        display: none;
+    }
+    .carrito header .navegacion input#perfil:checked ~ nav.opcionesDePerfil {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .carrito header .navegacion nav.opcionesDePerfil{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 15vw;
+        left: 85vw;
+        margin-top: 0;
+        position: inherit;
+    }
+    
+    .carrito header .navegacion nav.opcionesDePerfil{
+        display: none;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+    }
+
+    .carrito header .navegacion nav.opcionesDePerfil ul{
+        display: flex;
+        background-color: #000000;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 15vw;
+        height: 45vh;
+    }
+    .carrito header .navegacion nav.opcionesDePerfil ul li{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background-color: black;
+        height: 50px;
+    }
+    .carrito header .navegacion nav.opcionesDePerfil ul li a{
+        color: white;
+        font-size: 20px;
+    }
+
+}

@@ -1,12 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sound Surge</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/256e07d023.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    
+<body class="home">
+    <header>
+        <section class="navegacion">
+            <input type="checkbox" name="burguer" id="burguer">
+            <label class="burguer" for="burguer"><i class="fas fa-bars"></i></label>
+            <nav>
+                <ul>
+                    <li><a class="btn-neon" href="#">Categorias</a></li>
+                    <li><a class="btn-neon" href="#">Marcas</a></li> 
+                    <li><a class="btn-neon" href="#">Lo + vendido</a></li> 
+                </ul>
+            </nav>
+            <a class="logo" href="/"><img src="/images/LogoSoundSurge.png" alt="logoSoundSurge"></a>
+            <div class="busqueda">
+                <input id="icons-search" name="icons-search" type="text" placeholder="¿Que estas Buscando?"><i class="fas fa-search"></i>
+            </div>
+            <div class="carrito">
+                <a href="/carrito.html" target="_blank" class="btn-neon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="usuario">
+                <input type="checkbox" name="perfil" id="perfil">
+                <label class="perfil" for="perfil"><i class="fas fa-user-circle"></i></label>
+                <nav class="opcionesDePerfil">
+                    <ul>
+                        <li><a class="btn-neon" href="#">login</a></li>
+                        <li><a class="btn-neon" href="#">register</a></li> 
+                        <li><a class="btn-neon" href="#">settings</a></li> 
+                        <li><a class="btn-neon" href="#">sign out</a></li> 
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main>
+        <div class="carrousel">
+            <ul>
+                <div class="img-carrousel" id="item-1">
+                    <img src="/images/Audiomusica-Jockey-Plaza1.jpg" alt="Casa 1">
+                </div>
+                <div class="img-carrousel" id="item-2">
+                    <img src="/images/gc-md-hf-big-bang-2-07-13-22.jpg" alt="">
+                </div> 
+                <div class="img-carrousel" id="item-3">
+                    <img src="/images/giphy.gif" alt="Reci">
+                </div>
+                <div class="img-carrousel" id="item-4">
+                    <img src="/images/sweetwater2-1024x571.jpg" alt="Casa 2">
+                </div> 
+            </ul>     
+        </div>
+        <div class="categorias-home">
+            <h3> Novedades </h3>
+        </div>
+        <section class="contenedor">
+            <ul>
+                <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/guitarraYamaha/principal.jpg" alt="">
+                                <h2>Guitarra electrica yamaha</h2>
+                                <p>$ 74.495</p>
+                            </a>
+                        </div>
+                </article>
+                <article>
+                    <div class="producto">
+                        <a href="/detalle">
+                            <img src="/images/bateria.webp" alt="">
+                            <h2>Batería Yamaha Rydeen</h2>
+                            <p>$ 205.504</p>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/bajo.webp" alt="">
+                                <h2>Bajo Ibanez Gsr200sm</h2>
+                                <p>$ 140.462</p>
+                            </a>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/teclado korg.webp" alt="">
+                                <h2>Sintentizador Korg Minilogue</h2>
+                                <p>$ 134.912</p>
+                            </a>
+                        </div>
+                    </article>
+                    <article>
+                            <div class="producto">
+                                <a href="/detalle">
+                                    <img src="/images/epiphone les paul.jpg" alt="">
+                                    <h2>Epiphone Les Paul Special VE</h2>
+                                    <p>$ 68.606</p>
+                                </a>
+                            </div>
+                    </article>
+                <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/IN EAR CTM CE320.jpg" alt="">
+                                <h2>Auriculares In Ear ctm CE320</h2>
+                                <p>$ 51.767</p>
+                            </a>
+                        </div>
+                </article>
+                <div id="arrowAnim">
+                    <div class="arrowSliding">
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="arrowSliding delay1">
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="arrowSliding delay2">
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="arrowSliding delay3">
+                      <div class="arrow"></div>
+                    </div>
+                </div>
+            </ul>
+            </section>
+            <div class="categorias-home">
+                <h3> Ofertas </h3>
+            </div>
+            <section class="contenedor-2">
+                <ul>
+                    <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/guitarraYamaha/principal.jpg" alt="">
+                                <h2>Guitarra electrica yamaha</h2>
+                                <p>$ 74.495</p>
+                            </a>
+                        </div>
+                </article>
+                <article>
+                    <div class="producto">
+                        <a href="/detalle">
+                            <img src="/images/bateria.webp" alt="">
+                            <h2>Batería Yamaha Rydeen</h2>
+                            <p>$ 205.504</p>
+                        </a>
+                    </div>
+                </article>
+                <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/bajo.webp" alt="">
+                                <h2>Bajo Ibanez Gsr200sm</h2>
+                                <p>$ 140.462</p>
+                            </a>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/teclado korg.webp" alt="">
+                                <h2>Sintentizador Korg Minilogue</h2>
+                                <p>$ 134.912</p>
+                            </a>
+                        </div>
+                    </article>
+                    <article>
+                            <div class="producto">
+                                <a href="/detalle">
+                                    <img src="/images/epiphone les paul.jpg" alt="">
+                                    <h2>Epiphone Les Paul</h2>
+                                    <p>$ 68.606</p>
+                                </a>
+                            </div>
+                    </article>
+                <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/IN EAR CTM CE320.jpg" alt="">
+                                <h2>Auriculares ctm CE320</h2>
+                                <p>$ 51.767</p>
+                            </a>
+                        </div>
+                </article>
+                <div id="arrowAnim-2">
+                    <div class="arrowSliding">
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="arrowSliding delay1">
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="arrowSliding delay2">
+                      <div class="arrow"></div>
+                    </div>
+                    <div class="arrowSliding delay3">
+                      <div class="arrow"></div>
+                    </div>
+                </div>
+                </ul>
+                </section>
+                <div class="categorias-home">
+                    <h3> Surge Selection </h3>
+                </div>
+                <section class="contenedor-2">
+                    <ul>
+                        <article>
+                            <div class="producto">
+                                <a href="/detalle">
+                                    <img src="/images/guitarraYamaha/principal.jpg" alt="">
+                                    <h2>Guitarra electrica yamaha</h2>
+                                    <p>$ 74.495</p>
+                                </a>
+                            </div>
+                    </article>
+                    <article>
+                        <div class="producto">
+                            <a href="/detalle">
+                                <img src="/images/bateria.webp" alt="">
+                                <h2>Batería Yamaha Rydeen</h2>
+                                <p>$ 205.504</p>
+                            </a>
+                        </div>
+                    </article>
+                    <article>
+                            <div class="producto">
+                                <a href="/detalle">
+                                    <img src="/images/bajo.webp" alt="">
+                                    <h2>Bajo Ibanez Gsr200sm</h2>
+                                    <p>$ 140.462</p>
+                                </a>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="producto">
+                                <a href="/detalle">
+                                    <img src="/images/teclado korg.webp" alt="">
+                                    <h2>Sintentizador Korg Minilogue</h2>
+                                    <p>$ 134.912</p>
+                                </a>
+                            </div>
+                        </article>
+                        <article>
+                                <div class="producto">
+                                    <a href="/detalle">
+                                        <img src="/images/epiphone les paul.jpg" alt="">
+                                        <h2>Epiphone Les Paul</h2>
+                                        <p>$ 68.606</p>
+                                    </a>
+                                </div>
+                        </article>
+                    <article>
+                            <div class="producto">
+                                <a href="/detalle">
+                                    <img src="/images/IN EAR CTM CE320.jpg" alt="">
+                                    <h2>Auriculares ctm CE320</h2>
+                                    <p>$ 51.767</p>
+                                </a>
+                            </div>
+                    </article>
+                    <div id="arrowAnim-3">
+                        <div class="arrowSliding">
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay1">
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay2">
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="arrowSliding delay3">
+                          <div class="arrow"></div>
+                        </div>
+                    </div>
+                    </ul>
+                        </section>
+        <section class="spots">
+            <div class="video-1">
+                <iframe class="spot-1" src="https://www.youtube.com/embed/qfGggAGITwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-2">
+                <iframe class="spot-2" src="https://www.youtube.com/embed/Mi2iIqzdSD4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo-footer">
+            <a class="logo" href="/"><img src="/images/LogoSoundSurge.png" alt="logoSoundSurge"></a>
+        </div>
+        <section class="info">
+            <ul>
+                <h2>SOBRE NOSOTROS</h2>
+                <li><a href="">About SoundSurge</a></li>
+                <li><a href="">Mayoristas</a></li>
+                <li><a href="">Sucursales</a></li>
+                <li><a href="">Preguntas frecuentes</a></li>
+            </ul>
+            <ul>
+                <h2>NUESTROS LOCALES</h2>
+                <li><a href="https://goo.gl/maps/jgLkJ2YGPHFVgKx17" target="_blank">Sucursal Lanus</a></li>
+                <li><a href="https://g.page/rockcenter?share" target="_blank">Sucursal C.A.B.A</a></li>
+                <li><a href="https://goo.gl/maps/RUZwgessDfVcAD4u6" target="_blank">Sucursal Morón</a></li>
+                <li><a href="https://goo.gl/maps/ptPoEctEW94BJj2n9" target="_blank">Sucursal San Miguel</a></li>
+            </ul>
+        </section>
+        <section class="ubicacion">
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.45534151131!2d-58.71488824942152!3d-34.54202478037978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd129cb9d84b%3A0x6759403edf94803f!2sLa
+                %20P%C3%BAa.%20Instrumentos%20Musicales%2C%20audio%20e%20iluminaci%C3%B3n.!5e0!3m2!1ses-419!2sar!4v1658858434892!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+            <h2>REDES</h2>
+        <section class="Redes-sociales">
+            <ul>
+                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com/soundsurgearg/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://mail.google.com/mail/u/0/?tab=rm#inbox?compose=CllgCJfttZZpkVbZCXfXnxCCSBjJPLglQDKnNTKgXCzQlKSZGSVkXNjCpwvBsPkkFClpmSdBvRg" target="_blank"><i class="fas fa-at" ></i></a></li>
+            </ul>
+        </section>
+    </footer>
 </body>
 </html>

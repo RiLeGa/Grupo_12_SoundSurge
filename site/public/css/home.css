@@ -179,7 +179,6 @@
 @media (min-width: 791px){
     .home{
         background-image: url(/images/FondoRecital.jpg);
-        /* background-image: none; */
         background-color: white;
         background-attachment: scroll;
         background-size: cover;
@@ -188,6 +187,7 @@
 
     .home main .contenedor-2{
         display: block;
+        
     }
 
     .home main .contenedor, .contenedor-2{
@@ -201,9 +201,12 @@
         margin-left: 17vw;
         padding: 0;
     }
-    .home main .contenedor ul::-webkit-scrollbar,
-    .contenedor-2 ul::-webkit-scrollbar{
-        display: none;
+    .home main .contenedor ul::-webkit-scrollbar-thumb,
+    .contenedor-2 ul::-webkit-scrollbar-thumb{
+        display: flex;
+        width: 45vw;
+        color: #000000;
+
     }
 
     .home main .categorias-home:nth-of-type(3){
@@ -279,4 +282,78 @@
     .home main .spots .video-2 iframe.spot-2{
         width: 100%;
     }
+
+
+
+    #arrowAnim {
+        position: absolute;
+        width: 0vw;
+        height: 10vh;
+        top: 44rem;
+        left: 7vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+  }
+       
+  #arrowAnim-2 {
+        position: absolute;
+        width: 0vw;
+        height: 10vh;
+        right: 105vw;
+        top: 74.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+  #arrowAnim-3 {
+        position: absolute;
+        width: 0vw;
+        height: 10vh;
+        right: 100vw;
+        top: 107.5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      
+       .arrow {
+        width: 5vw;
+        height: 5vw;
+        border: 2.5vw solid;
+        border-color: black transparent transparent black;
+        transform: rotate(-45deg);
+      }
+      
+      .arrowSliding {
+        position: absolute;
+        -webkit-animation: slide 4s linear infinite; 
+                animation: slide 4s linear infinite;
+      }
+      
+       .delay1 {
+        -webkit-animation-delay: 1s; 
+          animation-delay: 1s;
+      }
+       .delay2 {
+        -webkit-animation-delay: 2s; 
+          animation-delay: 2s;
+      }
+       .delay3 {
+        -webkit-animation-delay: 3s; 
+          animation-delay: 3s;
+      }
+      
+      @keyframes slide {
+          0% { opacity:0; transform: translateX(15vw); }	
+         20% { opacity:1; transform: translateX(9vw); }	
+         80% { opacity:1; transform: translateX(-9vw); }	
+        100% { opacity:0; transform: translateX(-15vw); }	
+      }
+      @keyframes slide {
+          0% { opacity:0; transform: translateX(15vw); }	
+         20% { opacity:1; transform: translateX(9vw); }	
+         80% { opacity:1; transform: translateX(-9vw); }	
+        100% { opacity:0; transform: translateX(-15vw); }	
+      }
 }

@@ -1,41 +1,34 @@
-.home-detalle footer,
-.home footer{
+.carrito footer{
     background-color: black;
     background-size: cover;
     margin-top: 10px;
 }
-
-.home-detalle footer .logo-footer,
-.home footer .logo-footer{
+.carrito footer .logo-footer{
     display: flex;
     justify-content: center;
 }
 
-.home-detalle footer img,
-.home footer img{
+.carrito footer img{
     width: 200px;
     padding: 20px;
     margin-bottom: 45px;
     display: flex;
 }
 
-.home-detalle footer .info,
-.home footer .info{
+.carrito footer .info{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 
-.home-detalle footer .info h2,
-.home footer .info h2{
+.carrito footer .info h2{
     font-family: var(--fuenteGral);
     color: rebeccapurple;
     text-align: start;
 }
 
-.home-detalle footer .ubicacion .mapa,
-.home footer .ubicacion .mapa{
+.carrito footer .ubicacion .mapa{
     display: flex;
     width: 100%;
     height: 300px;
@@ -43,28 +36,24 @@
     justify-content: space-around;
 }
 
-.home-detalle footer .ubicacion .mapa iframe,
-.home footer .ubicacion .mapa iframe{
+.carrito footer .ubicacion .mapa iframe{
     border: 0;
     width: 100%;
     padding: 20px;
 }
-.home-detalle footer h2,
-.home footer h2{
+.carrito footer h2{
     font-family: var(--fuenteGral);
     color: rebeccapurple;
     text-align: center;
     margin: 20px 0;
 }
-.home-detalle footer .Redes-sociales,
-.home footer .Redes-sociales{
+.carrito footer .Redes-sociales{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.home-detalle footer .Redes-sociales ul,
-.home footer .Redes-sociales ul{
+.carrito footer .Redes-sociales ul{
     font-family: var(--fuenteGral);
     display: flex;
     width: 100%;
@@ -72,35 +61,24 @@
     justify-content: space-around;
     margin-bottom: 25px;
 }
-.home-detalle footer .info ul li,
-.home footer .info ul li{
+.carrito footer .info ul li{
     text-align: center;
 }
 
-.home-detalle footer .Redes-sociales ul li a,
-.home footer .Redes-sociales ul li a{
+.carrito footer .Redes-sociales ul li a{
     font-size: 45px;
-}
-
-
-
-
-@media (min-width: 461px){
-    
 }
 
 @media (min-width: 1055px){
 
-    .home-detalle footer .info,
-    .home footer .info{
+    .carrito footer .info{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         padding-left: 25px;
     }
 
-    .home-detalle footer .ubicacion .mapa,
-    .home footer .ubicacion .mapa{
+    .carrito footer .ubicacion .mapa{
         display: flex;
         width: 100%;
         height: 300px;
@@ -108,20 +86,17 @@
         justify-content: space-around;
     }
     
-    .home-detalle footer .ubicacion .mapa iframe,
-    .home footer .ubicacion .mapa iframe{
+    .carrito footer .ubicacion .mapa iframe{
         border: 0;
         width: 40%;
         padding: 20px;
     }
-    .home-detalle footer .info ul,
-    .home footer .info ul{
+    .carrito footer .info ul{
         font-family: var(--fuenteGral);
         padding-right: 25px;
         padding-left: 5px;
     }
-    .home-detalle footer .info ul:nth-last-child(1),
-    .home footer .info ul:nth-last-child(1){
+    .carrito footer .info ul:nth-last-child(1){
         margin-left: 33rem;
     }
 

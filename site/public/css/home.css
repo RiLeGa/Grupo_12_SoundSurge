@@ -1,7 +1,7 @@
 .home{
     background-image: url(/images/FondoMovil.jpg);
     background-color: #221d1da8;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: 100vw 120vh;
     background-repeat: no-repeat;
 }
@@ -21,22 +21,17 @@
 }
 .home main .contenedor ul article div.producto{ 
     background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 45px;
+    background-size: 65%;
     display: block;
     text-align: center;
-    width: 20vw;
-    height: 250px;
-    margin: 12px;
+    width: 18vw;
+    height: 325px;
+    transition: 0.5s;
+    border: 1px solid black;
 }
-
-.home main.contenedor-2 ul article div.producto{
-    background-color: rgb(255, 255, 255);
-    display: block;
-    text-align: center;
-    width: 20vw;
-    height: 250px;
-    margin: 12px;
-}
-
 
 .home main .contenedor-2{
     display: none;
@@ -52,7 +47,7 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .home main .contenedor ul article div.producto, .contenedor-2 ul article div.producto{
@@ -77,14 +72,37 @@
     color: #5b3b4d;
     margin-top: 10px;
 }
- 
-.home main .categorias-home h3{
+
+.home main .precio{
+    margin-top: 170px;
+}
+
+.home main .precio h3{
     font-family: var(--fuenteGral);
-    font-size: 30px;
+    font-size: 15px;
     text-align: center;
     color: #000000;
-    margin-top: 35px;    
+    margin-top: 35px; 
 }
+
+.home main span{
+    font-family: var(--fuenteGral);
+    font-size: 25px;
+    text-align: center;
+    color: #000000; 
+}
+.home main span.precioSinDesc{
+    font-size: 15px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+ 
 .home main .categorias-home:nth-of-type(3){
     display: none;
 }
@@ -135,6 +153,7 @@
 }
 
 
+
 @media (min-width: 461px){
     .home{
         background-attachment: scroll;
@@ -156,17 +175,53 @@
         flex-direction: row;
         align-items: center;
         flex-wrap: nowrap;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
 
-    .home main .contenedor ul article div.producto{
-        background-color: rgb(253, 252, 252);
+    .home main .contenedor ul article div.producto, .contenedor-2 ul article div.producto{
+        background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 45px;
+        background-size: 65%;
         display: block;
         text-align: center;
-        width: 41vw;
-        margin: 5px;
-        padding: 15px;
+        width: 40vw;
+        height: 260px;
+        margin-left: 7px;
+        transition: 0.5s;
+        box-shadow: 0 0 15px rgb(0 0 0 / 95%);
     }
+
+    .home main .precio{
+        margin-top: 170px;
+    }
+    
+    .home main .precio h3{
+        font-family: var(--fuenteGral);
+        font-size: 15px;
+        text-align: center;
+        color: #000000;
+        margin-top: 35px; 
+    }
+    
+    .home main span{
+        font-family: var(--fuenteGral);
+        font-size: 25px;
+        text-align: center;
+        color: #000000; 
+    }
+    .home main span.precioSinDesc{
+        font-size: 15px ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 3px;
+        text-decoration: line-through;
+        margin-left: 5px;
+    }
+    
 
     .home main .contenedor img{
         margin-top: 20px;
@@ -201,14 +256,7 @@
         margin-left: 17vw;
         padding: 0;
     }
-    .home main .contenedor ul::-webkit-scrollbar-thumb,
-    .contenedor-2 ul::-webkit-scrollbar-thumb{
-        display: flex;
-        width: 45vw;
-        color: #000000;
-
-    }
-
+   
     .home main .categorias-home:nth-of-type(3){
         display: block;
     }
@@ -223,7 +271,7 @@
         flex-direction: row;
         align-items: center;
         flex-wrap: nowrap;
-        overflow-y: auto;   
+        overflow-y: hidden;   
     }
     .home main .contenedor ul article div.producto:hover,
     .home main .contenedor-2 ul article div.producto:hover{
@@ -233,23 +281,29 @@
 
     .home main .contenedor ul article div.producto, .contenedor-2 ul article div.producto{
         background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 45px;
+        background-size: 65%;
         display: block;
         text-align: center;
         width: 18vw;
         height: 325px;
-        margin-left: 45px;
+        margin-left: 50px;
         transition: 0.5s;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.947);
+        box-shadow: 0 0 15px rgb(0 0 0 / 95%);
     }
 
-    .home main .contenedor img{
-        width: 80%;
-        height: 150px;
-    }
-
-    .home main .contenedor-2 img{
-        width: 90%;
-        height: 180px;
+    .home main .contenedor-2 .fas.fa-percentage{
+        display: flex;
+        height: 45px;
+        width: 45px;
+        padding: 6% 2%;
+        font-size: 15px;
+        justify-content: flex-start;
+        border: 2px solid black;
+        border-radius: 50%;
+        color: darkviolet;
     }
     
     .home main .spots{
@@ -282,78 +336,4 @@
     .home main .spots .video-2 iframe.spot-2{
         width: 100%;
     }
-
-
-
-    #arrowAnim {
-        position: absolute;
-        width: 0vw;
-        height: 10vh;
-        top: 44rem;
-        left: 7vw;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-  }
-       
-  #arrowAnim-2 {
-        position: absolute;
-        width: 0vw;
-        height: 10vh;
-        right: 105vw;
-        top: 74.5rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-  #arrowAnim-3 {
-        position: absolute;
-        width: 0vw;
-        height: 10vh;
-        right: 100vw;
-        top: 107.5rem;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
-      
-       .arrow {
-        width: 5vw;
-        height: 5vw;
-        border: 2.5vw solid;
-        border-color: black transparent transparent black;
-        transform: rotate(-45deg);
-      }
-      
-      .arrowSliding {
-        position: absolute;
-        -webkit-animation: slide 4s linear infinite; 
-                animation: slide 4s linear infinite;
-      }
-      
-       .delay1 {
-        -webkit-animation-delay: 1s; 
-          animation-delay: 1s;
-      }
-       .delay2 {
-        -webkit-animation-delay: 2s; 
-          animation-delay: 2s;
-      }
-       .delay3 {
-        -webkit-animation-delay: 3s; 
-          animation-delay: 3s;
-      }
-      
-      @keyframes slide {
-          0% { opacity:0; transform: translateX(15vw); }	
-         20% { opacity:1; transform: translateX(9vw); }	
-         80% { opacity:1; transform: translateX(-9vw); }	
-        100% { opacity:0; transform: translateX(-15vw); }	
-      }
-      @keyframes slide {
-          0% { opacity:0; transform: translateX(15vw); }	
-         20% { opacity:1; transform: translateX(9vw); }	
-         80% { opacity:1; transform: translateX(-9vw); }	
-        100% { opacity:0; transform: translateX(-15vw); }	
-      }
 }

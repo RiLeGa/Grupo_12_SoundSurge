@@ -1,10 +1,8 @@
-.home-detalle header,
-.home header{
+header{
     display: flex;
 }
 
-.home-detalle header .navegacion,
-.home header .navegacion {
+header .navegacion {
     background-color: rgb(0, 0, 0);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -14,48 +12,41 @@
     display: flex;
     justify-content: space-between;
 }
-.home-detalle header .navegacion .logo,
-.home header .navegacion .logo{
+header .navegacion .logo{
     display: flex;
     justify-content: center;
     display: flex;
     margin-left: 20px;
 }
-.home-detalle header .navegacion label.burguer i,
-.home header .navegacion label.burguer i{
+header .navegacion label.burguer i{
     width: 2vw;
     color: #8d1888;
     font-size: 20px;
     margin-top: 20px;
     padding: 0 20px;
 }
-.home-detalle header .navegacion input,
-.home header .navegacion input{
+header .navegacion input{
     display: none;
 }
-.home-detalle header .navegacion input:checked ~ nav ,
-.home header .navegacion input:checked ~ nav {
+header .navegacion input:checked ~ nav {
     display: block;
+    z-index: 1;
 }
-.home-detalle header .navegacion .busqueda,
-.home header .navegacion .busqueda{
+header .navegacion .busqueda{
     display: flex;
     padding: 0 10px;
 }
-.home-detalle header .navegacion .busqueda input,
-.home header .navegacion .busqueda input{
+header .navegacion .busqueda input{
     display: none;
 }
-.home-detalle header .navegacion nav,
-.home header .navegacion nav{
+header .navegacion nav{
     display: none;
     align-items: center;
     margin-top: 60px;
     position: absolute;
 }
 
-.home-detalle header .navegacion nav ul,
-.home header .navegacion nav ul{
+header .navegacion nav ul{
     display: flex;
     background-color: #8d1888;
     flex-direction: column;
@@ -63,8 +54,7 @@
     width: 100vw;
     height: 40vh;
 }
-.home-detalle header .navegacion nav ul li,
-.home header .navegacion nav ul li{
+header .navegacion nav ul li{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -72,32 +62,27 @@
     background-color: black;
     height: 50px;
 }
-.home-detalle header .navegacion nav ul li a,
-.home header .navegacion nav ul li a{
+header .navegacion nav ul li a{
     color: white;
     font-size: 20px;
 }
 
-.home-detalle header .navegacion .busqueda i.fas.fa-search,
-.home header .navegacion .busqueda i.fas.fa-search{
+header .navegacion .busqueda i.fas.fa-search{
     display: block;
     color: #8d1888;
     font-size: 20px;
     margin-top: 20px;
     padding: 0 5px;
     margin-left: 100px;
-    margin-right: 50px;
 }
 
-.home-detalle header .navegacion .carrito i.fas.fa-shopping-cart,
-.home header .navegacion .carrito i.fas.fa-shopping-cart{
+header .navegacion .carrito i.fas.fa-shopping-cart{
     color: #ffffff;
     font-size: 20px;
     margin-top: 20px;
     padding: 0 10px;
 }
-.home-detalle header .navegacion .usuario i.fas.fa-user-circle,
-.home header .navegacion .usuario i.fas.fa-user-circle{
+header .navegacion .usuario i.fas.fa-user-circle{
     display: none;
 }
 
@@ -105,16 +90,14 @@
 /*Tablet*/
 
 @media (min-width: 461px){
-    .home-detalle header section,
-    .home header section{
+    header section{
         background-color: black;
         width:  100%;
         height: 60px;
         display: flex;
         justify-content: space-around;
     }
-    .home-detalle header .navegacion label.burguer i,
-    .home header .navegacion label.burguer i{
+    header .navegacion label.burguer i{
         width: 2vw;
         color: #8d1888;
         font-size: 20px;
@@ -122,27 +105,23 @@
         padding-left: 25px;
     }
 
-    .home-detalle header .navegacion .logo,
-    .home header .navegacion .logo{
+    header .navegacion .logo{
         display: flex;
         justify-content: center;
     }
 
-    .home-detalle header .navegacion img,
-    .home header .navegacion img{
+    header .navegacion img{
         display: block;
         width: 100px;
         padding-right: 3px;
     }
-    .home-detalle header .navegacion .busqueda,
-    .home header .navegacion .busqueda {
+    header .navegacion .busqueda {
         display: flex;
         margin-top: 4px;
         margin-right: 10px;
     }
 
-    .home-detalle header .navegacion .busqueda input,
-    .home header .navegacion .busqueda input{
+    header .navegacion .busqueda input{
         display: flex;
         font-size: 15px;
         text-align: center;
@@ -151,8 +130,7 @@
         margin-top: 18px;
         border: none;
     }
-    .home-detalle header .navegacion .busqueda i.fas.fa-search,
-    .home header .navegacion .busqueda i.fas.fa-search{
+    header .navegacion .busqueda i.fas.fa-search{
         display: flex;
         color: #8d1888;
         font-size: 20px;
@@ -160,8 +138,7 @@
         padding: 0 5px;
     }
 
-    .home-detalle header .navegacion .carrito i.fas.fa-shopping-cart,
-    .home header .navegacion .carrito i.fas.fa-shopping-cart{
+    header .navegacion .carrito i.fas.fa-shopping-cart{
         color: #ffffff;
         font-size: 20px;
         margin-top: 20px;
@@ -171,8 +148,7 @@
 
 /*Desktop*/
 @media (min-width: 795px) {
-    .home-detalle header,
-    .home header{
+    header{
         background-color: black;
         width:  100%;
         height: 60px;
@@ -180,18 +156,15 @@
         justify-content: space-between;
         align-items: center;
     }
-    .home-detalle header .navegacion .burguer,
-    .home header .navegacion .burguer{
+    header .navegacion .burguer{
         display: none;
     }
-    .home-detalle header img,
-    .home header img{
+    header img{
         display: block;
         width: 110px;
         padding: 0 10px;
     }
-    .home-detalle header .navegacion nav,
-    .home header .navegacion nav{
+    header .navegacion nav{
         background-color: black;
         display: flex;
         align-items: center;
@@ -201,13 +174,11 @@
         position: inherit;
     }
 
-    .home-detalle header .navegacion nav.opcionesDePerfil,
-    .home header .navegacion nav.opcionesDePerfil{
+    header .navegacion nav.opcionesDePerfil{
         display: none;
     }
 
-    .home-detalle header .navegacion nav ul,
-    .home header .navegacion nav ul{
+    header .navegacion nav ul{
         display: flex;
         background-color: black;
         flex-direction: row-reverse;
@@ -217,77 +188,64 @@
         height: auto;
         color: white;
     }
-    .home-detalle header .navegacion nav ul li,
-    .home header .navegacion nav ul li{
+    header .navegacion nav ul li{
         display: flex;
         height: 45px;
     }
-    .home-detalle header .navegacion nav ul li a,
-    .home header .navegacion nav ul li a{
+    header .navegacion nav ul li a{
         color: white;
         font-size: 18px;
         padding-right: 30px;
     }
-    .home-detalle header .navegacion .burguer,
-    .home header .navegacion .burguer{
+    header .navegacion .burguer{
          display: none;
     }
 
-    .home-detalle header .navegacion .carrito i.fas.fa-shopping-cart,
-    .home header .navegacion .carrito i.fas.fa-shopping-cart{
+    header .navegacion .carrito i.fas.fa-shopping-cart{
         color: #ffffff;
         font-size: 20px;
         margin-top: 3px;
         padding: 0 10px;
     }
-    .home-detalle header .navegacion .usuario i.fas.fa-user-circle,
-    .home header .navegacion .usuario i.fas.fa-user-circle{
+    header .navegacion .usuario i.fas.fa-user-circle{
         display: block;
         color: #fbfbfb;
         font-size: 20px;
         margin-top: 2px;
         padding: 1px 10px;
     }
-    .home-detalle header .navegacion label.perfil,
-    .home header .navegacion label.perfil,
-    .home-detalle header .navegacion .btn-neon,
-    .home header .navegacion .btn-neon{
+    header .navegacion label.perfil,
+   header .navegacion .btn-neon{
         position: relative;
         display: inline-block;
         padding: 17px 12px;
         transition: 0.2s;
         border-radius: 10%;
     }
-    .home-detalle header .navegacion label.perfil:hover,
-    .home header .navegacion label.perfil:hover,
-    .home-detalle header .navegacion .btn-neon:hover, 
-    .home header .navegacion .btn-neon:hover{
+    header .navegacion label.perfil:hover,
+    header .navegacion .btn-neon:hover{
         background: #8d1888;
     }
 
     /*usuario*/
 
-    .home-detalle header .navegacion label.perfil i.fas .fa-user-circle,
-    .home header .navegacion label.perfil i.fas .fa-user-circle{
+    header .navegacion label.perfil i.fas .fa-user-circle{
         width: 2vw;
         color: #8d1888;
         font-size: 20px;
         margin-top: 20px;
         padding: 0 20px;
     }
-    .home-detalle header .navegacion input#perfil,
-    .home header .navegacion input#perfil{
+    header .navegacion input#perfil{
         display: none;
     }
-    .home-detalle header .navegacion input#perfil:checked ~ nav.opcionesDePerfil ,
-    .home header .navegacion input#perfil:checked ~ nav.opcionesDePerfil {
+    header .navegacion input#perfil:checked ~ nav.opcionesDePerfil {
         display: flex;
         position: absolute;
         z-index: 1;
     }
 
-    .home-detalle header .navegacion nav.opcionesDePerfil,
-    .home header .navegacion nav.opcionesDePerfil{
+    header .navegacion nav.opcionesDePerfil{
         background-color: black;
         display: flex;
         align-items: center;
@@ -298,8 +256,7 @@
         position: inherit;
     }
     
-    .home-detalle header .navegacion nav.opcionesDePerfil,
-    .home header .navegacion nav.opcionesDePerfil{
+    header .navegacion nav.opcionesDePerfil{
         display: none;
         flex-direction: row;
         justify-content: flex-start;
@@ -307,8 +264,7 @@
         position: absolute;
     }
 
-    .home-detalle header .navegacion nav.opcionesDePerfil ul,
-    .home header .navegacion nav.opcionesDePerfil ul{
+    header .navegacion nav.opcionesDePerfil ul{
         display: flex;
         background-color: #000000;
         flex-direction: column;
@@ -316,8 +272,7 @@
         width: 15vw;
         height: 45vh;
     }
-    .home-detalle header .navegacion nav.opcionesDePerfil ul li,
-    .home header .navegacion nav.opcionesDePerfil ul li{
+    header .navegacion nav.opcionesDePerfil ul li{
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -325,8 +280,7 @@
         background-color: black;
         height: 50px;
     }
-    .home-detalle header .navegacion nav.opcionesDePerfil ul li a,
-    .home header .navegacion nav.opcionesDePerfil ul li a{
+    header .navegacion nav.opcionesDePerfil ul li a{
         color: white;
         font-size: 20px;
     }

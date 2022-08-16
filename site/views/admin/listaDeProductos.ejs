@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+ <%- include('../partials/head',{title:"Administrador"}) %> 
+<body class="lista">
+
+  <%- include('../partials/header') %> 
+    <main >
+        <h1>Admin</h1>
+        <a class="direct-crear" href="crear">
+            <button type="button" class="btn btn-primary">Crear Producto</button>
+        </a>
+        <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">stock</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Des</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% productos.forEach(producto => { %>
+                  <tr>
+                      
+                        <th scope="row"><a href="..//<%= producto.id %>"><%= producto.id %> </a></th>
+                        <td><a href="/administrador/editar/<%= producto.id %>"><%= producto.marca %></a></td>
+                        <td colspan="1"><a href="/administrador/editar/<%= producto.id %>"><%= producto.titulo %></a></td>
+                        <td><a href="/administrador/editar/<%= producto.id %> "><%= producto.stock %></a></td>
+                        <td><a href="/administrador/editar/<%= producto.id %> "><%= producto.precio %></a></td>
+                        <td><a href="/administrador/editar/<%= producto.id %> "><%= producto.descuento %></a></td>
+                        <td>
+                            <div class="edicion">
+                                <a href="/administrador/editar/<%= producto.id%>">
+                                    <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                </a>
+                                <form action="/administrador/destroy/<%= producto.id%>?_method=DELETE" method="post">
+                                  <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </div>
+                        </td>
+                      
+                      </tr>
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
+    </main>
+  </body>
+</html>

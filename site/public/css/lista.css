@@ -1,0 +1,33 @@
+.lista main{
+    width: 100vw;
+} 
+
+.lista h1{
+    text-align: center;
+}
+
+.lista .table-responsive{
+    width: 80vw;
+    margin-left: 10vw;
+    border: 2px solid black;
+    margin-top: 15px;
+}
+
+.lista .direct-crear{
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.lista .table.table-hover{
+    width: 100%;
+}
+
+.lista .table.table-hover tbody{
+    text-align: center;
+}
+
+
+
+.lista a{
+    color: black;
+}

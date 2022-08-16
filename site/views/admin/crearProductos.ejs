@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ("../partials/head",{title: "Crear Producto"}) %>
+<body class="crear">
+    <%- include ("../partials/header") %> 
+    <main>
+        <h2>Crear Producto</h2>
+        <a class="direct-crear" href="lista">
+            <button type="button" class="btn btn-primary">Lista de productos</button>
+        </a>
+        <section>
+            <form action="./administrador/crear" method="post">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Marca</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese nombre del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese marca del producto">
+                </div> 
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Categorias</label>
+                    <select class="form-select" required aria-label="select example">
+                    <option selected hidden>Selecciona una opcion</option>
+                    <option value="3">Audio</option>
+                    <option value="1">Cuerdas</option>
+                    <option value="3">Iluminacion</option>
+                    <option value="2">Percusion</option>
+                    <option value="3">Vientos</option>
+                    <option value="3">Teclados/Pianos/Controladores</option>
+                    </select>
+                    <div class="invalid-feedback">Example invalid select feedback</div>
+                </div>  
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Precio</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese precio del producto">
+                </div>   
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Descuentos</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese su descuento">
+                </div>   
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese descripcion">
+                </div>   
+                <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Stock</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Stock disponible">
+                </div>
+                <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Imagenes</label>
+                <input type="file" class="form-control" aria-label="file example" required>
+                <div class="invalid-feedback">Example invalid form file feedback</div>
+                </div>
+                <div class="botones">
+                <button class="btn btn-primary" type="submit">Confirma</button>
+                <button class="btn btn-secundary" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>    
+</body>
+</html>

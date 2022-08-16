@@ -1,0 +1,74 @@
+.crear main h2{
+    margin-top: 20px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.crear main section{
+    margin-top: 50px;
+}
+
+.crear .direct-crear{
+    width: 60vw;
+    margin-left: 20vw;
+}
+
+.crear main section .mb-3 label.form-label{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-top: 25px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.crear main section .mb-3 .invalid-feedback{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-left: 20vw;
+    text-align: left;
+    font-size: 15px;
+    color: red;
+}
+
+.crear main section .mb-3 input.form-control{
+    width: 60vw;
+    height: 30px;
+    margin-left: 20vw;
+    border: 2px solid black;
+}
+
+.crear main section .mb-3 select.form-select{
+    width: 60vw;
+    height: 30px;
+    margin-left: 20vw;
+    border: 2px solid black;
+}
+
+.crear main section .botones{
+    width: 30vw;
+    margin-left: 35vw;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.crear main section .botones .btn.btn-primary{
+    background-color: rgb(74, 82, 74);
+    padding: 15px;
+    color:black;
+    border-radius: 15%;
+    margin-bottom: 50px;
+    
+}
+
+.crear main section .botones .btn.btn-secundary{
+    background-color: rgb(186, 3, 3);
+    padding: 15px;
+    color:black;
+    border-radius: 15%;
+    margin-bottom: 50px;
+    
+}

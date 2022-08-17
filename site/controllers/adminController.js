@@ -38,7 +38,7 @@ module.exports = {
         guardar(productos)
 
         /* Redirecciona a la lista de productos */
-        return res.redirect('/administrador/lista')
+        return res.redirect('/admin/lista')
         /* Redirecciona al detalle del producto recien creado */
     },
     editar : (req,res) => {

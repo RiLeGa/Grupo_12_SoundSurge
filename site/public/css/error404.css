@@ -1,9 +1,9 @@
-.error header section {
+.error main section {
     background-color: #17021d;
     background-size: cover;
 }
 
-.error header section h2 {
+.error main section h2 {
     color: rgb(255, 255, 255);
     text-decoration: underline;
     text-align: center;
@@ -11,7 +11,7 @@
     font-size: 25px;
 }
 
-.error header section h1 {
+.error main section h1 {
     background-color: #08267a;
     color: #ff2ee6;
     border-radius: 45px;
@@ -30,7 +30,7 @@
 
 /* Animacion del error 404 */
 
-.error header section h1{
+.error main section h1{
 animation: parpadear 2s infinite backwards;
 }
 
@@ -43,20 +43,20 @@ animation: parpadear 2s infinite backwards;
 
 /* ----------------------------------- */
 
-.error header section h3 {
+.error main section h3 {
     color: #ffffff;
     text-align: start;
     font-size: 18px;
     padding-left: 33px;
 }
-.error header section h3.first {
+.error main section h3.first {
     color: #ffffff;
     text-align: start;
     font-size: 18px;
     padding-left: 33px;
 }
 
-.error header section h3.second {
+.error main section h3.second {
     color: #ffffff;
     text-align: start;
     font-size: 18px;
@@ -64,27 +64,27 @@ animation: parpadear 2s infinite backwards;
     margin-top: 15px;
 }
 
-.error header section ul li {
+.error main section ul li {
     color: #00A6FF;
     padding-left: 17%;
     margin-top: 18px;
 }
 
-.error header section ul li a {
+.error main section ul li a {
     text-decoration: none;
     color: #00A6FF;    
 }
 
-.error header .foto img{
+.error main .foto img{
     margin-top: 50px;
     width: 100%;
 }
 
-.error header .foto {
+.error main .foto {
 width: 100%;
 }
 
-.error header .logo img{
+.error main .logo img{
     background-color: black;
     border: 2px solid #00a6ff;
     border-radius: 28%;
@@ -93,7 +93,7 @@ width: 100%;
     margin: 16px;
 }
 
-.error header section .logo{
+.error main section .logo{
     display: flex;
     justify-content: center;
     box-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue;
@@ -104,7 +104,7 @@ width: 100%;
 
 /* Animacion del logo */
 
-.error header section .logo{
+.error main section .logo{
     animation: flicker 2s infinite backwards;
     }
     
@@ -117,7 +117,7 @@ width: 100%;
 
 /* ----------------------------------- */
 
-.error header section h4{
+.error main section h4{
     color: white;
     text-align: center;
     font-size: 10px;
@@ -136,12 +136,12 @@ width: 100%;
 
 
  @media (min-width: 461px) {
-    .error header section {
+    .error main section {
         background-color: #17021d;
         background-size: cover;
     }
     
-    .error header section h2 {
+    .error main section h2 {
         color: rgb(255, 255, 255);
         text-decoration: underline;
         text-align: center;
@@ -149,7 +149,7 @@ width: 100%;
         font-size: 40px;
     }
     
-    .error header section h1 {
+    .error main section h1 {
         background-color: #08267a;
         color: #ff2ee6;
         border-radius: 45px;
@@ -169,7 +169,7 @@ width: 100%;
     
     /* Animacion del error 404 */
     
-    .error header section h1{
+    .error main section h1{
     animation: parpadear 2s infinite backwards;
     }
     
@@ -180,7 +180,7 @@ width: 100%;
         }
     }
     @media (min-width: 525px){
-        .error header section h1 {
+        .error main section h1 {
             background-color: #08267a;
             color: #ff2ee6;
             border-radius: 45px;
@@ -198,20 +198,20 @@ width: 100%;
 
     /* ----------------------------------- */
     
-    .error header section h3 {
+    .error main section h3 {
         color: #ffffff;
         text-align: start;
         font-size: 31px;
         padding-left: 33px;
     }
-    .error header section h3.first {
+    .error main section h3.first {
         color: #ffffff;
         text-align: start;
         font-size: 31px;
         padding-left: 33px;
     }
     
-    .error header section h3.second {
+    .error main section h3.second {
         color: #ffffff;
         text-align: start;
         font-size: 31px;
@@ -219,28 +219,28 @@ width: 100%;
         margin-top: 15px;
     }
     
-    .error header section ul li {
+    .error main section ul li {
         color: #00A6FF;
         padding-left: 17%;
         margin-top: 18px;
         font-size: 21px;
     }
     
-    .error header section ul li a {
+    .error main section ul li a {
         text-decoration: none;
         color: #00A6FF;    
     }
     
-    .error header .foto img{
+    .error main .foto img{
         margin-top: 50px;
         width: 100%;
     }
     
-    .error header .foto {
+    .error main .foto {
     width: 100%;
     }
     
-    .error header .logo img{
+    .error main .logo img{
         background-color: black;
         border: 2px solid #00a6ff;
         border-radius: 28%;
@@ -249,7 +249,7 @@ width: 100%;
         margin: 16px;
     }
     
-    .error header section .logo{
+    .error main section .logo{
         display: flex;
         justify-content: center;
         box-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue;
@@ -260,7 +260,7 @@ width: 100%;
     
     /* Animacion del logo */
     
-    .error header section .logo{
+    .error main section .logo{
         animation: flicker 2s infinite backwards;
         }
         
@@ -273,7 +273,7 @@ width: 100%;
     
     /* ----------------------------------- */
     
-    .error header section h4{
+    .error main section h4{
         color: white;
         text-align: center;
         font-size: 17px;
@@ -287,7 +287,7 @@ width: 100%;
 
 
     @media (min-width: 526px){
-    .error header section h1 {
+    .error main section h1 {
     background-color: #08267a;
     color: #ff2ee6;
     border-radius: 45px;
@@ -303,7 +303,7 @@ width: 100%;
     }
 }
 @media (min-width: 601px){
-.error header section h1 {
+.error main section h1 {
     background-color: #08267a;
     color: #ff2ee6;
     border-radius: 45px;
@@ -319,7 +319,7 @@ width: 100%;
     }
 }
 @media (min-width: 649px){
-.error header section h1 {
+.error main section h1 {
     background-color: #08267a;
     color: #ff2ee6;
     border-radius: 45px;
@@ -335,7 +335,7 @@ width: 100%;
 }
 }
 @media (min-width: 691px){
-.error header section h1 {
+.error main section h1 {
     background-color: #08267a;
     color: #ff2ee6;
     border-radius: 45px;
@@ -357,12 +357,12 @@ width: 100%;
 
 
 @media (min-width: 791px) {
-    .error header section {
+    .error main section {
         background-color: #17021d;
         background-size: cover;
     }
     
-    .error header section h2 {
+    .error main section h2 {
         color: rgb(255, 255, 255);
         text-decoration: underline;
         text-align: center;
@@ -370,7 +370,7 @@ width: 100%;
         font-size: 56px;
     }
     
-    .error header section h1 {
+    .error main section h1 {
         background-color: #08267a;
         color: #ff2ee6;
         border-radius: 176px;
@@ -389,7 +389,7 @@ width: 100%;
     
     /* Animacion del error 404 */
     
-    .error header section h1{
+    .error main section h1{
     animation: parpadear 2s infinite backwards;
     }
     
@@ -402,20 +402,20 @@ width: 100%;
     
     /* ----------------------------------- */
     
-    .error header section h3 {
+    .error main section h3 {
         color: #ffffff;
         text-align: center;
         font-size: 55px;
         padding-left: 33px;
     }
-    .error header section h3.first {
+    .error main section h3.first {
         color: #ffffff;
         text-align: center;
         font-size: 55px;
         padding-left: 33px;
     }
     
-    .error header section h3.second {
+    .error main section h3.second {
         color: #ffffff;
         text-align: center;
         font-size: 55px;
@@ -423,29 +423,29 @@ width: 100%;
         margin-top: 15px;
     }
     
-    .error header section ul li {
+    .error main section ul li {
     color: #00A6FF;
     padding-left: 24%;
     margin-top: 20px;
     font-size: 31px;
     }
     
-    .error header section ul li a {
+    .error main section ul li a {
         text-decoration: none;
         color: #00A6FF;    
     }
     
-    .error header .foto img{
+    .error main .foto img{
         margin-top: 50px;
         margin-left: 20%;
         width: 60%;
     }
     
-    .error header .foto {
+    .error main .foto {
     width: 100%;
     }
     
-    .error header .logo img{
+    .error main .logo img{
         background-color: black;
         border: 2px solid #00a6ff;
         border-radius: 28%;
@@ -454,7 +454,7 @@ width: 100%;
         margin: 16px;
     }
     
-    .error header section .logo{
+    .error main section .logo{
         display: flex;
         justify-content: center;
         box-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue;
@@ -465,7 +465,7 @@ width: 100%;
     
     /* Animacion del logo */
     
-    .error header section .logo{
+    .error main section .logo{
         animation: flicker 2s infinite backwards;
         }
         
@@ -478,7 +478,7 @@ width: 100%;
     
     /* ----------------------------------- */
     
-    .error header section h4{
+    .error main section h4{
         color: white;
         text-align: center;
         font-size: 18px;
@@ -487,7 +487,7 @@ width: 100%;
     }
 }
 @media (min-width: 1024px) {
-    .error header section h1 {
+    .error main section h1 {
         background-color: #08267a;
         color: #ff2ee6;
         border-radius: 176px;

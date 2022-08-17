@@ -294,6 +294,39 @@
         box-shadow: 0 0 15px rgb(0 0 0 / 95%);
     }
 
+    .home main .precio{
+        margin-top: 170px;
+    }
+
+    .home main .precio-1{
+        margin-top: 200px;
+    }
+    
+    .home main .precio h3, .precio-1 h3{
+        font-family: var(--fuenteGral);
+        font-size: 15px;
+        text-align: center;
+        color: #000000;
+        margin-top: 35px; 
+    }
+    
+    .home main span{
+        font-family: var(--fuenteGral);
+        font-size: 25px;
+        text-align: center;
+        color: #000000; 
+    }
+    .home main span.precioSinDesc{
+        font-size: 15px ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 3px;
+        text-decoration: line-through;
+        margin-left: 5px;
+    }
+
     .home main .contenedor-2 .fas.fa-percentage{
         display: flex;
         height: 45px;

@@ -24,7 +24,7 @@
         "precio": 230205,
         "descuento": 15,
         "descripcion": "BATERIA ACUSTICA YAMAHA 5 CUERPOS RDP2F5 BURGANDY GLITTER, NO INCLUYE FIERROS, PLATILLOS Y PEDALES, Bombo de 22” x 16”, Timbal base de 16” x 15”, Tom de 12” x 8”, Tom de 10” x 7”, Caja de 14” x 5,5”, Sujeciones de tom CL940LB x 2, Sujeciones de toms y abrazaderas de tubos originales Yamaha. Dos sujeciones de toms de 22,2 mm de diámetro y una abrazadera de tubo. Una bola articulada proporciona máxima libertad para montar los toms en cualquier ángulo, y permite incorporar otro hardware* para poder crear la configuración perfecta para cada baterista. * El hardware debe cumplir con la especificación estándar de Yamaha de 22,2 mm.",
-        "stock": 7,
+        "stock": 6,
         "imagenes": [
             "bateria-yamaha-1.jpg",
             "bateria-yamaha-2.jpg"
@@ -39,7 +39,7 @@
         "precio": 716206,
         "descuento": 30,
         "descripcion": "Fabricada en arce/caoba con acabado brillante, Con 6 cuerdas y 22 trastes de tamaño medium jumbo, El largo de escala es de 24.75'' El puente es fijo, Incluye 2 micrófonos humbucker, Controles de selector de micrófonos, tono y volumen.Sonidos fuertes y firmes con un estilo propio.",
-        "stock": 7,
+        "stock": 5,
         "imagenes": [
             "les-paul.jpg",
             "les-paul-principal.jpg",
@@ -56,7 +56,7 @@
         "precio": 84042,
         "descuento": 0,
         "descripcion": "Amplificador combo. Potencia de salida 25 W. Tipo de conector de entrada: Jack 3.5 mm. Tipo de conector de salida: Jack 3.5 mm. Conseguí un sonido con características naturales y propias del instrumento. Pesa 8 kg. Dimensiones: 340 mm de alto x 350 mm de ancho x 215 mm de profundidad.",
-        "stock": 10,
+        "stock": 8,
         "imagenes": [
             "ampli-marshal25-1.jpg",
             "ampli-marshal25-2.jpg",
@@ -88,7 +88,7 @@
         "precio": 75000,
         "descuento": 20,
         "descripcion": "Fabricada en caoba con acabado brillante. Con 6 cuerdas y 22 trastes de tamaño medium jumbo. El largo de escala es de 25.5''. El puente es tremolo. Incluye 3 micrófonos humbucker, simples. Controles de selector de micrófonos, tono y volumen. Palanca incluida. Sonidos fuertes y firmes con un estilo propio.",
-        "stock": 13,
+        "stock": 15,
         "imagenes": [
             "guit-Yamaha-1.jpg",
             "guit-Yamaha-2.jpg",
@@ -98,12 +98,12 @@
     {
         "id": 7,
         "marca": "Behringer",
-        "titulo": "Interface Behringer U-Phoria UM2",
-        "categorias": "Cuerdas",
+        "titulo": "Interface Behringer U-Phoria",
+        "categorias": "Audio",
         "precio": 35707,
         "descuento": 10,
         "descripcion": "Contar con una buena calidad de sonido a la hora de grabar tus pistas es muy importante para dar el salto de amateur a profesional. Es por eso que esta interface de audio Behringer UM2 U-Phoria es la indicada para vos. Lográ la grabación completa Este aparato cuenta con 2 entradas, lo que te permitirá ingresar varios sonidos a la vez. La regla es que necesitás tantas entradas co líneas quieras grabar simultáneamente, es decir que podrás utilizarla para micrófonos e instrumentos y obtener una grabación completa una sola vez. Además, cuenta con 2 salidas que te permitirán conectar a tu computadora y así hacer el trabajo de forma integral. Sumá calidad Gracias a sus 48 kHz y su resolución de audio de 16 bit vas a lograr que todas tus grabaciones tengan una calidad sobresaliente y resalten las melodías de cada instrumento y cada voz. Poder fantasma activo Para dar más potencia a la señal que conectes a la interface, este producto cuenta con alimentación fantasma o phantom, que optimiza señal y brinda corriente de manera constante a todos los dispositivos de audio que conectes.",
-        "stock": 13,
+        "stock": 30,
         "imagenes": [
             "interface-berin-1.jpg",
             "interface-berin-2.jpg",
@@ -117,46 +117,45 @@
         "titulo": "Arturia Keylab Essential 61",
         "categorias": "Teclados/Pianos/Controladores",
         "precio": 68474,
-        "descuento": 20,
+        "descuento": 0,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
+        "stock": 20,
         "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
+            "arturia-midi-1.jpg",
+            "arturia-midi-2.jpg",
+            "arturia-midi-3.jpg",
+            "arturia-midi-4.jpg"
         ]
     },
     {
         "id": 9,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
+        "marca": "Line6",
+        "titulo": "Pedal de efecto Line6 POD Go",
+        "categorias": "Audio",
+        "precio": 126270,
+        "descuento": 0,
+        "descripcion": "Compatible con bajo, guitarra eléctrica. Incluye 306 efectos. Tipos de efectos: multi-efectos. Incluye pedal de expresión. Posee pantalla LCD. Trae conector de entrada dc jack, jack, jack 6.3 mm stereo, usb. Trae conector de salida jack 6.3 mm stereo, usb. Sonidos de alta calidad.",
+        "stock": 20,
         "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
+            "Line6-POD-1.jpg",
+            "Line6-POD-2.jpg",
+            "Line6-POD-3.jpg"
         ]
     },
     {
         "id": 10,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
+        "marca": "Zildjian",
+        "titulo": "Set De Platillos Zildjian",
+        "categorias": "Percusion",
+        "precio": 103368,
+        "descuento": 10,
+        "descripcion": "Set de 4 Platillos - incluye Par 13» HiHat + 14» Crash + 18» Crash Ride - ZBT SeriesLos platillos ZBT (Zildjian Bronze Technology) están hechos de aleación B8, utilizando tornos extensos y un acabado tradicional que les da textura y carácter. Ofreciendo un buen sonido y rendimiento, este set es muy adecuado para los bateristas principiantes que tocan en dormitorios, sótanos, salas de práctica y conciertos.",
+        "stock": 15,
         "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
+            "Set-Zildjian-1.jpg",
+            "Set-Zildjian-2.jpg",
+            "Set-Zildjian-3.jpg",
+            "Set-Zildjian-4.jpg"
         ]
     },
     {

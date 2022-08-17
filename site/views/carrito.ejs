@@ -17,19 +17,15 @@
         <section>
             <ul class="boleta">
                 <h2>PRODUCTO</h2>
-                <h2 class="descripcion">DESCRIPCION</h2>
                 <h2>PRECIO</h2>
                 <h2>CANTIDAD</h2>
                 <h2>TOTAL</h2>
             </ul>
                 <div>
                     <article>
-                        <section>
-                            <img class="guitarra" src="/images/<%= productos[0].imagenes[0] %>" alt="Imagen principal">
-                            <!-- <img class="guitarra" src="/images/Guitarra.png" alt="imagen guitarra"> -->
-                        </section>
-                        <!-- <p class="descripcion"><%= productos[0].titulo %></p> -->
-                        <div class="cant-precios">
+                        
+                        <img class="guitarra" src="/images/<%= productos[0].imagenes[0] %>" alt="Imagen principal">
+                        
                         <span class="primerprecio">$<%= productos[0].precio %></span>
                         <div class="cantidad">
                         <button class="restar">-</button>
@@ -37,26 +33,23 @@
                         <button class="sumar">+</button>
                         </div>
                         <span class="segundoprecio">$<%= productos[0].precio %></span>
-                        </div>
+                        
                     </article>
                     <article>
-                        <section>
-                            <img class="bateria" src="/images/<%= productos[1].imagenes[0] %>" alt="Imagen principal">
-                            <!-- <img class="bateria" src="/images/Bateria.jpg" alt="imagen bateria"> -->
-                        </section>
-                        <!-- <p class="descripcion"><%= productos.descripcion %></p> -->
-                        <div class="cant-precios">
+                        
+                        <img class="bateria" src="/images/<%= productos[1].imagenes[0] %>" alt="Imagen principal">
+                    
                         <span class="primerprecio">$<%= productos[1].precio %></span>
                         <div class="cantidad">
-                            <button class="restar">-</button>
-                            <input type="number">
-                            <button class="sumar">+</button>
+                        <button class="restar">-</button>
+                        <input type="number">
+                        <button class="sumar">+</button>
                         </div>
-                            <span class="segundoprecio">$<%= productos[1].precio %></span>
-                        </div>
+                        <span class="segundoprecio">$<%= productos[1].precio %></span>
+                        
                     </article>
                 </div>
-        </section>
+            </section>
             <!-- Recuadro verde con texto -->
             <section>
                 <p>Entrega: 
@@ -65,20 +58,14 @@
             <!-- Subtotal, Total -->
             <section>
                 <ul class="cuenta">
-                    <li class="subtotal">Subtotal</li>
-                    <li class="total">Total</li>
-                    <li class="precio1">$50000</li>
-                    <li class="precio2">$50000</li>
+                    <li class="subtotal">Subtotal : $<%= productos[0].precio + productos[1].precio %> </li>
+                    <li class="total">Total : $<%= productos[0].precio + productos[1].precio%> </li>
                 </ul>
             </section>
-            <!-- Boton FINALIZAR COMPRA -->
-            <section>
+            <section class="botones">
                 <div>
                     <button class="comprar">FINALIZAR COMPRA</button>
                 </div>
-            </section>
-            <!-- Boton BUSCAR MAS PRODUCTOS -->
-            <section>
                 <div>
                     <button class="mas">BUSCAR MAS PRODUCTOS</button>
                 </div>

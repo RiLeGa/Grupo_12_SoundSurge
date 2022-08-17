@@ -18,7 +18,7 @@
     height: 44px;
     border-radius: 16px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-left: 1vw;
 } 
@@ -64,7 +64,15 @@
 .carrito main section div .cantidad{
     width: 280px;
     padding-left: 38px;
+
 }
+
+.carrito main section div .cant-precios{
+    width: 280px;
+    padding-left: 38px;
+}
+
+
 .carrito main section div p {
     display: none;
     font-size: 10px;
@@ -90,13 +98,21 @@
 }
 .carrito main section .cuenta .subtotal,
 .carrito main section .cuenta .total{
+    display: flex;
+    justify-content: center;
     background-color: #d7bfdb;
     border: 3px solid white;
     font-size: 24px;
     padding-top: 14px;
     text-align: center;
-    padding-right: 100px;
 }
+
+.carrito main section.botones{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .carrito main section .cuenta .precio1{
     
     text-align: center;
@@ -114,24 +130,25 @@
 .carrito main section div .comprar{
     color: white;
     background-color: black;
-    height: 27px;
-    width: 170px;
+    height: 41px;
+    width: 50vw;
+    margin-left: 25vw;
     border-radius: 6px;
     font-size: 11px;
     font-weight: 900;
-    margin-left: 94px;
     margin-top: 20px;
 }
 .carrito main section div .mas{
     background-color: #2d5a2d;
     font-size: 11px;
     font-weight: 900;
-    border-radius: 11px;
-    width: 50%;
+    border-radius: 6px;
+    width: 50vw;
+    margin-left: 25vw;
     color: white;
     height: 41px;
     margin-top: 33px;
-    margin-left: 92px;
+
 }
 @media (min-width: 425px) {
     .carrito main section div .cantidad{
@@ -144,11 +161,11 @@
         color: white;
         background-color: black;
         height: 41px;
-        width: 215px;
+        width: 50vw;
+        margin-left: 25vw;
         border-radius: 6px;
         font-size: 14px;
         font-weight: 900;
-        margin-left: 91px;
         margin-top: 20px;
     }
     }
@@ -167,12 +184,12 @@
         }
 
         .carrito main section div article .guitarra{
-            width: 80%;
+            width: 15%;
             height: 200px;
             margin: 20px
         }
         .carrito main section div article .bateria{
-            width: 80%;
+            width: 15%;
             height: 200px;
             margin: 20px
         }
@@ -198,22 +215,22 @@
             font-size: 11px;
             font-weight: 900;
             border-radius: 11px;
-            width: 50%;
+            width: 50vw;
+            margin-left: 25vw;
             color: white;
             height: 41px;
             margin-top: 33px;
-            margin-left: 23%;
         }
         .carrito main section div .mas {
             background-color: #2d5a2d;
             font-size: 11px;
             font-weight: 900;
             border-radius: 11px;
-            width: 50%;
+            width: 50vw;
+            margin-left: 25vw;
             color: white;
             height: 41px;
             margin-top: 33px;
-            margin-left: 23%;
         }
         .carrito main section p {
             color: white;
@@ -227,10 +244,9 @@
         }
         .carrito main section div .cantidad{
             background-color: #ffffff;
-            margin-left: 1px;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
             }
         .carrito main section div .cantidad_2{
             background-color: #ffffff;
@@ -250,14 +266,36 @@
     }
 .carrito main section div article span.segundoprecio{
     font-size: 24px;
+    margin-right: 19px;
     }
+
+    .carrito main section ul.boleta{
+        color: #000000;
+        background-color: #ffffff;
+        border: 2px solid black;
+        width: 98vw;
+        padding: 0 18px;
+        height: 44px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 1vw;
+    } 
+
+
+    .carrito main section ul.boleta{}
+
+    .carrito main section ul.boleta{}
+
+    .carrito main section ul.boleta{}
+
 
 .carrito main section div .cantidad{
     background-color: #ffffff;
-    margin-left: -2rem;
     display: flex;
     align-items: center;
-    justify-content: space-around
+    justify-content: center
     }
 
 
@@ -279,7 +317,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-around;
     }
 
     .carrito main section div article section{

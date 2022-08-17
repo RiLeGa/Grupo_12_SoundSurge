@@ -31,3 +31,8 @@
 .lista a{
     color: black;
 }
+
+.lista .edicion{
+    display: flex;
+    justify-content: center
+}

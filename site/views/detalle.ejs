@@ -53,7 +53,7 @@
             <ul>
                 <% for( let i = 0; i < 10; i++ ) { %>
                         <article>
-                            <a href="/detalle/<%= productos[i].id %>">
+                            <a href="/productos/detalle/<%= productos[i].id %>">
                             <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')"></div>
                             <h4><%= productos[i].titulo %></h4>
                             <p>$<%= productos[i].precio %></p>

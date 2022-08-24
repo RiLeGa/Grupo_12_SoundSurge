@@ -5,30 +5,34 @@
     <%- include ("../partials/header") %> 
     <main>
         <h2>Modificar Producto</h2>
+        <a class="direct-lista" href="../lista">
+            <button type="submit" class="btn btn-primary">Lista de productos</button>
+        </a>
         <section>
-            <form action="./administrador/editar" method="put">
+            <form action="./admin/editar/<%= productos.id %>?_method=PUT">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Marca</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese nombre del producto"></div>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese nombre del producto" value="<%= producto.marca %> ">
+                </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese marca del producto">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese marca del producto" value="<%= producto.titulo %> ">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Precio</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese precio del producto">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese precio del producto" value="<%= producto.precio %>">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descuentos</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese su descuento">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese su descuento" value="<%= producto.descuento %>">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese descripcion">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese descripcion" value="<%= producto.descripcion %>">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Stock</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Stock disponible">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Stock disponible" value="<%= producto.stock %>">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Categorias</label>

@@ -52,7 +52,7 @@ header .navegacion nav ul{
     flex-direction: column;
     justify-content: space-evenly;
     width: 100vw;
-    height: 40vh;
+    height: 55vh;
 }
 header .navegacion nav ul li{
     display: flex;
@@ -192,6 +192,11 @@ header .navegacion .usuario i.fas.fa-user-circle{
         display: flex;
         height: 45px;
     }
+
+    header .navegacion nav ul .movil-tablet{
+        display: none;
+    }
+
     header .navegacion nav ul li a{
         color: white;
         font-size: 18px;

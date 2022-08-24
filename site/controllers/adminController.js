@@ -48,6 +48,7 @@ module.exports = {
     })
     /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
     return res.render('admin/editarProductos',{
+        productos,
         producto
     })
     },

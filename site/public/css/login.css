@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-position: right 0;
     background-size: 100vw 100vh;
-    background-color: var(--colorFondo);
+    background-color: black;
     font-family: var(--fuenteGral);
 }
 
@@ -15,7 +15,7 @@
 .login .logo-login img{
     width: 30%;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .login main{
@@ -105,14 +105,23 @@
     margin-left: 15px;
 }
 
+.login main .foot-log{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
 /* Tablet */
 
 @media(min-width:769px){
     .login{
-        background-image:url('../images/Fondo.jpg') ;
+        background-image:url('../images/FondoTablet.jpg') ;
         background-repeat: no-repeat;
         background-position: right 0;
-        background-size: 55vw 100vh;
+        background-size: 55vw 100%;
     }
 
     .login .logo-login img{

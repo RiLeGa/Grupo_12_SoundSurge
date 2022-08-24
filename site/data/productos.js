@@ -6,7 +6,7 @@ let ultimoId = productos[productos.length - 1].id + 1
 console.log(ultimoId);
 /* Creamos un nuevo producto */
 let nuevoProducto = {
-    id: 0,
+    id: ultimoId,
     marca: "",
     titulo: "",
     precio: 0,
@@ -14,13 +14,13 @@ let nuevoProducto = {
     descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
     stock: 0,
     imagenes: [
-        "",
+        "default.jpg"
     ]
 }
 
-/* productos.push(nuevoProducto);
-console.log(productos); */
-
+productos.push(nuevoProducto);
+/* console.log(productos);
+ */
 /* Pasamos el Objeto literal a un string */
 /* let string = JSON.stringify(productos,null,4) */
 /* Subimos los cambios y actualizaciones al json */
@@ -30,8 +30,8 @@ console.log(productos); */
 /* Editar producto */
 let ProduEdit = productos.map((element,index) => {
     if (element.id === 6) {
-        element.marca = "Iphone"
-        element.titulo = "Iphone 13 pro max plus extra super ultra violeta"
+        element.marca = ""
+        element.titulo = ""
         element.precio = 530000
         element.stock = 3
     }

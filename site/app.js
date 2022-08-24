@@ -17,9 +17,12 @@ app.set('view engine', 'ejs');
 app.use(express.static( "public"))
 
 
-app.use('/', indexRouter, adminController, productosRouter, usuariosRouter);
+app.use('/', indexRouter);
+app.use('/admin', adminController);
+app.use('/productos', productosRouter);
+app.use('/users', usuariosRouter);
 
-app.use(express.json());
+app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 app.listen(port, () => console.log(`Servidor levantado con exito en http://localhost:${port}`))

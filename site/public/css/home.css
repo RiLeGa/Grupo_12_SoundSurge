@@ -85,6 +85,11 @@
     margin-top: 35px; 
 }
 
+.home main .secciones{
+    text-align: center;
+    font-size: 45px;
+}
+
 .home main span{
     font-family: var(--fuenteGral);
     font-size: 25px;

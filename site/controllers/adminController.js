@@ -15,17 +15,17 @@ module.exports = {
         return res.render('admin/crearProductos');
     },
     store:(req,res) => {
-        let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
+        let {marca, titulo, categorias, precio, descuento, stock, descripcion} = req.body
         
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
-            marca:Marca,
-            titulo:Titulo,
-            categorias:Categoria,
-            precio:+Precio,
-            descuento:+Descuento,
-            stock:+Stock,
-            descripcion:Descripcion,
+            marca : marca,
+            titulo : titulo,
+            categorias : categorias,
+            precio:+precio,
+            descuento:+descuento,
+            stock:+stock,
+            descripcion : descripcion,
             imagenes: [
                 "default-image.png",
                 "default-image.png",
@@ -38,8 +38,9 @@ module.exports = {
         guardar(productos)
 
         /* Redirecciona a la lista de productos */
-        return res.redirect('/admin/lista')
+       /*  return res.redirect('/admin/lista') */
         /* Redirecciona al detalle del producto recien creado */
+        return res.send(req.body)
     },
     editar : (req,res) => {
     id = +req.params.id

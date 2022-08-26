@@ -6,5 +6,8 @@ module.exports = {
 
     register : (req,res) => {
         return res.render('register');
+    },
+    buscar : (req,res) =>{
+        return res.render('');
     }
 }

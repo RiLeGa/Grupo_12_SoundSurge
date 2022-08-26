@@ -19,28 +19,31 @@ module.exports = {
         
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
-            marca : marca,
-            titulo : titulo,
-            categorias : categorias,
+            marca,
+            titulo,
+            categorias,
             precio:+precio,
             descuento:+descuento,
             stock:+stock,
-            descripcion : descripcion,
+            descripcion,
             imagenes: [
                 "default-image.png",
                 "default-image.png",
                 "default-image.png",
                 "default-image.png"
-            ],
+            ]
         }
+        return res.send(req.body)
 
         productos.push(productoNuevo)
         guardar(productos)
 
+       
+
         /* Redirecciona a la lista de productos */
        /*  return res.redirect('/admin/lista') */
         /* Redirecciona al detalle del producto recien creado */
-        return res.send(req.body)
+        
     },
     editar : (req,res) => {
     id = +req.params.id

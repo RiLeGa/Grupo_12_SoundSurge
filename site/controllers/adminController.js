@@ -1,9 +1,13 @@
 const fs = require('fs')
 const path = require('path')
 let productos = require('../data/productos.json')
+const historial = require('../data/historialDeBorrado.json')
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
 ,JSON.stringify(dato,null,4),'utf-8')
+
+const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historialDeBorrado.json')
+    , JSON.stringify(dato, null, 4), 'utf-8')
 
 module.exports = {
     lista : (req,res) => {
@@ -58,7 +62,7 @@ module.exports = {
     },
     actualizar:(req,res) => {
         idParams = +req.params.id
-        let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
+        let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion,Imagenes} = req.body
 
         productos.forEach(producto => {
             if (producto.id === idParams) {
@@ -69,10 +73,37 @@ module.exports = {
                 producto.descuento = +Descuento
                 producto.stock = +Stock
                 producto.descripcion = Descripcion
+                producto.imagenes = Imagenes
             }
         })
+
         guardar(productos)
         return res.redirect('/admin/lista')
-    }
-}
 
+        /* return res.send(req.body) */
+    },
+    borrar: (req, res) => {
+        idParams = +req.params.id
+
+        let productoParaEliminar = productos.find((elemento) => {
+            return elemento.id == idParams
+        })
+
+        historial.push(productoParaEliminar)
+        guardarHistorial(historial)
+
+
+        let productosModificados = productos.filter(producto => producto.id !== idParams)
+        guardar(productosModificados)
+
+        return res.redirect('/admin/lista')
+    },
+    papelera: (req,res) => {
+        return res.render('admin/papelera', {
+            historial
+        }
+        )
+    }
+
+
+}

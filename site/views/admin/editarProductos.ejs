@@ -9,35 +9,35 @@
             <button type="submit" class="btn btn-primary">Lista de productos</button>
         </a>
         <section>
-            <form action="./admin/editar/<%= productos.id %>?_method=PUT">
+            <form action="/admin/editar/<%= producto.id %>?_method=put" method="post">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Marca</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese nombre del producto" value="<%= producto.marca %> ">
+                    <input type="text" class="form-control" name="Marca" id="formGroupExampleInput" placeholder="Ingrese nombre del producto" value="<%= producto.marca %> ">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese marca del producto" value="<%= producto.titulo %> ">
+                    <input type="text" class="form-control" name="Titulo" id="formGroupExampleInput2" placeholder="Ingrese marca del producto" value="<%= producto.titulo %> ">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Precio</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese precio del producto" value="<%= producto.precio %>">
+                    <input type="text" class="form-control" name="Precio" id="formGroupExampleInput2" placeholder="Ingrese precio del producto" value="<%= producto.precio %>">
                 </div>   
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Descuentos</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese su descuento" value="<%= producto.descuento %>">
+                    <label for="formGroupExampleInput2" class="form-label">Descuento</label>
+                    <input type="text" class="form-control" name="Descuento" id="formGroupExampleInput2" placeholder="Ingrese su descuento" value="<%= producto.descuento %>">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese descripcion" value="<%= producto.descripcion %>">
+                    <input type="text" class="form-control" name="Descripcion" id="formGroupExampleInput2" placeholder="Ingrese descripcion" value="<%= producto.descripcion %>">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Stock</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Stock disponible" value="<%= producto.stock %>">
+                    <input type="text" class="form-control" name="Stock" id="formGroupExampleInput2" placeholder="Stock disponible" value="<%= producto.stock %>">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Categorias</label>
-                    <select class="form-select" required aria-label="select example">
-                    <option selected hidden>Selecciona una opcion</option>
+                    <select class="form-select" name="Categorias" required aria-label="select example">
+                    <option selected hidden><%= producto.categorias %></option>
                     <option value="3">Audio</option>
                     <option value="1">Cuerdas</option>
                     <option value="3">Iluminacion</option>
@@ -50,12 +50,12 @@
                 </div>
                 <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">Imagenes</label>
-                <input type="file" class="form-control" aria-label="file example" required>
+                <input type="file" class="form-control" name="Imagenes" aria-label="file example" required multiple >
                 <div class="invalid-feedback">Example invalid form file feedback</div>
                 </div>
                 <div class="botones">
-                <button class="btn btn-primary" type="submit" disabled>Confirma</button>
-                <button class="btn btn-secundary" type="submit" disabled>Cancelar</button>
+                <button class="btn btn-primary" type="submit">Confirma</button>
+                <button class="btn btn-secundary" type="submit">Cancelar</button>
                 </div>
             </form>
         </section>

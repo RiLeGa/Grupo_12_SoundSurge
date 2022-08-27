@@ -26,12 +26,12 @@
                 <% productos.forEach(producto => { %>
                   <tr>
                       
-                        <th scope="row"><a href="/admin/editar/<%= producto.id %>"><%= producto.id %> </a></th>
-                        <td><a href="/admin/editar/<%= producto.id %>"><%= producto.marca %></a></td>
-                        <td colspan="1"><a href="/admin/editar/<%= producto.id %>"><%= producto.titulo %></a></td>
-                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.stock %></a></td>
-                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.precio %></a></td>
-                        <td><a href="/admin/editar/<%= producto.id %> "><%= producto.descuento %></a></td>
+                        <th scope="row"><a href="/productos/detalle/<%= producto.id %>"><%= producto.id %> </a></th>
+                        <td><a href="/productos/detalle/<%= producto.id %>"><%= producto.marca %></a></td>
+                        <td colspan="1"><a href="/productos/detalle/<%= producto.id %>"><%= producto.titulo %></a></td>
+                        <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.stock %></a></td>
+                        <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.precio %></a></td>
+                        <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.descuento %></a></td>
                         <td>
                             <div class="edicion">
                                 <a href="/admin/editar/<%= producto.id%>">

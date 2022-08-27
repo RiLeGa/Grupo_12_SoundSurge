@@ -316,5 +316,21 @@
             "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
             "168343-800-auto.png"
         ]
+    },
+    {
+        "id": 21,
+        "marca": "gibson",
+        "titulo": "guitarra gibson",
+        "categorias": "1",
+        "precio": 0,
+        "descuento": null,
+        "stock": 0,
+        "descripcion": "",
+        "imagenes": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ]
     }
 ]

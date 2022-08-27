@@ -33,17 +33,17 @@ module.exports = {
                 "default-image.png"
             ]
         }
-        return res.send(req.body)
+        
 
         productos.push(productoNuevo)
         guardar(productos)
 
-       
+        return res.redirect('/admin/lista')
 
         /* Redirecciona a la lista de productos */
-       /*  return res.redirect('/admin/lista') */
+       
         /* Redirecciona al detalle del producto recien creado */
-        
+        /* return res.send(req.body) */
     },
     editar : (req,res) => {
     id = +req.params.id

@@ -4,99 +4,69 @@
         "Nombre": "Alexa",
         "Apellido": "Battams",
         "Email": "abattams0@huffingtonpost.com",
-        "Contraseña": "BAfxMqoTBCFd",
-        "Telefono": "7256699094",
-        "Ciudad": "Rāipur",
-        "Genero": "Female"
+        "Contraseña": "BAfxMqoTBCFd"
     },
     {
         "id": 2,
         "Nombre": "Moina",
         "Apellido": "Bernette",
         "Email": "mbernette1@cbsnews.com",
-        "Contraseña": "IPZXFKDltAUm",
-        "Telefono": "3458081801",
-        "Ciudad": "Osveya",
-        "Genero": "Female"
+        "Contraseña": "IPZXFKDltAUm"
     },
     {
         "id": 3,
         "Nombre": "Carri",
         "Apellido": "Newsome",
         "Email": "cnewsome2@yelp.com",
-        "Contraseña": "qqRIpvlb",
-        "Telefono": "6316382013",
-        "Ciudad": "Patpata Segundo",
-        "Genero": "Polygender"
+        "Contraseña": "qqRIpvlb"
     },
     {
         "id": 4,
         "Nombre": "Vincenty",
         "Apellido": "Beisley",
         "Email": "vbeisley3@omniture.com",
-        "Contraseña": "F6QDr1G",
-        "Telefono": "1144960399",
-        "Ciudad": "Hinlayagan Ilaud",
-        "Genero": "Male"
+        "Contraseña": "F6QDr1G"
     },
     {
         "id": 5,
         "Nombre": "Batsheva",
         "Apellido": "Kobera",
         "Email": "bkobera4@feedburner.com",
-        "Contraseña": "JHJgdOBzdh19",
-        "Telefono": "7553758903",
-        "Ciudad": "Lancheng",
-        "Genero": "Female"
+        "Contraseña": "JHJgdOBzdh19"
     },
     {
         "id": 6,
         "Nombre": "Alfie",
         "Apellido": "Osgood",
         "Email": "aosgood5@toplist.cz",
-        "Contraseña": "dwuwEBEJ",
-        "Telefono": "1872764734",
-        "Ciudad": "Baohe",
-        "Genero": "Male"
+        "Contraseña": "dwuwEBEJ"
     },
     {
         "id": 7,
         "Nombre": "Beaufort",
         "Apellido": "Seleway",
         "Email": "bseleway6@privacy.gov.au",
-        "Contraseña": "2cfoB7Djl5LH",
-        "Telefono": "2158374370",
-        "Ciudad": "Şaḩam",
-        "Genero": "Male"
+        "Contraseña": "2cfoB7Djl5LH"
     },
     {
         "id": 8,
         "Nombre": "Melisande",
         "Apellido": "Antognelli",
         "Email": "mantognelli7@wired.com",
-        "Contraseña": "8h5RVqSWxn",
-        "Telefono": "6846030883",
-        "Ciudad": "Fontinha",
-        "Genero": "Female"
+        "Contraseña": "8h5RVqSWxn"
     },
     {
         "id": 9,
         "Nombre": "Skipp",
         "Apellido": "Hrinishin",
         "Email": "shrinishin8@yelp.com",
-        "Contraseña": "qe6bTBuMh0",
-        "Telefono": "5004153522",
-        "Ciudad": "Chonghe",
-        "Genero": "Male"
+        "Contraseña": "qe6bTBuMh0"
     },
     {
         "id": 10,
         "Nombre": "Gunner",
         "Apellido": "Gotch",
         "Email": "ggotch9@wikispaces.com",
-        "Contraseña": "RIitE3zjgUW",
-        "Telefono": "1742627745",
-        "Ciudad": "Sicheng",
-        "Genero": "Male"
+        "Contraseña": "RIitE3zjgUW"
     }
 ]

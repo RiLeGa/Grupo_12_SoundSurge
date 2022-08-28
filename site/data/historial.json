@@ -28,21 +28,5 @@
             "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
             "168343-800-auto.png"
         ]
-    },
-    {
-        "id": 19,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
-        "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
     }
 ]

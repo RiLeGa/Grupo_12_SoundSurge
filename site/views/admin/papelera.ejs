@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ("../partials/head",{title: "Papelera"}) %>
-<body class="home">
-    <%- include ("../partials/header") %> 
-    <main>
-        <div class="categorias-home">
-            <h3 class="secciones"> Eliminados </h3>
-        </div>
-        <section class="contenedor">
-            <ul>
-                <% for( let i = 0; i <= historial.lenght ; i++ ) { %>
-                    <article>
-                        <div class="producto"  style="background-image:url('./images/<%= historial[i].imagenes %>')">
-                            <div class="precio-1">
-                                <h3><%= historial.titulo %></h3>
-                                <span >$<%= historial.precio %></span>
+ <%- include('../partials/head',{title:"Papelera"}) %> 
+<body class="lista">
+
+  <%- include('../partials/header') %> 
+    <main >
+        <h1>Papelera</h1>
+        <a class="direct-crear" href="lista">
+            <button type="button" class="btn btn-primary">Lista de Productos</button>
+        </a>
+        <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">stock</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Des</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% historial.forEach(historial => { %>
+                  <tr>
+                      
+                        <th scope="row"><%= historial.id %></th>
+                        <td><%= historial.marca %></td>
+                        <td colspan="1"><%= historial.titulo %></td>
+                        <td><%= historial.stock %></td>
+                        <td><%= historial.precio %></td>
+                        <td><%= historial.descuento %></td>
+                        <td>
+                            <div class="edicion">
+                              
+                                  
                             </div>
-                        </div>
-                    </article>
-                <% } %>
-            </ul>
+                        </td>
+                      
+                      </tr>
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
     </main>
-</body>
+  </body>
 </html>

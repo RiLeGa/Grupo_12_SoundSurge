@@ -1,12 +1,12 @@
 const fs = require('fs')
 const path = require('path')
 let productos = require('../data/productos.json')
-const historial = require('../data/historialDeBorrado.json')
+const historial = require('../data/historial.json')
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
 ,JSON.stringify(dato,null,4),'utf-8')
 
-const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historialDeBorrado.json')
+const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
 module.exports = {

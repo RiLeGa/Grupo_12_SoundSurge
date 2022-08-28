@@ -19,6 +19,11 @@
     margin-left: 10vw;
 }
 
+.lista .direct-papelera{
+    width: 80vw;
+    margin-left: 2vw;
+}
+
 .lista .table.table-hover{
     width: 100%;
 }

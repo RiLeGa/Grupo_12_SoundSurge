@@ -159,130 +159,33 @@
     },
     {
         "id": 11,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
+        "marca": "Orange ",
+        "titulo": "Amplificador Orange Crush Bass ",
+        "precio": 58903,
+        "descuento": 0,
+        "stock": 5,
+        "descripcion": "amplificador combo. Potencia de salida 25 W. Tipo de conector de entrada: Jack 3.5 mm. Tipo de conector de salida: Jack 6.35 mm. Cuenta con una frecuencia mínima de 300 Hz y máxima de 2700 Hz. Conseguí un sonido con características naturales y propias del instrumento. Pesa 8.3 kg. Dimensiones: 36.5 cm de alto x 32.5 cm de ancho x 23.5 cm de profundidad.",
         "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
+            "Ampli-orange-1.jpg",
+            "Ampli-orange-2.jpg",
+            "Ampli-orange-3.jpg",
+            "Ampli-orange-4.jpg"
         ]
     },
     {
         "id": 12,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
+        "marca": "MERCADOFLASH ",
+        "titulo": "Laser Proyector X 2 ",
+        "precio": 28000,
+        "descuento": 0,
+        "stock": 15,
+        "descripcion": "- Láser Led con luces dinámicas y movimientos animados -Traza más de 3000 Puntos de distinta intensidad. Los puntos se desplazan, expanden y agrupan en patrones aleatorios, similar a los fuegos artificiales - Modo audio rítmico (Micrófono incorporado) - Modo automático - Modo Strobo (DESTELLOS) - Regulador de velocidad de efectos - Control de sensibilidad - Cooler trasero - Regulador de Velocidad - Alimentación a 110/240 V - MEDIDAS: LARGO 11 cm - ANCHO 9 cm - ALTO 3,5 cm.",
         "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
-    },
-    {
-        "id": 13,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
-        "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
-    },
-    {
-        "id": 14,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
-        "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
-    },
-    {
-        "id": 15,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
-        "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
-    },
-    {
-        "id": 16,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
-        "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
-    },
-    {
-        "id": 17,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
-        "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
-    },
-    {
-        "id": 18,
-        "marca": "Yamaha",
-        "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
-        "precio": 75000,
-        "descuento": 20,
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "stock": 13,
-        "imagenes": [
-            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
-            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
-            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
+            "proyector-laser-1.jpg",
+            "proyector-laser-2.jpg",
+            "proyector-laser-3.jpg",
+            "proyector-laser-4.jpg",
+            "proyector-laser-5.jpg"
         ]
     }
 ]

@@ -98,3 +98,12 @@
     margin-bottom: 10px;
 }
 
+.register main .foot-reg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+

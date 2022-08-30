@@ -19,3 +19,4 @@
 ## Dejar de hacer.
 
 - No subestimar las tareas.
+- Posponer daylis y desarrollo de actividades

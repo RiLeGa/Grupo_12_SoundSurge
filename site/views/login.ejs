@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include ("./partials/head",{title: "Login"}) %>
+<body class="login">
+    <main>
+        <section class="logo-login">
+                <img src="/images/LogoSoundSurge.png" alt="Logo de la empresa">
+        </section>
+        <h1>Bienvenido</h1>
+        <form action="" method="get">
+            <h4>---------------Ingresar con email---------------</h4>
+            <div class="container">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" placeholder="Ingresa tu Usuario">
+            </div>
+            <div class="container">
+                <label for="contaseña">Contraseña</label>
+                <input type="text" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="mostrar">
+                <input type="checkbox" name="mostrar" id="mostrar">
+                <label for="mostrar">Mostrar contraseña</label>
+                <a href="">Olvide mi contraseña</a>
+            </div>
+            <div class="mostrar">
+                <input type="checkbox" name="mostrar" id="mostrar">
+                <label for="mostrar">Recordarme</label>
+            </div>
+            <button type="submit" class="inicio">Iniciar sesión</button>
+
+            <h4>---------------o---------------</h4>
+
+            <button type="submit"><i class="fab fa-google"></i> Acceder con Google</button>
+
+            <button type="submit" class="face"><i class="fab fa-facebook"></i> Acceder con Facebook</button>       
+ 
+
+            <h3>¿No tiene cuenta?<a href="/users/register">Registrate</a></h3>
+
+            <div class="foot-log">
+                <a href="/">Soporte</a>
+                <a href="/">Home</a>
+                <a href="/">Contacto</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

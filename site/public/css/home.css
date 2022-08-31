@@ -1,0 +1,377 @@
+.home{
+    background-image: url(/images/FondoMovil.jpg);
+    background-color: #221d1da8;
+    background-attachment: fixed;
+    background-size: 100vw 120vh;
+    background-repeat: no-repeat;
+}
+
+.home::-webkit-scrollbar{
+    display: none;
+}
+
+.home main .contenedor, .home main .contenedor-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 4%;
+    margin-top: 10px;
+}
+.home main .contenedor ul article div.producto{ 
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 45px;
+    background-size: 65%;
+    display: block;
+    text-align: center;
+    width: 18vw;
+    height: 325px;
+    transition: 0.5s;
+    border: 1px solid black;
+}
+
+.home main .contenedor-2{
+    display: none;
+    margin-top: 25px;
+    width: 96vw;
+    height: 400px;
+    margin-left: 3vw;
+}
+
+.home main .contenedor ul{
+    display: flex;
+    width: 98%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+}
+
+.home main .contenedor ul article div.producto, .contenedor-2 ul article div.producto{
+    display: block;
+    text-align: center;
+    width: 90vw;
+    padding: 20px;
+    height: 310px;
+}
+
+.home main .contenedor img, .contenedor-2 img{
+    width: 80%;
+    height: 150px;
+}
+
+
+.home main .contenedor ul .producto h2, 
+.home main .contenedor-2 ul .producto h2{
+    font-family: var(--fuenteGral);
+    font-size: 20px;
+    text-align: center;
+    color: #5b3b4d;
+    margin-top: 10px;
+}
+
+.home main .precio{
+    margin-top: 170px;
+}
+
+.home main .precio h3{
+    font-family: var(--fuenteGral);
+    font-size: 15px;
+    text-align: center;
+    color: #000000;
+    margin-top: 35px; 
+}
+
+.home main .secciones{
+    text-align: center;
+    font-size: 45px;
+}
+
+.home main span{
+    font-family: var(--fuenteGral);
+    font-size: 25px;
+    text-align: center;
+    color: #000000; 
+}
+.home main span.precioSinDesc{
+    font-size: 15px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+ 
+.home main .categorias-home:nth-of-type(3){
+    display: none;
+}
+.home main .categorias-home:nth-of-type(4){
+    display: none;
+}
+.home main .contenedor-2 .categorias-home h3:first-child{
+    margin-bottom: -40px;
+}
+.home main .contenedor-2 .categorias-home h3:last-child{
+    margin-top: 65px;
+
+}
+
+
+.home main .contenedor p, .contenedor-2 p{
+    margin-top: 20px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-top: none;
+}
+
+.home main .spots{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.811);
+    padding: 10px 10px;
+    margin-top: 10px;
+    
+}
+
+.home main .spots .video-1 iframe.spot-1{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.home main .spots .video-2{
+    display: none;
+}
+
+
+
+@media (min-width: 461px){
+    .home{
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .home main .contenedor{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .home main .contenedor ul{
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+    }
+
+    .home main .contenedor ul article div.producto, .contenedor-2 ul article div.producto{
+        background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 45px;
+        background-size: 65%;
+        display: block;
+        text-align: center;
+        width: 40vw;
+        height: 260px;
+        margin-left: 7px;
+        transition: 0.5s;
+        box-shadow: 0 0 15px rgb(0 0 0 / 95%);
+    }
+
+    .home main .precio{
+        margin-top: 170px;
+    }
+    
+    .home main .precio h3{
+        font-family: var(--fuenteGral);
+        font-size: 15px;
+        text-align: center;
+        color: #000000;
+        margin-top: 35px; 
+    }
+    
+    .home main span{
+        font-family: var(--fuenteGral);
+        font-size: 25px;
+        text-align: center;
+        color: #000000; 
+    }
+    .home main span.precioSinDesc{
+        font-size: 15px ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 3px;
+        text-decoration: line-through;
+        margin-left: 5px;
+    }
+    
+
+    .home main .contenedor img{
+        margin-top: 20px;
+        width: 80%;
+        height: 150px;
+    }
+
+}
+
+@media (min-width: 791px){
+    .home{
+        background-image: url(/images/FondoRecital.jpg);
+        background-color: white;
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .home main .contenedor-2{
+        display: block;
+        
+    }
+
+    .home main .contenedor, .contenedor-2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 66vw;
+        margin-top: 30px;
+        margin-left: 17vw;
+        padding: 0;
+    }
+   
+    .home main .categorias-home:nth-of-type(3){
+        display: block;
+    }
+    .home main .categorias-home:nth-of-type(4){
+        display: block;
+    }
+    
+    .home main .contenedor ul, .contenedor-2 ul{
+        display: flex;
+        width: 85vw;
+        height: 400px;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-y: hidden;   
+    }
+    .home main .contenedor ul article div.producto:hover,
+    .home main .contenedor-2 ul article div.producto:hover{
+        transform: scale(1.1);
+    }
+
+
+    .home main .contenedor ul article div.producto, .contenedor-2 ul article div.producto{
+        background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 45px;
+        background-size: 65%;
+        display: block;
+        text-align: center;
+        width: 18vw;
+        height: 325px;
+        margin-left: 50px;
+        transition: 0.5s;
+        box-shadow: 0 0 15px rgb(0 0 0 / 95%);
+    }
+
+    .home main .precio{
+        margin-top: 170px;
+    }
+
+    .home main .precio-1{
+        margin-top: 200px;
+    }
+    
+    .home main .precio h3, .precio-1 h3{
+        font-family: var(--fuenteGral);
+        font-size: 15px;
+        text-align: center;
+        color: #000000;
+        margin-top: 35px; 
+    }
+    
+    .home main span{
+        font-family: var(--fuenteGral);
+        font-size: 25px;
+        text-align: center;
+        color: #000000; 
+    }
+    .home main span.precioSinDesc{
+        font-size: 15px ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 3px;
+        text-decoration: line-through;
+        margin-left: 5px;
+    }
+
+    .home main .contenedor-2 .fas.fa-percentage{
+        display: flex;
+        height: 45px;
+        width: 45px;
+        padding: 6% 2%;
+        font-size: 15px;
+        justify-content: flex-start;
+        border: 2px solid black;
+        border-radius: 50%;
+        color: darkviolet;
+    }
+    
+    .home main .spots{
+        display: flex;
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        margin-top: 150px;
+        margin-bottom: 50px;
+        justify-content: space-around;
+    }
+    .home main .spots div.video-1{
+        display: flex;
+        width: 45%;
+        height: 300px;
+    }
+    .home main .spots .video-1 iframe.spot-1{
+        display: flex;
+        width: 100%;
+        height: 230px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    .home main .spots div.video-2{
+        display: flex;
+        width: 45%;
+        height: 300px;
+    }
+    .home main .spots .video-2 iframe.spot-2{
+        width: 100%;
+    }
+}

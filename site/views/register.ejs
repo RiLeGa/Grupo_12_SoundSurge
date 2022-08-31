@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include ("./partials/head",{title: "Registro"}) %>
+<body class="register">
+    <main>
+        <section class="container-register">
+            <h1>Registro.</h1>
+            <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
+        <div class="icons">
+            <i class="fas fa-user"></i>
+        </div>
+        <form action="" method="get">
+            <div class="container">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="container">
+                <label for="surname">Apellido</label>
+                <input type="text" name="surname" id="surname" placeholder="Ingresa tu apellido">
+            </div>
+            <div class="container">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="container">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="container">
+                <label for="confirmar">Confirmar contraseña</label>
+                <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña">
+            </div>
+            
+            <button type="submit" class="enviar">Enviar</button>
+            
+        <h4>--------------- Registrarse con -----------------</h4>
+            <button type="submit" class="facebook"><i class="fab fa-facebook"></i> Registrarte con Facebook</button>
+            
+        
+            <button type="submit" class="google"><i class="fab fa-google"></i> Registrarte con Google</button>
+
+        </form>
+        <div class="foot-reg">
+            <a href="/">Soporte</a>
+            <a href="/">Home</a>
+            <a href="/">Contacto</a>
+        </div>
+    </section>                  
+    </main>
+</body>
+</html>

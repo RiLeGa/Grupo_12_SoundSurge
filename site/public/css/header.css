@@ -1,0 +1,293 @@
+header{
+    display: flex;
+}
+
+header .navegacion {
+    background-color: rgb(0, 0, 0);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width:  100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+header .navegacion .logo{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    margin-left: 20px;
+}
+header .navegacion label.burguer i{
+    width: 2vw;
+    color: #8d1888;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+header .navegacion input{
+    display: none;
+}
+header .navegacion input:checked ~ nav {
+    display: block;
+    z-index: 1;
+}
+header .navegacion .busqueda{
+    display: flex;
+    padding: 0 10px;
+}
+header .navegacion .busqueda input{
+    display: none;
+}
+header .navegacion nav{
+    display: none;
+    align-items: center;
+    margin-top: 60px;
+    position: absolute;
+}
+
+header .navegacion nav ul{
+    display: flex;
+    background-color: #8d1888;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 55vh;
+}
+header .navegacion nav ul li{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    height: 50px;
+}
+header .navegacion nav ul li a{
+    color: white;
+    font-size: 20px;
+}
+
+header .navegacion .busqueda i.fas.fa-search{
+    display: block;
+    color: #8d1888;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 0 5px;
+    margin-left: 100px;
+}
+
+header .navegacion .carrito i.fas.fa-shopping-cart{
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+header .navegacion .usuario i.fas.fa-user-circle{
+    display: none;
+}
+
+
+/*Tablet*/
+
+@media (min-width: 461px){
+    header section{
+        background-color: black;
+        width:  100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+    }
+    header .navegacion label.burguer i{
+        width: 2vw;
+        color: #8d1888;
+        font-size: 20px;
+        margin-top: 20px;
+        padding-left: 25px;
+    }
+
+    header .navegacion .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    header .navegacion img{
+        display: block;
+        width: 100px;
+        padding-right: 3px;
+    }
+    header .navegacion .busqueda {
+        display: flex;
+        margin-top: 4px;
+        margin-right: 10px;
+    }
+
+    header .navegacion .busqueda input{
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+        width: 30vw;
+        height: 20px;
+        margin-top: 18px;
+        border: none;
+    }
+    header .navegacion .busqueda i.fas.fa-search{
+        display: flex;
+        color: #8d1888;
+        font-size: 20px;
+        margin: 18px 10px 0 5px;
+        padding: 0 5px;
+    }
+
+    header .navegacion .carrito i.fas.fa-shopping-cart{
+        color: #ffffff;
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 795px) {
+    header{
+        background-color: black;
+        width:  100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .navegacion .burguer{
+        display: none;
+    }
+    header img{
+        display: block;
+        width: 110px;
+        padding: 0 10px;
+    }
+    header .navegacion nav{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 35vw;
+        margin-top: 0;
+        position: inherit;
+    }
+
+    header .navegacion nav.opcionesDePerfil{
+        display: none;
+    }
+
+    header .navegacion nav ul{
+        display: flex;
+        background-color: black;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 30vw;
+        height: 50vh;
+        height: auto;
+        color: white;
+    }
+    header .navegacion nav ul li{
+        display: flex;
+        height: 45px;
+    }
+
+    header .navegacion nav ul .movil-tablet{
+        display: none;
+    }
+
+    header .navegacion nav ul li a{
+        color: white;
+        font-size: 18px;
+        padding-right: 30px;
+    }
+    header .navegacion .burguer{
+         display: none;
+    }
+
+    header .navegacion .carrito i.fas.fa-shopping-cart{
+        color: #ffffff;
+        font-size: 20px;
+        margin-top: 3px;
+        padding: 0 10px;
+    }
+    header .navegacion .usuario i.fas.fa-user-circle{
+        display: block;
+        color: #fbfbfb;
+        font-size: 20px;
+        margin-top: 2px;
+        padding: 1px 10px;
+    }
+    header .navegacion label.perfil,
+   header .navegacion .btn-neon{
+        position: relative;
+        display: inline-block;
+        padding: 17px 12px;
+        transition: 0.2s;
+        border-radius: 10%;
+    }
+    header .navegacion label.perfil:hover,
+    header .navegacion .btn-neon:hover{
+        background: #8d1888;
+    }
+
+    /*usuario*/
+
+    header .navegacion label.perfil i.fas .fa-user-circle{
+        width: 2vw;
+        color: #8d1888;
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+    header .navegacion input#perfil{
+        display: none;
+    }
+    header .navegacion input#perfil:checked ~ nav.opcionesDePerfil {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+    }
+
+    header .navegacion nav.opcionesDePerfil{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 15vw;
+        left: 85vw;
+        margin-top: 0;
+        position: inherit;
+    }
+    
+    header .navegacion nav.opcionesDePerfil{
+        display: none;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+    }
+
+    header .navegacion nav.opcionesDePerfil ul{
+        display: flex;
+        background-color: #000000;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 15vw;
+        height: 45vh;
+    }
+    header .navegacion nav.opcionesDePerfil ul li{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background-color: black;
+        height: 50px;
+    }
+    header .navegacion nav.opcionesDePerfil ul li a{
+        color: white;
+        font-size: 20px;
+    }
+
+}

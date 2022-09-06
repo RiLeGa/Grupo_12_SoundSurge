@@ -19,6 +19,8 @@ module.exports = {
         return res.render('admin/crearProductos');
     },
     store:(req,res) => {
+        
+
         let {marca, titulo, categorias, precio, descuento, stock, descripcion} = req.body
         
         let productoNuevo = {
@@ -30,12 +32,7 @@ module.exports = {
             descuento:+descuento,
             stock:+stock,
             descripcion,
-            imagenes: [
-                "default-image.png",
-                "default-image.png",
-                "default-image.png",
-                "default-image.png"
-            ]
+            imagenes: (req.files.length === 4) ? img : ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png']
         }
         
 

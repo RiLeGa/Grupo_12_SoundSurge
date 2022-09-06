@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 const path = require ("path")
 const methodOverride = require('method-override')
+const multer = require("multer")
 
 /* necesraio para usar GET y POST */
 app.use(express.json())

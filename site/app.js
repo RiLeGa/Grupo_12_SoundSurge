@@ -28,5 +28,9 @@ app.use('/admin', adminController);
 app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
 
+app.use((req, res, next) => {
+    res.status(404).render("error404")
+})
+
 
 module.exports = app;

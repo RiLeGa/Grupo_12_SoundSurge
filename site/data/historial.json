@@ -28,5 +28,19 @@
             "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
             "168343-800-auto.png"
         ]
+    },
+    {
+        "id": 13,
+        "marca": "pepin ",
+        "titulo": "tatilu ",
+        "precio": 45220000,
+        "descuento": 15,
+        "stock": 15,
+        "descripcion": "ahfailsbnvvsn vsf vsf",
+        "imagenes": [
+            "ampli-marshal25-1.jpg",
+            "ampli-marshal25-2.jpg",
+            "ampli-marshal25-3.jpg"
+        ]
     }
 ]

@@ -66,6 +66,4 @@ ________________________________________________________________________________
 
 ________________________________________________________________________________
 
-### Link al tablero de Trello.
-![Trello](https://trello.com/b/eMPnRInH/proyectogrupo12)
-
+[![Trello(https://trello.com/b/eMPnRInH/proyectogrupo12)]

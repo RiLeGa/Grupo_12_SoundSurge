@@ -1,0 +1,20 @@
+/* Fuenta a utilizar */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+:root{
+    /* Fuentes */
+    --fuenteGral : Oswald;
+    /* Colores */
+    --colorRosa:#FF29A9;
+    --colorCeleste:#8BD1E3;
+    --colorNegro:#000000;
+    --colorBlanco: aliceblue;
+    --colorRojo:#fa0019;
+    --colorGris:rgb(136, 136, 136);
+    --colorGrisOscuro:#464444;
+    --colorVioleta:#271177;
+    --colorBlanco :white;
+    --colorFondo : #684242;
+    --colorDeBorde:#040731;
+    --ColorRegister:#0d0b0b;
+}

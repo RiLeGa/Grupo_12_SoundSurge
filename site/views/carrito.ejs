@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include ("./partials/head",{title: "Tu carrito"}) %>
+</head>
+<body class="carrito">
+    <%- include ("./partials/header") %> 
+                                                <!--  M A I N  -->
+    <main>
+        <section>
+            <h1>Mi carrito</h1>
+        </section>
+            <!-- Producto, precio, etc -->
+        <section>
+                
+        </section>
+            <!-- Productos -->
+        <section>
+            <ul class="boleta">
+                <h2>PRODUCTO</h2>
+                <h2>PRECIO</h2>
+                <h2>CANTIDAD</h2>
+                <h2>TOTAL</h2>
+            </ul>
+                <div>
+                    <article>
+                        
+                        <img class="guitarra" src="/images/<%= productos[0].imagenes[0] %>" alt="Imagen principal">
+                        
+                        <span class="primerprecio">$<%= productos[0].precio %></span>
+                        <div class="cantidad">
+                        <button class="restar">-</button>
+                        <input type="number">
+                        <button class="sumar">+</button>
+                        </div>
+                        <span class="segundoprecio">$<%= productos[0].precio %></span>
+                        
+                    </article>
+                    <article>
+                        
+                        <img class="bateria" src="/images/<%= productos[1].imagenes[0] %>" alt="Imagen principal">
+                    
+                        <span class="primerprecio">$<%= productos[1].precio %></span>
+                        <div class="cantidad">
+                        <button class="restar">-</button>
+                        <input type="number">
+                        <button class="sumar">+</button>
+                        </div>
+                        <span class="segundoprecio">$<%= productos[1].precio %></span>
+                        
+                    </article>
+                </div>
+            </section>
+            <!-- Recuadro verde con texto -->
+            <section>
+                <p>Entrega: 
+                    Vea todas las opciones de envio para sus productos, incluyendo los plazos y los precios de envio.</p>
+            </section>
+            <!-- Subtotal, Total -->
+            <section>
+                <ul class="cuenta">
+                    <li class="subtotal">Subtotal : $<%= productos[0].precio + productos[1].precio %> </li>
+                    <li class="total">Total : $<%= productos[0].precio + productos[1].precio%> </li>
+                </ul>
+            </section>
+            <section class="botones">
+                <div>
+                    <button class="comprar">FINALIZAR COMPRA</button>
+                </div>
+                <div>
+                    <button class="mas">BUSCAR MAS PRODUCTOS</button>
+                </div>
+            </section>
+        </section>
+    </main>
+                                            <!--  F O O T E R  -->
+    <%- include ("./partials/footer") %> 
+</body>
+</html>

@@ -1,0 +1,139 @@
+.home main .carrousel{
+    display: none;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;  
+}
+.carrousel ul{
+    display: flex;
+    width: 400%;
+    animation: cambio 15s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    position: relative;
+}
+.carrousel ul .img-carrousel {
+    display: flex;
+    width: 100vw;
+    position: relative;
+}
+.carrousel ul .img-carrousel .anuncios{
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carrousel ul img{
+    width: 100%;
+    height: 200px
+}
+
+
+
+@keyframes cambio {
+    0% {margin-left: 0%;}
+    25% {margin-left: 0%;}
+
+    30% {margin-left: -100%;}
+    55% {margin-left: -100%;} 
+
+    60% {margin-left: -200%;}
+    85% {margin-left: -200%;}
+
+    90% {margin-left: -300%;}
+    100% {margin-left: -300%;} 
+}
+
+/*Tablet*/
+
+@media (min-width: 461px){
+
+.home main .carrousel{
+    display: none;
+    width: 100%;
+    height: 250px;
+    overflow: hidden; 
+    position: relative; 
+}
+.carrousel ul{
+    display: flex;
+    width: 400%;
+    animation: cambio 20s infinite alternate ease-in-out;
+    position: relative;
+}
+.carrousel ul .img-carrousel{
+    display: flex;
+    width: 100vw;
+}
+.carrousel ul {
+    list-style: none;
+    width: 400vw;
+}
+.carrousel ul img{
+    width: 100%;
+    height: 250px
+}
+
+
+@keyframes cambio {
+    0% {margin-left: 0%;}
+    25% {margin-left: 0%;}
+
+    30% {margin-left: -100%;}
+    55% {margin-left: -100%;} 
+
+    60% {margin-left: -200%;}
+    85% {margin-left: -200%;}
+
+    90% {margin-left: -300%;}
+    100% {margin-left: -300%;} 
+}
+
+}
+
+/*Desktop*/
+
+@media (min-width: 791px){
+
+    .home main .carrousel{
+        display: inline-block;
+        width: 100%;
+        height: 350px;
+        position: relative;
+        overflow:hidden; 
+    }
+    .home main .carrousel ul::-webkit-scrollbar,
+    .carrousel-2 ul::-webkit-scrollbar{
+        display: none;
+    }
+    .carrousel ul{
+        display: flex;
+        width: 400%;
+        animation: cambio 20s infinite alternate ease-in-out;
+        position: relative;
+    }
+    .carrousel ul .img-carrousel{
+        display: flex;
+        width: 100vw;
+    }
+
+    .carrousel ul img{
+        width: 100%;
+        height: 350px
+    }
+    
+    @keyframes cambio {
+        0% {margin-left: 0%;}
+        25% {margin-left: 0%;}
+    
+        30% {margin-left: -100%;}
+        55% {margin-left: -100%;} 
+    
+        60% {margin-left: -200%;}
+        85% {margin-left: -200%;}
+
+        90% {margin-left: -300%;}
+        100% {margin-left: -300%;} 
+    }
+}

@@ -1,0 +1,69 @@
+[
+    {
+        "id": 21,
+        "marca": "gibson   ",
+        "titulo": "guitarra gibson   ",
+        "precio": 150000,
+        "descuento": 15,
+        "stock": 25,
+        "descripcion": "alta guitarra pa",
+        "imagenes": [
+            "arturia-midi-1.jpg",
+            "arturia-midi-2.jpg",
+            "arturia-midi-3.jpg"
+        ]
+    },
+    {
+        "id": 20,
+        "marca": "Yamaha",
+        "titulo": "Guitarra Yamaha PAC012",
+        "categorias": "Cuerdas",
+        "precio": 75000,
+        "descuento": 20,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 13,
+        "imagenes": [
+            "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
+            "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
+            "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
+            "168343-800-auto.png"
+        ]
+    },
+    {
+        "id": 14,
+        "marca": "kbvkjfbj ",
+        "titulo": "bjsnfjlsnblsknb",
+        "categorias": "2",
+        "precio": 1828282992,
+        "descuento": 25,
+        "stock": 5,
+        "descripcion": "ksvhaba lk ssibasfñkln ñaibs fijkasñjfbviñSBNV BAIBSF NOB K",
+        "imagenes": [
+            null
+        ]
+    },
+    {
+        "id": 13,
+        "marca": "kbvkjfbj ",
+        "titulo": "bjsnfjlsnblsknb",
+        "categorias": "2",
+        "precio": 1828282992,
+        "descuento": 25,
+        "stock": 5,
+        "descripcion": "ksvhaba lk ssibasfñkln ñaibs fijkasñjfbviñSBNV BAIBSF NOB K",
+        "imagenes": [
+            ""
+        ]
+    },
+    {
+        "id": 13,
+        "marca": "kbvkjfbj ",
+        "titulo": "bjsnfjlsnblsknb",
+        "categorias": "2",
+        "precio": 1828282992,
+        "descuento": 25,
+        "stock": 5,
+        "descripcion": "ksvhaba lk ssibasfñkln ñaibs fijkasñjfbviñSBNV BAIBSF NOB K",
+        "imagenes": []
+    }
+]

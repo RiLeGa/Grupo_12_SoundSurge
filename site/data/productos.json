@@ -187,5 +187,33 @@
             "proyector-laser-4.jpg",
             "proyector-laser-5.jpg"
         ]
+    },
+    {
+        "id": 13,
+        "precio": null,
+        "descuento": null,
+        "stock": null,
+        "imagenes": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ]
+    },
+    {
+        "id": 14,
+        "marca": "gibson",
+        "titulo": "tatilu",
+        "categorias": "3",
+        "precio": 5678978879,
+        "descuento": 20,
+        "stock": 5,
+        "descripcion": "jhvhjvgvycggvjhv",
+        "imagenes": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ]
     }
 ]

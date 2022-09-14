@@ -32,7 +32,7 @@ module.exports = {
             descuento:+descuento,
             stock:+stock,
             descripcion,
-            imagenes: (req.files.length === 4) ? img : ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png']
+            imagenes: ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png']
         }
         
 

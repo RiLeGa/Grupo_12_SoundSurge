@@ -9,26 +9,39 @@
         <div class="icons">
             <i class="fas fa-user"></i>
         </div>
-        <form action="" method="get">
+        <form action="/users/register" method="post">
             <div class="container">
-                <label for="name">Nombre</label>
-                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre">
+                <label for="nombre">nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
             </div>
             <div class="container">
-                <label for="surname">Apellido</label>
-                <input type="text" name="surname" id="surname" placeholder="Ingresa tu apellido">
+                <label for="apellido">apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido">
             </div>
             <div class="container">
-                <label for="email">Email</label>
+                <label for="direccion">direccion</label>
+                <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion">
+            </div>
+            <div class="container">
+                <label for="telefono">telefono</label>
+                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono">
+            </div>
+            <div class="container">
+                <label for="email">email</label>
                 <input type="email" name="email" id="email" placeholder="Ingresa tu email">
             </div>
             <div class="container">
-                <label for="contraseña">Contraseña</label>
+                <label for="contraseña">contraseña</label>
                 <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
             </div>
             <div class="container">
                 <label for="confirmar">Confirmar contraseña</label>
                 <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña">
+            </div>
+
+            <div class="container container-img">
+                <label for="imagen">Subi tu imagen aqui</label>
+                <input type="file" name="imagen" id="imagen">
             </div>
             
             <button type="submit" class="enviar">Enviar</button>

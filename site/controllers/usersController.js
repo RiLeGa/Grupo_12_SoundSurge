@@ -1,3 +1,14 @@
+const fs = require('fs')
+const path = require('path')
+let usuarios = require('../data/usuarios.json')
+const historial = require('../data/historial.json')
+
+const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
+,JSON.stringify(dato,null,4),'utf-8')
+
+const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
+    , JSON.stringify(dato, null, 4), 'utf-8')
+
 
 module.exports = {
     login : (req,res) => {
@@ -6,6 +17,33 @@ module.exports = {
 
     register : (req,res) => {
         return res.render('register');
+    },
+    newUser:(req,res) => {
+        
+
+        let {nombre, apellido, direccion, telefono, email, contraseña} = req.body
+        
+        let nuevoUsuario = {
+            id: usuarios[usuarios.length - 1].id + 1,
+            nombre,
+            apellido,
+            direccion,
+            telefono:+telefono,
+            email,
+            contraseña,
+            imagen: ['default-image.png']
+        }
+        
+
+        usuarios.push(nuevoUsuario)
+        guardar(usuarios)
+
+        return res.redirect('/users/login')
+
+        /* Redirecciona a la lista de productos */
+       
+        /* Redirecciona al detalle del producto recien creado */
+        /* return res.send(req.body) */
     },
     buscar : (req,res) =>{
         return res.render('');

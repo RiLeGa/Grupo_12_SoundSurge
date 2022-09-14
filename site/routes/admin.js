@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {crear, editar, lista, store, actualizar, borrar, papelera} = require('../controllers/adminController')
+const {crear, editar, lista, store, actualizar, borrar, papelera, userlist} = require('../controllers/adminController')
 
 /* GET admin pages. */
 router.get('/crear', crear);
@@ -14,5 +14,8 @@ router.delete('/borrar/:id', borrar);
 router.get('/papelera', papelera)
 
 router.get('/lista', lista);
+
+router.get('/userlist', userlist)
+
 
 module.exports = router;

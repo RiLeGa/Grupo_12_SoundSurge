@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 let productos = require('../data/productos.json')
+let usuarios = require('../data/usuarios.json')
 const historial = require('../data/historial.json')
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
@@ -104,6 +105,12 @@ module.exports = {
             historial
         }
         )
+    },
+    userlist : (req,res) => {
+        return res.render('admin/listaDeUsuarios',{
+            usuarios
+        });
+
     }
 
 

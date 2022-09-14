@@ -1,72 +1,38 @@
 [
     {
         "id": 1,
-        "Nombre": "Alexa",
-        "Apellido": "Battams",
-        "Email": "abattams0@huffingtonpost.com",
-        "Contraseña": "BAfxMqoTBCFd"
+        "nombre": "Moina",
+        "apellido": "Bernette",
+        "direccion": "Calle falsa 123",
+        "telefono": 1144558855,
+        "email": "mbernette1@cbsnews.com",
+        "contraseña": "IPZXFKDltAUm",
+        "imagen": [
+            "default-image.png"
+        ]
     },
     {
         "id": 2,
-        "Nombre": "Moina",
-        "Apellido": "Bernette",
-        "Email": "mbernette1@cbsnews.com",
-        "Contraseña": "IPZXFKDltAUm"
+        "nombre": "leandro",
+        "apellido": "rios",
+        "direccion": "evergreen 123",
+        "telefono": 1155447788,
+        "email": "leandro@surge.com",
+        "contraseña": "123456",
+        "imagen": [
+            "default-image.png"
+        ]
     },
     {
         "id": 3,
-        "Nombre": "Carri",
-        "Apellido": "Newsome",
-        "Email": "cnewsome2@yelp.com",
-        "Contraseña": "qqRIpvlb"
-    },
-    {
-        "id": 4,
-        "Nombre": "Vincenty",
-        "Apellido": "Beisley",
-        "Email": "vbeisley3@omniture.com",
-        "Contraseña": "F6QDr1G"
-    },
-    {
-        "id": 5,
-        "Nombre": "Batsheva",
-        "Apellido": "Kobera",
-        "Email": "bkobera4@feedburner.com",
-        "Contraseña": "JHJgdOBzdh19"
-    },
-    {
-        "id": 6,
-        "Nombre": "Alfie",
-        "Apellido": "Osgood",
-        "Email": "aosgood5@toplist.cz",
-        "Contraseña": "dwuwEBEJ"
-    },
-    {
-        "id": 7,
-        "Nombre": "Beaufort",
-        "Apellido": "Seleway",
-        "Email": "bseleway6@privacy.gov.au",
-        "Contraseña": "2cfoB7Djl5LH"
-    },
-    {
-        "id": 8,
-        "Nombre": "Melisande",
-        "Apellido": "Antognelli",
-        "Email": "mantognelli7@wired.com",
-        "Contraseña": "8h5RVqSWxn"
-    },
-    {
-        "id": 9,
-        "Nombre": "Skipp",
-        "Apellido": "Hrinishin",
-        "Email": "shrinishin8@yelp.com",
-        "Contraseña": "qe6bTBuMh0"
-    },
-    {
-        "id": 10,
-        "Nombre": "Gunner",
-        "Apellido": "Gotch",
-        "Email": "ggotch9@wikispaces.com",
-        "Contraseña": "RIitE3zjgUW"
+        "nombre": "thomas",
+        "apellido": "tejeda",
+        "direccion": "caballos blancos 1220",
+        "telefono": 1133664499,
+        "email": "thomas@surge.com",
+        "contraseña": "456789",
+        "imagen": [
+            "default-image.png"
+        ]
     }
 ]

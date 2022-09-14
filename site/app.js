@@ -34,7 +34,7 @@ app.use((req, res, next) => {
 })
 
 
-// catch 404 and forward to error handler
+/* // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
   });
@@ -48,7 +48,7 @@ app.use(function(req, res, next) {
     // render the error page
     res.status(err.status || 500);
     res.render('error404');
-  });
+  }); */
 
 
 module.exports = app;

@@ -1,12 +1,15 @@
 const fs = require('fs')
 const path = require('path')
 let usuarios = require('../data/usuarios.json')
-const historial = require('../data/historial.json')
+const { validationResult } = require('express-validator')
+
+const historialUsuarios = require('../data/historialUsuarios.json')
+
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
 ,JSON.stringify(dato,null,4),'utf-8')
 
-const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
+const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historialUsuarios.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
 
@@ -31,7 +34,7 @@ module.exports = {
             telefono:+telefono,
             email,
             contraseña,
-            imagen: ['default-image.png']
+            imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png"
         }
         
 
@@ -40,9 +43,9 @@ module.exports = {
 
         return res.redirect('/users/login')
 
-        /* Redirecciona a la lista de productos */
+        /* Redirecciona a login */
        
-        /* Redirecciona al detalle del producto recien creado */
+        /* Redirecciona al detalle del usuario recien creado */
         /* return res.send(req.body) */
     },
     buscar : (req,res) =>{

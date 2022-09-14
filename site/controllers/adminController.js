@@ -3,11 +3,15 @@ const path = require('path')
 let productos = require('../data/productos.json')
 let usuarios = require('../data/usuarios.json')
 const historial = require('../data/historial.json')
+const historialUsuarios = require('../data/historialUsuarios.json')
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
 ,JSON.stringify(dato,null,4),'utf-8')
 
 const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
+    , JSON.stringify(dato, null, 4), 'utf-8')
+
+const guardarHistorialU = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historialUsuario.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
 module.exports = {
@@ -22,7 +26,7 @@ module.exports = {
     store:(req,res) => {
         
 
-        let {marca, titulo, categorias, precio, descuento, stock, descripcion} = req.body
+        let {marca, titulo, categorias, precio, descuento, stock, descripcion, imagenes} = req.body
         
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
@@ -106,12 +110,31 @@ module.exports = {
         }
         )
     },
+    //visualiza vista con listado de usuarios//
     userlist : (req,res) => {
         return res.render('admin/listaDeUsuarios',{
             usuarios
         });
+    },
+    borrarUsuario: (req, res) => {
+        idParams = +req.params.id
 
+        let usuarioEliminar = usuarios.find((elemento) => {
+            return elemento.id == idParams
+        })
+
+        historialUsuarios.push(usuarioEliminar)
+        guardarHistorialU(historialUsuarios)
+
+
+        let usuariosModificados = usuarios.filter(usuario => usuario.id !== idParams)
+        guardar(usuariosModificados)
+
+        return res.redirect('/admin/lista')
+    },
+    papeleraUsuarios: (req,res) => {
+        return res.render('admin/papeleraDeUsuarios', {
+            historialUsuarios
+        })
     }
-
-
 }

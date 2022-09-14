@@ -107,3 +107,13 @@
     margin-top: 20px;
 }
 
+.register main .terminos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--fuenteGral);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+

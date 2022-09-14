@@ -27,8 +27,20 @@
                       <td><%= usuario.direccion %></td>
                       <td><%= usuario.telefono %></td>
                       <td><%= usuario.email %></td>
-                      <td><%= usuario.imagen %></td>
-                    </tr>
+                      <td><img class="usuario" id="imgMain" src="/images/<%= usuario.imagen %>" alt="Imagen principal"></td>
+                      <td>
+                        <div class="edicion">
+                            <a href="/">
+                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                            </a>
+                            <a href="/">
+                            <form action="borrarUsuario/<%= usuario.id%>?_method=DELETE" method="post">
+                              <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                            </form>
+                            </a>
+                        </div>
+                    </td>
+                  </tr>
                 <% }) %>
             </tbody>
           </table>

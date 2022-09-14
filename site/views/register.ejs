@@ -4,12 +4,15 @@
 <body class="register">
     <main>
         <section class="container-register">
-            <h1>Registro.</h1>
+            <h1>Registro</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
-        <div class="icons">
-            <i class="fas fa-user"></i>
-        </div>
-        <form action="/users/register" method="post">
+        <form action="/users/register" method="post" enctype="multipart/form-data">
+            <div class="icons">
+                <i class="fas fa-user"></i>
+                <div class="container container-img">
+                    <input type="file" name="imagen" id="imagen">
+                </div>
+            </div>
             <div class="container">
                 <label for="nombre">nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
@@ -38,10 +41,11 @@
                 <label for="confirmar">Confirmar contraseña</label>
                 <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña">
             </div>
+           
 
-            <div class="container container-img">
-                <label for="imagen">Subi tu imagen aqui</label>
-                <input type="file" name="imagen" id="imagen">
+            <div class="terminos">
+                <input type="checkbox" name="terminos" id="terminos">
+                <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
             
             <button type="submit" class="enviar">Enviar</button>

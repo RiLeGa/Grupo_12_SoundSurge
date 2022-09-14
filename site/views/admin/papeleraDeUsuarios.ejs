@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+ <%- include('../partials/head',{title:"Papelera"}) %> 
+<body class="lista">
+
+  <%- include('../partials/header') %> 
+    <main >
+        <h1>Papelera</h1>
+        <a class="direct-crear" href="lista">
+            <button type="button" class="btn btn-primary">Lista de Productos</button>
+        </a>
+        <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">apellido</th>
+                <th scope="col">direccion</th>
+                <th scope="col">telefono</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% historialUsuarios.forEach(historialUsuarios => { %>
+                  <tr>
+                      
+                        <th scope="row"><%= historialUsuarios.id %></th>
+                        <td><%= historialUsuarios.nombre %></td>
+                        <td colspan="1"><%= historialUsuarios.apellido %></td>
+                        <td><%= historialUsuarios.direccion %></td>
+                        <td><%= historialUsuarios.telefono %></td>
+                        <td><%= historialUsuarios.email %></td>
+                        <td>
+  
+                        </td>
+                      
+                      </tr>
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
+    </main>
+  </body>
+</html>

@@ -51,11 +51,14 @@ module.exports = {
     let producto = productos.find((elemento) => {
         return elemento.id == id
     })
+    
     /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
     return res.render('admin/editarProductos',{
         productos,
         producto
+        
     })
+    
     },
     actualizar:(req,res) => {
         idParams = +req.params.id
@@ -75,6 +78,7 @@ module.exports = {
         })
 
         guardar(productos)
+
         return res.redirect('/admin/lista')
 
         /* return res.send(req.body) */

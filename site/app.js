@@ -29,6 +29,10 @@ app.use('/admin', adminController);
 app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
 
+app.use((req, res, next) => {
+    res.status(404).render("error404")
+})
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

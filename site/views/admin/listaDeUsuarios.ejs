@@ -33,11 +33,9 @@
                             <a href="/">
                                 <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                             </a>
-                            <a href="/">
-                            <form action="borrarUsuario/<%= usuario.id%>?_method=DELETE" method="post">
+                            <form action="borrarUsuario/<%= usuarios.id%>?_method=delete" method="post">
                               <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </form>
-                            </a>
                         </div>
                     </td>
                   </tr>

@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-app.use(express.static( "public"))
+app.use(express.static("public"))
 
 const indexRouter = require('./routes/index');
 const productosRouter = require('./routes/productos');
@@ -30,7 +30,7 @@ app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
 
 app.use((req, res, next) => {
-    res.status(404).render("error404")
+    res.status(404).render("error")
 })
 
 

@@ -3,15 +3,12 @@ const path = require('path')
 let productos = require('../data/productos.json')
 let usuarios = require('../data/usuarios.json')
 const historial = require('../data/historial.json')
-const historialUsuarios = require('../data/historialUsuarios.json')
+
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
 ,JSON.stringify(dato,null,4),'utf-8')
 
 const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
-    , JSON.stringify(dato, null, 4), 'utf-8')
-
-const guardarHistorialU = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historialUsuario.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
 module.exports = {
@@ -119,16 +116,9 @@ module.exports = {
     borrarUsuario: (req, res) => {
         idParams = +req.params.id
 
-        let usuarioEliminar = usuarios.find((elemento) => {
-            return elemento.id == idParams
-        })
 
-        historialUsuarios.push(usuarioEliminar)
-        guardarHistorialU(historialUsuarios)
-
-
-        let usuariosModificados = usuarios.filter(usuario => usuario.id !== idParams)
-        guardar(usuariosModificados)
+        let usuarios = usuarios.filter(usuario => usuario.id !== idParams)
+        guardar(usuarios)
 
         return res.redirect('/admin/lista')
     },

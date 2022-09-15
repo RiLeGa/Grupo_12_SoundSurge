@@ -1,17 +1,5 @@
 [
     {
-        "id": 1,
-        "nombre": "Moina",
-        "apellido": "Bernette",
-        "direccion": "Calle falsa 123",
-        "telefono": 1144558855,
-        "email": "mbernette1@cbsnews.com",
-        "contraseña": "IPZXFKDltAUm",
-        "imagen": [
-            "default-image.png"
-        ]
-    },
-    {
         "id": 2,
         "nombre": "leandro",
         "apellido": "rios",
@@ -34,5 +22,23 @@
         "imagen": [
             "default-image.png"
         ]
+    },
+    {
+        "id": 4,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "1663",
+        "telefono": 1159003729,
+        "email": "leandroriosga@gmail.com",
+        "imagen": "avatar-1663182792203.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "1663",
+        "telefono": 0,
+        "email": "leandroriosga@gmail.com",
+        "imagen": "avatar-1663215905543.jpg"
     }
 ]

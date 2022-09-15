@@ -3,14 +3,8 @@ const path = require('path')
 let usuarios = require('../data/usuarios.json')
 const { validationResult } = require('express-validator')
 
-const historialUsuarios = require('../data/historialUsuarios.json')
-
-
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
 ,JSON.stringify(dato,null,4),'utf-8')
-
-const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historialUsuarios.json')
-    , JSON.stringify(dato, null, 4), 'utf-8')
 
 
 module.exports = {

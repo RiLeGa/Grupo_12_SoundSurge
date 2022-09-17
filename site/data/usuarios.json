@@ -22,14 +22,5 @@
         "imagen": [
             "default-image.png"
         ]
-    },
-    {
-        "id": 4,
-        "nombre": "Rios",
-        "apellido": "Gabriel",
-        "direccion": "1663",
-        "telefono": 1159003729,
-        "email": "leandroriosga@gmail.com",
-        "imagen": "avatar-1663366805164.png"
     }
 ]

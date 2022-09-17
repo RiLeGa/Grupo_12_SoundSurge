@@ -9,42 +9,63 @@
         <form action="/users/register" method="post" enctype="multipart/form-data">
             <div class="icons">
                 <i class="fas fa-user"> <input type="file" name="imagen" id="imagen"> </i>
-                <!-- <div class="container container-img">
-                    <input type="file" name="imagen" id="imagen">
-                </div> -->
             </div>
             <div class="container">
                 <label for="nombre">nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null%>">
+                <% if (locals.errors && errors.nombre) { %>
+                    <small><%= errors.nombre.msg %></small>
+                <% } %>
             </div>
             <div class="container">
                 <label for="apellido">apellido</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido">
+                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"value="<%= locals.old && old.apellido ? old.apellido : null%>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <small><%= errors.apellido.msg %></small>
+                <% } %>
             </div>
             <div class="container">
                 <label for="direccion">direccion</label>
-                <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion">
+                <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion"value="<%= locals.old && old.direccion ? old.direccion : null%>">
+                <% if (locals.errors && errors.direccion) { %>
+                    <small><%= errors.direccion.msg %></small>
+                <% } %>
             </div>
             <div class="container">
                 <label for="telefono">telefono</label>
-                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono">
+                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono"value="<%= locals.old && old.telefono ? old.telefono : null%>">
+                <% if (locals.errors && errors.telefono) { %>
+                    <small><%= errors.telefono.msg %></small>
+                <% } %>
             </div>
             <div class="container">
                 <label for="email">email</label>
-                <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email"value="<%= locals.old && old.email ? old.email : null%>">
+                <% if (locals.errors && errors.email) { %>
+                    <small><%= errors.email.msg %></small>
+                <% } %>
             </div>
             <div class="container">
                 <label for="contraseña">contraseña</label>
                 <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
+                <% if (locals.errors && errors.contraseña) { %>
+                    <small><%= errors.contraseña.msg %></small>
+                <% } %>
             </div>
             <div class="container">
                 <label for="confirmar">Confirmar contraseña</label>
                 <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña">
+                <% if (locals.errors && errors.confirmar) { %>
+                    <small><%= errors.confirmar.msg %></small>
+                <% } %>
             </div>
            
 
             <div class="terminos">
                 <input type="checkbox" name="terminos" id="terminos">
+                <% if (locals.errors && errors.terminos) { %>
+                    <small><%= errors.terminos.msg %></small>
+                <% } %>
                 <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
             

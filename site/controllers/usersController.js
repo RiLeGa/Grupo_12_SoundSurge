@@ -18,6 +18,15 @@ module.exports = {
     },
     newUser:(req,res) => {
         
+        let errors = validationResult(req)
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'imagen',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+        if (errors.isEmpty()) {
 
         let {nombre, apellido, direccion, telefono, email, contraseña} = req.body
         
@@ -42,6 +51,20 @@ module.exports = {
        
         /* Redirecciona al detalle del usuario recien creado */
         /* return res.send(req.body) */
+
+    } else {
+
+            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', dato))
+            if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
+                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', req.file.filename))
+            }
+            
+            /* return res.send(errors.mapped()) */
+            return res.render('users/register', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
     },
     login : (req,res) => {
         return res.render('login');

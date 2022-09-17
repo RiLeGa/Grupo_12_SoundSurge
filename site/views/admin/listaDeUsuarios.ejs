@@ -30,10 +30,7 @@
                       <td><img class="usuario" id="imgMain" src="/images/<%= usuario.imagen %>" alt="Imagen principal"></td>
                       <td>
                         <div class="edicion">
-                            <a href="/">
-                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                            </a>
-                            <form action="borrarUsuario/<%= usuarios.id%>?_method=delete" method="post">
+                            <form action="borrarUsuario/<%= usuario.id%>?_method=DELETE" method="post">
                               <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </form>
                         </div>

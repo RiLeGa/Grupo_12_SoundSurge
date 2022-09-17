@@ -6,14 +6,15 @@ const { validationResult } = require('express-validator')
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
 ,JSON.stringify(dato,null,4),'utf-8')
 
+const guardarU = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
+,JSON.stringify(dato,null,4),'utf-8')
 
 module.exports = {
-    login : (req,res) => {
-        return res.render('login');
-    },
 
     register : (req,res) => {
-        return res.render('register');
+        return res.render('register',{
+            req
+        });
     },
     newUser:(req,res) => {
         
@@ -40,6 +41,35 @@ module.exports = {
         /* Redirecciona a login */
        
         /* Redirecciona al detalle del usuario recien creado */
+        /* return res.send(req.body) */
+    },
+    login : (req,res) => {
+        return res.render('login');
+    },
+    editarUsuario : (req,res) => {
+        return res.render('perfilDeUsuario', {
+            usuarios
+        });
+    },
+    actualizarUsuario:(req,res) => {
+        idParams = +req.params.id
+        let {nombre, apellido, direccion, telefono, email, imagenes} = req.body
+
+        productos.forEach(producto => {
+            if (producto.id === idParams) {
+                producto.nombre = nombre
+                producto.apellido = apellido
+                producto.direccion = direccion
+                producto.direccion = +telefono
+                producto.email = +email
+                producto.imagenes = imagenes
+            }
+        })
+
+        guardarU(usuarios)
+
+        return res.redirect('/')
+
         /* return res.send(req.body) */
     },
     buscar : (req,res) =>{

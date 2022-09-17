@@ -8,6 +8,9 @@ const historial = require('../data/historial.json')
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
 ,JSON.stringify(dato,null,4),'utf-8')
 
+const guardarU = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
+,JSON.stringify(dato,null,4),'utf-8')
+
 const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
@@ -117,10 +120,10 @@ module.exports = {
         idParams = +req.params.id
 
 
-        let usuarios = usuarios.filter(usuario => usuario.id !== idParams)
-        guardar(usuarios)
+        usuarios = usuarios.filter(usuario => usuario.id !== idParams)
+        guardarU(usuarios)
 
-        return res.redirect('/admin/lista')
+        return res.redirect('/')
     },
     papeleraUsuarios: (req,res) => {
         return res.render('admin/papeleraDeUsuarios', {

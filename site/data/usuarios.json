@@ -24,16 +24,6 @@
         ]
     },
     {
-        "id": 4,
-        "nombre": "Rios",
-        "apellido": "Gabriel",
-        "direccion": "1663",
-        "telefono": 1159003729,
-        "email": "leandroriosga@gmail.com",
-        "contrasenia": "Leandro2",
-        "imagen": "avatar-1663447228884.png"
-    },
-    {
         "id": 5,
         "nombre": "rodrigo",
         "apellido": "rodriguez",
@@ -42,5 +32,35 @@
         "email": "rodri@email.com",
         "contrasenia": "leandro2",
         "imagen": "avatar-1663448090957.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "1663",
+        "telefono": 1236548987,
+        "email": "leandroriosga@gmail.com",
+        "contrasenia": "123456789",
+        "imagen": "avatar-1663484480689.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "1663",
+        "telefono": 987654321,
+        "email": "leandroriosga@gmail.com",
+        "contrasenia": "321654987",
+        "imagen": "avatar-1663484563979.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "1663",
+        "telefono": 1159003729,
+        "email": "leandroriosga@gmail.com",
+        "contrasenia": "321654987",
+        "imagen": "avatar-1663484659612.jpg"
     }
 ]

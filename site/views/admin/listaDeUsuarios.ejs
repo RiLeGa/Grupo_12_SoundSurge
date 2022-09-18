@@ -27,7 +27,7 @@
                       <td><%= usuario.direccion %></td>
                       <td><%= usuario.telefono %></td>
                       <td><%= usuario.email %></td>
-                      <td><img class="usuario" id="imgMain" src="/images/<%= usuario.imagen %>" alt="Imagen principal"></td>
+                      <td><img class="usuario" id="imgMain" src="/images/users/<%= usuario.imagen %>" alt="Imagen principal"></td>
                       <td>
                         <div class="edicion">
                             <form action="borrarUsuario/<%= usuario.id%>?_method=DELETE" method="post">

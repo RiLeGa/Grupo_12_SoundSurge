@@ -22,5 +22,25 @@
         "imagen": [
             "default-image.png"
         ]
+    },
+    {
+        "id": 4,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "1663",
+        "telefono": 1159003729,
+        "email": "leandroriosga@gmail.com",
+        "contrasenia": "Leandro2",
+        "imagen": "avatar-1663447228884.png"
+    },
+    {
+        "id": 5,
+        "nombre": "rodrigo",
+        "apellido": "rodriguez",
+        "direccion": "irgoin 2537",
+        "telefono": 1165478967,
+        "email": "rodri@email.com",
+        "contrasenia": "leandro2",
+        "imagen": "avatar-1663448090957.png"
     }
 ]

@@ -28,7 +28,7 @@ module.exports = {
         }
         if (errors.isEmpty()) {
 
-        let {nombre, apellido, direccion, telefono, email, contraseña} = req.body
+        let {nombre, apellido, direccion, telefono, email, contrasenia} = req.body
         
         let nuevoUsuario = {
             id: usuarios[usuarios.length - 1].id + 1,
@@ -37,7 +37,7 @@ module.exports = {
             direccion,
             telefono:+telefono,
             email,
-            contraseña,
+            contrasenia,
             imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png"
         }
         
@@ -54,9 +54,9 @@ module.exports = {
 
     } else {
 
-            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', dato))
+            let ruta = (dato) => fs.existsSync(path.join(__dirname, 'public', 'images', 'users', dato))
             if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', req.file.filename))
+                fs.unlinkSync(path.join(__dirname, 'public', 'images', 'users', req.file.filename))
             }
             
             /* return res.send(errors.mapped()) */
@@ -78,14 +78,14 @@ module.exports = {
         idParams = +req.params.id
         let {nombre, apellido, direccion, telefono, email, imagenes} = req.body
 
-        productos.forEach(producto => {
-            if (producto.id === idParams) {
-                producto.nombre = nombre
-                producto.apellido = apellido
-                producto.direccion = direccion
-                producto.direccion = +telefono
-                producto.email = +email
-                producto.imagenes = imagenes
+        usuarios.forEach(usuario => {
+            if (usuario.id === idParams) {
+                usuario.nombre = nombre
+                usuario.apellido = apellido
+                usuario.direccion = direccion
+                usuario.direccion = +telefono
+                usuario.email = +email
+                usuario.imagenes = imagenes
             }
         })
 

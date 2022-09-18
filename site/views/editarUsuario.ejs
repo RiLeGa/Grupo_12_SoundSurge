@@ -12,7 +12,7 @@
             </div>
             <div class="container">
                 <label for="nombre">nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null%>">
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= usuario.nombre %> <%= locals.old && old.nombre ? old.nombre : null%>">
                 <% if (locals.errors && errors.nombre) { %>
                     <small><%= errors.nombre.msg %></small>
                 <% } %>

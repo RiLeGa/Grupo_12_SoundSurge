@@ -27,16 +27,16 @@ module.exports = [
     .isEmail().withMessage('Debe ingresar un email valido'),
 
     /* Contraseña */
-    check('contraseña')
+    check('contrasenia')
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(),
     check('confirmar')
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(),
 
     /* terminos */
     check('terminos')
-    .notEmpty().withMessage('Debe Aceptar nuestros terminos y condiciones'),
+    .notEmpty().withMessage('Debe Aceptar nuestros terminos y condiciones').bail(),
 
     body('confirmar')
-    .custom((value,{req}) => value !== req.body.pass ? false : true)
-    .withMessage('Las contraseñas no coinciden')
+    .custom((value,{req}) => value !== req.body.contrasenia ? false : true)
+    .withMessage('Las contraseñas no coinciden').bail()
 ]

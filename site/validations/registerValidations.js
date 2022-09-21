@@ -28,7 +28,7 @@ module.exports = [
 
     /* Contraseña */
     check('contrasenia')
-    .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(),
+    .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
     check('confirmar')
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(),
 

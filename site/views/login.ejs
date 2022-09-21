@@ -7,15 +7,21 @@
                 <img src="/images/LogoSoundSurge.png" alt="Logo de la empresa">
         </section>
         <h1>Bienvenido</h1>
-        <form action="" method="get">
+        <form action="/users/login" method="post">
             <h4>---------------Ingresar con email---------------</h4>
             <div class="container">
-                <label for="usuario">Usuario</label>
-                <input type="text" name="usuario" id="usuario" placeholder="Ingresa tu Usuario">
+                <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                    <% if (locals.errors && errors.email) { %>
+                        <small><%= errors.email.msg %></small>
+                    <% } %>
             </div>
             <div class="container">
-                <label for="contaseña">Contraseña</label>
-                <input type="text" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
+                <label for="contrasenia">Contraseña</label>
+                    <input type="contrasenia" name="contrasenia" id="contrasenia" placeholder="Ingresa tu contraseña">
+                    <% if (locals.errors && errors.contrasenia) { %>
+                        <small><%= errors.pass.msg %></small>
+                    <% } %>
             </div>
             <div class="mostrar">
                 <input type="checkbox" name="mostrar" id="mostrar">
@@ -23,8 +29,8 @@
                 <a href="">Olvide mi contraseña</a>
             </div>
             <div class="mostrar">
-                <input type="checkbox" name="mostrar" id="mostrar">
-                <label for="mostrar">Recordarme</label>
+                <input type="checkbox" name="recordarme" id="recordarme">
+                    <label for="recordarme">Recordarme</label>
             </div>
             <button type="submit" class="inicio">Iniciar sesión</button>
 

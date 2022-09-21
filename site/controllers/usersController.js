@@ -38,7 +38,8 @@ module.exports = {
             telefono:+telefono,
             email,
             contrasenia,
-            imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png"
+            imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
+            rol : "usuario"
         }
         
 
@@ -68,6 +69,24 @@ module.exports = {
     },
     login : (req,res) => {
         return res.render('login');
+    },
+    inLogin:(req,res) => {
+
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+        
+            const {email} = req.body
+            let usuario = usuarios.find(user => user.email === email)
+
+            req.session.userLogin = {
+                id : usuario.id,
+                nombre : usuario.nombre,
+                image : usuario.imagen,
+                rol : usuario.rol
+            }
+            return res.redirect('/users/profile')
+            /* return res.send(req.body) */
+        }
     },
     editarUsuario : (req,res) => {
         return res.render('perfilDeUsuario', {

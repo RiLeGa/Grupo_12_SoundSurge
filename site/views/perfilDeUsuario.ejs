@@ -3,12 +3,13 @@
     <%- include ("./partials/head",{title: "Perfil del usuario"}) %>
 <body class="detalle">
     <%- include ("./partials/header") %> 
-    <main class="detalleDeProd">
-        <section class="sectionDetail">
-            <div class="vistas">
-                
-            </div>
-        </section>
+    <main>
+        <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
+        <h1>Hola <%= `${locals.userLogin.rol} ${locals.userLogin.nombre}` %></h1>
+        
+        <form action="/users/logout?_method=DELETE" method="post">
+            <button type="submit">Cerrar Sesion</button>
+        </form>
     </main>
     <%- include ("./partials/footer") %> 
 </body>

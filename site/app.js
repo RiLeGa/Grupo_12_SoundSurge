@@ -1,9 +1,11 @@
-const express = require("express")
-const app = express()
-const port = 3000
-const path = require ("path")
-const methodOverride = require('method-override')
-const multer = require("multer")
+const express = require("express");
+const app = express();
+const path = require ("path");
+const createError = require('http-errors');
+const methodOverride = require('method-override');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session = require('express-session');
 
 /* necesraio para usar GET y POST */
 app.use(express.json())
@@ -12,17 +14,27 @@ app.use(express.urlencoded({ extended: false }));
 /* necesario para utilizar DELETE y PUT */
 app.use(methodOverride('_method'))
 
-
+app.use(cookieParser());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+const userLogin = require('./middlewares/userLoginCheck')
 
 
 app.use(express.static("public"))
 
 const indexRouter = require('./routes/index');
 const productosRouter = require('./routes/productos');
-const adminController = require('./routes/admin')
-const usuariosRouter = require('./routes/usuarios')
+const adminController = require('./routes/admin');
+const usuariosRouter = require('./routes/usuarios');
+
+app.use(logger('dev'));
+
+app.use(session({
+  secret: "La Comision 17"
+}))
+
+app.use(userLogin)
 
 app.use('/', indexRouter);
 app.use('/admin', adminController);

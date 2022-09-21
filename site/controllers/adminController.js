@@ -24,8 +24,20 @@ module.exports = {
         return res.render('admin/crearProductos');
     },
     store:(req,res) => {
-        
+        let errors = validationResult(req)
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'imagen',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
 
+        if (errors.isEmpty()) {
+            let img = req.files.map(imagen => {
+                return imagen.filename
+            })
+        
         let {marca, titulo, categorias, precio, descuento, stock, descripcion, imagenes} = req.body
         
         let productoNuevo = {
@@ -37,7 +49,7 @@ module.exports = {
             descuento:+descuento,
             stock:+stock,
             descripcion,
-            imagenes: ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png']
+            imagenes: (req.files.length === 4) ? img : ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png'],
         }
         
 
@@ -50,6 +62,20 @@ module.exports = {
        
         /* Redirecciona al detalle del producto recien creado */
         /* return res.send(req.body) */
+    } else {
+        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', dato))
+
+        req.files.forEach(imagen => {
+            if (ruta(imagen) && (imagen !== "default-image.png")) {
+                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', imagen))
+            }
+        })
+        /* return res.send(errors.mapped()) */
+        return res.render('admin/crearProductos', {
+            errors: errors.mapped(),
+            old: req.body
+        })
+    }
     },
     editar : (req,res) => {
     id = +req.params.id

@@ -55,9 +55,9 @@ module.exports = {
 
     } else {
 
-            let ruta = (dato) => fs.existsSync(path.join(__dirname, 'public', 'images', 'users', dato))
+            let ruta = (dato) => fs.existsSync(path.join(__dirname, "..", "..", 'public', 'images', 'users', dato))
             if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, 'public', 'images', 'users', req.file.filename))
+                fs.unlinkSync(path.join(__dirname, "..", "..", 'public', 'images', 'users', req.file.filename))
             }
             
             /* return res.send(errors.mapped()) */

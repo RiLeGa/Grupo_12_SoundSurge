@@ -7,18 +7,8 @@ module.exports = [
     .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres'),
     
     /* Apellido */
-    check('apellido').trim()
-    .notEmpty().withMessage('Debe ingresar su apellido').bail()
-    .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres'),
-
-    /* Direccion */
-    check('direccion').trim()
-    .notEmpty().withMessage('Debe ingresar su nombre').bail()
-    .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres'),
-    
-    /* Telefono */
-    check('telefono').trim()
-    .notEmpty().withMessage('Debe ingresar su apellido').bail()
+    check('apellido')
+    .notEmpty().withMessage('Debe ingresar su apellido')
     .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres'),
 
     /* Email */
@@ -34,7 +24,7 @@ module.exports = [
 
     /* terminos */
     check('terminos')
-    .notEmpty().withMessage('Debe Aceptar nuestros terminos y condiciones').bail(),
+    .notEmpty().withMessage('Debe Aceptar nuestros terminos y condiciones'),
 
     body('confirmar')
     .custom((value,{req}) => value !== req.body.contrasenia ? false : true)

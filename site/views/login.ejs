@@ -7,8 +7,8 @@
                 <img src="/images/LogoSoundSurge.png" alt="Logo de la empresa">
         </section>
         <h1>Bienvenido</h1>
-        <form action="/users/login" method="post" enctype="multipart/form-data">
-            <h4>---------------Ingresar con email---------------</h4>
+        <h4>---------------Ingresar con email---------------</h4>
+        <form action="/users/login" method="post">
             <div class="container">
                 <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Ingresa tu email">
@@ -24,13 +24,8 @@
                     <% } %>
             </div>
             <div class="mostrar">
-                <input type="checkbox" name="mostrar" id="mostrar">
-                <label for="mostrar">Mostrar contraseña</label>
-                <a href="">Olvide mi contraseña</a>
-            </div>
-            <div class="mostrar">
                 <input type="checkbox" name="recordarme" id="recordarme">
-                    <label for="recordarme">Recordarme</label>
+                    <label for="recordarme" >Recordarme</label>
             </div>
             <button type="submit" class="inicio">Iniciar sesión</button>
         </form>

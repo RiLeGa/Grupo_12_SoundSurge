@@ -6,11 +6,11 @@
         "direccion": "evergreen 123",
         "telefono": 1155447788,
         "email": "leandro@surge.com",
-        "contrasenia": "123456",
+        "contrasenia": "12345678",
         "imagen": [
             "perfil-lean.jpg"
         ],
-        "rol" : "admin"
+        "rol": "admin"
     },
     {
         "id": 3,
@@ -23,7 +23,7 @@
         "imagen": [
             "default-image.png"
         ],
-        "rol" : "usuario"
+        "rol": "usuario"
     },
     {
         "id": 4,
@@ -34,7 +34,7 @@
         "email": "leandroriosga@gmail.com",
         "contrasenia": "Leandro2",
         "imagen": "avatar-1663447228884.png",
-        "rol" : "usuario"
+        "rol": "usuario"
     },
     {
         "id": 5,
@@ -45,6 +45,18 @@
         "email": "rodri@email.com",
         "contrasenia": "leandro2",
         "imagen": "avatar-1663448090957.png",
-        "rol" : "usuario"
+        "rol": "usuario"
+    },
+    {
+        "id": 6,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "1663",
+        "telefono": 1159003729,
+        "email": "ririos@surge.com",
+        "contrasenia": "123456789",
+        "imagen": "avatar-1663915792466.jpg",
+        "rol": "usuario"
     }
+    
 ]

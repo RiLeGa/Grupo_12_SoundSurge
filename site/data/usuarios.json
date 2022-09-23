@@ -6,7 +6,7 @@
         "direccion": "evergreen 123",
         "telefono": 1155447788,
         "email": "leandro@surge.com",
-        "contraseña": "123456",
+        "contrasenia": "123456",
         "imagen": [
             "perfil-lean.jpg"
         ],
@@ -19,7 +19,7 @@
         "direccion": "caballos blancos 1220",
         "telefono": 1133664499,
         "email": "thomas@surge.com",
-        "contraseña": "456789",
+        "contrasenia": "456789",
         "imagen": [
             "default-image.png"
         ],

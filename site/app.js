@@ -28,18 +28,19 @@ const productosRouter = require('./routes/productos');
 const adminController = require('./routes/admin');
 const usuariosRouter = require('./routes/usuarios');
 
-app.use(logger('dev'));
-
-app.use(session({
-  secret: "La Comision 17"
-}))
-
-app.use(userLogin)
-
 app.use('/', indexRouter);
 app.use('/admin', adminController);
 app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
+
+app.use(logger('dev'));
+
+app.use(session({
+  secret: "Feel the Sound"
+}))
+
+app.use(userLogin)
+
 
 app.use((req, res, next) => {
     res.status(404).render("error")

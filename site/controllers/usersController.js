@@ -75,18 +75,19 @@ module.exports = {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
         
-            const {email} = req.body
+            let {email} = req.body
             let usuario = usuarios.find(user => user.email === email)
-
+    
             req.session.userLogin = {
                 id : usuario.id,
                 nombre : usuario.nombre,
                 image : usuario.imagen,
                 rol : usuario.rol
             }
+            return res.send(req.body)
             return res.redirect('/users/profile')
-            /* return res.send(req.body) */
         }
+        
     },
     editarUsuario : (req,res) => {
         return res.render('perfilDeUsuario', {

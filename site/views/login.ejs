@@ -7,7 +7,7 @@
                 <img src="/images/LogoSoundSurge.png" alt="Logo de la empresa">
         </section>
         <h1>Bienvenido</h1>
-        <form action="/users/login" method="post">
+        <form action="/users/login" method="post" enctype="multipart/form-data">
             <h4>---------------Ingresar con email---------------</h4>
             <div class="container">
                 <label for="email">Email</label>
@@ -18,9 +18,9 @@
             </div>
             <div class="container">
                 <label for="contrasenia">Contraseña</label>
-                    <input type="contrasenia" name="contrasenia" id="contrasenia" placeholder="Ingresa tu contraseña">
+                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa tu contraseña">
                     <% if (locals.errors && errors.contrasenia) { %>
-                        <small><%= errors.pass.msg %></small>
+                        <small><%= errors.contrasenia.msg %></small>
                     <% } %>
             </div>
             <div class="mostrar">
@@ -33,8 +33,8 @@
                     <label for="recordarme">Recordarme</label>
             </div>
             <button type="submit" class="inicio">Iniciar sesión</button>
-
-            <h4>---------------o---------------</h4>
+        </form>
+        <h4>---------------o---------------</h4>
 
             <button type="submit"><i class="fab fa-google"></i> Acceder con Google</button>
 
@@ -48,7 +48,6 @@
                 <a href="/">Home</a>
                 <a href="/">Contacto</a>
             </div>
-        </form>
     </main>
 </body>
 </html>

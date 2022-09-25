@@ -28,7 +28,7 @@ header .navegacion label.burguer i{
 header .navegacion input{
     display: none;
 }
-header .navegacion input:checked ~ nav {
+header .navegacion input:checked ~ nav.opcionesDePerfil-Movil {
     display: block;
     z-index: 1;
 }
@@ -39,14 +39,14 @@ header .navegacion .busqueda{
 header .navegacion .busqueda input{
     display: none;
 }
-header .navegacion nav{
+header .navegacion nav.opcionesDePerfil-Movil{
     display: none;
     align-items: center;
     margin-top: 60px;
     position: absolute;
 }
 
-header .navegacion nav ul{
+header .navegacion nav.opcionesDePerfil-Movil ul{
     display: flex;
     background-color: #8d1888;
     flex-direction: column;
@@ -54,7 +54,7 @@ header .navegacion nav ul{
     width: 100vw;
     height: 55vh;
 }
-header .navegacion nav ul li{
+header .navegacion nav.opcionesDePerfil-Movil ul li{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -62,9 +62,21 @@ header .navegacion nav ul li{
     background-color: black;
     height: 50px;
 }
-header .navegacion nav ul li a{
+header .navegacion nav.opcionesDePerfil-Movil ul li a{
     color: white;
     font-size: 20px;
+}
+
+header .navegacion nav.opcionesDePerfil-Movil form.exit{
+    display: contents;
+}
+
+header .navegacion nav.opcionesDePerfil-Movil button.logout{
+    background: black;
+    color: #dbdbdb;
+    font-size: 20px;
+    padding: 15px 12px;
+    border: none;
 }
 
 header .navegacion .busqueda i.fas.fa-search{
@@ -83,6 +95,12 @@ header .navegacion .carrito i.fas.fa-shopping-cart{
     padding: 0 10px;
 }
 header .navegacion .usuario i.fas.fa-user-circle{
+    display: none;
+}
+header .navegacion label.perfil{
+    display: none;
+}
+header .navegacion nav.opcionesDePerfil{
     display: none;
 }
 
@@ -143,6 +161,9 @@ header .navegacion .usuario i.fas.fa-user-circle{
         font-size: 20px;
         margin-top: 20px;
         padding: 0 10px;
+    }
+    header .navegacion label.perfil{
+        display: none;
     }
 }
 

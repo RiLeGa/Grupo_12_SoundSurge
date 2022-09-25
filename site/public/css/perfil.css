@@ -1,0 +1,12 @@
+.credencial{
+    display: flex;
+}
+
+.credencial img{
+    width: 200px;
+    height: 300px;
+}
+
+.credencial h2{
+    font-size: 20px;
+}

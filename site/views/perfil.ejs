@@ -4,9 +4,10 @@
 <body>
     <%- include ("./partials/header") %> 
     <main>
-        <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
-        <h1>Hola <%= `${locals.userLogin.rol} ${locals.userLogin.nombre}` %></h1>
-        
+        <div class="credencial">
+            <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
+            <h2>Hola <%= `${locals.userLogin.rol} ${locals.userLogin.nombre}` %></h2>
+        </div>
         <form class="exit" action="/users/logout?_method=DELETE" method="post">
             <button class="logout" type="submit">Cerrar Sesion</button>
         </form>

@@ -20,6 +20,13 @@ app.set('view engine', 'ejs');
 
 const userLogin = require('./middlewares/userLoginCheck')
 
+app.use(session({
+  secret: "Feel the Sound"
+}))
+
+app.use(userLogin)
+
+app.use(logger('dev'));
 
 app.use(express.static("public"))
 
@@ -32,14 +39,6 @@ app.use('/', indexRouter);
 app.use('/admin', adminController);
 app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
-
-app.use(logger('dev'));
-
-app.use(session({
-  secret: "Feel the Sound"
-}))
-
-app.use(userLogin)
 
 
 app.use((req, res, next) => {
@@ -60,7 +59,7 @@ app.use(function(req, res, next) {
   
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.render('error404');
   });
 
 

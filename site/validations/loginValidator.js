@@ -15,7 +15,7 @@ module.exports = [
 
     body('email')
     .custom((value,{req}) =>{
-        usuario = usuarios.find(user => user.email === value && bcryptjs.compareSync(req.body.contrasenia, user.contrasenia))
+        let usuario = usuarios.find(user => user.email === value && bcryptjs.compareSync(req.body.contrasenia, user.contrasenia))
 
         if (usuario) {
             return true

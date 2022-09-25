@@ -1,62 +1,46 @@
 [
     {
-        "id": 2,
+        "id": 5,
         "nombre": "leandro",
         "apellido": "rios",
-        "direccion": "evergreen 123",
-        "telefono": 1155447788,
+        "direccion": "",
+        "telefono": "",
         "email": "leandro@surge.com",
-        "contrasenia": "12345678",
-        "imagen": [
-            "perfil-lean.jpg"
-        ],
+        "contrasenia": "$2a$12$dYuCHaTuLPHgGecbpC7eIeUetyKe.RGs8GKmRHx2ExVpieHnkX67u",
+        "imagen": "avatar-1663972664180.png",
         "rol": "admin"
     },
     {
-        "id": 3,
-        "nombre": "thomas",
-        "apellido": "tejeda",
-        "direccion": "caballos blancos 1220",
-        "telefono": 1133664499,
-        "email": "thomas@surge.com",
-        "contrasenia": "456789",
-        "imagen": [
-            "default-image.png"
-        ],
-        "rol": "usuario"
-    },
-    {
-        "id": 4,
-        "nombre": "Rios",
-        "apellido": "Gabriel",
-        "direccion": "1663",
-        "telefono": 1159003729,
-        "email": "leandroriosga@gmail.com",
-        "contrasenia": "Leandro2",
-        "imagen": "avatar-1663447228884.png",
-        "rol": "usuario"
-    },
-    {
         "id": 5,
-        "nombre": "rodrigo",
-        "apellido": "rodriguez",
-        "direccion": "irgoin 2537",
-        "telefono": 1165478967,
-        "email": "rodri@email.com",
-        "contrasenia": "leandro2",
-        "imagen": "avatar-1663448090957.png",
+        "nombre": "matias",
+        "apellido": "rios",
+        "direccion": "",
+        "telefono": "",
+        "email": "leandro@soundsurge.com",
+        "contrasenia": "$2a$12$dYuCHaTuLPHgGecbpC7eIeUetyKe.RGs8GKmRHx2ExVpieHnkX67u",
+        "imagen": "avatar-1663972664180.png",
         "rol": "usuario"
     },
     {
         "id": 6,
-        "nombre": "Rios",
-        "apellido": "Gabriel",
-        "direccion": "1663",
-        "telefono": 1159003729,
-        "email": "ririos@surge.com",
-        "contrasenia": "123456789",
-        "imagen": "avatar-1663915792466.jpg",
+        "nombre": "thomas",
+        "apellido": "tejeda",
+        "direccion": "",
+        "telefono": "",
+        "email": "thomas@surge.com",
+        "contrasenia": "$2a$12$PVNvDnobLLz7tqgIxhjf5.ngNl.oKC3ytSYACOPGwCvMgnE3Qi0t6",
+        "imagen": "avatar-1664063384809.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 7,
+        "nombre": "sofia",
+        "apellido": "perez",
+        "direccion": "",
+        "telefono": "",
+        "email": "sofia@perez.com",
+        "contrasenia": "$2a$12$aPOJsr.5yJ8cJkKhk6WEjuLSIq4tJx6L/mVVse3CL06s4HiE2RHV6",
+        "imagen": "avatar-1664063570712.jpg",
         "rol": "usuario"
     }
-    
 ]

@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 let usuarios = require("../data/usuarios.json");
 const { validationResult } = require("express-validator");
+const bcrypt = require('bcryptjs')
 
 const guardar = (dato) =>
   fs.writeFileSync(
@@ -43,7 +44,7 @@ module.exports = {
         direccion : "",
         telefono: "",
         email,
-        contrasenia,
+        contrasenia : bcrypt.hashSync(contrasenia, 12),
         imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
         rol: "usuario",
       };
@@ -52,7 +53,7 @@ module.exports = {
       guardar(usuarios);
 
       /* Redirecciona a login */
-      return res.redirect("/users/login");
+      return res.redirect("/users/perfil");
     } else {
       /* return res.send(errors.mapped()) */
       return res.render("register", {
@@ -64,20 +65,26 @@ module.exports = {
   login: (req, res) => {
     return res.render("login");
   },
+  perfil: (req, res) => {
+    return res.render("perfil")
+  },
   inLogin: (req, res) => {
     let errors = validationResult(req);
     /* return res.send(errors) */
     if (errors.isEmpty()) {
-      const { email } = req.body;
+      const { email, recordarme } = req.body;
       let usuario = usuarios.find((user) => user.email === email);
 
       req.session.userLogin = {
         id: usuario.id,
         nombre: usuario.nombre,
-        image: usuario.imagen,
+        imagen: usuario.imagen,
         rol: usuario.rol,
       }
-      return res.render("perfilDeUsuario")
+      if(recordarme){
+          res.cookie('SoundSurge',req.session.userLogin,{maxAge: 1000 * 60 * 60})
+      }
+      return res.redirect("/users/perfil")
     } else {
       /* return res.send(errors.mapped()) */
       return res.render("login", {
@@ -86,36 +93,37 @@ module.exports = {
       });
     }
   },
-  perfil: (req, res) => {
-    return res.render("perfilDeUsuario")
-  },
-  editarUsuario: (req, res) => {
-    return res.render("perfilDeUsuario", {
-      usuarios,
-    });
-  },
-  actualizarUsuario: (req, res) => {
-    idParams = +req.params.id;
-    let { nombre, apellido, direccion, telefono, email, imagenes } = req.body;
+  logout : (req,res) => {
 
-    usuarios.forEach((usuario) => {
-      if (usuario.id === idParams) {
-        usuario.nombre = nombre;
-        usuario.apellido = apellido;
-        usuario.direccion = direccion;
-        usuario.direccion = +telefono;
-        usuario.email = +email;
-        usuario.imagenes = imagenes;
-      }
-    });
+    req.session.destroy();
+    if(req.cookies.SoundSurge){
+        res.cookie('SoundSurge','',{maxAge: -1})
+    }
+    return res.redirect('/')
+    
+},
+editarUsuario: (req, res) => {
+  idParams = +req.params.session.userLogin;
+  let { nombre, apellido, direccion, telefono, email, imagenes } = req.body;
 
-    guardarU(usuarios);
+  userLogin.forEach((usuario) => {
+    if (usuario.id === idParams) {
+      usuario.nombre = nombre;
+      usuario.apellido = apellido;
+      usuario.direccion = direccion;
+      usuario.direccion = +telefono;
+      usuario.email = +email;
+      usuario.imagenes = imagenes;
+    }
+  });
 
-    return res.redirect("/");
+  guardarU(usuarios);
 
-    /* return res.send(req.body) */
-  },
-  buscar: (req, res) => {
-    return res.render("");
-  },
+  return res.redirect("/");
+
+  /* return res.send(req.body) */
+},
+buscar: (req, res) => {
+  return res.render("");
+},
 };

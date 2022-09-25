@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ("./partials/head",{title: "Registro"}) %>
+    <%- include ("./partials/head",{title: "editarPerfil"}) %>
 <body class="register">
     <main>
         <section class="container-register">
             <h1>Registro</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
-        <form action="/users/register" method="post" enctype="multipart/form-data">
+            <form action="/admin/editarPerfil/<%= locals.userLogin.id %>?_method=put" method="post">
             <div class="icons">
                 <i class="fas fa-user"> <input type="file" name="imagen" id="imagen"> </i>
             </div>

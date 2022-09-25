@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ("./partials/head",{title: "Perfil del usuario"}) %>
-<body class="detalle">
+    <%- include ("./partials/head",{title: locals.userLogin.nombre}) %>
+<body>
     <%- include ("./partials/header") %> 
     <main>
         <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
         <h1>Hola <%= `${locals.userLogin.rol} ${locals.userLogin.nombre}` %></h1>
         
-        <form action="/users/logout?_method=DELETE" method="post">
-            <button type="submit">Cerrar Sesion</button>
+        <form class="exit" action="/users/logout?_method=DELETE" method="post">
+            <button class="logout" type="submit">Cerrar Sesion</button>
         </form>
     </main>
     <%- include ("./partials/footer") %> 

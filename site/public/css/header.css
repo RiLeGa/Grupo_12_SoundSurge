@@ -216,17 +216,39 @@ header .navegacion .usuario i.fas.fa-user-circle{
         display: block;
         color: #fbfbfb;
         font-size: 20px;
-        margin-top: 2px;
+        margin-top: -8px;
         padding: 1px 10px;
     }
-    header .navegacion label.perfil,
+    
    header .navegacion .btn-neon{
         position: relative;
         display: inline-block;
-        padding: 17px 12px;
+        padding: 15px 12px;
         transition: 0.2s;
         border-radius: 10%;
     }
+
+    header .navegacion label.perfil{
+        position: relative;
+        display: inline-block;
+        padding: 15px 7px 0 10px;
+        transition: 0.2s;
+        border-radius: 10%;
+    }
+    header .navegacion label.sinLog{
+        display: block;
+        color: #fbfbfb;
+        padding: 15px 7px 8px 10px;
+        border-radius: 10%;
+    }
+
+    header .navegacion label.sinLog h2{
+        font-size: 15px;
+        color: white;
+    }
+
+    header .navegacion nav.opcionesDePerfil button.logout:hover,
+    header .navegacion label.sinLog:hover,
     header .navegacion label.perfil:hover,
     header .navegacion .btn-neon:hover{
         background: #8d1888;
@@ -240,6 +262,19 @@ header .navegacion .usuario i.fas.fa-user-circle{
         font-size: 20px;
         margin-top: 20px;
         padding: 0 20px;
+    }
+    header .navegacion label.perfil h2{
+        font-size: 14px;
+        color: white;
+    }
+    header .navegacion label.perfil img {
+        width: 85px;
+        margin-left: 4px;
+        height: 35px;
+        color: #8d1888;
+        margin-top: -12px;
+        padding: 0 20px;
+        border-radius: 50%;
     }
     header .navegacion input#perfil{
         display: none;
@@ -257,7 +292,6 @@ header .navegacion .usuario i.fas.fa-user-circle{
         justify-content: space-around;
         width: 15vw;
         left: 85vw;
-        margin-top: 0;
         position: inherit;
     }
     
@@ -288,6 +322,17 @@ header .navegacion .usuario i.fas.fa-user-circle{
     header .navegacion nav.opcionesDePerfil ul li a{
         color: white;
         font-size: 20px;
+    }
+    header .navegacion nav.opcionesDePerfil form.exit{
+        display: contents;
+    }
+
+    header .navegacion nav.opcionesDePerfil button.logout{
+        background: none;
+        color: white;
+        font-size: 18px;
+        padding: 15px 12px;
+        border-radius: 10%;
     }
 
 }

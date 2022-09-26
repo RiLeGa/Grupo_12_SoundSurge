@@ -1,12 +1,31 @@
 .credencial{
     display: flex;
+    background-image: url(/images/FondoMovil.jpg);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 6px solid black;
+    width: 30vw;
+    height: 500px;
+    margin-left: 35vw;
+    margin-top: 35px;
+    border-radius: 10%;
 }
 
 .credencial img{
     width: 200px;
-    height: 300px;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 10%;
 }
 
 .credencial h2{
     font-size: 20px;
+    margin-top: 10px;
+    color: rgb(166, 0, 208);
+    
+}
+
+.credencial .logo img{
+    width: 100px;
 }

@@ -7,6 +7,9 @@
         <div class="credencial">
             <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
             <h2>Hola <%= `${locals.userLogin.rol} ${locals.userLogin.nombre}` %></h2>
+            <div class="logo">
+                <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
+            </div>
         </div>
         <form class="exit" action="/users/logout?_method=DELETE" method="post">
             <button class="logout" type="submit">Cerrar Sesion</button>

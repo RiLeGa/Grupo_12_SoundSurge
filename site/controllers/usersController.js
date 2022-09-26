@@ -53,7 +53,7 @@ module.exports = {
       guardar(usuarios);
 
       /* Redirecciona a login */
-      return res.redirect("/users/perfil");
+      return res.redirect("/users/login");
     } else {
       /* return res.send(errors.mapped()) */
       return res.render("register", {

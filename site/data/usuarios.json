@@ -42,5 +42,27 @@
         "contrasenia": "$2a$12$aPOJsr.5yJ8cJkKhk6WEjuLSIq4tJx6L/mVVse3CL06s4HiE2RHV6",
         "imagen": "avatar-1664063570712.jpg",
         "rol": "usuario"
+    },
+    {
+        "id": 8,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "",
+        "telefono": "",
+        "email": "sound@surge.com",
+        "contrasenia": "$2a$12$UI1noaEAEmNUd4SubU5Gz.IRYVF5.UQU/gW2o2czNtkIFobD5/CtK",
+        "imagen": "avatar-1664221717141.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 9,
+        "nombre": "Rios",
+        "apellido": "Gabriel",
+        "direccion": "",
+        "telefono": "",
+        "email": "leandro@sound.com",
+        "contrasenia": "$2a$12$JoiDAIsx8EvkoxLxnSlvk.wCoAEcnTBEUPLhTu9pAWjj6NaTA8rz2",
+        "imagen": "avatar-1664222835135.jpg",
+        "rol": "usuario"
     }
 ]

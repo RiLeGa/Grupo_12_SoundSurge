@@ -3,10 +3,15 @@
     <%- include ("./partials/head",{title: locals.userLogin.nombre}) %>
 <body>
     <%- include ("./partials/header") %> 
-    <main>
+    <main class="perfil">
         <div class="credencial">
             <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
-            <h2>Hola <%= `${locals.userLogin.rol} ${locals.userLogin.nombre}` %></h2>
+            <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
+            <h1><%= `${locals.userLogin.rol}` %></h1>
+            <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                <h2>All Access</h2>
+            <% } %>
+            
             <div class="logo">
                 <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
             </div>

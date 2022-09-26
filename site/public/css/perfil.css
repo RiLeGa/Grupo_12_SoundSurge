@@ -1,31 +1,38 @@
-.credencial{
+.perfil{
     display: flex;
-    background-image: url(/images/FondoMovil.jpg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil .credencial{
+    display: flex;
+    background: linear-gradient(#6487e6, #9437b1);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border: 6px solid black;
-    width: 30vw;
+    width: 252px;
     height: 500px;
-    margin-left: 35vw;
     margin-top: 35px;
     border-radius: 10%;
 }
 
-.credencial img{
+.perfil .credencial img{
     width: 200px;
     height: 150px;
     margin-top: 10px;
     border-radius: 10%;
 }
 
-.credencial h2{
+.perfil .credencial h2{
     font-size: 20px;
     margin-top: 10px;
-    color: rgb(166, 0, 208);
+    color: rgb(255, 255, 255);
     
 }
 
-.credencial .logo img{
-    width: 100px;
+.perfil .credencial .logo img{
+    width: 75px;
+    height: 65px;
 }

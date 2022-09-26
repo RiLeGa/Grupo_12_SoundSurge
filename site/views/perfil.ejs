@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include ("./partials/head",{title: locals.userLogin.nombre}) %>
+<body>
+    <%- include ("./partials/header") %> 
+    <main class="perfil">
+        <div class="credencial">
+            <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
+            <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
+            <h1><%= `${locals.userLogin.rol}` %></h1>
+            <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                <h2>All Access</h2>
+            <% } %>
+            
+            <div class="logo">
+                <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
+            </div>
+        </div>
+        <form class="exit" action="/users/logout?_method=DELETE" method="post">
+            <button class="logout" type="submit">Cerrar Sesion</button>
+        </form>
+    </main>
+    <%- include ("./partials/footer") %> 
+</body>
+</html>

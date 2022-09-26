@@ -28,5 +28,33 @@
             "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
             "168343-800-auto.png"
         ]
+    },
+    {
+        "id": 13,
+        "precio": null,
+        "descuento": null,
+        "stock": null,
+        "imagenes": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ]
+    },
+    {
+        "id": 14,
+        "marca": "gibson",
+        "titulo": "tatilu",
+        "categorias": "3",
+        "precio": 5678978879,
+        "descuento": 20,
+        "stock": 5,
+        "descripcion": "jhvhjvgvycggvjhv",
+        "imagenes": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ]
     }
 ]

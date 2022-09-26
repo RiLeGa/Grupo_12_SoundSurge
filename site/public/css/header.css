@@ -28,7 +28,7 @@ header .navegacion label.burguer i{
 header .navegacion input{
     display: none;
 }
-header .navegacion input:checked ~ nav {
+header .navegacion input:checked ~ nav.opcionesDePerfil-Movil {
     display: block;
     z-index: 1;
 }
@@ -39,14 +39,14 @@ header .navegacion .busqueda{
 header .navegacion .busqueda input{
     display: none;
 }
-header .navegacion nav{
+header .navegacion nav.opcionesDePerfil-Movil{
     display: none;
     align-items: center;
     margin-top: 60px;
     position: absolute;
 }
 
-header .navegacion nav ul{
+header .navegacion nav.opcionesDePerfil-Movil ul{
     display: flex;
     background-color: #8d1888;
     flex-direction: column;
@@ -54,7 +54,7 @@ header .navegacion nav ul{
     width: 100vw;
     height: 55vh;
 }
-header .navegacion nav ul li{
+header .navegacion nav.opcionesDePerfil-Movil ul li{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -62,9 +62,25 @@ header .navegacion nav ul li{
     background-color: black;
     height: 50px;
 }
-header .navegacion nav ul li a{
+header .navegacion nav.opcionesDePerfil-Movil ul li a{
     color: white;
     font-size: 20px;
+}
+
+header .navegacion nav.opcionesDePerfil-Movil form.exit{
+    display: contents;
+}
+
+header .navegacion nav.opcionesDePerfil-Movil button.logout{
+    background: black;
+    color: #dbdbdb;
+    font-size: 20px;
+    padding: 15px 12px;
+    border: none;
+}
+header .navegacion .busqueda button{
+    background: none;
+    border: none;
 }
 
 header .navegacion .busqueda i.fas.fa-search{
@@ -83,6 +99,18 @@ header .navegacion .carrito i.fas.fa-shopping-cart{
     padding: 0 10px;
 }
 header .navegacion .usuario i.fas.fa-user-circle{
+    display: none;
+}
+header .navegacion label.perfil{
+    display: none;
+}
+header .navegacion nav.opcionesDePerfil{
+    display: none;
+}
+header .navegacion .opcionesDeProductos{
+    display: none;
+}
+header .navegacion div.usuario{
     display: none;
 }
 
@@ -144,6 +172,9 @@ header .navegacion .usuario i.fas.fa-user-circle{
         margin-top: 20px;
         padding: 0 10px;
     }
+    header .navegacion label.perfil{
+        display: none;
+    }
 }
 
 /*Desktop*/
@@ -177,6 +208,12 @@ header .navegacion .usuario i.fas.fa-user-circle{
     header .navegacion nav.opcionesDePerfil{
         display: none;
     }
+    header .navegacion .opcionesDeProductos{
+        display: flex;
+        flex: auto;
+        justify-content: space-around;
+        align-items: self-end;
+    }
 
     header .navegacion nav ul{
         display: flex;
@@ -209,24 +246,48 @@ header .navegacion .usuario i.fas.fa-user-circle{
     header .navegacion .carrito i.fas.fa-shopping-cart{
         color: #ffffff;
         font-size: 20px;
-        margin-top: 3px;
+        margin-top: 7px;
         padding: 0 10px;
     }
     header .navegacion .usuario i.fas.fa-user-circle{
         display: block;
         color: #fbfbfb;
         font-size: 20px;
-        margin-top: 2px;
+        margin-top: -8px;
         padding: 1px 10px;
+        text-align: center;
     }
-    header .navegacion label.perfil,
+    
    header .navegacion .btn-neon{
         position: relative;
         display: inline-block;
-        padding: 17px 12px;
+        padding: 15px 12px;
+        transition: 0.2s;
+        border-radius: 10%;
+        font-size: 20px;
+    }
+
+    header .navegacion label.perfil{
+        position: relative;
+        display: inline-block;
+        padding: 15px 7px 0 10px;
         transition: 0.2s;
         border-radius: 10%;
     }
+    header .navegacion label.sinLog{
+        display: block;
+        color: #fbfbfb;
+        padding: 15px 7px 8px 10px;
+        border-radius: 10%;
+    }
+
+    header .navegacion label.sinLog h2{
+        font-size: 15px;
+        color: white;
+    }
+
+    header .navegacion nav.opcionesDePerfil button.logout:hover,
+    header .navegacion label.sinLog:hover,
     header .navegacion label.perfil:hover,
     header .navegacion .btn-neon:hover{
         background: #8d1888;
@@ -234,12 +295,31 @@ header .navegacion .usuario i.fas.fa-user-circle{
 
     /*usuario*/
 
+    header .navegacion div.usuario{
+        display: block;
+        display: block;
+        width: 280px;
+    }
+
     header .navegacion label.perfil i.fas .fa-user-circle{
         width: 2vw;
         color: #8d1888;
         font-size: 20px;
         margin-top: 20px;
         padding: 0 20px;
+    }
+    header .navegacion label.perfil h2{
+        font-size: 14px;
+        color: white;
+    }
+    header .navegacion label.perfil img {
+        width: 85px;
+        margin-left: 4px;
+        height: 35px;
+        color: #8d1888;
+        margin-top: -12px;
+        padding: 0 20px;
+        border-radius: 50%;
     }
     header .navegacion input#perfil{
         display: none;
@@ -257,7 +337,6 @@ header .navegacion .usuario i.fas.fa-user-circle{
         justify-content: space-around;
         width: 15vw;
         left: 85vw;
-        margin-top: 0;
         position: inherit;
     }
     
@@ -288,6 +367,18 @@ header .navegacion .usuario i.fas.fa-user-circle{
     header .navegacion nav.opcionesDePerfil ul li a{
         color: white;
         font-size: 20px;
+    }
+    header .navegacion nav.opcionesDePerfil form.exit{
+        display: contents;
+    }
+
+    header .navegacion nav.opcionesDePerfil button.logout{
+        background: none;
+        color: white;
+        font-size: 18px;
+        padding: 15px 12px;
+        border: none;
+        border-radius: 10%;
     }
 
 }

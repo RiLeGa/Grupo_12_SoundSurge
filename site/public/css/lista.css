@@ -7,6 +7,10 @@
     text-align: center;
 }
 
+.lista li a{
+    color: white;
+}
+
 .lista .table-responsive{
     width: 80vw;
     margin-left: 10vw;
@@ -41,4 +45,11 @@
 .lista .edicion{
     display: flex;
     justify-content: center
+}
+
+.lista .usuario{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
 }

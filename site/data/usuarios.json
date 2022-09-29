@@ -64,5 +64,16 @@
         "contrasenia": "$2a$12$JoiDAIsx8EvkoxLxnSlvk.wCoAEcnTBEUPLhTu9pAWjj6NaTA8rz2",
         "imagen": "avatar-1664222835135.jpg",
         "rol": "usuario"
+    },
+    {
+        "id": 10,
+        "nombre": "Lucas",
+        "apellido": "Cordoba",
+        "direccion": "",
+        "telefono": "",
+        "email": "lucas@gmail.com",
+        "contrasenia": "$2a$12$8zyTvqwtYQakzQLQcviIEO91nSOJA6wUbiesC5QpZmAIT0V2icftC",
+        "imagen": "avatar-1664417428450.jpg",
+        "rol": "admin"
     }
 ]

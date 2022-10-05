@@ -4,31 +4,56 @@
 <body class="register">
     <main>
         <section class="container-register">
-            <h1>Registro.</h1>
+            <h1>Registro</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
-        <div class="icons">
-            <i class="fas fa-user"></i>
-        </div>
-        <form action="" method="get">
-            <div class="container">
-                <label for="name">Nombre</label>
-                <input type="text" name="name" id="name" placeholder="Ingresa tu nombre">
+        <form action="/users/register" method="post" enctype="multipart/form-data">
+            <div class="icons">
+                <i class="fas fa-user"> <input type="file" name="imagen" id="imagen"> </i>
             </div>
             <div class="container">
-                <label for="surname">Apellido</label>
-                <input type="text" name="surname" id="surname" placeholder="Ingresa tu apellido">
+                <label for="nombre">nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null%>">
+                <% if (locals.errors && errors.nombre) { %>
+                    <small><%= errors.nombre.msg %></small>
+                <% } %>
             </div>
             <div class="container">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                <label for="apellido">apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"value="<%= locals.old && old.apellido ? old.apellido : null%>">
+                <% if (locals.errors && errors.apellido) { %>
+                    <small><%= errors.apellido.msg %></small>
+                <% } %>
+            </div>
+    
+            <div class="container">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email"value="<%= locals.old && old.email ? old.email : null%>">
+                <% if (locals.errors && errors.email) { %>
+                    <small><%= errors.email.msg %></small>
+                <% } %>
             </div>
             <div class="container">
-                <label for="contraseña">Contraseña</label>
-                <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
+                <label for="contrasenia">contrasenia</label>
+                <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa tu contraseña">
+                <% if (locals.errors && errors.contrasenia) { %>
+                    <small><%= errors.contrasenia.msg %></small>
+                <% } %>
             </div>
             <div class="container">
                 <label for="confirmar">Confirmar contraseña</label>
                 <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña">
+                <% if (locals.errors && errors.confirmar) { %>
+                    <small><%= errors.confirmar.msg %></small>
+                <% } %>
+            </div>
+           
+
+            <div class="terminos">
+                <input type="checkbox" name="terminos" id="terminos">
+                <% if (locals.errors && errors.terminos) { %>
+                    <small class="terms"><%= errors.terminos.msg %></small>
+                <% } %>
+                <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
             
             <button type="submit" class="enviar">Enviar</button>

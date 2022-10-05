@@ -38,6 +38,16 @@
     color: var(--colorGris);
 }
 
+.register main small{
+    margin-left: 9vw;
+    font-size: 15px;
+}
+
+.register main small.terms{
+    margin: 0;
+    font-size: 15px;
+}
+
 .register main .container{
     display: flex;
     flex-direction: column;
@@ -55,7 +65,7 @@
     padding: 3px;
     font-family: var(--fuenteGral);
     font-weight: 400;
-    color: var(--colorGris);
+    color: var(--colorBlanco);
 }
 
 .register main .container input{
@@ -105,5 +115,15 @@
     width: 80%;
     margin-left: 10%;
     margin-top: 20px;
+}
+
+.register main .terminos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--fuenteGral);
+    color: white;
+    font-size: 25px;
+    text-align: center;
 }
 

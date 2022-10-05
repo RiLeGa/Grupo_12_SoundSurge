@@ -78,6 +78,12 @@
     margin-left: 15%;
 }
 
+.login main .container small{
+    margin-left: 7vw;
+    font-size: 15px;
+}
+
+
 .login main .mostrar{
     text-align: center;
     font-size: 15px;

@@ -2,17 +2,18 @@
 @import url("./variables.css");
 @import url("./general.css");
 @import url("./header.css");
-@import url("./headerCarrito.css");
-@import url("./headerCrear.css");
+
+
 @import url("./footer.css");
 @import url("./home.css");
 @import url("./lista.css");
 @import url("./carrousel-home.css");
 @import url("./detalle.css");
-@import url("./carrito.css");
-@import url("./generalCarrito.css");
+
+
 @import url("./mainCarrito.css");
-@import url("./footerCarrito.css");
+
+@import url("./perfil.css");
 @import url("./register.css");
 @import url("./login.css");
 @import url("./crear.css");

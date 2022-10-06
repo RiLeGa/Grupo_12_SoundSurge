@@ -24,6 +24,7 @@ module.exports = {
         return res.render('admin/crearProductos');
     },
     store:(req,res) => {
+        /* return res.send(req.body) */ 
         let errors = validationResult(req)
         if (req.fileValidationError) {
             let imagen = {
@@ -38,7 +39,8 @@ module.exports = {
                 return imagen.filename
             })
         
-        let {marca, titulo, categorias, precio, descuento, stock, descripcion, imagenes} = req.body
+        let {marca, titulo, categorias, precio, descuento, stock, descripcion} = req.body
+        
         
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
@@ -55,6 +57,8 @@ module.exports = {
 
         productos.push(productoNuevo)
         guardar(productos)
+
+        
 
         return res.redirect('/admin/lista')
 

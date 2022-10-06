@@ -33,6 +33,20 @@
 }
 
 .register main .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.register main .icons input{
+    font-family: var(--fuenteGral);
+    text-align: center;
+    font-size: 15px;
+    color: var(--colorGris);
+}
+
+.register main i.fa-user{
     text-align: center;
     font-size: 80px;
     color: var(--colorGris);
@@ -126,4 +140,3 @@
     font-size: 25px;
     text-align: center;
 }
-

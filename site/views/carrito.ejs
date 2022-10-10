@@ -24,30 +24,25 @@
                 <div>
                     <article>
                         
-                        <img class="guitarra" src="/images/<%= productos[0].imagenes[0] %>" alt="Imagen principal">
+                        <img class="guitarra" src="/images/<%= producto.imagenes[0] %>" alt="Imagen principal">
                         
-                        <span class="primerprecio">$<%= productos[0].precio %></span>
+                        <span class="primerprecio">$<%= producto.precio %></span>
+                        
                         <div class="cantidad">
                         <button class="restar">-</button>
                         <input type="number">
                         <button class="sumar">+</button>
                         </div>
-                        <span class="segundoprecio">$<%= productos[0].precio %></span>
+                        <div class="precio-descuento">
+                            <h3 class="precio">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
+                            <% if (producto.descuento !== 0) { %>
+                                <p class="descuento">$<%= producto.precio %></p>
+                            <% } %>
+                        </div>
+                        
                         
                     </article>
-                    <article>
-                        
-                        <img class="bateria" src="/images/<%= productos[1].imagenes[0] %>" alt="Imagen principal">
                     
-                        <span class="primerprecio">$<%= productos[1].precio %></span>
-                        <div class="cantidad">
-                        <button class="restar">-</button>
-                        <input type="number">
-                        <button class="sumar">+</button>
-                        </div>
-                        <span class="segundoprecio">$<%= productos[1].precio %></span>
-                        
-                    </article>
                 </div>
             </section>
             <!-- Recuadro verde con texto -->
@@ -58,8 +53,13 @@
             <!-- Subtotal, Total -->
             <section>
                 <ul class="cuenta">
-                    <li class="subtotal">Subtotal : $<%= productos[0].precio + productos[1].precio %> </li>
-                    <li class="total">Total : $<%= productos[0].precio + productos[1].precio%> </li>
+                    <li class="subtotal">Subtotal :  </li>
+                    <li class="total">Total : <div >
+                        <h3 class="precio">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
+                        <% if (producto.descuento !== 0) { %>
+                            <p class="descuento">$<%= producto.precio %></p>
+                        <% } %>
+                    </div> </li>
                 </ul>
             </section>
             <section class="botones">

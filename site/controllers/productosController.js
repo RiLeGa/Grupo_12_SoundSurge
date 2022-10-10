@@ -11,8 +11,11 @@ module.exports = {
     },
 
     carrito : (req,res) => {
+        let id = +req.params.id
+        let productoCarrito = productos.find((producto) => producto.id === id)
         return res.render('carrito',{
-                productos
+            producto : productoCarrito,
+            productos
         });
     }
 }

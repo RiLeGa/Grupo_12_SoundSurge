@@ -98,6 +98,10 @@
 .detalle main.detalleDeProd .sectionDetail div.detalle .agregar .a-favorito, .a-carrito{
     width: 60%;
     height: 30px;
+    
+}
+.detalle .a-carrito a{
+color: black;
 }
 
 

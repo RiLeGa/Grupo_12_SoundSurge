@@ -7,8 +7,8 @@ const upload = require('../middlewares/multerProductos')
 
 
 /* GET admin pages. */
-router.get('/crear', adminCheck, crear);
-router.post('/crear', upload.array("imagenes"), store);
+router.get('/crear',  adminCheck, crear);
+router.post('/crear', upload.array('imagen'), adminCheck, store);
 
 router.get('/editar/:id', adminCheck, editar);
 router.put('/editar/:id', actualizar);

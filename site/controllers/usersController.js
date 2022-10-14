@@ -34,7 +34,7 @@ module.exports = {
     if (errors.isEmpty()) {
       /* return res.send(req.body)*/
 
-      let { nombre, apellido, email, contrasenia } =
+      let { nombre, apellido, email, contrasenia} =
         req.body;
 
       let nuevoUsuario = {
@@ -52,8 +52,20 @@ module.exports = {
       usuarios.push(nuevoUsuario);
       guardar(usuarios);
 
+      const { recordarme } = req.body;
+      usuarios = usuarios.find((user) => user.email === email);
+      req.session.userLogin = {
+        id: usuarios.id,
+        nombre: usuarios.nombre,
+        imagen: usuarios.imagen,
+        rol: usuarios.rol
+      }
+      if(recordarme){
+        res.cookie('SoundSurge',req.session.userLogin,{maxAge: 1000 * 60 * 60})
+      }
+
       /* Redirecciona a login */
-      return res.redirect("/users/perfil");
+      return res.redirect("/");
     } else {
       /* return res.send(errors.mapped()) */
       return res.render("register", {

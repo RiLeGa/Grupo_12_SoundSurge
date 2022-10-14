@@ -11,7 +11,7 @@
         "rol": "admin"
     },
     {
-        "id": 5,
+        "id": 7,
         "nombre": "matias",
         "apellido": "rios",
         "direccion": "",
@@ -22,7 +22,7 @@
         "rol": "usuario"
     },
     {
-        "id": 6,
+        "id": 8,
         "nombre": "thomas",
         "apellido": "tejeda",
         "direccion": "",
@@ -33,7 +33,7 @@
         "rol": "usuario"
     },
     {
-        "id": 7,
+        "id": 9,
         "nombre": "sofia",
         "apellido": "perez",
         "direccion": "",
@@ -41,6 +41,105 @@
         "email": "sofia@perez.com",
         "contrasenia": "$2a$12$aPOJsr.5yJ8cJkKhk6WEjuLSIq4tJx6L/mVVse3CL06s4HiE2RHV6",
         "imagen": "avatar-1664063570712.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 10,
+        "nombre": "fernando",
+        "apellido": "rojas",
+        "direccion": "",
+        "telefono": "",
+        "email": "FERNANDO@SURGE.COM",
+        "contrasenia": "$2a$12$wLxNlcGdl8vhVGmmneWXteI07s/FW4jp6ppSRD1P/xP9qKKEWg2fe",
+        "imagen": "avatar-1665725822352.png",
+        "rol": "usuario"
+    },
+    {
+        "id": 11,
+        "nombre": "pedro",
+        "apellido": "sanchez",
+        "direccion": "",
+        "telefono": "",
+        "email": "sanpedro@surge.com",
+        "contrasenia": "$2a$12$F2Q8ktumbpTyhKwexvs0Je.RJdxs7dJJ7eoSHIYjWEsN7NQVx/FqO",
+        "imagen": "avatar-1665726712656.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 12,
+        "nombre": "pablo",
+        "apellido": "perez",
+        "direccion": "",
+        "telefono": "",
+        "email": "PABLO@SURGE.COM",
+        "contrasenia": "$2a$12$IB6y/3qHwtmq0gKhD6ARWerKvA7i0/msqjJxtX4KTIS8d0fFHWf/2",
+        "imagen": "avatar-1665726962600.png",
+        "rol": "usuario"
+    },
+    {
+        "id": 13,
+        "nombre": "carlos",
+        "apellido": "robles",
+        "direccion": "",
+        "telefono": "",
+        "email": "carbles@surge.com",
+        "contrasenia": "$2a$12$gK5QntmJZaGuVt.UWVHS3uenZCtmwLL2IrBrp0APYmY6e1wQePPo.",
+        "imagen": "avatar-1665727112622.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 14,
+        "nombre": "alberto",
+        "apellido": "gatin",
+        "direccion": "",
+        "telefono": "",
+        "email": "Albertin@surge.com",
+        "contrasenia": "$2a$12$0YUBYoeJG3.wZH0LO5ksT.tdM/gTm4d5H/yJ0O7dAiUgHYale.mta",
+        "imagen": "avatar-1665727301748.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 15,
+        "nombre": "claudia",
+        "apellido": "garcia",
+        "direccion": "",
+        "telefono": "",
+        "email": "claudia@surge.com",
+        "contrasenia": "$2a$12$0gjnGX5RguVkZVqpkAHEXO6vm/0Jo6LH.CijEzNR4LV3t3uPlBSBC",
+        "imagen": "avatar-1665758532284.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 16,
+        "nombre": "jose",
+        "apellido": "rivas",
+        "direccion": "",
+        "telefono": "",
+        "email": "peperiv@surge.com",
+        "contrasenia": "$2a$12$OQ7fjFy3hGJjoXS1xD68Aub5y1N1l5gh15x96W8sb4nTP0ucKzDty",
+        "imagen": "avatar-1665759876084.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 17,
+        "nombre": "lisandro",
+        "apellido": "baez",
+        "direccion": "",
+        "telefono": "",
+        "email": "Lisanbaez@surge.com",
+        "contrasenia": "$2a$12$jTbO2LTnNnRDFpozt557W.5xplNeOO7s1038tgfkMf8N0RyHWBfrO",
+        "imagen": "avatar-1665760108099.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 18,
+        "nombre": "rodolfo",
+        "apellido": "santamarina",
+        "direccion": "",
+        "telefono": "",
+        "email": "rodosanta@surge.com",
+        "contrasenia": "$2a$12$oUx1tbMTeuyYCNZR1asefOCA6MeFiDGDcuFvEMMypZ3dOlETBFmbm",
+        "imagen": "avatar-1665760260787.jpg",
         "rol": "usuario"
     }
 ]

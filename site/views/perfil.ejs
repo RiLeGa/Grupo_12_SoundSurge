@@ -19,6 +19,10 @@
         <form class="exit" action="/users/logout?_method=DELETE" method="post">
             <button class="logout" type="submit">Cerrar Sesion</button>
         </form>
+
+        <a href="/users/editarUsuario/<%= locals.userLogin.id%>">
+            <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+        </a>
     </main>
     <%- include ("./partials/footer") %> 
 </body>

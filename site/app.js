@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const path = require ("path");
@@ -19,6 +20,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 const userLogin = require('./middlewares/userLoginCheck')
+const dbConnectionTest = require('./middlewares/dbConnectionTest')
 
 app.use(session({
   secret: "Feel the Sound"
@@ -34,6 +36,8 @@ const indexRouter = require('./routes/index');
 const productosRouter = require('./routes/productos');
 const adminController = require('./routes/admin');
 const usuariosRouter = require('./routes/usuarios');
+
+dbConnectionTest()
 
 app.use('/', indexRouter);
 app.use('/admin', adminController);

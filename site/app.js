@@ -7,6 +7,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 
+const userLogin = require('./middlewares/userLoginCheck')
+const dbConnectionTest = require("./middlewares/dbConnectionTest")
+
 /* necesraio para usar GET y POST */
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
@@ -18,7 +21,8 @@ app.use(cookieParser());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-const userLogin = require('./middlewares/userLoginCheck')
+dbConnectionTest()
+
 
 app.use(session({
   secret: "Feel the Sound"

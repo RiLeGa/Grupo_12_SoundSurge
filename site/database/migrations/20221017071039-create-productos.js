@@ -9,13 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      marca: {
-        type: Sequelize.STRING
-      },
       titulo: {
-        type: Sequelize.STRING
-      },
-      categoria: {
         type: Sequelize.STRING
       },
       precio: {
@@ -30,8 +24,25 @@ module.exports = {
       stock: {
         type: Sequelize.INTEGER
       },
-      imagenes: {
-        type: Sequelize.STRING
+      marcaId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'Marcas'
+          },
+          key: 'id'
+        }, 
+      },
+      categoriaId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'Categorias'
+          },
+          key: 'id'
+        }, 
       },
       createdAt: {
         allowNull: false,

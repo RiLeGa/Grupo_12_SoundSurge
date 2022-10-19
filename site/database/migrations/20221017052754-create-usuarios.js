@@ -30,9 +30,6 @@ module.exports = {
       rol: {
         type: Sequelize.STRING
       },
-      imagenesId: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

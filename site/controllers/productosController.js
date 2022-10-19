@@ -1,4 +1,6 @@
 let productos = require('../data/productos.json')
+let db =require("../database/models")
+
 
 module.exports = {
     detalle : (req,res) => {

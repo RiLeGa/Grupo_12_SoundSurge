@@ -12,6 +12,36 @@ module.exports = {
       nombre: {
         type: Sequelize.STRING
       },
+      productosId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName: "Productos"
+          },
+          key:"id"
+        }
+      },
+      usuariosId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName: "Usuarios"
+          },
+          key:"id"
+        }
+      },
+      historialesId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName: "Historiales"
+          },
+          key:"id"
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

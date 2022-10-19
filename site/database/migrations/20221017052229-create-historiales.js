@@ -22,16 +22,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       descripcion: {
-        type: Sequelize.STRING
-      },
-      imagenesId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING(1000)
       },
       marcasID: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName: "Marcas"
+          },
+          key:"id"
+        }
       },
       categoriasId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+      
+        references:{
+          model:{
+            tableName: "Categorias"
+          },
+          key:"id"}
       },
       createdAt: {
         allowNull: false,

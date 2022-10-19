@@ -10,10 +10,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       productosId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName: "Productos"
+          },
+          key:"id"
+        }
       },
       usuariosId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName: "Usuarios"
+          },
+          key:"id"
+        }
       },
       createdAt: {
         allowNull: false,

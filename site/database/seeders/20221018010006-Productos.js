@@ -28,7 +28,7 @@ listado.forEach(producto => {
     stock: producto.stock,
     precio: producto.precio,
     descuento: producto.descuento,
-    
+    descripcion:producto.descripcion,
     categoriasId: categoria,
     marcasId: marca,
     createdAt:new Date,

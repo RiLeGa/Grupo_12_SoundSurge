@@ -19,12 +19,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       telefono: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       email: {
         type: Sequelize.STRING
       },
-      contraseña: {
+      contrasenia: {
         type: Sequelize.STRING
       },
       imagen: {

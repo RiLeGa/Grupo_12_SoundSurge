@@ -1,10 +1,10 @@
 const fs = require("fs");
 const path = require("path");
-let usuarios = require("../data/usuarios.json");
+/* let usuarios = require("../data/usuarios.json"); */
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcryptjs')
-
-const guardar = (dato) =>
+const db = require("../database/models")
+/* const guardar = (dato) =>
   fs.writeFileSync(
     path.join(__dirname, "../data/usuarios.json"),
     JSON.stringify(dato, null, 4),
@@ -16,7 +16,7 @@ const guardarU = (dato) =>
     path.join(__dirname, "../data/usuarios.json"),
     JSON.stringify(dato, null, 4),
     "utf-8"
-  );
+  ); */
 
 module.exports = {
   register: (req, res) => {
@@ -82,17 +82,33 @@ module.exports = {
   },
   inLogin: (req, res) => {
     let errors = validationResult(req);
-    /* return res.send(errors) */
+    return res.send(errors)
     if (errors.isEmpty()) {
       const { email, recordarme } = req.body;
-      let usuario = usuarios.find((user) => user.email === email);
+     /*  let usuario = usuarios.find((user) => user.email === email);
 
       req.session.userLogin = {
         id: usuario.id,
         nombre: usuario.nombre,
         imagen: usuario.imagen,
         rol: usuario.rol,
-      }
+      } */
+
+      db.Usuarios.findOne({
+        where : {
+            email
+        }
+    })
+    .then(usuario => {
+        
+        req.session.userLogin = {
+            id : usuario.id,
+            nombre : usuario.nombre,
+            imagen : usuario.imagen,
+            rol : usuario.rolId
+        }
+      })
+        
       if(recordarme){
           res.cookie('SoundSurge',req.session.userLogin,{maxAge: 1000 * 60 * 60})
       }

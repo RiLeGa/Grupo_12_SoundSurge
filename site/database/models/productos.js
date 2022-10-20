@@ -19,7 +19,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'productosId',
         onDelete:'cascade'
       })
-      
     }
   }
   Productos.init({

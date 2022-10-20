@@ -1,9 +1,9 @@
 'use strict';
 
-let listado = require('../../data/historial.json')
+let listado = require('../../data/productos.json')
 
 let listadoCategorias = ["Cuerdas","Percusion","Audio","Teclados/Pianos/Controladores","Otros"]
-let listadoMarcas = ["Epiphone","Yamaha","Gibson","Marshall","Ibanez","Behringer","Arturia","Line6","Zildjian","Orange ","MERCADOFLASH "]
+let marcas = ["Epiphone","Yamaha","Gibson","Marshall","Ibanez","Behringer","Arturia","Line6","Zildjian","Orange ","MERCADOFLASH "]
 
 let productos = []
 
@@ -17,7 +17,7 @@ listado.forEach(producto => {
     }
   });
 
-  listadoMarcas.forEach((elemento,index) => {
+  marcas.forEach((elemento,index) => {
     if ((elemento.toUpperCase()) === (producto.marca.toUpperCase())) {
         return marca = index + 1
     }

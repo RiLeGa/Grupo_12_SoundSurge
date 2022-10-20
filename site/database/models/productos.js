@@ -4,7 +4,23 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Productos extends Model {
-   
+    
+    static associate(models) {
+      Productos.belongsTo(models.Categorias,{
+        as: 'category',
+        foreignKey: 'categoriasId'
+      }),
+      Productos.belongsTo(models.Marcas,{
+        as: 'marca',
+        foreignKey: 'marcasId'
+      }),
+      Productos.hasMany(models.Imagenes,{
+        as: 'imagenes',
+        foreignKey: 'productosId',
+        onDelete:'cascade'
+      })
+      
+    }
   }
   Productos.init({
     titulo: DataTypes.STRING,
@@ -12,8 +28,8 @@ module.exports = (sequelize, DataTypes) => {
     precio: DataTypes.INTEGER,
     descuento: DataTypes.INTEGER,
     descripcion: DataTypes.STRING,
-    marcasID: DataTypes.INTEGER,
-    categoriasId: DataTypes.INTEGER
+    categoriasId: DataTypes.INTEGER,
+    marcasId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Productos',

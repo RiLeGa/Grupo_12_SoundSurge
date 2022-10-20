@@ -1,5 +1,4 @@
 'use strict';
-
 let listado = require('../../data/productos.json')
 let imagenes = []
 
@@ -28,23 +27,16 @@ listado.forEach(producto => {
     createdAt:new Date,
     updatedAt:new Date
   }
-  let imagen5 = {
-    nombre: producto.imagenes[3],
-    productosId: producto.id,
-    createdAt:new Date,
-    updatedAt:new Date
-  }
-  imagenes.push(imagen,imagen2,imagen3,imagen4,imagen5)
+  imagenes.push(imagen,imagen2,imagen3,imagen4)
 })
 
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Imagenes', imagenes, {})
+     await queryInterface.bulkInsert('Imagenes', imagenes, {});
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.bulkDelete('Imagenes ', null, {});
+     await queryInterface.bulkDelete('Imagenes', null, {});
   }
 };
 

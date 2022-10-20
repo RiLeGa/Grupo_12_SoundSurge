@@ -1,6 +1,6 @@
 'use strict';
 
-let listado = ["Cuerdas","Percusion",'Tablets',"Audio","Teclados/Pianos/Controladores","Otros"]
+let listado = ["Cuerdas","Percusion","Audio","Teclados/Pianos/Controladores","Otros"]
 
 let categorias = listado.map(categoria => {
   let elemento = {

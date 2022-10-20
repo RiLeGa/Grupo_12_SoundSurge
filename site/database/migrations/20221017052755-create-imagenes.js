@@ -1,5 +1,4 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Imagenes', {
@@ -13,34 +12,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       productosId: {
-        type: Sequelize.INTEGER/*,
-        
-        references:{
-          model:{
-            tableName: "Productos"
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'Productos'
           },
-          key:"id"
-        }*/
-      },
-      usuariosId: {
-        type: Sequelize.INTEGER/*,
-        
-        references:{
-          model:{
-            tableName: "Usuarios"
-          },
-          key:"id"
-        }*/
-      },
-      historialesId: {
-        type: Sequelize.INTEGER/*,
-        
-        references:{
-          model:{
-            tableName: "Historiales"
-          },
-          key:"id"
-        }*/
+          key: 'id'
+        },
       },
       createdAt: {
         allowNull: false,

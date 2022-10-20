@@ -2,7 +2,7 @@
 
 let listado = require('../../data/historial.json')
 
-let listadoCategorias = ["Cuerdas","Percusion",'Tablets',"Audio","Teclados/Pianos/Controladores","Otros"]
+let listadoCategorias = ["Cuerdas","Percusion","Audio","Teclados/Pianos/Controladores","Otros"]
 let listadoMarcas = ["Epiphone","Yamaha","Gibson","Marshall","Ibanez","Behringer","Arturia","Line6","Zildjian","Orange ","MERCADOFLASH "]
 
 let productos = []
@@ -18,7 +18,7 @@ listado.forEach(producto => {
   });
 
   listadoMarcas.forEach((elemento,index) => {
-    if ((elemento) === (producto.marca)) {
+    if ((elemento.toUpperCase()) === (producto.marca.toUpperCase())) {
         return marca = index + 1
     }
   });
@@ -28,7 +28,7 @@ listado.forEach(producto => {
     stock: producto.stock,
     precio: producto.precio,
     descuento: producto.descuento,
-    descripcion:producto.descripcion,
+    descripcion: producto.descripcion,
     categoriasId: categoria,
     marcasId: marca,
     createdAt:new Date,
@@ -37,15 +37,12 @@ listado.forEach(producto => {
   productos.push(nuevo)
 })
 
-
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Historiales', productos, {})
+     await queryInterface.bulkInsert('Productos', productos, {});
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.bulkDelete('Productos ', null, {});
+     await queryInterface.bulkDelete('Productos', null, {});
   }
 };
-

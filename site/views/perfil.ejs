@@ -7,9 +7,11 @@
         <div class="credencial">
             <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
             <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
-            <h1><%= `${locals.userLogin.rol}` %></h1>
-            <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+            <% if (locals.userLogin && locals.userLogin.rol === 1 ) { %>
+                <h1><%= `Admin` %></h1>
                 <h2>All Access</h2>
+            <% } else { %>
+                <h1><%= "Invitado" %></h1>
             <% } %>
             
             <div class="logo">

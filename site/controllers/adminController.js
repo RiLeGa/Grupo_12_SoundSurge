@@ -154,7 +154,8 @@ module.exports = {
     userlist : (req,res) => {
         return res.render('admin/listaDeUsuarios',{
             usuarios
-        });
+        })
+        
     },
     borrarUsuario: (req, res) => {
         idParams = +req.params.id

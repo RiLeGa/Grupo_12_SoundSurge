@@ -2,8 +2,8 @@ const fs = require("fs");
 const path = require("path");
 /* let usuarios = require("../data/usuarios.json"); */
 const { validationResult } = require("express-validator");
-const bcrypt = require('bcryptjs')
-const db = require("../database/models")
+const bcrypt = require("bcryptjs");
+const db = require("../database/models");
 /* const guardar = (dato) =>
   fs.writeFileSync(
     path.join(__dirname, "../data/usuarios.json"),
@@ -34,17 +34,16 @@ module.exports = {
     if (errors.isEmpty()) {
       /* return res.send(req.body)*/
 
-      let { nombre, apellido, email, contrasenia} =
-        req.body;
+      let { nombre, apellido, email, contrasenia } = req.body;
 
       let nuevoUsuario = {
         id: usuarios[usuarios.length - 1].id + 1,
         nombre,
         apellido,
-        direccion : "",
+        direccion: "",
         telefono: "",
         email,
-        contrasenia : bcrypt.hashSync(contrasenia, 12),
+        contrasenia: bcrypt.hashSync(contrasenia, 12),
         imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
         rol: "usuario",
       };
@@ -58,10 +57,12 @@ module.exports = {
         id: usuarios.id,
         nombre: usuarios.nombre,
         imagen: usuarios.imagen,
-        rol: usuarios.rol
-      }
-      if(recordarme){
-        res.cookie('SoundSurge',req.session.userLogin,{maxAge: 1000 * 60 * 60})
+        rol: usuarios.rol,
+      };
+      if (recordarme) {
+        res.cookie("SoundSurge", req.session.userLogin, {
+          maxAge: 1000 * 60 * 60,
+        });
       }
 
       /* Redirecciona a login */
@@ -78,15 +79,15 @@ module.exports = {
     return res.render("login");
   },
   perfil: (req, res) => {
-    return res.render("perfil")
+    return res.render("perfil");
   },
   inLogin: (req, res) => {
     let errors = validationResult(req);
-    return res.send(errors)
+    /* return res.send(errors) */
     if (errors.isEmpty()) {
       const { email, recordarme } = req.body;
-     /*  let usuario = usuarios.find((user) => user.email === email);
-
+      /* let usuario = usuarios.find((user) => user.email === email);
+/* 
       req.session.userLogin = {
         id: usuario.id,
         nombre: usuario.nombre,
@@ -95,63 +96,65 @@ module.exports = {
       } */
 
       db.Usuarios.findOne({
-        where : {
-            email
-        }
-    })
-    .then(usuario => {
-        
+        where: {
+          email,
+        },
+      }).then((usuario) => {
+        usuario = usuario.dataValues;
+
         req.session.userLogin = {
-            id : usuario.id,
-            nombre : usuario.nombre,
-            imagen : usuario.imagen,
-            rol : usuario.rolId
+          id: usuario.id,
+          nombre: usuario.nombre,
+          imagen: usuario.imagen,
+          rol: usuario.rolId,
+        };
+        if (recordarme) {
+          res.cookie("SoundSurge", req.session.userLogin, {
+            maxAge: 1000 * 60 * 60,
+          });
         }
+        return res.redirect("/users/perfil");
       })
-        
-      if(recordarme){
-          res.cookie('SoundSurge',req.session.userLogin,{maxAge: 1000 * 60 * 60})
-      }
-      return res.redirect("/users/perfil")
+      .catch((error) => {
+        return res.send(error)
+      });
     } else {
-      /* return res.send(errors.mapped()) */
-      return res.render("login", {
+      /*       return res.send(errors.mapped())
+       */ return res.render("login", {
         errors: errors.mapped(),
         old: req.body,
       });
     }
   },
-  logout : (req,res) => {
-
+  logout: (req, res) => {
     req.session.destroy();
-    if(req.cookies.SoundSurge){
-        res.cookie('SoundSurge','',{maxAge: -1})
+    if (req.cookies.SoundSurge) {
+      res.cookie("SoundSurge", "", { maxAge: -1 });
     }
-    return res.redirect('/')
-    
-},
-editarUsuario: (req, res) => {
-  idParams = +req.params.session.userLogin;
-  let { nombre, apellido, direccion, telefono, email, imagenes } = req.body;
+    return res.redirect("/");
+  },
+  editarUsuario: (req, res) => {
+    idParams = +req.params.session.userLogin;
+    let { nombre, apellido, direccion, telefono, email, imagenes } = req.body;
 
-  userLogin.forEach((usuario) => {
-    if (usuario.id === idParams) {
-      usuario.nombre = nombre;
-      usuario.apellido = apellido;
-      usuario.direccion = direccion;
-      usuario.direccion = +telefono;
-      usuario.email = +email;
-      usuario.imagenes = imagenes;
-    }
-  });
+    userLogin.forEach((usuario) => {
+      if (usuario.id === idParams) {
+        usuario.nombre = nombre;
+        usuario.apellido = apellido;
+        usuario.direccion = direccion;
+        usuario.direccion = +telefono;
+        usuario.email = +email;
+        usuario.imagenes = imagenes;
+      }
+    });
 
-  guardarU(usuarios);
+    guardarU(usuarios);
 
-  return res.redirect("/");
+    return res.redirect("/");
 
-  /* return res.send(req.body) */
-},
-buscar: (req, res) => {
-  return res.render("");
-},
+    /* return res.send(req.body) */
+  },
+  buscar: (req, res) => {
+    return res.render("");
+  },
 };

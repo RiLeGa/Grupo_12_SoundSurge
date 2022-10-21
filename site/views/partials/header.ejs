@@ -6,7 +6,7 @@
             <ul>
                 <% if (locals.userLogin) { %>
                     <li><a class="btn-neon" href="/users/perfil">Perfil</a></li>
-                    <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                    <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
                         <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
                     <% } %>
                 <% } else { %>
@@ -54,7 +54,7 @@
                 <ul>
                     <% if (locals.userLogin) { %>
                         <li><a class="btn-neon" href="/users/perfil">Perfil</a></li>
-                        <% if (locals.userLogin && locals.userLogin.rol === "admin") { %>
+                        <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
                             <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
                         <% } %>
                         <form class="exit" action="/users/logout?_method=DELETE" method="post">

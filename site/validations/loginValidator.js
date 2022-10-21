@@ -14,15 +14,15 @@ module.exports = [
     .notEmpty().withMessage('Debe ingresar su contraseña').bail()
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
 
-    body('contrasenia')
+    body("contrasenia")
     .custom((value, {req}) => {
        return db.Usuarios.findOne({
             where: {
-                email: req.body.email
+                email : req.body.email
             }
        })
        .then(user => {
-           if(!bcryptjs.compareSync(value, user.dataValues.password)){
+           if(!bcryptjs.compareSync(value, user.dataValues.contrasenia)){
                return Promise.reject()
            }
        })
@@ -31,7 +31,7 @@ module.exports = [
        })
     })
 
-    /* body('email')
+   /*  body('email')
     .custom((value,{req}) =>{
         let usuario = usuarios.find(user => user.email === value && bcryptjs.compareSync(req.body.contrasenia, user.contrasenia))
 

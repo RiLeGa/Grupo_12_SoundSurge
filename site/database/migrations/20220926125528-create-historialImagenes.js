@@ -1,44 +1,23 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Historiales', {
+    await queryInterface.createTable('HistorialImagenes', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      titulo: {
+      nombre: {
         type: Sequelize.STRING
       },
-      stock: {
-        type: Sequelize.INTEGER
-      },
-      precio: {
-        type: Sequelize.INTEGER
-      },
-      descuento: {
-        type: Sequelize.INTEGER
-      },
-      descripcion: {
-        type: Sequelize.STRING(1000)
-      },
-      categoriasId: {
+      historialId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        onDelete: 'CASCADE',
         references: {
           model: {
-            tableName: 'Categorias'
-          },
-          key: 'id'
-        },
-      },
-      marcasId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: {
-            tableName: 'Marcas'
+            tableName: 'Historiales'
           },
           key: 'id'
         },
@@ -54,6 +33,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Historiales');
+    await queryInterface.dropTable('HistorialImagenes');
   }
 };

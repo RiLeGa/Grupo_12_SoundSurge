@@ -39,10 +39,10 @@ listado.forEach(historial => {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-     await queryInterface.bulkInsert('Productos', historiales, {});
+     await queryInterface.bulkInsert('Historiales', historiales, {});
   },
 
   async down (queryInterface, Sequelize) {
-     await queryInterface.bulkDelete('Productos', null, {});
+     await queryInterface.bulkDelete('Historiales', null, {});
   }
 };

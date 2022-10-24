@@ -1,6 +1,7 @@
 [
+   
     {
-        "id": 21,
+        "id": 1,
         "marca": "Gibson",
         "titulo": "guitarra gibson",
         "categoria": "Cuerdas",
@@ -15,7 +16,7 @@
         ]
     },
     {
-        "id": 20,
+        "id": 2,
         "marca": "Yamaha",
         "titulo": "Guitarra Yamaha PAC012",
         "categoria": "Cuerdas",
@@ -27,6 +28,6 @@
             "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
             "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
             "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
-    }]
+            "168343-800-auto.png"]
+    }
+]

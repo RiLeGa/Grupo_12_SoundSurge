@@ -20,7 +20,7 @@ router.get('/papelera',adminCheck, papelera)
 
 router.get('/lista', adminCheck, lista);
 
-router.get('/userlist', adminCheck, userlist)
+router.get('/userlist', userlist)
 
 
 module.exports = router;

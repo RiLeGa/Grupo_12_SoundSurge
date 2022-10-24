@@ -1,8 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 let productos = require('../data/productos.json')
-let usuarios = require('../data/usuarios.json')
+/* let usuarios = require('../data/usuarios.json') */
 const historial = require('../data/historial.json')
+const db = require("../database/models");
+
 
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
@@ -152,10 +154,30 @@ module.exports = {
     },
     //visualiza vista con listado de usuarios//
     userlist : (req,res) => {
+        db.Usuarios.findAll()
+        .then((usuarios) => {
+        let todos = [
+            id = usuarios.id ,
+        ]
+
+        let response = {
+            status : 200,
+            meta : {
+                length : todos.length,
+                path : "ruta"
+            },
+            data : usuarios
+        }
+
+       /*  return res.status(200).json(response)
+ */
         return res.render('admin/listaDeUsuarios',{
             usuarios
+         })
         })
-        
+        .catch((error) => {
+            return res.send(error)
+          });
     },
     borrarUsuario: (req, res) => {
         idParams = +req.params.id

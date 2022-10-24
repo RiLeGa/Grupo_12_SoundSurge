@@ -1,8 +1,8 @@
 [
     {
         "id": 21,
-        "marca": "gibson   ",
-        "titulo": "guitarra gibson   ",
+        "marca": "Gibson",
+        "titulo": "guitarra gibson",
         "categoria": "Cuerdas",
         "precio": 150000,
         "descuento": 15,

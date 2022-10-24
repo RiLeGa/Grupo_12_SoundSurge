@@ -27,13 +27,8 @@ listado.forEach(producto => {
     createdAt:new Date,
     updatedAt:new Date
   }
-  let imagen5 = {
-    nombre: producto.imagenes[4],
-    productosId: producto.id,
-    createdAt:new Date,
-    updatedAt:new Date
-  }
-  imagenes.push(imagen,imagen2,imagen3,imagen4,imagen5)
+  
+  imagenes.push(imagen,imagen2,imagen3,imagen4)
 })
 
 module.exports = {

@@ -7,6 +7,7 @@ const db = require("../database/models");
 
 
 
+
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
 ,JSON.stringify(dato,null,4),'utf-8')
 
@@ -154,27 +155,32 @@ module.exports = {
     },
     //visualiza vista con listado de usuarios//
     userlist : (req,res) => {
-        db.Usuarios.findAll()
-        .then((usuarios) => {
-        let todos = [
-            id = usuarios.id ,
-        ]
 
-        let response = {
+        let usuarios = []
+        db.Usuarios.findAll()     
+        .then((todos) => {
+            usuarios = todos
+        })
+
+        res.send(usuarios)
+          /*   return res.render('admin/listaDeUsuarios',{
+                usuarios
+              })
+ */
+       
+
+        /* let response = {
             status : 200,
             meta : {
-                length : todos.length,
+                length : usuarios.length,
                 path : "ruta"
             },
-            data : usuarios
-        }
+            data: usuarios  
+                            
+        }  */
 
-       /*  return res.status(200).json(response)
- */
-        return res.render('admin/listaDeUsuarios',{
-            usuarios
-         })
-        })
+        /* return res.status(200).json(response) */
+
         .catch((error) => {
             return res.send(error)
           });

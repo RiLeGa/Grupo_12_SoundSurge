@@ -28,7 +28,7 @@
                     <% for( let i = 0; i <= 9; i++ ) { %>
                         <article>
                             <a href="/productos/detalle/<%= productos[i].id %>">
-                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
                                 <div class="precio-1">
                                     <h3><%= productos[i].titulo %></h3>
                                     <span >$<%= productos[i].precio %></span>
@@ -48,7 +48,7 @@
                             <% if (productos[i].descuento !== 0) { %>
                             <article>
                                 <a href="/productos/detalle/<%= productos[i].id %>">
-                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
                                     <i class="fas fa-percentage"><%= productos[i].descuento %></i>
                                     <div class="precio">
                                         <h3><%= productos[i].titulo %></h3>
@@ -70,7 +70,7 @@
                         <% for( let i = 0; i <= 9; i++ ) { %>
                             <article>
                                 <a href="/productos/detalle/<%= productos[i].id %>">
-                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
                                     <div class="precio-1">
                                         <h3><%= productos[i].titulo %></h3>
                                         <span>$<%= productos[i].precio %></span>

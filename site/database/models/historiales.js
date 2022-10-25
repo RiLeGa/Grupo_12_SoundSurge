@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
       Historiales.belongsTo(models.Marcas,{
         as: 'marca',
         foreignKey: 'marcasId'
-      }),HistorialImagenes.hasMany(models.Productos,{
+      }),
+      Historiales.hasMany(models.HistorialImagenes,{
         as: 'historyal',
         foreignKey: 'historialId'
       })

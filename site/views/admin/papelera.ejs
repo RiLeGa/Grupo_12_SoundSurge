@@ -23,11 +23,11 @@
               </tr>
             </thead>
             <tbody>
-                <% historial.forEach(historial => { %>
+                <% historiales.forEach(historial => { %>
                   <tr>
                       
                         <th scope="row"><%= historial.id %></th>
-                        <td><%= historial.marca %></td>
+                        <td><%= historial.marca.nombre %></td>
                         <td colspan="1"><%= historial.titulo %></td>
                         <td><%= historial.stock %></td>
                         <td><%= historial.precio %></td>

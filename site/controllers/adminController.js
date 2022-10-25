@@ -1,8 +1,8 @@
 const fs = require('fs')
 const path = require('path')
-let productos = require('../data/productos.json')
+
 let usuarios = require('../data/usuarios.json')
-const historial = require('../data/historial.json')
+
 
 let db = require('../database/models')
 let Sequelize = require('sequelize')
@@ -143,10 +143,18 @@ module.exports = {
         return res.redirect('/admin/lista')
     },
     papelera: (req,res) => {
-        return res.render('admin/papelera', {
-            historial
-        }
-        )
+        let historiales = db.Historiales.findAll({
+            include:[{ all: true}]
+        })
+        Promise.all([historiales])
+        .then(([historiales])=> {
+            
+            
+            return res.render('admin/papelera', {
+                historiales
+            })
+        })
+        .catch(error => res.send(error))
     },
     //visualiza vista con listado de usuarios//
     userlist : (req,res) => {

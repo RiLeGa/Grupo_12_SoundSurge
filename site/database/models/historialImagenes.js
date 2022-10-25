@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       HistorialImagenes.belongsTo(models.Historiales,{
-        as: 'historyal',
+        as: 'historial',
         foreignKey: 'historialId'
       })
     }

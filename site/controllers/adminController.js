@@ -4,6 +4,9 @@ let productos = require('../data/productos.json')
 let usuarios = require('../data/usuarios.json')
 const historial = require('../data/historial.json')
 
+let db = require('../database/models')
+let Sequelize = require('sequelize')
+
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
 ,JSON.stringify(dato,null,4),'utf-8')
@@ -16,9 +19,18 @@ const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../dat
 
 module.exports = {
     lista : (req,res) => {
-        return res.render('admin/listaDeProductos',{
-            productos
+        let productos = db.Productos.findAll({
+            include:[{ all: true}]
         })
+        Promise.all([productos])
+        .then(([productos])=> {
+            
+            
+            return res.render('admin/listaDeProductos', {
+                productos
+            })
+        })
+        .catch(error => res.send(error))
     },
     crear : (req,res) => {
         return res.render('admin/crearProductos');

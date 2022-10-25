@@ -1,0 +1,14 @@
+<h2>Productos relacionados</h2>
+<section class="similares">
+    <ul>
+        <% for( let i = 0; i < 10; i++ ) { %>
+                <article>
+                    <a href="/productos/detalle/<%= productos.id %>">
+                    <div class="producto"  style="background-image:url('/images/<%= productos.imagenes[0].nombre %>')"></div>
+                    <h4><%= productos.titulo %></h4>
+                    <p>$<%= productos.precio %></p>
+                    </a>
+                </article>
+        <% } %>
+    </ul>
+</section>

@@ -48,9 +48,6 @@ module.exports = {
         imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
         rol: "usuario",
       },
-      {
-        timeStamp:
-      }
       
       )
       

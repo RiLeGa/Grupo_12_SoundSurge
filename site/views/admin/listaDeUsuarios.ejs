@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ("./partials/head",{title: "Lista de usuarios"}) %>
-<body class="lista">
-    <%- include ("./partials/header") %> 
-    <main >
-        <h1>Lista de usuarios</h1>
-        <div class="table-responsive">
+  <%- include ("./partials/head",{title: "Lista de usuarios"}) %>
+  <body class="lista">
+    <%- include ("./partials/header") %>
+    <main>
+      <h1>Lista de usuarios</h1>
+      <div class="table-responsive">
         <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">Direccion</th>
-                <th scope="col">Telefono</th>
-                <th scope="col">Email</th>
-                <th scope="col">Rol</th>
-                <th scope="col">Imagen</th>
-              </tr>
-            </thead>
-            <tbody>
-                <% usuarios.forEach(usuario => { %>
-                  <tr>
-                      <th scope="row"><%= usuario.id %> </th>
-                      <td><%= usuario.nombre %></td>
-                      <td colspan="1"><%= usuario.apellido %></td>
-                      <td><%= usuario.direccion %></td>
-                      <td><%= usuario.telefono %></td>
-                      <td><%= usuario.email %></td>
-                      <td><%= usuario.rol %></td>
-                      <td><img class="usuario" id="imgMain" src="/images/users/<%= usuario.imagen %>" alt="Imagen principal"></td>
-                      <td>
-                        <div class="edicion">
-                            <form action="borrarUsuario/<%= usuario.id%>?_method=DELETE" method="post">
-                              <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                            </form>
-                        </div>
-                    </td>
-                  </tr>
-                <% }) %>
-            </tbody>
-          </table>
-        </div>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Email</th>
+              <th scope="col">Rol</th>
+              <th scope="col">Imagen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for( let i = 0; i <= usuarios.length; i++ ) { %> %>
+            <tr>
+              <th scope="row"><%= usuario.[i]id %></th>
+              <td><%= usuario.nombre %></td>
+              <td colspan="1"><%= usuario.apellido %></td>
+              <td><%= usuario.direccion %></td>
+              <td><%= usuario.telefono %></td>
+              <td><%= usuario.email %></td>
+              <td><%= usuario.rol %></td>
+              <td>
+                <img
+                  class="usuario"
+                  id="imgMain"
+                  src="/images/users/<%= usuario.imagen %>"
+                  alt="Imagen principal"
+                />
+              </td>
+              <td>
+                <div class="edicion">
+                  <form
+                    action="borrarUsuario/<%= usuario.id%>?_method=DELETE"
+                    method="post"
+                  >
+                    <button type="submit" class="btn btn-danger">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
     </main>
   </body>
 </html>

@@ -159,6 +159,7 @@ module.exports = {
         let todos = [
             id = usuarios.id ,
         ]
+        
 
         let response = {
             status : 200,

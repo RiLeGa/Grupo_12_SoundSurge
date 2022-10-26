@@ -4,6 +4,7 @@ const path = require("path");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require("../database/models");
+const { timeStamp } = require("console");
 /* const guardar = (dato) =>
   fs.writeFileSync(
     path.join(__dirname, "../data/usuarios.json"),
@@ -32,9 +33,38 @@ module.exports = {
       errors.errors.push(imagen);
     }
     if (errors.isEmpty()) {
-      /* return res.send(req.body)*/
+      /* return res.send(req.body) */
+      let { nombre, apellido, email, contrasenia } = req.body
+      let usuarios = {}
 
-      let { nombre, apellido, email, contrasenia } = req.body;
+      db.Usuarios.create(usuarios, {
+        id: "",
+        nombre,
+        apellido,
+        direccion: "",
+        telefono: "",
+        email,
+        contrasenia: bcrypt.hashSync(contrasenia, 12),
+        imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
+        rol: "usuario",
+      },
+      {
+        timeStamp:
+      }
+      
+      )
+      
+      .then((usuario)=>{
+        usuarios = usuario
+        res.redirect("/")
+      })
+      .catch((error) => {
+        return res.send(error);
+      });
+
+      //----------------------------------------//
+
+        /* let { nombre, apellido, email, contrasenia } = req.body;
 
       let nuevoUsuario = {
         id: usuarios[usuarios.length - 1].id + 1,
@@ -49,30 +79,34 @@ module.exports = {
       };
 
       usuarios.push(nuevoUsuario);
-      guardar(usuarios);
+      guardar(usuarios); */
 
-      const { recordarme } = req.body;
-      usuarios = usuarios.find((user) => user.email === email);
-      req.session.userLogin = {
-        id: usuarios.id,
-        nombre: usuarios.nombre,
-        imagen: usuarios.imagen,
-        rol: usuarios.rol,
-      };
-      if (recordarme) {
-        res.cookie("SoundSurge", req.session.userLogin, {
-          maxAge: 1000 * 60 * 60,
-        });
-      }
+      //----------------------------------------//
 
-      /* Redirecciona a login */
-      return res.redirect("/");
-    } else {
-      /* return res.send(errors.mapped()) */
-      return res.render("register", {
-        errors: errors.mapped(),
-        old: req.body,
-      });
+        /* .then((usuario) => {
+          const { email, recordarme } = req.body;
+          db.Usuarios.findByPk((usuario) => usuario.email === email);
+          req.session.userLogin = {
+            id: usuario.id,
+            nombre: usuario.nombre,
+            imagen: usuario.imagen,
+            rol: usuario.rol,
+          };
+          if (recordarme) {
+            res.cookie("SoundSurge", req.session.userLogin, {
+              maxAge: 1000 * 60 * 60,
+            });
+            res.redirect("/");
+          } else { */
+
+          /* Redirecciona a login */
+            /* return res.send(errors.mapped()) */
+            /* return res.render("register", {
+              errors: errors.mapped(),
+              old: req.body,
+            });
+          }
+        }); */
     }
   },
   login: (req, res) => {
@@ -99,25 +133,26 @@ module.exports = {
         where: {
           email,
         },
-      }).then((usuario) => {
-        usuario = usuario.dataValues;
-
-        req.session.userLogin = {
-          id: usuario.id,
-          nombre: usuario.nombre,
-          imagen: usuario.imagen,
-          rol: usuario.rolId,
-        };
-        if (recordarme) {
-          res.cookie("SoundSurge", req.session.userLogin, {
-            maxAge: 1000 * 60 * 60,
-          });
-        }
-        return res.redirect("/users/perfil");
       })
-      .catch((error) => {
-        return res.send(error)
-      });
+        .then((usuario) => {
+          usuario = usuario.dataValues;
+
+          req.session.userLogin = {
+            id: usuario.id,
+            nombre: usuario.nombre,
+            imagen: usuario.imagen,
+            rol: usuario.rolId,
+          };
+          if (recordarme) {
+            res.cookie("SoundSurge", req.session.userLogin, {
+              maxAge: 1000 * 60 * 60,
+            });
+          }
+          return res.redirect("/users/perfil");
+        })
+        .catch((error) => {
+          return res.send(error);
+        });
     } else {
       /*       return res.send(errors.mapped())
        */ return res.render("login", {

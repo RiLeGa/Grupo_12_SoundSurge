@@ -6,41 +6,42 @@
         <section class="container-register">
             <h1>Registro</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
-            <form action="/admin/editarPerfil/<%= locals.userLogin.id %>?_method=put" method="post">
+
+            <form action="/user/editar/<%= locals.userLogin.id %>?_method=put" method="post" >
             <div class="icons">
                 <i class="fas fa-user"> <input type="file" name="imagen" id="imagen"> </i>
             </div>
             <div class="container">
                 <label for="nombre">nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= usuario.nombre %> <%= locals.old && old.nombre ? old.nombre : null%>">
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="">
                 <% if (locals.errors && errors.nombre) { %>
                     <small><%= errors.nombre.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="apellido">apellido</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"value="<%= locals.old && old.apellido ? old.apellido : null%>">
+                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido">
                 <% if (locals.errors && errors.apellido) { %>
                     <small><%= errors.apellido.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="direccion">direccion</label>
-                <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion"value="<%= locals.old && old.direccion ? old.direccion : null%>">
+                <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion">
                 <% if (locals.errors && errors.direccion) { %>
                     <small><%= errors.direccion.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="telefono">telefono</label>
-                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono"value="<%= locals.old && old.telefono ? old.telefono : null%>">
+                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono">
                 <% if (locals.errors && errors.telefono) { %>
                     <small><%= errors.telefono.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="email">email</label>
-                <input type="email" name="email" id="email" placeholder="Ingresa tu email"value="<%= locals.old && old.email ? old.email : null%>">
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email">
                 <% if (locals.errors && errors.email) { %>
                     <small><%= errors.email.msg %></small>
                 <% } %>
@@ -71,12 +72,6 @@
             
             <button type="submit" class="enviar">Enviar</button>
             
-        <h4>--------------- Registrarse con -----------------</h4>
-            <button type="submit" class="facebook"><i class="fab fa-facebook"></i> Registrarte con Facebook</button>
-            
-        
-            <button type="submit" class="google"><i class="fab fa-google"></i> Registrarte con Google</button>
-
         </form>
         <div class="foot-reg">
             <a href="/">Soporte</a>

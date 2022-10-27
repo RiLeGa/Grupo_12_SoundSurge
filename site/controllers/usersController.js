@@ -4,7 +4,7 @@ const path = require("path");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require("../database/models");
-const { timeStamp } = require("console");
+const usuarios = require("../database/models/usuarios");
 /* const guardar = (dato) =>
   fs.writeFileSync(
     path.join(__dirname, "../data/usuarios.json"),
@@ -35,29 +35,44 @@ module.exports = {
     if (errors.isEmpty()) {
       /* return res.send(req.body) */
       let { nombre, apellido, email, contrasenia } = req.body
-      let usuarios = {}
 
-      db.Usuarios.create(usuarios, {
-        id: "",
-        nombre,
-        apellido,
-        direccion: "",
-        telefono: "",
-        email,
-        contrasenia: bcrypt.hashSync(contrasenia, 12),
-        imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
-        rol: "usuario",
-      },
-      
-      )
-      
-      .then((usuario)=>{
-        usuarios = usuario
-        res.redirect("/")
+      db.Usuarios.create({
+         nombre,
+         apellido,
+         direccion: "",
+         telefono: "",
+         email,
+         contrasenia: bcrypt.hashSync(contrasenia, 12),
+         imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
+         rolId: 2,
       })
-      .catch((error) => {
-        return res.send(error);
-      });
+      
+      .then(usuario => {
+                
+        req.session.userLogin = {
+            id : usuario.id,
+            nombre : usuario.nombre,
+            imagen : usuario.imagen,
+            rol : usuario.rolId
+        }
+        return res.redirect('/')
+    })
+    .catch(errores => res.send(errores))
+  } else {
+    
+    let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', dato))
+
+    if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
+        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', req.file.filename))
+    }
+    
+    /* return res.send(errors.mapped()) */
+    return res.render('users/register', {
+        errors: errors.mapped(),
+        old: req.body
+    })
+    
+
 
       //----------------------------------------//
 
@@ -78,18 +93,7 @@ module.exports = {
       usuarios.push(nuevoUsuario);
       guardar(usuarios); */
 
-      //----------------------------------------//
-
-        /* .then((usuario) => {
-          const { email, recordarme } = req.body;
-          db.Usuarios.findByPk((usuario) => usuario.email === email);
-          req.session.userLogin = {
-            id: usuario.id,
-            nombre: usuario.nombre,
-            imagen: usuario.imagen,
-            rol: usuario.rol,
-          };
-          if (recordarme) {
+         /* if (recordarme) {
             res.cookie("SoundSurge", req.session.userLogin, {
               maxAge: 1000 * 60 * 60,
             });
@@ -165,8 +169,41 @@ module.exports = {
     }
     return res.redirect("/");
   },
+  editarU: (req, res) => {
+    return res.render("editarUsuario");
+  },
   editarUsuario: (req, res) => {
-    idParams = +req.params.session.userLogin;
+    let errors = validationResult(req);
+    if (req.fileValidationError) {
+      let imagen = {
+        param: "imagen",
+        msg: req.fileValidationError,
+      };
+      errors.errors.push(imagen);
+    }
+    if (errors.isEmpty()) {
+    
+    /* return res.send(req.body) */
+    const idParams = +req.params.id
+    const { nombre, apellido, direccion, telefono, email, contrasenia } = req.body;
+    if (Usuarios.id === idParams) 
+    db.Usuarios.update(
+      {
+        nombre,
+        apellido,
+        direccion,
+        telefono,
+        email,
+        contrasenia : bcrypt.hashSync(contrasenia, 12),
+        imagen : req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
+        createAt: new Date,
+        updateAt: new Date
+      },
+      {
+        where: {id : req.params.id}
+      });
+      
+   /*  idParams = +req.params.session.userLogin;
     let { nombre, apellido, direccion, telefono, email, imagenes } = req.body;
 
     userLogin.forEach((usuario) => {
@@ -180,12 +217,13 @@ module.exports = {
       }
     });
 
-    guardarU(usuarios);
-
-    return res.redirect("/");
+    guardarU(usuarios); */
+    
+    return res.redirect("/perfil");
 
     /* return res.send(req.body) */
-  },
+  }
+},
   buscar: (req, res) => {
     return res.render("");
   },

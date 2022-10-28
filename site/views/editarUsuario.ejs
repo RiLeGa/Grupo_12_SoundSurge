@@ -4,7 +4,7 @@
 <body class="register">
     <main>
         <section class="container-register">
-            <h1>Registro</h1>
+            <h1>Edicion de Perfil</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
 
             <form action="/user/editar/<%= locals.userLogin.id %>?_method=put" method="post" >
@@ -13,14 +13,14 @@
             </div>
             <div class="container">
                 <label for="nombre">nombre</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="">
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%=`${usuario.nombre}`%>">
                 <% if (locals.errors && errors.nombre) { %>
                     <small><%= errors.nombre.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="apellido">apellido</label>
-                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido">
+                <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" value="<%=`${usuario.apellido}`%>">
                 <% if (locals.errors && errors.apellido) { %>
                     <small><%= errors.apellido.msg %></small>
                 <% } %>
@@ -34,32 +34,20 @@
             </div>
             <div class="container">
                 <label for="telefono">telefono</label>
-                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono">
+                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono" >
                 <% if (locals.errors && errors.telefono) { %>
                     <small><%= errors.telefono.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="email">email</label>
-                <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email"  >
+                <!-- buscar como deshabilitar un input -->
                 <% if (locals.errors && errors.email) { %>
                     <small><%= errors.email.msg %></small>
                 <% } %>
             </div>
-            <div class="container">
-                <label for="contrasenia">contrasenia</label>
-                <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa tu contraseña">
-                <% if (locals.errors && errors.contrasenia) { %>
-                    <small><%= errors.contrasenia.msg %></small>
-                <% } %>
-            </div>
-            <div class="container">
-                <label for="confirmar">Confirmar contraseña</label>
-                <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña">
-                <% if (locals.errors && errors.confirmar) { %>
-                    <small><%= errors.confirmar.msg %></small>
-                <% } %>
-            </div>
+            
            
 
             <div class="terminos">

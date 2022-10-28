@@ -170,9 +170,15 @@ module.exports = {
     return res.redirect("/");
   },
   editarU: (req, res) => {
-    return res.render("editarUsuario");
+    let idParams = req.params.id
+    db.Usuarios.findByPk(idParams)
+    .then(usuario => {
+      /* return res.send(usuario) */
+      return res.render("editarUsuario", {usuario});
+    })
   },
   editarUsuario: (req, res) => {
+    /* return res.send(req.body) */
     let errors = validationResult(req);
     if (req.fileValidationError) {
       let imagen = {

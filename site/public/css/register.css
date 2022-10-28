@@ -12,15 +12,14 @@
     background-position-x: center;
     background-position-y: center;
     background-color: rgb(0, 0, 0);
-    border: 4px solid #040731;
-    width: 60%;
-    margin-left: 20%;
-    border-radius: 10%;
+    border: 4px solid #000000;
+    width: 100vw;
+   
    
 }
 .register main h1{
     text-align: center;
-    margin-top: 0;
+    margin-top: 10px;
     color: var(--colorGris);
     margin-bottom: 8px;
 }
@@ -37,9 +36,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
+}
+
+.register main .icons img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
 }
 
 .register main .icons input{
+    display: none;
     font-family: var(--fuenteGral);
     text-align: center;
     font-size: 15px;
@@ -129,6 +136,7 @@
     width: 80%;
     margin-left: 10%;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .register main .terminos{
@@ -139,4 +147,20 @@
     color: white;
     font-size: 25px;
     text-align: center;
+}
+
+@media (min-width: 461px){
+.register main .container-register{
+    background-image: url(/images/LogoSoundSurge.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-color: rgb(0, 0, 0);
+    border: 4px solid #040731;
+    width: 60%;
+    height: 100vh;
+    margin-left: 20%;
+    border-radius: 10%;
+}
 }

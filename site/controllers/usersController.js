@@ -178,7 +178,7 @@ module.exports = {
     })
   },
   editarUsuario: (req, res) => {
-    /* return res.send(req.body) */
+    return res.send(req.body)
     let errors = validationResult(req);
     if (req.fileValidationError) {
       let imagen = {
@@ -190,24 +190,48 @@ module.exports = {
     if (errors.isEmpty()) {
     
     /* return res.send(req.body) */
-    const idParams = +req.params.id
-    const { nombre, apellido, direccion, telefono, email, contrasenia } = req.body;
-    if (Usuarios.id === idParams) 
+    let idParams = req.params.id
+    db.Usuarios.findByPk(idParams)
+    .then(usuario => {
+      /* return res.send(usuario) */
+      req.session.destroy();
+    })
+
+    const { nombre, apellido, direccion, telefono } = req.body;
+
     db.Usuarios.update(
       {
         nombre,
         apellido,
         direccion,
         telefono,
-        email,
-        contrasenia : bcrypt.hashSync(contrasenia, 12),
         imagen : req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
         createAt: new Date,
         updateAt: new Date
       },
       {
         where: {id : req.params.id}
-      });
+      })
+        db.Usuarios.findByPk(idParams)
+      .then((usuario) => {
+        usuario = usuario.dataValues;
+        req.session.userLogin = {
+          id: usuario.id,
+          nombre: usuario.nombre,
+          imagen: usuario.imagen,
+          rol: usuario.rolId,
+        };
+        if (recordarme) {
+          res.cookie("SoundSurge", req.session.userLogin, {
+            maxAge: 1000 * 60 * 60,
+          });
+        }
+        return res.redirect("/users/perfil");
+      })
+      .catch((error) => {
+        return res.send(error);
+      })
+    
       
    /*  idParams = +req.params.session.userLogin;
     let { nombre, apellido, direccion, telefono, email, imagenes } = req.body;
@@ -225,11 +249,11 @@ module.exports = {
 
     guardarU(usuarios); */
     
-    return res.redirect("/perfil");
+   /*  return res.redirect("/perfil"); */
 
     /* return res.send(req.body) */
   }
-},
+  },
   buscar: (req, res) => {
     return res.render("");
   },

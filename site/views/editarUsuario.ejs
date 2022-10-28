@@ -9,7 +9,8 @@
 
             <form action="/user/editar/<%= locals.userLogin.id %>?_method=put" method="post" >
             <div class="icons">
-                <i class="fas fa-user"> <input type="file" name="imagen" id="imagen"> </i>
+                <input type="file" name="imagen" id="imagen">
+                <img src="/images/users/<%= usuario.imagen %> " alt=""> 
             </div>
             <div class="container">
                 <label for="nombre">nombre</label>
@@ -27,21 +28,21 @@
             </div>
             <div class="container">
                 <label for="direccion">direccion</label>
-                <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion">
+                <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion" value="<%=`${usuario.direccion}`%>">
                 <% if (locals.errors && errors.direccion) { %>
                     <small><%= errors.direccion.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="telefono">telefono</label>
-                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono" >
+                <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono" value="<%=`${usuario.telefono}`%>">
                 <% if (locals.errors && errors.telefono) { %>
                     <small><%= errors.telefono.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="email">email</label>
-                <input type="email" name="email" id="email" placeholder="Ingresa tu email"  >
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email" value="<%=`${usuario.email}`%>" >
                 <!-- buscar como deshabilitar un input -->
                 <% if (locals.errors && errors.email) { %>
                     <small><%= errors.email.msg %></small>

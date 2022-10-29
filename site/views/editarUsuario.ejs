@@ -7,55 +7,43 @@
             <h1>Edicion de Perfil</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
 
-            <form action="/user/editar/<%= locals.userLogin.id %>?_method=put" method="post" >
+            <form action="/user/editar/<%= usuario.id %>?_method=put" method="post" >
             <div class="icons">
+                <label for="image">
+                    <img src="/images/users/<%= usuario.imagen %> " alt="" >
+                </label>
                 <input type="file" name="imagen" id="imagen">
-                <img src="/images/users/<%= usuario.imagen %> " alt=""> 
+                 
             </div>
             <div class="container">
                 <label for="nombre">nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%=`${usuario.nombre}`%>">
-                <% if (locals.errors && errors.nombre) { %>
-                    <small><%= errors.nombre.msg %></small>
-                <% } %>
+
             </div>
             <div class="container">
                 <label for="apellido">apellido</label>
                 <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" value="<%=`${usuario.apellido}`%>">
-                <% if (locals.errors && errors.apellido) { %>
-                    <small><%= errors.apellido.msg %></small>
-                <% } %>
+
             </div>
             <div class="container">
                 <label for="direccion">direccion</label>
                 <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion" value="<%=`${usuario.direccion}`%>">
-                <% if (locals.errors && errors.direccion) { %>
-                    <small><%= errors.direccion.msg %></small>
-                <% } %>
             </div>
+
             <div class="container">
                 <label for="telefono">telefono</label>
                 <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono" value="<%=`${usuario.telefono}`%>">
-                <% if (locals.errors && errors.telefono) { %>
-                    <small><%= errors.telefono.msg %></small>
-                <% } %>
+                
             </div>
             <div class="container">
                 <label for="email">email</label>
-                <input type="email" name="email" id="email" placeholder="Ingresa tu email" value="<%=`${usuario.email}`%>" >
+                <input type="email" name="email" id="email" placeholder="Ingresa tu email" value="<%=`${usuario.email}`%>" disabled>
                 <!-- buscar como deshabilitar un input -->
-                <% if (locals.errors && errors.email) { %>
-                    <small><%= errors.email.msg %></small>
-                <% } %>
-            </div>
             
-           
+            </div>
 
             <div class="terminos">
                 <input type="checkbox" name="terminos" id="terminos">
-                <% if (locals.errors && errors.terminos) { %>
-                    <small><%= errors.terminos.msg %></small>
-                <% } %>
                 <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
             

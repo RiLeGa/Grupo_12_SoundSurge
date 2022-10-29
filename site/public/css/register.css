@@ -46,7 +46,6 @@
 }
 
 .register main .icons input{
-    display: none;
     font-family: var(--fuenteGral);
     text-align: center;
     font-size: 15px;
@@ -159,7 +158,6 @@
     background-color: rgb(0, 0, 0);
     border: 4px solid #040731;
     width: 60%;
-    height: 100vh;
     margin-left: 20%;
     border-radius: 10%;
 }

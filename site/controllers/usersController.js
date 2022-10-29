@@ -5,6 +5,7 @@ const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require("../database/models");
 const usuarios = require("../database/models/usuarios");
+const { literal } = require("sequelize");
 /* const guardar = (dato) =>
   fs.writeFileSync(
     path.join(__dirname, "../data/usuarios.json"),
@@ -178,26 +179,17 @@ module.exports = {
     })
   },
   editarUsuario: (req, res) => {
-    return res.send(req.body)
-    let errors = validationResult(req);
-    if (req.fileValidationError) {
-      let imagen = {
-        param: "imagen",
-        msg: req.fileValidationError,
-      };
-      errors.errors.push(imagen);
-    }
-    if (errors.isEmpty()) {
-    
-    /* return res.send(req.body) */
-    let idParams = req.params.id
-    db.Usuarios.findByPk(idParams)
+   /*  return res.send(req.body) */
+   let idParams = req.params.id
+   db.Usuarios.findByPk(idParams)
     .then(usuario => {
       /* return res.send(usuario) */
       req.session.destroy();
     })
+      /* return res.send(usuario) */
+      
 
-    const { nombre, apellido, direccion, telefono } = req.body;
+    let { nombre, apellido, direccion, telefono } = req.body;
 
     db.Usuarios.update(
       {
@@ -212,7 +204,6 @@ module.exports = {
       {
         where: {id : req.params.id}
       })
-        db.Usuarios.findByPk(idParams)
       .then((usuario) => {
         usuario = usuario.dataValues;
         req.session.userLogin = {
@@ -252,7 +243,7 @@ module.exports = {
    /*  return res.redirect("/perfil"); */
 
     /* return res.send(req.body) */
-  }
+  
   },
   buscar: (req, res) => {
     return res.render("");

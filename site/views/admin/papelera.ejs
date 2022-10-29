@@ -33,10 +33,9 @@
                         <td><%= historial.precio %></td>
                         <td><%= historial.descuento %></td>
                         <td>
-                            <div class="edicion">
-                              
-                                  
-                            </div>
+                          <form action="/admin/restore/<%= historial.id%>?_method=DELETE" method="post">
+                            <button type="submit" class="btn btn-success"><i class="fas fa-plane-departure"></i></button>
+                          </form>
                         </td>
                       
                       </tr>

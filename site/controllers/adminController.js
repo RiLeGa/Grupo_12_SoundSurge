@@ -371,57 +371,6 @@ module.exports = {
             })
         })
         .catch(error => res.send(error))
-    }, restore: (req, res) => {
-        let idParams = +req.params.id
-        db.Historiales.findOne({
-            where : {
-                id :idParams
-            },
-            include : [{
-                all : true
-            }]
-        })
-        .then(historialProducto => {
-            db.Productos.create({
-                titulo: historialProducto.titulo,
-                precio: historialProducto.precio,
-                descuento: historialProducto.descuento,
-                stock: historialProducto.stock,
-                descripcion:historialProducto.descripcion,
-                categoriasId: historialProducto.categoriasId,
-                marcasId: historialProducto.marcasId,
-            })
-            .then(productoNuevo => {
-                let imagen1 = db.Imagenes.create({
-                    nombre: historialProducto.imagenes[0].nombre,
-                    productoId: productoNuevo.id
-                })
-                let imagen2 = db.Imagenes.create({
-                    nombre: historialProducto.imagenes[1].nombre,
-                    productoId: productoNuevo.id
-                })
-                let imagen3 = db.Imagenes.create({
-                    nombre: historialProducto.imagenes[2].nombre,
-                    productoId: productoNuevo.id
-                })
-                let imagen4 = db.Imagenes.create({
-                    nombre: historialProducto.imagenes[3].nombre,
-                    productoId: productoNuevo.id
-                })
-                Promise.all([imagen1,imagen2,imagen3,imagen4])
-                .then(([imagen1,imagen2,imagen3,imagen4]) =>{
-                    db.Historiales.destroy({
-                        where : {
-                            id : idParams
-                        }
-                    })
-                    .then(eliminar => {
-                        return res.redirect('/admin/lista')
-                    })
-                })
-            })
-        })
-        .catch(errores => res.send(errores))
     },
     //visualiza vista con listado de usuarios//
     userlist : (req,res) => {

@@ -35,49 +35,54 @@ module.exports = {
     }
     if (errors.isEmpty()) {
       /* return res.send(req.body) */
-      let { nombre, apellido, email, contrasenia } = req.body
+      let { nombre, apellido, email, contrasenia } = req.body;
 
       db.Usuarios.create({
-         nombre,
-         apellido,
-         direccion: "",
-         telefono: "",
-         email,
-         contrasenia: bcrypt.hashSync(contrasenia, 12),
-         imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
-         rolId: 2,
+        nombre,
+        apellido,
+        direccion: "",
+        telefono: "",
+        email,
+        contrasenia: bcrypt.hashSync(contrasenia, 12),
+        imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
+        rolId: 2,
       })
-      
-      .then(usuario => {
-                
-        req.session.userLogin = {
-            id : usuario.id,
-            nombre : usuario.nombre,
-            imagen : usuario.imagen,
-            rol : usuario.rolId
-        }
-        return res.redirect('/')
-    })
-    .catch(errores => res.send(errores))
-  } else {
-    
-    let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', dato))
 
-    if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
-        fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', req.file.filename))
-    }
-    
-    /* return res.send(errors.mapped()) */
-    return res.render('users/register', {
+        .then((usuario) => {
+          req.session.userLogin = {
+            id: usuario.id,
+            nombre: usuario.nombre,
+            imagen: usuario.imagen,
+            rol: usuario.rolId,
+          };
+          return res.redirect("/");
+        })
+        .catch((errores) => res.send(errores));
+    } else {
+      let ruta = (dato) =>
+        fs.existsSync(
+          path.join(__dirname, "..", "..", "public", "images", "users", dato)
+        );
+
+      if (
+        ruta(req.file.filename) &&
+        req.file.filename !== "default-image.png"
+      ) {
+        fs.unlinkSync(
+          path.join(__dirname,"..","..","public","images","users",req.file.filename
+          )
+        );
+      }
+
+      /* return res.send(errors.mapped()) */
+      return res.render("users/register", {
         errors: errors.mapped(),
-        old: req.body
-    })
-    
-
+        old: req.body,
+      });
 
       //----------------------------------------//
 
-        /* let { nombre, apellido, email, contrasenia } = req.body;
+      /* let { nombre, apellido, email, contrasenia } = req.body;
 
       let nuevoUsuario = {
         id: usuarios[usuarios.length - 1].id + 1,
@@ -94,16 +99,16 @@ module.exports = {
       usuarios.push(nuevoUsuario);
       guardar(usuarios); */
 
-         /* if (recordarme) {
+      /* if (recordarme) {
             res.cookie("SoundSurge", req.session.userLogin, {
               maxAge: 1000 * 60 * 60,
             });
             res.redirect("/");
           } else { */
 
-          /* Redirecciona a login */
-            /* return res.send(errors.mapped()) */
-            /* return res.render("register", {
+      /* Redirecciona a login */
+      /* return res.send(errors.mapped()) */
+      /* return res.render("register", {
               errors: errors.mapped(),
               old: req.body,
             });
@@ -158,9 +163,9 @@ module.exports = {
     } else {
       /*       return res.send(errors.mapped())
        */ return res.render("login", {
-        errors: errors.mapped(),
-        old: req.body,
-      });
+      errors: errors.mapped(),
+      old: req.body,
+    });
     }
   },
   logout: (req, res) => {
@@ -171,81 +176,48 @@ module.exports = {
     return res.redirect("/");
   },
   editarU: (req, res) => {
-    let idParams = req.params.id
-    db.Usuarios.findByPk(idParams)
-    .then(usuario => {
+    let idParams = req.params.id;
+    db.Usuarios.findByPk(idParams).then((usuario) => {
       /* return res.send(usuario) */
-      return res.render("editarUsuario", {usuario});
-    })
+      return res.render("editarUsuario", { usuario });
+    });
   },
   editarUsuario: (req, res) => {
-   /*  return res.send(req.body) */
-   let idParams = req.params.id
-   db.Usuarios.findByPk(idParams)
-    .then(usuario => {
-      /* return res.send(usuario) */
-      req.session.destroy();
-    })
-      /* return res.send(usuario) */
-      
 
-    let { nombre, apellido, direccion, telefono } = req.body;
-
+    let idParams = req.params.id;
+    /*  return res.send(req.body) */
+    req.session.destroy();
+    if (req.cookies.SoundSurge) {
+      res.cookie("SoundSurge", "", { maxAge: -1 });
+    }
     db.Usuarios.update(
       {
-        nombre,
-        apellido,
-        direccion,
-        telefono,
-        imagen : req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
-        createAt: new Date,
-        updateAt: new Date
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        direccion: req.body.direccion,
+        telefono: req.body.telefono,
+        updateAt: new Date(),
       },
       {
-        where: {id : req.params.id}
+        where: { id: idParams},
       })
-      .then((usuario) => {
-        usuario = usuario.dataValues;
+    db.Usuarios.findByPk(idParams)
+    .then((usuario) => {
+
         req.session.userLogin = {
           id: usuario.id,
           nombre: usuario.nombre,
           imagen: usuario.imagen,
           rol: usuario.rolId,
-        };
-        if (recordarme) {
-          res.cookie("SoundSurge", req.session.userLogin, {
-            maxAge: 1000 * 60 * 60,
-          });
         }
-        return res.redirect("/users/perfil");
+
+        return res.render("editarUsuario", { usuario })
+
       })
+      
+      
       .catch((error) => {
         return res.send(error);
-      })
-    
-      
-   /*  idParams = +req.params.session.userLogin;
-    let { nombre, apellido, direccion, telefono, email, imagenes } = req.body;
-
-    userLogin.forEach((usuario) => {
-      if (usuario.id === idParams) {
-        usuario.nombre = nombre;
-        usuario.apellido = apellido;
-        usuario.direccion = direccion;
-        usuario.direccion = +telefono;
-        usuario.email = +email;
-        usuario.imagenes = imagenes;
-      }
-    });
-
-    guardarU(usuarios); */
-    
-   /*  return res.redirect("/perfil"); */
-
-    /* return res.send(req.body) */
-  
-  },
-  buscar: (req, res) => {
-    return res.render("");
-  },
-};
+      });
+  } 
+  };

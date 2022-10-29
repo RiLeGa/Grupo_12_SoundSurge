@@ -7,24 +7,24 @@
             <h1>Edicion de Perfil</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
 
-            <form action="/user/editar/<%= usuario.id %>?_method=put" method="post" >
+            <form action="/users/editar/<%= usuario.id %>?_method=put" method="post" >
+
             <div class="icons">
                 <label for="image">
                     <img src="/images/users/<%= usuario.imagen %> " alt="" >
                 </label>
-                <input type="file" name="imagen" id="imagen">
                  
             </div>
             <div class="container">
                 <label for="nombre">nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%=`${usuario.nombre}`%>">
-
             </div>
+
             <div class="container">
                 <label for="apellido">apellido</label>
                 <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido" value="<%=`${usuario.apellido}`%>">
-
             </div>
+
             <div class="container">
                 <label for="direccion">direccion</label>
                 <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu direccion" value="<%=`${usuario.direccion}`%>">
@@ -33,18 +33,12 @@
             <div class="container">
                 <label for="telefono">telefono</label>
                 <input type="text" name="telefono" id="telefono" placeholder="Ingresa tu telefono" value="<%=`${usuario.telefono}`%>">
-                
             </div>
+
             <div class="container">
                 <label for="email">email</label>
                 <input type="email" name="email" id="email" placeholder="Ingresa tu email" value="<%=`${usuario.email}`%>" disabled>
                 <!-- buscar como deshabilitar un input -->
-            
-            </div>
-
-            <div class="terminos">
-                <input type="checkbox" name="terminos" id="terminos">
-                <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
             
             <button type="submit" class="enviar">Enviar</button>

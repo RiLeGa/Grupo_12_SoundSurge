@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const express = require("express");
 const app = express();
 const path = require ("path");
@@ -6,6 +8,9 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
+
+const userLogin = require('./middlewares/userLoginCheck')
+const dbConnectionTest = require("./middlewares/dbConnectionTest")
 
 /* necesraio para usar GET y POST */
 app.use(express.json())
@@ -18,7 +23,8 @@ app.use(cookieParser());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-const userLogin = require('./middlewares/userLoginCheck')
+dbConnectionTest()
+
 
 app.use(session({
   secret: "Feel the Sound"
@@ -42,7 +48,7 @@ app.use('/users', usuariosRouter);
 
 
 app.use((req, res, next) => {
-    res.status(404).render("error")
+    res.status(404).render("error404")
 })
 
 
@@ -59,7 +65,7 @@ app.use(function(req, res, next) {
   
     // render the error page
     res.status(err.status || 500);
-    res.render('error404');
+    /* res.render('error'); */
   });
 
 

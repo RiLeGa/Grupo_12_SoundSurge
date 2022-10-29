@@ -1,7 +1,9 @@
+@import url("./glider.css");
 @import url("./normalize.css");
-@import url("./variables.css");
 @import url("./general.css");
+@import url("./variables.css");
 @import url("./header.css");
+
 
 
 @import url("./footer.css");

@@ -9,7 +9,7 @@
             <button type="button" class="btn btn-primary">Lista de productos</button>
         </a>
         <section>
-            <form action="/admin/crear" method="post" >
+            <form action="/admin/crear/" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="marca" class="form-label">marca</label>
                     <input type="text" name="marca" class="form-control" id="marca" placeholder="Ingrese nombre del producto">
@@ -30,7 +30,6 @@
                         <option value="3">Vientos</option>
                         <option value="3">Teclados/Pianos/Controladores</option>
                     </select>
-                    <div class="invalid-feedback">Example invalid select feedback</div>
                 </div>  
 
                 <div class="mb-3">
@@ -51,8 +50,7 @@
                 </div>
                 <div class="mb-3">
                 <label for="imagenes" class="form-label">imagenes</label>
-                <input type="file" class="form-control" aria-label="file example" required multiple>
-                <div class="invalid-feedback">Example invalid form file feedback</div>
+                <input class="form-control" type="file" id="imagenes" name="imagenes" multiple>
                 </div>
                 <div class="botones">
                 <button class="btn btn-primary" type="submit">Confirma</button>

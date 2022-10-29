@@ -1,8 +1,11 @@
 const fs = require('fs')
 const path = require('path')
 let productos = require('../data/productos.json')
-let usuarios = require('../data/usuarios.json')
+/* let usuarios = require('../data/usuarios.json') */
 const historial = require('../data/historial.json')
+const db = require("../database/models");
+
+
 
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
@@ -24,6 +27,7 @@ module.exports = {
         return res.render('admin/crearProductos');
     },
     store:(req,res) => {
+        /* return res.send(req.body)  */
         let errors = validationResult(req)
         if (req.fileValidationError) {
             let imagen = {
@@ -34,11 +38,13 @@ module.exports = {
         }
 
         if (errors.isEmpty()) {
+            /* return res.send(req.body) */
             let img = req.files.map(imagen => {
                 return imagen.filename
             })
         
-        let {marca, titulo, categorias, precio, descuento, stock, descripcion, imagenes} = req.body
+        let {marca, titulo, categorias, precio, descuento, descripcion, stock} = req.body
+        
         
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
@@ -47,14 +53,16 @@ module.exports = {
             categorias,
             precio:+precio,
             descuento:+descuento,
-            stock:+stock,
             descripcion,
-            imagenes: (req.files.length === 4) ? img : ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png'],
+            stock:+stock,
+            imagenes: req.files.length <= 4 ? img : ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png']
         }
         
 
         productos.push(productoNuevo)
         guardar(productos)
+
+        /* return res.send(req.body) */
 
         return res.redirect('/admin/lista')
 
@@ -71,7 +79,7 @@ module.exports = {
             }
         })
         /* return res.send(errors.mapped()) */
-        return res.render('admin/crearProductos', {
+        return res.render('/admin/crearProductos', {
             errors: errors.mapped(),
             old: req.body
         })
@@ -92,10 +100,18 @@ module.exports = {
     
     },
     actualizar:(req,res) => {
-        idParams = +req.params.id
-        let {Marca,Titulo,Categoria,Precio,Descuento,Stock,Descripcion,Imagenes} = req.body
-
-        productos.forEach(producto => {
+        const idParams = +req.params.id
+        const { Marca, Titulo, Categoria, Precio, Descuento, Stock, Descripcion } = req.body
+        let errors = validationResult(req)
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'imagen',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+        if (errors.isEmpty()) {
+            productos.forEach(producto =>{
             if (producto.id === idParams) {
                 producto.marca = Marca
                 producto.titulo = Titulo
@@ -113,6 +129,7 @@ module.exports = {
         return res.redirect('/admin/lista')
 
         /* return res.send(req.body) */
+    }
     },
     borrar: (req, res) => {
         idParams = +req.params.id
@@ -138,9 +155,35 @@ module.exports = {
     },
     //visualiza vista con listado de usuarios//
     userlist : (req,res) => {
-        return res.render('admin/listaDeUsuarios',{
-            usuarios
-        });
+
+        let usuarios = []
+        db.Usuarios.findAll()     
+        .then((todos) => {
+            usuarios = todos
+        })
+
+        res.send(usuarios)
+          /*   return res.render('admin/listaDeUsuarios',{
+                usuarios
+              })
+ */
+       
+
+        /* let response = {
+            status : 200,
+            meta : {
+                length : usuarios.length,
+                path : "ruta"
+            },
+            data: usuarios  
+                            
+        }  */
+
+        /* return res.status(200).json(response) */
+
+        .catch((error) => {
+            return res.send(error)
+          });
     },
     borrarUsuario: (req, res) => {
         idParams = +req.params.id

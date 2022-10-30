@@ -216,11 +216,7 @@ module.exports = {
             imagen: usuario.imagen,
             rol: usuario.rolId,
           };
-          if (recordarme) {
-            res.cookie("SoundSurge", req.session.userLogin, {
-              maxAge: 1000 * 60 * 60,
-            });
-          }
+          
           return res.redirect("/users/perfil");
         })
       .catch((error) => {
@@ -228,12 +224,15 @@ module.exports = {
       });
   },
   eliminarUsuario : (req,res) => {
-    
-    db.Usuario.destroy(
+    req.session.destroy();
+    if (req.cookies.SoundSurge) {
+      res.cookie("SoundSurge", "", { maxAge: -1 });
+    }
+    let idParams = req.params.id;
+   
+    db.Usuarios.destroy(
       {
-        where: {
-            id : idParams 
-        }
+        where:{id: idParams}
       })
       return res.redirect("/") 
 }

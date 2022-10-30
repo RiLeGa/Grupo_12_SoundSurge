@@ -20,7 +20,7 @@ router.get('/editar/:id', editarU);
 router.put('/editar/:id',userLoginCheck, editarUsuario);
 
 router.delete('/logout', logout);
-router.delete('/eliminarUsuario', eliminarUsuario);
+router.delete('/eliminarUsuario/:id', eliminarUsuario);
 
 
 

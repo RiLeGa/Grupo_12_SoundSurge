@@ -1,4 +1,4 @@
-@import url("./glider.css");
+/* @import url("./glider.css"); */
 @import url("./normalize.css");
 @import url("./general.css");
 @import url("./variables.css");
@@ -9,7 +9,7 @@
 @import url("./footer.css");
 @import url("./home.css");
 @import url("./lista.css");
-@import url("./carrousel-home.css");
+/* @import url("./carrousel-home.css"); */
 @import url("./detalle.css");
 
 

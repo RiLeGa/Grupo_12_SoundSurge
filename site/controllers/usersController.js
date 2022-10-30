@@ -184,12 +184,13 @@ module.exports = {
   },
   editarUsuario: (req, res) => {
 
-    let idParams = req.params.id;
+    
     /*  return res.send(req.body) */
     req.session.destroy();
     if (req.cookies.SoundSurge) {
       res.cookie("SoundSurge", "", { maxAge: -1 });
     }
+    let idParams = req.params.id;
     db.Usuarios.update(
       {
         nombre: req.body.nombre,
@@ -201,23 +202,39 @@ module.exports = {
       {
         where: { id: idParams},
       })
-    db.Usuarios.findByPk(idParams)
-    .then((usuario) => {
-
-        req.session.userLogin = {
-          id: usuario.id,
-          nombre: usuario.nombre,
-          imagen: usuario.imagen,
-          rol: usuario.rolId,
-        }
-
-        return res.render("editarUsuario", { usuario })
-
+      db.Usuarios.findOne({
+        where: {
+          email,
+        },
       })
-      
-      
+        .then((usuario) => {
+          usuario = usuario.dataValues;
+
+          req.session.userLogin = {
+            id: usuario.id,
+            nombre: usuario.nombre,
+            imagen: usuario.imagen,
+            rol: usuario.rolId,
+          };
+          if (recordarme) {
+            res.cookie("SoundSurge", req.session.userLogin, {
+              maxAge: 1000 * 60 * 60,
+            });
+          }
+          return res.redirect("/users/perfil");
+        })
       .catch((error) => {
         return res.send(error);
       });
-  } 
-  };
+  },
+  eliminarUsuario : (req,res) => {
+    
+    db.Usuario.destroy(
+      {
+        where: {
+            id : idParams 
+        }
+      })
+      return res.redirect("/") 
+}
+}

@@ -22,6 +22,14 @@
             <button class="logout" type="submit">Cerrar Sesion</button>
         </form>
 
+        <form class="exit" action="/users/eliminarUsuario?_method=DELETE" method="post">
+            <button class="logout" type="submit">eliminar</button>
+        </form>
+
+        <!-- <a href="/users/eliminarUsuario/<%= locals.userLogin.id%>">
+            <button type="button" class="btn btn-success"><i class="fas fa-tombstone">eliminar usuario</i></button>
+        </a> -->
+
         <a href="/users/editar/<%= locals.userLogin.id%>">
             <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
         </a>

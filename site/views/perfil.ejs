@@ -7,29 +7,27 @@
         <div class="credencial">
             <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
             <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
+            <a href="/users/editar/<%= locals.userLogin.id%>">
+                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+            </a>
             <% if (locals.userLogin && locals.userLogin.rol === 1 ) { %>
                 <h1><%= `Admin` %></h1>
                 <h2>All Access</h2>
             <% } else { %>
                 <h1><%= "Invitado" %></h1>
             <% } %>
+            <form class="exit" action="/users/logout?_method=DELETE" method="post">
+                <button class="logout" type="submit">Cerrar Sesion</button>
+            </form>
             
             <div class="logo">
                 <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
             </div>
-        </div>
-        <form class="exit" action="/users/logout?_method=DELETE" method="post">
-            <button class="logout" type="submit">Cerrar Sesion</button>
-        </form>
-
-        <form class="exit" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
-            <button class="logout" type="submit">eliminar</button>
-        </form>
-
+        </div>  
         
-        <a href="/users/editar/<%= locals.userLogin.id%>">
-            <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-        </a>
+        <form class="exit" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
+            <button class="logout" type="submit">Eliminar usuario</button>
+        </form>
     </main>
     <%- include ("./partials/footer") %> 
 </body>

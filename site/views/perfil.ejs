@@ -4,6 +4,7 @@
 <body>
     <%- include ("./partials/header") %> 
     <main class="perfil">
+        <section class="perfil">
         <div class="credencial">
             <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
             <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
@@ -24,10 +25,14 @@
                 <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
             </div>
         </div>  
+    </section>
         
         <form class="exit" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
             <button class="logout" type="submit">Eliminar usuario</button>
         </form>
+        <section class="video-promo">
+            <video muted autoplay loop><source src="/videos/fondo-perfil.mp4"></video>
+        </section>
     </main>
     <%- include ("./partials/footer") %> 
 </body>

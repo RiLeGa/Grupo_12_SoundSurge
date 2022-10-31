@@ -38,6 +38,26 @@
 }
 
 @media(min-width:769px){
+    
+    .perfil{
+        position: relative;
+        z-index: 2;
+        background-color: rgb(red, green, blue, 11.5px);
+        top: 4vw;
+    }
+
+    .perfil .video-promo video{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .perfil.video-promo video{
+        width: 100vw;
+    }
+    
     .perfil .credencial{
         display: flex;
         background: linear-gradient(#6487e6, #9437b1);

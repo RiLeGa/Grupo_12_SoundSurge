@@ -20,12 +20,13 @@
                 </div> 
             </ul>     
         </div> -->
+        
             <div class="categorias-home">
                 <h3 class="secciones"> Novedades </h3>
             </div>
             <section class="contenedor">
                 <ul>
-                    <% for( let i = 0; i <= 9; i++ ) { %>
+                    <% for( let i = 0; i <= 7; i++ ) { %>
                         <article>
                             <a href="/productos/detalle/<%= productos[i].id %>">
                             <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
@@ -39,48 +40,58 @@
                     <% } %>
                 </ul>
             </section>
-                <div class="categorias-home">
-                    <h3 class="secciones"> Ofertas </h3>
-                </div>
-                <section class="contenedor-2">
-                    <ul>
-                        <% for( let i = 0; i <= 9; i++ ) { %>
-                            <% if (productos[i].descuento !== 0) { %>
-                            <article>
-                                <a href="/productos/detalle/<%= productos[i].id %>">
-                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
-                                    <i class="fas fa-percentage"><%= productos[i].descuento %></i>
-                                    <div class="precio">
-                                        <h3><%= productos[i].titulo %></h3>
-                                        <span class="precioSinDesc">$<%= productos[i].precio %></span>
-                                        <span>$<%= productos[i].precio - (productos[i].precio * productos[i].descuento / 100)%></span>
-                                    </div>
+
+            <div class="banner-medio">
+                <img src="/images/gc-md-hf-big-bang-2-07-13-22.jpg" alt=""> 
+            </div>
+
+            
+            <div class="categorias-home">
+                <h3 class="secciones"> Ofertas </h3>
+            </div>
+            <section class="contenedor">
+                <ul>
+                    <% for( let i = 0; i <= 4; i++ ) { %>
+                        <% if (productos[i].descuento !== 0) { %>
+                        <article>
+                            <a href="/productos/detalle/<%= productos[i].id %>">
+                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                                <i class="fas fa-percentage"><%= productos[i].descuento %></i>
+                                <div class="precio">
+                                    <h3><%= productos[i].titulo %></h3>
+                                    <span class="precioSinDesc">$<%= productos[i].precio %></span>
+                                    <span>$<%= productos[i].precio - (productos[i].precio * productos[i].descuento / 100)%></span>
                                 </div>
-                                </a>
-                            </article>
-                            <% } %>
+                            </div>
+                            </a>
+                        </article>
                         <% } %>
-                    </ul>
-                </section>
-                <div class="categorias-home">
-                    <h3 class="secciones"> Surge Selection </h3>
-                </div>
-                <section class="contenedor-2">
-                    <ul>
-                        <% for( let i = 0; i <= 9; i++ ) { %>
-                            <article>
-                                <a href="/productos/detalle/<%= productos[i].id %>">
-                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
-                                    <div class="precio-1">
-                                        <h3><%= productos[i].titulo %></h3>
-                                        <span>$<%= productos[i].precio %></span>
-                                    </div>
+                    <% } %>
+                </ul>
+            </section>
+
+            
+
+            <div class="categorias-home">
+                <h3 class="secciones"> Surge Selection </h3>
+            </div>
+            <section class="contenedor-2">
+                <ul>
+                    <% for( let i = 0; i <= 3; i++ ) { %>
+                        <article>
+                            <a href="/productos/detalle/<%= productos[i].id %>">
+                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                                <div class="precio-1">
+                                    <h3><%= productos[i].titulo %></h3>
+                                    <span>$<%= productos[i].precio %></span>
                                 </div>
-                                </a>
-                            </article>
-                        <% } %>
-                    </ul>
-                </section>
+                            </div>
+                            </a>
+                        </article>
+                    <% } %>
+                </ul>
+            </section>
+                
         <section class="spots">
             <div class="video-1">
                 <iframe class="spot-1" src="https://www.youtube.com/embed/qfGggAGITwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

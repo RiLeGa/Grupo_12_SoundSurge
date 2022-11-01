@@ -45,7 +45,7 @@ app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
 
 
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
     res.status(404).render("error")
 })
 
@@ -64,7 +64,7 @@ app.use(function(req, res, next) {
     // render the error page
     res.status(err.status || 500);
     res.render('error404');
-  });
+  });*/
 
 
 module.exports = app;

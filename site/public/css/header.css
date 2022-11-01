@@ -187,6 +187,15 @@ header .navegacion div.usuario{
         justify-content: space-between;
         align-items: center;
     }
+
+    header section{
+        background-color: black;
+        width:  30%;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+    }
+
     header .navegacion .burguer{
         display: none;
     }
@@ -267,12 +276,13 @@ header .navegacion div.usuario{
         font-size: 20px;
     }
 
-    header .navegacion label.perfil{
+    header .navegacion label.perfilU{
         position: relative;
         display: inline-block;
         padding: 15px 7px 0 10px;
         transition: 0.2s;
         border-radius: 10%;
+        top: 4;
     }
     header .navegacion label.sinLog{
         display: block;
@@ -298,7 +308,7 @@ header .navegacion div.usuario{
     header .navegacion div.usuario{
         display: block;
         display: block;
-        width: 280px;
+        width: 130px;
     }
 
     header .navegacion label.perfil i.fas .fa-user-circle{
@@ -308,11 +318,11 @@ header .navegacion div.usuario{
         margin-top: 20px;
         padding: 0 20px;
     }
-    header .navegacion label.perfil h2{
+    header .navegacion label.perfilU h2{
         font-size: 14px;
         color: white;
     }
-    header .navegacion label.perfil img {
+    header .navegacion label.perfilU img {
         width: 85px;
         margin-left: 4px;
         height: 35px;

@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const db = require("../database/models");
 const usuarios = require("../database/models/usuarios");
 const { literal } = require("sequelize");
+const { log } = require("console");
 /* const guardar = (dato) =>
   fs.writeFileSync(
     path.join(__dirname, "../data/usuarios.json"),
@@ -183,13 +184,9 @@ module.exports = {
     });
   },
   editarUsuario: (req, res) => {
-
-    let idParams = req.params.id;
     /*  return res.send(req.body) */
-    req.session.destroy();
-    if (req.cookies.SoundSurge) {
-      res.cookie("SoundSurge", "", { maxAge: -1 });
-    }
+    
+    let idParams = req.params.id;
     db.Usuarios.update(
       {
         nombre: req.body.nombre,
@@ -201,23 +198,52 @@ module.exports = {
       {
         where: { id: idParams},
       })
-    db.Usuarios.findByPk(idParams)
-    .then((usuario) => {
+      .then((data) => {
+        
+        db.Usuarios.findOne({
+          where: {
+            id : idParams
+          },
+        })
+          .then((usuario) => {
+            
+            req.session.reload(function(err) {
+              req.session.user = {
+              id: usuario.id,
+              nombre: usuario.nombre,
+              imagen: usuario.imagen,
+              rol: usuario.rolId,
+            };
 
-        req.session.userLogin = {
-          id: usuario.id,
-          nombre: usuario.nombre,
-          imagen: usuario.imagen,
-          rol: usuario.rolId,
-        }
-
-        return res.render("editarUsuario", { usuario })
-
+            return res.redirect("/users/perfil");
+            
+          }) 
+         
+          /* if (req.cookies.SoundSurge) {
+            res.cookie("SoundSurge", "", { maxAge: -1 });
+            res.cookie("SoundSurge", req.session.userLogin, {
+              maxAge: 1000 * 60 * 60,
+            });
+          } */
+          
+        })
+        .catch((errores) => res.send(errores));
+      
       })
+      .catch((errores) => res.send(errores));
       
-      
-      .catch((error) => {
-        return res.send(error);
-      });
-  } 
-  };
+  },
+  eliminarUsuario : (req,res) => {
+    req.session.destroy();
+    if (req.cookies.SoundSurge) {
+      res.cookie("SoundSurge", "", { maxAge: -1 });
+    }
+    let idParams = req.params.id;
+   
+    db.Usuarios.destroy(
+      {
+        where:{id: idParams}
+      })
+      return res.redirect("/") 
+}
+}

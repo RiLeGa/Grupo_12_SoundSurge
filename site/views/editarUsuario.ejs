@@ -7,7 +7,7 @@
             <h1>Edicion de Perfil</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
 
-            <form action="/users/editar/<%= usuario.id %>?_method=put" method="post" >
+            <form action="/users/editar/<%=locals.userLogin.id%>?_method=put" method="post" >
 
             <div class="icons">
                 <label for="image">

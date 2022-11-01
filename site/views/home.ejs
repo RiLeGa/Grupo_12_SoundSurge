@@ -4,7 +4,7 @@
 <body class="home">
     <%- include ("./partials/header") %> 
     <main>
-        <div class="carrousel">
+        <!-- <div class="carrousel">
             <ul>
                 <div class="img-carrousel" id="item-1">
                     <img src="/images/Audiomusica-Jockey-Plaza1.jpg" alt="Casa 1">
@@ -19,37 +19,14 @@
                     <img src="/images/sweetwater2-1024x571.jpg" alt="Casa 2">
                 </div> 
             </ul>     
-        </div>
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="/images/Audiomusica-Jockey-Plaza1.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="/images/gc-md-hf-big-bang-2-07-13-22.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/images/giphy.gif" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="/images/sweetwater2-1024x571.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+        </div> -->
+        
             <div class="categorias-home">
                 <h3 class="secciones"> Novedades </h3>
             </div>
             <section class="contenedor">
                 <ul>
-                    <% for( let i = 0; i <= 9; i++ ) { %>
+                    <% for( let i = 0; i <= 7; i++ ) { %>
                         <article>
                             <a href="/productos/detalle/<%= productos[i].id %>">
                             <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
@@ -63,6 +40,7 @@
                     <% } %>
                 </ul>
             </section>
+<<<<<<< HEAD
                 <div class="categorias-home">
                     <h3 class="secciones"> Ofertas </h3>
                 </div>
@@ -79,11 +57,35 @@
                                         <span class="precioSinDesc">$<%= productos[i].precio %></span>
                                         <span>$<%= productos[i].precio - (productos[i].precio * productos[i].descuento / 100)%></span>
                                     </div>
+=======
+
+            <div class="banner-medio">
+                <img src="/images/gc-md-hf-big-bang-2-07-13-22.jpg" alt=""> 
+            </div>
+
+            
+            <div class="categorias-home">
+                <h3 class="secciones"> Ofertas </h3>
+            </div>
+            <section class="contenedor">
+                <ul>
+                    <% for( let i = 0; i <= 4; i++ ) { %>
+                        <% if (productos[i].descuento !== 0) { %>
+                        <article>
+                            <a href="/productos/detalle/<%= productos[i].id %>">
+                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                                <i class="fas fa-percentage"><%= productos[i].descuento %></i>
+                                <div class="precio">
+                                    <h3><%= productos[i].titulo %></h3>
+                                    <span class="precioSinDesc">$<%= productos[i].precio %></span>
+                                    <span>$<%= productos[i].precio - (productos[i].precio * productos[i].descuento / 100)%></span>
+>>>>>>> Leandro
                                 </div>
-                                </a>
-                            </article>
-                            <% } %>
+                            </div>
+                            </a>
+                        </article>
                         <% } %>
+<<<<<<< HEAD
                     </ul>
                 </section>
                 <div class="categorias-home">
@@ -99,12 +101,34 @@
                                         <h3><%= productos[i].titulo %></h3>
                                         <span>$<%= productos[i].precio %></span>
                                     </div>
+=======
+                    <% } %>
+                </ul>
+            </section>
+
+            
+
+            <div class="categorias-home">
+                <h3 class="secciones"> Surge Selection </h3>
+            </div>
+            <section class="contenedor-2">
+                <ul>
+                    <% for( let i = 0; i <= 3; i++ ) { %>
+                        <article>
+                            <a href="/productos/detalle/<%= productos[i].id %>">
+                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                                <div class="precio-1">
+                                    <h3><%= productos[i].titulo %></h3>
+                                    <span>$<%= productos[i].precio %></span>
+>>>>>>> Leandro
                                 </div>
-                                </a>
-                            </article>
-                        <% } %>
-                    </ul>
-                </section>
+                            </div>
+                            </a>
+                        </article>
+                    <% } %>
+                </ul>
+            </section>
+                
         <section class="spots">
             <div class="video-1">
                 <iframe class="spot-1" src="https://www.youtube.com/embed/qfGggAGITwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -114,8 +138,10 @@
             </div>
         </section>
     </main>
+
+    
     <%- include ("./partials/footer") %> 
+    
 </body>
 </html>
 
-<script src="../javascript/glider.js"></script>

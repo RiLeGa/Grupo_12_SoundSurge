@@ -4,27 +4,39 @@
 <body>
     <%- include ("./partials/header") %> 
     <main class="perfil">
-        <div class="credencial">
-            <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
-            <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
-            <% if (locals.userLogin && locals.userLogin.rol === 1 ) { %>
-                <h1><%= `Admin` %></h1>
-                <h2>All Access</h2>
-            <% } else { %>
-                <h1><%= "Invitado" %></h1>
-            <% } %>
-            
-            <div class="logo">
-                <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
-            </div>
-        </div>
-        <form class="exit" action="/users/logout?_method=DELETE" method="post">
-            <button class="logout" type="submit">Cerrar Sesion</button>
-        </form>
+            <div class="credencial">
+                <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
+                <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
+                
+                <% if (locals.userLogin && locals.userLogin.rol === 1 ) { %>
+                    <h1><%= `Admin` %></h1>
+                    <h2>All Access</h2>
+                <% } else { %>
+                    <h1><%= "Invitado" %></h1>
+                <% } %>
+                
+                <div class="logo">
+                    <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
+                </div>
+            </div>  
+            <section class="edit-delete-logout">
 
-        <a href="/users/editar/<%= locals.userLogin.id%>">
-            <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-        </a>
+                <form class="exit" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
+                    <button class="logout" type="submit"><i class="fas fa-user-times"></i>Eliminar usuario</button>
+                </form>
+        
+                <a href="/users/editar/<%= locals.userLogin.id%>">
+                    <button type="button" class="btn btn-success"><i class="fas fa-edit"> </i>Editar usuario</button>
+                </a>
+        
+                <form class="exit" action="/users/logout?_method=DELETE" method="post">
+                    <button class="logout" type="submit"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</button>
+                </form>
+            
+            </section>
+            <section class="video-promo">
+                <video muted autoplay loop><source src="/videos/fondo-perfil.mp4" type="video/mp4"></video>
+            </section>
     </main>
     <%- include ("./partials/footer") %> 
 </body>

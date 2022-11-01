@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "marca": "epiphone",
+        "titulo": "EpiPhone Riviera Royal Tan",
+        "categoria": "Cuerdas",
+        "precio": 345000,
+        "descuento": 10,
+        "descripcion": "Guitarra eléctrica Modelo de cuerpo Semi-Hollow con calados en F, Cuerpo y tapa de madera de arce laminada, Binding de color crema, Mástil de caoba, Perfil del mástil Rounded C, Dispasón de laurel indio, Anchura de la cejuela: 43mm….",
+        "stock": 7,
+        "imagenes": [
+            "epi-royal-1.jpg",
+            "epi-royal-2.jpg",
+            "epi-royal-3.jpg",
+            "epi-royal-4.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "marca": "Yamaha",
+        "titulo": "Batería Yamaha Rydeen",
+        "categoria": "Percusion",
+        "precio": 230205,
+        "descuento": 15,
+        "descripcion": "BATERIA ACUSTICA YAMAHA 5 CUERPOS RDP2F5 BURGANDY GLITTER, NO INCLUYE FIERROS, PLATILLOS Y PEDALES, Bombo de 22” x 16”, Timbal base de 16” x 15”, Tom de 12” x 8”, Tom de 10” x 7”, Caja de 14” x 5,5”, Sujeciones de tom CL940LB x 2, Sujeciones de toms y abrazaderas de tubos originales Yamaha. Dos sujeciones de toms de 22,2 mm de diámetro y una abrazadera de tubo. Una bola articulada proporciona máxima libertad para montar los toms en cualquier ángulo, y permite incorporar otro hardware* para poder crear la configuración perfecta para cada baterista. * El hardware debe cumplir con la especificación estándar de Yamaha de 22,2 mm.",
+        "stock": 6,
+        "imagenes": [
+            "bateria-yamaha-1.jpg",
+            "bateria-yamaha-2.jpg",
+            "bateria-yamaha-1.jpg",
+            "bateria-yamaha-2.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "marca": "Gibson",
+        "titulo": "Gibson Modern Les Paul",
+        "categoria": "Cuerdas",
+        "precio": 716206,
+        "descuento": 30,
+        "descripcion": "Fabricada en arce/caoba con acabado brillante, Con 6 cuerdas y 22 trastes de tamaño medium jumbo, El largo de escala es de 24.75'' El puente es fijo, Incluye 2 micrófonos humbucker, Controles de selector de micrófonos, tono y volumen.Sonidos fuertes y firmes con un estilo propio.",
+        "stock": 5,
+        "imagenes": [
+            "les-paul.jpg",
+            "les-paul-principal.jpg",
+            "les-paul-horizontal.jpg",
+            "les-paul-4.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "marca": "Marshall",
+        "titulo": "Amplificador Marshall Code 25",
+        "categoria": "Audio",
+        "precio": 84042,
+        "descuento": 0,
+        "descripcion": "Amplificador combo. Potencia de salida 25 W. Tipo de conector de entrada: Jack 3.5 mm. Tipo de conector de salida: Jack 3.5 mm. Conseguí un sonido con características naturales y propias del instrumento. Pesa 8 kg. Dimensiones: 340 mm de alto x 350 mm de ancho x 215 mm de profundidad.",
+        "stock": 8,
+        "imagenes": [
+            "ampli-marshal25-1.jpg",
+            "ampli-marshal25-2.jpg",
+            "ampli-marshal25-3.jpg",
+            "ampli-marshal25-1.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "marca": "Ibanez",
+        "titulo": "Bajo Activo Ibanez Gsr200",
+        "categoria": "Cuerdas",
+        "precio": 170000,
+        "descuento": 20,
+        "descripcion": "Bajo de 4 cuerdas GSR perteneciente a la serie GIO basada en los Soundgears, estos bajos no solo se tocan y se ven mejor que cualquier otro en su rango de precio, sino que también cada bajo GSR recibe el ajuste e inspección de su contraparte más cara. Los bajos GSR ofrecen la famosa sofisticación, comodidad, tono y facilidad de tocar de los Soundgear, pero a un precio más económico.Características:-Cuerpo en Araucaria Agathis,-Mástil GSR4 de Arce,-Diapasón de Palo de Rosa,-22 trastes,-Tamaños de trastes Medium,-Escala: 864mm/34'',-Herrajes Negros,-Ecualizador Activo Phat II EQ/Boost,-2 controles de volumen, 1 control de tono,-Color: Natural Gray Bur.",
+        "stock": 7,
+        "imagenes": [
+            "bajo-ibanez-1.jpg",
+            "bajo-ibanez-2.jpg",
+            "bajo-ibanez-3.jpg",
+            "bajo-ibanez-4.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "marca": "Yamaha",
+        "titulo": "Guitarra Yamaha PAC012",
+        "categoria": "Cuerdas",
+        "precio": 75000,
+        "descuento": 20,
+        "descripcion": "Fabricada en caoba con acabado brillante. Con 6 cuerdas y 22 trastes de tamaño medium jumbo. El largo de escala es de 25.5''. El puente es tremolo. Incluye 3 micrófonos humbucker, simples. Controles de selector de micrófonos, tono y volumen. Palanca incluida. Sonidos fuertes y firmes con un estilo propio.",
+        "stock": 15,
+        "imagenes": [
+            "guit-Yamaha-1.jpg",
+            "guit-Yamaha-2.jpg",
+            "guit-Yamaha-3.jpg",
+            "guit-Yamaha-1.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "marca": "Behringer",
+        "titulo": "Interface Behringer U-Phoria",
+        "categoria": "Audio",
+        "precio": 35707,
+        "descuento": 10,
+        "descripcion": "Lográ la grabación completa Este aparato cuenta con 2 entradas, lo que te permitirá ingresar varios sonidos a la vez. La regla es que necesitás tantas entradas co líneas quieras grabar simultáneamente, es decir que podrás utilizarla para micrófonos e instrumentos y obtener una grabación completa una sola vez. Además, cuenta con 2 salidas que te permitirán conectar a tu computadora y así hacer el trabajo de forma integral. Sumá calidad Gracias a sus 48 kHz y su resolución de audio de 16 bit vas a lograr que todas tus grabaciones tengan una calidad sobresaliente y resalten las melodías de cada instrumento y cada voz. Poder fantasma activo Para dar más potencia a la señal que conectes a la interface, este producto cuenta con alimentación fantasma o phantom, que optimiza señal y brinda corriente de manera constante a todos los dispositivos de audio que conectes.",
+        "stock": 30,
+        "imagenes": [
+            "interface-berin-1.jpg",
+            "interface-berin-2.jpg",
+            "interface-berin-3.jpg",
+            "interface-berin-4.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "marca": "Arturia",
+        "titulo": "Arturia Keylab Essential 61",
+        "categoria": "Teclados/Pianos/Controladores",
+        "precio": 68474,
+        "descuento": 0,
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
+        "stock": 20,
+        "imagenes": [
+            "arturia-midi-1.jpg",
+            "arturia-midi-2.jpg",
+            "arturia-midi-3.jpg",
+            "arturia-midi-4.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "marca": "Line6",
+        "titulo": "Pedal de efecto Line6 POD Go",
+        "categoria": "Audio",
+        "precio": 126270,
+        "descuento": 0,
+        "descripcion": "Compatible con bajo, guitarra eléctrica. Incluye 306 efectos. Tipos de efectos: multi-efectos. Incluye pedal de expresión. Posee pantalla LCD. Trae conector de entrada dc jack, jack, jack 6.3 mm stereo, usb. Trae conector de salida jack 6.3 mm stereo, usb. Sonidos de alta calidad.",
+        "stock": 20,
+        "imagenes": [
+            "Line6-POD-1.jpg",
+            "Line6-POD-2.jpg",
+            "Line6-POD-3.jpg",
+            "Line6-POD-1.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "marca": "Zildjian",
+        "titulo": "Set De Platillos Zildjian",
+        "categoria": "Percusion",
+        "precio": 103368,
+        "descuento": 10,
+        "descripcion": "Set de 4 Platillos - incluye Par 13» HiHat + 14» Crash + 18» Crash Ride - ZBT SeriesLos platillos ZBT (Zildjian Bronze Technology) están hechos de aleación B8, utilizando tornos extensos y un acabado tradicional que les da textura y carácter. Ofreciendo un buen sonido y rendimiento, este set es muy adecuado para los bateristas principiantes que tocan en dormitorios, sótanos, salas de práctica y conciertos.",
+        "stock": 15,
+        "imagenes": [
+            "Set-Zildjian-1.jpg",
+            "Set-Zildjian-2.jpg",
+            "Set-Zildjian-3.jpg",
+            "Set-Zildjian-4.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "marca": "Orange ",
+        "titulo": "Amplificador Orange Crush Bass ",
+        "categoria": "Audio",
+        "precio": 58903,
+        "descuento": 0,
+        "stock": 5,
+        "descripcion": "amplificador combo. Potencia de salida 25 W. Tipo de conector de entrada: Jack 3.5 mm. Tipo de conector de salida: Jack 6.35 mm. Cuenta con una frecuencia mínima de 300 Hz y máxima de 2700 Hz. Conseguí un sonido con características naturales y propias del instrumento. Pesa 8.3 kg. Dimensiones: 36.5 cm de alto x 32.5 cm de ancho x 23.5 cm de profundidad.",
+        "imagenes": [
+            "Ampli-orange-1.jpg",
+            "Ampli-orange-2.jpg",
+            "Ampli-orange-3.jpg",
+            "Ampli-orange-4.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "marca": "MERCADOFLASH ",
+        "titulo": "Laser Proyector X 2 ",
+        "categoria": "Otros",
+        "precio": 28000,
+        "descuento": 0,
+        "stock": 15,
+        "descripcion": "- Láser Led con luces dinámicas y movimientos animados -Traza más de 3000 Puntos de distinta intensidad. Los puntos se desplazan, expanden y agrupan en patrones aleatorios, similar a los fuegos artificiales - Modo audio rítmico (Micrófono incorporado) - Modo automático - Modo Strobo (DESTELLOS) - Regulador de velocidad de efectos - Control de sensibilidad - Cooler trasero - Regulador de Velocidad - Alimentación a 110/240 V - MEDIDAS: LARGO 11 cm - ANCHO 9 cm - ALTO 3,5 cm.",
+        "imagenes": [
+            "proyector-laser-1.jpg",
+            "proyector-laser-2.jpg",
+            "proyector-laser-3.jpg",
+            "proyector-laser-4.jpg"
+        ]
+    }
+]

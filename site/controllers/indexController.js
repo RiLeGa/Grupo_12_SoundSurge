@@ -13,6 +13,7 @@ module.exports = {
             return res.render('home', {
                 productos
             })
+
         })
         .catch(error => res.send(error))
         

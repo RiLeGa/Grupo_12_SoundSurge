@@ -40,24 +40,6 @@
                     <% } %>
                 </ul>
             </section>
-<<<<<<< HEAD
-                <div class="categorias-home">
-                    <h3 class="secciones"> Ofertas </h3>
-                </div>
-                <section class="contenedor-2">
-                    <ul>
-                        <% for( let i = 0; i <= 9; i++ ) { %>
-                            <% if (productos[i].descuento !== 0) { %>
-                            <article>
-                                <a href="/productos/detalle/<%= productos[i].id %>">
-                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
-                                    <i class="fas fa-percentage"><%= productos[i].descuento %></i>
-                                    <div class="precio">
-                                        <h3><%= productos[i].titulo %></h3>
-                                        <span class="precioSinDesc">$<%= productos[i].precio %></span>
-                                        <span>$<%= productos[i].precio - (productos[i].precio * productos[i].descuento / 100)%></span>
-                                    </div>
-=======
 
             <div class="banner-medio">
                 <img src="/images/gc-md-hf-big-bang-2-07-13-22.jpg" alt=""> 
@@ -73,35 +55,17 @@
                         <% if (productos[i].descuento !== 0) { %>
                         <article>
                             <a href="/productos/detalle/<%= productos[i].id %>">
-                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
                                 <i class="fas fa-percentage"><%= productos[i].descuento %></i>
                                 <div class="precio">
                                     <h3><%= productos[i].titulo %></h3>
                                     <span class="precioSinDesc">$<%= productos[i].precio %></span>
                                     <span>$<%= productos[i].precio - (productos[i].precio * productos[i].descuento / 100)%></span>
->>>>>>> Leandro
                                 </div>
                             </div>
                             </a>
                         </article>
                         <% } %>
-<<<<<<< HEAD
-                    </ul>
-                </section>
-                <div class="categorias-home">
-                    <h3 class="secciones"> Surge Selection </h3>
-                </div>
-                <section class="contenedor-2">
-                    <ul>
-                        <% for( let i = 0; i <= 9; i++ ) { %>
-                            <article>
-                                <a href="/productos/detalle/<%= productos[i].id %>">
-                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
-                                    <div class="precio-1">
-                                        <h3><%= productos[i].titulo %></h3>
-                                        <span>$<%= productos[i].precio %></span>
-                                    </div>
-=======
                     <% } %>
                 </ul>
             </section>
@@ -116,11 +80,10 @@
                     <% for( let i = 0; i <= 3; i++ ) { %>
                         <article>
                             <a href="/productos/detalle/<%= productos[i].id %>">
-                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
+                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
                                 <div class="precio-1">
                                     <h3><%= productos[i].titulo %></h3>
                                     <span>$<%= productos[i].precio %></span>
->>>>>>> Leandro
                                 </div>
                             </div>
                             </a>

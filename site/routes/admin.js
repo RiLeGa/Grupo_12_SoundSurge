@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const upload = require("../middlewares/multerProductos")
-
 const {crear, editar, lista, store, actualizar, borrar, papelera, userlist, borrarUsuario} = require('../controllers/adminController')
 const adminCheck = require('../middlewares/adminCheck')
 const upload = require('../middlewares/multerProductos')

@@ -46,6 +46,7 @@ module.exports = {
         .catch(error => res.send(error))
     },
     store:(req,res) => {
+        /* return res.send(req.body)  */
         let errors = validationResult(req)
         if (req.fileValidationError) {
             let imagen = {
@@ -107,7 +108,7 @@ module.exports = {
             }
         })
         /* return res.send(errors.mapped()) */
-        return res.render('admin/crearProductos', {
+        return res.render('/admin/crearProductos', {
             errors: errors.mapped(),
             old: req.body
         })
@@ -374,9 +375,35 @@ module.exports = {
     },
     //visualiza vista con listado de usuarios//
     userlist : (req,res) => {
-        return res.render('admin/listaDeUsuarios',{
-            usuarios
-        });
+
+        let usuarios = []
+        db.Usuarios.findAll()     
+        .then((todos) => {
+            usuarios = todos
+        })
+
+        res.send(usuarios)
+          /*   return res.render('admin/listaDeUsuarios',{
+                usuarios
+              })
+ */
+       
+
+        /* let response = {
+            status : 200,
+            meta : {
+                length : usuarios.length,
+                path : "ruta"
+            },
+            data: usuarios  
+                            
+        }  */
+
+        /* return res.status(200).json(response) */
+
+        .catch((error) => {
+            return res.send(error)
+          });
     },
     borrarUsuario: (req, res) => {
         idParams = +req.params.id

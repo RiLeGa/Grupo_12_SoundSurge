@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {login, register, newUser, editarUsuario, inLogin, perfil, logout} = require('../controllers/usersController');
+const {login, register, newUser, editarUsuario, inLogin, perfil, logout, editarU} = require('../controllers/usersController');
 const registerValidations = require('../validations/registerValidations');
 const loginValidator = require('../validations/loginValidator');
 const upload = require('../middlewares/multerUsuarios')
@@ -15,7 +15,10 @@ router.get('/login', login);
 router.post('/login', loginValidator, inLogin);
 
 router.get('/perfil', userLoginCheck, perfil);
-router.put('/Perfil', userLoginCheck, editarUsuario);
+
+router.get('/editar/:id', editarU);
+router.put('/editar/:id',userLoginCheck, editarUsuario);
+
 router.delete('/logout', logout);
 
 module.exports = router;

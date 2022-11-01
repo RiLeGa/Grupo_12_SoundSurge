@@ -4,6 +4,8 @@ const upload = require("../middlewares/multerProductos")
 
 const {crear, editar, lista, store, actualizar, borrar, papelera, userlist, borrarUsuario} = require('../controllers/adminController')
 const adminCheck = require('../middlewares/adminCheck')
+const upload = require('../middlewares/multerProductos')
+
 
 
 /* GET admin pages. */
@@ -25,7 +27,7 @@ router.get('/papelera',adminCheck, papelera)
 
 router.get('/lista', adminCheck, lista);
 
-router.get('/userlist', adminCheck, userlist)
+router.get('/userlist', userlist)
 
 
 module.exports = router;

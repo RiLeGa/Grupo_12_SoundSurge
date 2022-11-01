@@ -1,6 +1,6 @@
 const {sequelize} = require('../database/models')
 
-const dbConectionTest = async () => {
+const dbConnectionTest = async () => {
     try {
         await sequelize.authenticate()
         console.log('La coneccion fue establecida con exito');
@@ -9,4 +9,4 @@ const dbConectionTest = async () => {
     }
 }
 
-module.exports = dbConectionTest
+module.exports = dbConnectionTest

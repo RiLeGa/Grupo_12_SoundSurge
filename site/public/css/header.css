@@ -187,6 +187,15 @@ header .navegacion div.usuario{
         justify-content: space-between;
         align-items: center;
     }
+
+    header section{
+        background-color: black;
+        width:  30%;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+    }
+
     header .navegacion .burguer{
         display: none;
     }

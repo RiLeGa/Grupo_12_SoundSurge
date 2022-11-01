@@ -18,6 +18,7 @@
     flex-direction: row;
     padding: 0 4%;
     margin-top: 10px;
+    margin-bottom: 25px;
 }
 .home main .contenedor ul article div.producto{ 
     background-color: rgb(255, 255, 255);
@@ -31,6 +32,7 @@
     height: 325px;
     transition: 0.5s;
     border: 1px solid black;
+
 }
 .home main .banner-medio img{
     width: 100vw;
@@ -178,6 +180,7 @@
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
+        margin-bottom: 25px;
     }
 
     .home main .contenedor ul{

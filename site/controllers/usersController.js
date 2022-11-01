@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const db = require("../database/models");
 const usuarios = require("../database/models/usuarios");
 const { literal } = require("sequelize");
+const { log } = require("console");
 /* const guardar = (dato) =>
   fs.writeFileSync(
     path.join(__dirname, "../data/usuarios.json"),
@@ -183,13 +184,8 @@ module.exports = {
     });
   },
   editarUsuario: (req, res) => {
-
-    
     /*  return res.send(req.body) */
-    req.session.destroy();
-    if (req.cookies.SoundSurge) {
-      res.cookie("SoundSurge", "", { maxAge: -1 });
-    }
+    
     let idParams = req.params.id;
     db.Usuarios.update(
       {
@@ -202,26 +198,40 @@ module.exports = {
       {
         where: { id: idParams},
       })
-      db.Usuarios.findOne({
-        where: {
-          email,
-        },
-      })
-        .then((usuario) => {
-          usuario = usuario.dataValues;
-
-          req.session.userLogin = {
-            id: usuario.id,
-            nombre: usuario.nombre,
-            imagen: usuario.imagen,
-            rol: usuario.rolId,
-          };
-          
-          return res.redirect("/users/perfil");
+      .then((data) => {
+        
+        db.Usuarios.findOne({
+          where: {
+            id : idParams
+          },
         })
-      .catch((error) => {
-        return res.send(error);
-      });
+          .then((usuario) => {
+            
+            req.session.reload(function(err) {
+              req.session.user = {
+              id: usuario.id,
+              nombre: usuario.nombre,
+              imagen: usuario.imagen,
+              rol: usuario.rolId,
+            };
+
+            return res.redirect("/users/perfil");
+            
+          }) 
+         
+          /* if (req.cookies.SoundSurge) {
+            res.cookie("SoundSurge", "", { maxAge: -1 });
+            res.cookie("SoundSurge", req.session.userLogin, {
+              maxAge: 1000 * 60 * 60,
+            });
+          } */
+          
+        })
+        .catch((errores) => res.send(errores));
+      
+      })
+      .catch((errores) => res.send(errores));
+      
   },
   eliminarUsuario : (req,res) => {
     req.session.destroy();

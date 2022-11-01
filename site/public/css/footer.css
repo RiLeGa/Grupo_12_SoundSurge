@@ -1,7 +1,7 @@
 footer{
     background-color: black;
     background-size: cover;
-    margin-top: 10px;
+    margin-top: -3px;
 }
 
 footer .logo-footer{
@@ -78,6 +78,11 @@ footer .Redes-sociales ul li a{
 }
 
 @media (min-width: 1055px){
+
+    footer{
+        background-color: black;
+        background-size: cover;
+    }
 
     footer .info{
         display: flex;

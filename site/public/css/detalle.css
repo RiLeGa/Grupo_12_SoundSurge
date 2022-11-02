@@ -108,6 +108,7 @@ color: black;
 .detalle main.detalleDeProd p.descripcion{
     width: 90vw;
     margin-left: 4vw;
+    margin-bottom: 5%;
     text-align: center;
 }
 

@@ -9,7 +9,7 @@
                 <ul>
                     <li>
                         <% producto.imagenes.forEach(img => { %>
-                            <img class="secundarias" src="/images/<%= img %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('src','/images/<%= img %>')">
+                            <img class="secundarias" src="/images/<%= img.nombre %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('src','/images/<%= img.nombre %>')">
                         <% }) %>
                     </li>
                 </ul>
@@ -17,11 +17,11 @@
                     <% if (producto.descuento !== 0) { %>
                     <i class="fas fa-percentage"><%= producto.descuento %></i>
                     <% } %>
-                    <img class="principal" id="imgMain" src="/images/<%= producto.imagenes[0] %>" alt="Imagen principal">
+                    <img class="principal" id="imgMain" src="/images/<%= producto.imagenes[0].nombre %>" alt="Imagen principal">
                 </div>
             </div>
             <div class="detalle">
-                <h2><%= producto.marca %></h2>
+                <h2><%= producto.marca.nombre %></h2>
                 <h1><%= producto.titulo %></h1>
                 <br>
                 <span> <i class="fas fa-award"></i> Garantia oficial</span>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="agregar">
                     <button class="a-favorito" type="submit">Agregar a favoritos</button>
-                    <button class="a-carrito" type="submit">Agregar al carrito</button>
+                    <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
                 </div>
             </div>
         </section>
@@ -48,20 +48,7 @@
             <h2>descripcion</h2>
             <p class="descripcion"><%= producto.descripcion %></p>
         </section>
-        <h2>Productos relacionados</h2>
-        <section class="similares">
-            <ul>
-                <% for( let i = 0; i < 10; i++ ) { %>
-                        <article>
-                            <a href="/productos/detalle/<%= productos[i].id %>">
-                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')"></div>
-                            <h4><%= productos[i].titulo %></h4>
-                            <p>$<%= productos[i].precio %></p>
-                            </a>
-                        </article>
-                <% } %>
-            </ul>
-        </section>
+       
     </main>
     <%- include ("./partials/footer") %> 
 </body>

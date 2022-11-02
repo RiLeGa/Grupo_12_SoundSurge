@@ -1,8 +1,10 @@
 [
+   
     {
-        "id": 21,
-        "marca": "gibson   ",
-        "titulo": "guitarra gibson   ",
+        "id": 1,
+        "marca": "Gibson",
+        "titulo": "guitarra gibson",
+        "categoria": "Cuerdas",
         "precio": 150000,
         "descuento": 15,
         "stock": 25,
@@ -14,10 +16,10 @@
         ]
     },
     {
-        "id": 20,
+        "id": 2,
         "marca": "Yamaha",
         "titulo": "Guitarra Yamaha PAC012",
-        "categorias": "Cuerdas",
+        "categoria": "Cuerdas",
         "precio": 75000,
         "descuento": 20,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
@@ -26,35 +28,6 @@
             "_0003_2020_Capri-_BasicPack_PhantomBlack_PDP-Hero.png",
             "_0005_2020_Capri-_BasicPack_PhantomBlack_Front-View.png",
             "_0000_2020_Capri-_BasicPack_PhantomBlack_Backside.png",
-            "168343-800-auto.png"
-        ]
-    },
-    {
-        "id": 13,
-        "precio": null,
-        "descuento": null,
-        "stock": null,
-        "imagenes": [
-            "default-image.png",
-            "default-image.png",
-            "default-image.png",
-            "default-image.png"
-        ]
-    },
-    {
-        "id": 14,
-        "marca": "gibson",
-        "titulo": "tatilu",
-        "categorias": "3",
-        "precio": 5678978879,
-        "descuento": 20,
-        "stock": 5,
-        "descripcion": "jhvhjvgvycggvjhv",
-        "imagenes": [
-            "default-image.png",
-            "default-image.png",
-            "default-image.png",
-            "default-image.png"
-        ]
+            "168343-800-auto.png"]
     }
 ]

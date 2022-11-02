@@ -8,8 +8,16 @@
     font-family: var(--fuenteGral);
 }
 
+.login::-webkit-scrollbar{
+    display: none;
+}
+
 .login .logo-login{
     text-align: center;
+}
+
+.login main .video-promo{
+    display: none;
 }
 
 .login .logo-login img{
@@ -123,19 +131,40 @@
 /* Tablet */
 
 @media(min-width:769px){
+
     .login{
-        background-image:url('../images/FondoTablet.jpg') ;
-        background-repeat: no-repeat;
-        background-position: right 0;
-        background-size: 55vw 100%;
+        background-image: none;
     }
 
+    
     .login .logo-login img{
-        width: 45%;
+        width: 20%;
+    }
+
+    .login main .cont-form{
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+        /* display: none; */
+        
+    }
+    
+
+    .login main .video-promo{
+        display: block;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .login main .video-promo video{
+        width: 100vw;
+        height: max-content ;
     }
 
     .login main{
-        width: 45%;
+        width: 100vw;
         margin: 0 1.5px;
         padding-bottom: 50px;
     }

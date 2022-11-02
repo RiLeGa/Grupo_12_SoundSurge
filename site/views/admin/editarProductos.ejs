@@ -9,49 +9,58 @@
             <button type="submit" class="btn btn-primary">Lista de productos</button>
         </a>
         <section>
-            <form action="/admin/editar/<%= producto.id %>?_method=put" method="post">
+            <form action="/admin/editar/<%= producto.id %>?_method=put" method="post"  enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Marca</label>
-                    <input type="text" class="form-control" name="Marca" id="formGroupExampleInput" placeholder="Ingrese nombre del producto" value="<%= producto.marca %> ">
-                </div>
+                    <label for="marcas" class="form-label">MARCAS</label>
+                <select class="form-select" name="marca" aria-label="select example">
+                       
+                    <option selected hidden value="">Selecciona una opcion</option>
+                                    <% marcas.forEach(marca => { %>
+                                        <option value="<%= marca.id %>" <%= producto.marcasId === marca.id ? "selected" : null %>><%= marca.nombre %></option>
+                                    <% }) %>
+                </select>
+            </div> 
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" name="Titulo" id="formGroupExampleInput2" placeholder="Ingrese marca del producto" value="<%= producto.titulo %> ">
+                    <input type="text" class="form-control" name="titulo" id="formGroupExampleInput2" placeholder="Ingrese marca del producto" value="<%= producto.titulo %> ">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Precio</label>
-                    <input type="text" class="form-control" name="Precio" id="formGroupExampleInput2" placeholder="Ingrese precio del producto" value="<%= producto.precio %>">
+                    <input type="text" class="form-control" name="precio" id="formGroupExampleInput2" placeholder="Ingrese precio del producto" value="<%= producto.precio %>">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descuento</label>
-                    <input type="text" class="form-control" name="Descuento" id="formGroupExampleInput2" placeholder="Ingrese su descuento" value="<%= producto.descuento %>">
+                    <input type="text" class="form-control" name="descuento" id="formGroupExampleInput2" placeholder="Ingrese su descuento" value="<%= producto.descuento %>">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" name="Descripcion" id="formGroupExampleInput2" placeholder="Ingrese descripcion" value="<%= producto.descripcion %>">
+                    <input type="text" class="form-control" name="descripcion" id="formGroupExampleInput2" placeholder="Ingrese descripcion" value="<%= producto.descripcion %>">
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Stock</label>
-                    <input type="text" class="form-control" name="Stock" id="formGroupExampleInput2" placeholder="Stock disponible" value="<%= producto.stock %>">
+                    <input type="text" class="form-control" name="stock" id="formGroupExampleInput2" placeholder="Stock disponible" value="<%= producto.stock %>">
                 </div>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Categorias</label>
-                    <select class="form-select" name="Categorias" required aria-label="select example">
-                    <option selected hidden><%= producto.categorias %></option>
-                    <option value="3">Audio</option>
-                    <option value="1">Cuerdas</option>
-                    <option value="3">Iluminacion</option>
-                    <option value="2">Percusion</option>
-                    <option value="3">Vientos</option>
-                    <option value="3">Teclados/Pianos/Controladores</option>
+                    <label for="categorias" class="form-label">CATEGORIAS</label>
+                    <select class="form-select" name="categoria" aria-label="select example">
+                        
+                        <option selected hidden value="">Selecciona una opcion</option>
+                                        <% categorias.forEach(categoria => { %>
+                                            <option value="<%= categoria.id %>" <%= producto.categoriasId === categoria.id ? "selected" : null %>><%= categoria.nombre %></option>
+                                        <% }) %>
                     </select>
-                    <div class="invalid-feedback">Example invalid select feedback</div>
                 </div>  
+                </div>
+                <div class="imagenes-sec">
+                    <% producto.imagenes.forEach(img => { %>
+                        <img class="secundarias" src="/images/<%= img.nombre %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('src','/images/<%= img.nombre %>')">
+                    <% }) %>
+                    
                 </div>
                 <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">Imagenes</label>
-                <input type="file" class="form-control" name="Imagenes" aria-label="file example" required multiple >
-                <div class="invalid-feedback">Example invalid form file feedback</div>
+                <input type="file" class="form-control"  name="imagen" placeholder="Introduzca la imagen del producto"  multiple >
+                
                 </div>
                 <div class="botones">
                 <button class="btn btn-primary" type="submit">Confirma</button>

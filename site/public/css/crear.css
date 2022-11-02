@@ -3,7 +3,19 @@
     font-size: 45px;
     text-align: center;
 }
-
+.crear{
+    display: flex;
+    flex-direction: column;
+}
+.crear .imagenes-sec{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+   
+}
+.crear .secundarias{
+    width: 16%
+}
 .crear main section{
     margin-top: 50px;
 }

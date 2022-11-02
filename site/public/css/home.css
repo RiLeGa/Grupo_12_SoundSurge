@@ -18,6 +18,7 @@
     flex-direction: row;
     padding: 0 4%;
     margin-top: 10px;
+    margin-bottom: 25px;
 }
 .home main .contenedor ul article div.producto{ 
     background-color: rgb(255, 255, 255);
@@ -31,8 +32,15 @@
     height: 325px;
     transition: 0.5s;
     border: 1px solid black;
+
+}
+.home main .banner-medio img{
+    width: 100vw;
 }
 
+.home main .video-promo{
+    width: 100vw;
+}
 .home main .contenedor-2{
     display: none;
     margin-top: 25px;
@@ -172,6 +180,7 @@
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
+        margin-bottom: 25px;
     }
 
     .home main .contenedor ul{
@@ -250,16 +259,32 @@
         
     }
 
-    .home main .contenedor, .contenedor-2{
+    .home main .contenedor{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
-        width: 66vw;
+        width: 90vw;
         margin-top: 30px;
-        margin-left: 17vw;
+        margin-left: 6vw;
         padding: 0;
+    }
+
+    .home main .contenedor-2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 90vw;
+        margin-top: 30px;
+        margin-left: 6vw;
+        padding: 0;
+    }
+
+    .home main .banner-medio img{
+        width: 100vw;
     }
    
     .home main .categorias-home:nth-of-type(3){
@@ -271,12 +296,12 @@
     
     .home main .contenedor ul, .contenedor-2 ul{
         display: flex;
-        width: 85vw;
-        height: 400px;
+        width: 100vw;
+        /* height: 400px; */
         flex-direction: row;
         align-items: center;
-        flex-wrap: nowrap;
-        overflow-y: hidden;   
+        flex-wrap: wrap;
+        /* overflow-y: hidden; */   
     }
     .home main .contenedor ul article div.producto:hover,
     .home main .contenedor-2 ul article div.producto:hover{
@@ -295,6 +320,7 @@
         width: 18vw;
         height: 325px;
         margin-left: 50px;
+        margin-bottom: 35px;
         transition: 0.5s;
         box-shadow: 0 0 15px rgb(0 0 0 / 95%);
     }

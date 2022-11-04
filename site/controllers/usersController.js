@@ -184,55 +184,63 @@ module.exports = {
     });
   },
   editarUsuario: (req, res) => {
-    /*  return res.send(req.body) */
-    
-    let idParams = req.params.id;
-    db.Usuarios.update(
-      {
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        direccion: req.body.direccion,
-        telefono: req.body.telefono,
-        updateAt: new Date(),
-      },
-      {
-        where: { id: idParams},
-      })
-      .then((data) => {
-        
-        db.Usuarios.findOne({
-          where: {
-            id : idParams
-          },
-        })
-          .then((usuario) => {
-            
-            req.session.reload(function(err) {
-              req.session.user = {
-              id: usuario.id,
-              nombre: usuario.nombre,
-              imagen: usuario.imagen,
-              rol: usuario.rolId,
-            };
+    /* return res.send(req.body) */
 
-            return res.redirect("/users/perfil");
-            
-          }) 
-         
-          /* if (req.cookies.SoundSurge) {
-            res.cookie("SoundSurge", "", { maxAge: -1 });
-            res.cookie("SoundSurge", req.session.userLogin, {
-              maxAge: 1000 * 60 * 60,
-            });
-          } */
-          
+    let errors = validationResult(req)
+
+    if (errors.isEmpty()) {
+
+        const {nombre, apellido, direccion, telefono } = req.body
+
+        db.Usuarios.findOne({
+            id: +req.params.id
         })
-        .catch((errores) => res.send(errores));
-      
-      })
-      .catch((errores) => res.send(errores));
-      
-  },
+        .then(user => {
+            db.Usuarios.update({
+              nombre: nombre.trim(),
+              apellido: apellido.trim(),
+              direccion: direccion,
+              telefono: telefono,
+              /* avatar: req.file ? req.file.filename : user.avatar */
+            },{
+                where: {
+                    id: +req.params.id
+                }
+            })
+            .then(data=> {
+                db.Usuarios.findOne({
+                    id: +req.params.id
+                })
+                .then(usuario => { 
+                    
+                    req.session.userLogin = {
+                      id: usuario.id,
+                      nombre: usuario.nombre,
+                      imagen: usuario.imagen,
+                      rol: usuario.rolId,
+                    }
+                    if(req.cookies.SoundSurge){
+                        res.cookie('SoundSurge','',{maxAge: -1});
+                        res.cookie('SoundSurge', req.session.userLogin, {maxAge: 1000 * 60 * 60 * 24})
+                    }
+                    req.session.save( (err) => {
+                        req.session.reload((err) => {
+                            return res.redirect('/users/perfil')
+        
+                        });
+                     });
+        
+                })
+                
+            }).catch(err => res.send(err))
+
+        })
+        .catch(err => res.send(err))
+
+    } else {
+
+    }
+},
   eliminarUsuario : (req,res) => {
     req.session.destroy();
     if (req.cookies.SoundSurge) {

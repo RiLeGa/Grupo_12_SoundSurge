@@ -48,5 +48,14 @@ module.exports = {
                     })
             
             .catch(error => res.send(error))
+    },
+    listarCategorias : (req,res) => {
+        return res.render("categorias")
+    },
+    listarMarcas : (req,res) => {
+        return res.render("marcas")
+    },
+    listarTendencia : (req,res) => {
+        return res.render("loMasVendido")
     }
 }

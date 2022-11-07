@@ -17,5 +17,22 @@ module.exports = {
         })
         .catch(error => res.send(error))
         
+    },
+    search : (req,res) => {
+        let elemento = req.query.icon-search
+
+        db.Productos.findAll({
+            where : {
+                [Op.or] : [
+                    {nombre : {[Op.substring] : elemento}},
+                    {descripcion : {[Op.substring] : elemento}}
+                ]
+            }
+        })
+        return res.render('busqueda', 
+        {
+            busqueda: elemento,
+            resultados
+        });
     }
 }

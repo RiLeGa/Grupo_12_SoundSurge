@@ -1,11 +1,11 @@
 window.addEventListener("load",( ) => {
 
-    let vinculacion = "Documento vinculado con exito"
-    console.log(vinculacion);
+    /* let vinculacion = "Documento vinculado con exito"
+    console.log(vinculacion); */
 
     let $ = (elemento) => document.querySelector(elemento)
 
-    let buscador = $("#search")
+    let buscador = $("#icons-search")
     let palabra = ""
     buscador.onkeydown = ( event) => {
         let letra = event.key

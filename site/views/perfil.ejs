@@ -30,7 +30,7 @@
                 </a>
         
                 <form class="exit" action="/users/logout?_method=DELETE" method="post">
-                    <button class="logout" type="submit"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</button>
+                    <button class="btn btn-del" type="submit"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</button>
                 </form>
             
             </section>
@@ -39,5 +39,9 @@
             </section>
     </main>
     <%- include ("./partials/footer") %> 
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../javascript/eliminarU.js"></script>
+    
 </body>
 </html>

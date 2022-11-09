@@ -108,9 +108,16 @@ module.exports = {
             }
         })
         /* return res.send(errors.mapped()) */
-        return res.render('/admin/crearProductos', {
-            errors: errors.mapped(),
-            old: req.body
+        let categorias = db.Categorias.findAll()
+        let marcas = db.Marcas.findAll()
+        Promise.all([categorias,marcas])
+        .then(([categorias,marcas]) => {
+            return res.render('admin/crearProductos',{
+                categorias,
+                marcas,
+                errors: errors.mapped(),
+                old: req.body
+            })
         })
     }
     },

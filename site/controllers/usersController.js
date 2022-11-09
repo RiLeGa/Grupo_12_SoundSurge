@@ -201,7 +201,7 @@ module.exports = {
               apellido: apellido.trim(),
               direccion: direccion,
               telefono: telefono,
-              /* avatar: req.file ? req.file.filename : user.avatar */
+              imagen: req.file ? req.file.filename : user.imagen
             },{
                 where: {
                     id: +req.params.id

@@ -13,6 +13,14 @@
     flex-direction: row;
    
 }
+.crear .error{
+    margin: 10px;
+    color: white;
+    background-color: red;
+    width: 20%;
+   display: flex;
+   justify-content: center;
+}
 .crear .secundarias{
     width: 16%
 }
@@ -24,7 +32,12 @@
     width: 60vw;
     margin-left: 20vw;
 }
-
+.crear main section .mb-3{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-right: 20%;
+}
 .crear main section .mb-3 label.form-label{
     display: flex;
     flex-direction: column;

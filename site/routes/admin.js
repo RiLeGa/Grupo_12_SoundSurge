@@ -3,12 +3,13 @@ const router = express.Router();
 const {crear, editar, lista, store, actualizar, borrar, papelera, userlist, borrarUsuario} = require('../controllers/adminController')
 const adminCheck = require('../middlewares/adminCheck')
 const upload = require('../middlewares/multerProductos')
+const productValidator = require("../validations/productsValidation")
 
 
 
 /* GET admin pages. */
 router.get('/crear', adminCheck, crear);
-router.post('/crear', upload.array('imagen'), store);
+router.post('/crear', upload.array('imagen'),productValidator, store);
 
 router.get('/editar/:id', adminCheck, editar);
 router.put('/editar/:id',upload.fields([

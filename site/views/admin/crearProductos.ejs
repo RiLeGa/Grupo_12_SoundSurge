@@ -12,54 +12,74 @@
             <form action="/admin/crear" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="marcas" class="form-label">MARCAS</label>
-                <select class="form-select" name="marcas" aria-label="select example">
+                <select class="form-select" id="marcas" name="marcas" aria-label="select example">
                        
                     <option selected hidden value="">Selecciona una opcion</option>
                                     <% marcas.forEach(marca => { %>
                                         <option value="<%= marca.id %>"><%= marca.nombre %></option>
                                     <% }) %>
                 </select>
+                <p class="error">
+                    <%= locals.errors && errors.marcas ? errors.marcas.msg : null %>
+                </p>
             </div> 
                 <div class="mb-3">
                     <label for="titulo" class="form-label">titulo</label>
-                    <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Ingrese marca del producto">
+                    <input type="text" name="titulo" class="form-control" id="titulo" value="<%= locals.old && old.titulo ? old.titulo : null%>" placeholder="Ingrese marca del producto">
+                    <p class="error">
+                        <%= locals.errors && errors.titulo ? errors.titulo.msg : null %>
+                    </p>
                 </div> 
+                
 
                 <div class="mb-3">
                     <label for="categorias" class="form-label">categorias</label>
-                    <select class="form-select" name="categorias" aria-label="select example">
-                       
+                    <select class="form-select" name="categorias" id="categorias" aria-label="select example">
                         <option selected hidden value="">Selecciona una opcion</option>
-                                        <% categorias.forEach(categoria => { %>
-                                            <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
-                                        <% }) %>
+                            <% categorias.forEach(categoria => { %>
+                                <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                            <% }) %>
                     </select>
+                    <p class="error">
+                        <%= locals.errors && errors.categorias ? errors.categorias.msg : null %>
+                    </p>
                 </div>  
 
                 <div class="mb-3">
                     <label for="precio" class="form-label">precio</label>
-                    <input type="number" name="precio" class="form-control" id="precio" placeholder="Ingrese precio del producto">
+                    <input type="number" name="precio" class="form-control" value="<%= locals.old && old.precio ? old.precio : null%>" id="precio" placeholder="Ingrese precio del producto">
+                    <p class="error">
+                        <%= locals.errors && errors.precio ? errors.precio.msg : null %>
+                    </p>
                 </div>   
                 <div class="mb-3">
                     <label for="descuento" class="form-label">descuento</label>
-                    <input type="number" name="descuento" class="form-control" id="descuento" placeholder="Ingrese su descuento">
+                    <input type="number" name="descuento" class="form-control" id="descuento" value="<%= locals.old && old.descuento ? old.descuento : null%>" placeholder="Ingrese su descuento">
+                    <p class="error">
+                        <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
+                    </p>
                 </div>   
                 <div class="mb-3">
                     <label for="descripcion" class="form-label">descripcion</label>
-                    <input type="text" name="descripcion" class="form-control" id="descripcion" placeholder="Ingrese descripcion">
+                    <input type="text" name="descripcion" class="form-control" id="descripcion" value="<%= locals.old && old.descripcion ? old.descripcion : null%>" placeholder="Ingrese descripcion">
+                    <p class="error">
+                        <%= locals.errors && errors.descripcion ? errors.descripcion.msg : null %>
+                    </p>
                 </div>   
                 <div class="mb-3">
                     <label for="stock" class="form-label">stock</label>
-                    <input type="number" name="stock" class="form-control" id="stock" placeholder="stock disponible">
+                    <input type="number" name="stock" class="form-control" id="stock" value="<%= locals.old && old.stock ? old.stock : null%>" placeholder="stock disponible">
+                    <p class="error">
+                        <%= locals.errors && errors.stock ? errors.stock.msg : null %>
+                    </p>
                 </div>
                 <div class="mb-3">
                 <label for="imagenes" class="form-label">imagenes</label>
-                <input type="file" class="form-control"  name="imagen" aria-label="file example" required multiple>
-                <div class="invalid-feedback">Example invalid form file feedback</div>
+                <input type="file" class="form-control" id="imagen" name="imagen" aria-label="file example"  multiple>
                 </div>
                 <div class="botones">
                 <button class="btn btn-primary" type="submit">Confirma</button>
-                <button class="btn btn-secundary" type="reset">Cancelar</button>
+                <button class="btn btn-secundary" type="reset"><a  href="/admin/lista">Cancelar</a></button>
                 </div>
             </form>
         </section>

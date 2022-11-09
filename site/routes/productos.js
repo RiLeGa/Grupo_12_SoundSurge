@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+
 const {detalle, carrito, listarCategorias, listarMarcas, listarTendencia} = require('../controllers/productosController')
 
 router.get('/detalle/:id', detalle);

@@ -7,7 +7,7 @@ module.exports = [
     .isLength({min:5}).withMessage('Debe contener al menos 5 caracteres'),
 
     /* Marca */
-    check('marca').trim()
+    check('marcas').trim()
     .notEmpty().withMessage('Debe seleccionar una marca'),
 
     /* Precio */
@@ -26,7 +26,7 @@ module.exports = [
     .isInt().withMessage('Solo se aceptan numeros'),
 
     /* Categoria */
-    check('categoria').trim()
+    check('categorias').trim()
     .notEmpty().withMessage('Debe seleccionar una categoria'),
 
     /* Descripcion */

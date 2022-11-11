@@ -1,3 +1,4 @@
+window.onload = function() {
 const swalWithBootstrapButtons = Swal.mixin({
     customClass: {
       confirmButton: 'btn btn-del',
@@ -32,3 +33,4 @@ const swalWithBootstrapButtons = Swal.mixin({
       )
     }
   })
+}

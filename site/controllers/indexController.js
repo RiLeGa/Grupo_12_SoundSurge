@@ -1,5 +1,6 @@
 
 let db =require("../database/models")
+const { Op } = require("sequelize");
 
 module.exports = {
     home : (req,res) => {
@@ -19,12 +20,12 @@ module.exports = {
         
     },
     search : (req,res) => {
-        let elemento = req.query.icon-search
+        let elemento = req.query.search
 
-        db.Productos.findAll({
+        db.Productos.findAll( {
             where : {
                 [Op.or] : [
-                    {nombre : {[Op.substring] : elemento}},
+                    {titulo : {[Op.substring] : elemento}},
                     {descripcion : {[Op.substring] : elemento}}
                 ]
             }

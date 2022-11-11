@@ -19,26 +19,45 @@
                                         <option value="<%= marca.id %>" <%= producto.marcasId === marca.id ? "selected" : null %>><%= marca.nombre %></option>
                                     <% }) %>
                 </select>
+                <p class="error" id="marcaError">
+                    <%= locals.errors && errors.marcas ? errors.marcas.msg : null %>
+                </p>
             </div> 
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Titulo</label>
                     <input type="text" class="form-control" name="titulo" id="formGroupExampleInput2" placeholder="Ingrese marca del producto" value="<%= producto.titulo %> ">
+                    <p class="error" id="tituloError">
+                        <%= locals.errors && errors.titulo ? errors.titulo.msg : null %>
+                    </p>
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Precio</label>
                     <input type="text" class="form-control" name="precio" id="formGroupExampleInput2" placeholder="Ingrese precio del producto" value="<%= producto.precio %>">
+                    <p class="error" id="precioError">
+                        <%= locals.errors && errors.precio ? errors.precio.msg : null %>
+                    </p>
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descuento</label>
                     <input type="text" class="form-control" name="descuento" id="formGroupExampleInput2" placeholder="Ingrese su descuento" value="<%= producto.descuento %>">
+                    <p class="error" id="descuentoError">
+                        <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
+                    </p>
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
                     <input type="text" class="form-control" name="descripcion" id="formGroupExampleInput2" placeholder="Ingrese descripcion" value="<%= producto.descripcion %>">
+                    <p class="error" id="descripcionError">
+                        <%= locals.errors && errors.descripcion ? errors.descripcion.msg : null %>
+                    </p>
                 </div>   
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Stock</label>
                     <input type="text" class="form-control" name="stock" id="formGroupExampleInput2" placeholder="Stock disponible" value="<%= producto.stock %>">
+                    <p class="error" id="stockError">
+                        <%= locals.errors && errors.stock ? errors.stock.msg : null %>
+                    </p>
+                </div>
                 </div>
                 <div class="mb-3">
                     <label for="categorias" class="form-label">CATEGORIAS</label>
@@ -49,6 +68,9 @@
                                             <option value="<%= categoria.id %>" <%= producto.categoriasId === categoria.id ? "selected" : null %>><%= categoria.nombre %></option>
                                         <% }) %>
                     </select>
+                    <p class="error" id="categoriaError">
+                        <%= locals.errors && errors.categorias ? errors.categorias.msg : null %>
+                    </p>
                 </div>  
                 </div>
                 <div class="imagenes-sec">
@@ -59,11 +81,13 @@
                 </div>
                 <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">Imagenes</label>
-                <input type="file" class="form-control"  name="imagen1" placeholder="Introduzca la imagen del producto"  multiple >
-                <input type="file" class="form-control"  name="imagen2" placeholder="Introduzca la imagen del producto"  multiple >
-                <input type="file" class="form-control"  name="imagen3" placeholder="Introduzca la imagen del producto"  multiple >
-                <input type="file" class="form-control"  name="imagen4" placeholder="Introduzca la imagen del producto"  multiple >
-                
+                <input type="file" class="form-control" id="imagen" name="imagen" placeholder="Introduzca la imagen del producto"  multiple >
+                <input type="file" class="form-control" id="imagen2" name="imagen2" placeholder="Introduzca la imagen del producto"  multiple >
+                <input type="file" class="form-control" id="imagen3" name="imagen3" placeholder="Introduzca la imagen del producto"  multiple >
+                <input type="file" class="form-control" id="imagen4" name="imagen4" placeholder="Introduzca la imagen del producto"  multiple >
+                <p class="error" id="imagen">
+                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                </p>
                 </div>
                 <div class="botones">
                 <button class="btn btn-primary" type="submit">Confirma</button>
@@ -71,6 +95,7 @@
                 </div>
             </form>
         </section>
-    </main>    
+    </main>  
+    <script src="/javascripts/validacionProductos.js"></script>  
 </body>
 </html>

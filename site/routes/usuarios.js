@@ -8,8 +8,8 @@ const userLoginCheck = require('../middlewares/userLoginCheck')
 
 
 
-router.get('/register', register);
-router.post('/register', upload.single('imagen'),registerValidations, newUser);
+router.get('/register', registerValidations, register);
+router.post('/register', upload.single('imagen'), newUser);
 
 router.get('/login', login);
 router.post('/login', loginValidator, inLogin);

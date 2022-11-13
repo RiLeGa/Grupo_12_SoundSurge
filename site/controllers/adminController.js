@@ -157,7 +157,7 @@ module.exports = {
         if (errors.isEmpty()) {
             const idParams = +req.params.id
           
-            const { marca, titulo, categoria, precio, descuento, stock, descripcion } = req.body
+            const { marcas, titulo, categorias, precio, descuento, stock, descripcion } = req.body
            
             let producto = db.Productos.findOne({
                 where: {
@@ -173,8 +173,8 @@ module.exports = {
                 descuento: +descuento,
                 stock: +stock,
                 descripcion,
-                categoriasId: +categoria,
-                marcasId: +marca,
+                categoriasId: +categorias,
+                marcasId: +marcas,
             },{
                 where: {
                     id : idParams

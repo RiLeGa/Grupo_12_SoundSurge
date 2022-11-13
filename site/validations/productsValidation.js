@@ -22,7 +22,6 @@ module.exports = [
 
     /* Stock */
     check('stock').trim()
-    .notEmpty().withMessage('Este campo es obligatorio').bail()
     .isInt().withMessage('Solo se aceptan numeros'),
 
     /* Categoria */

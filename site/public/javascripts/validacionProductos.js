@@ -48,7 +48,7 @@ window.addEventListener('load', () => {
                 validate.titulo = false
                 break;
             case !(this.value.trim().length > 2 && this.value.trim().length < 100):
-                $('#tituloError').innerHTML = "El titulo del producto debe 2 letras y maximo 10"
+                $('#tituloError').innerHTML = "El titulo del producto debe tener mas de 2 letras y maximo 10"
                 this.style.border='2px solid red'
                 validate.titulo = false
                 break;

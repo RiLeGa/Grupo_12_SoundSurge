@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
         console.log(arr);
         if (!arr.includes(false)) {
             btn.disabled = false
-            btn.style.backgroundColor = 'blue'
+            btn.style.backgroundColor = 'green'
         }else{
             btn.disabled = true
             btn.style.backgroundColor = 'red'
@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
     let img3 = $('#imagen3')
     let img4 = $('#imagen4')
 
-    let btn = $('.btn btn-primary')
+    let btn = $('#btn-submit')
 
     /* Expresiones regulares para utilizar */
     let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/
@@ -236,12 +236,12 @@ window.addEventListener('load', () => {
     /* Validacion */
     const validate = {
         titulo : false,
-        price : false,
-        discount : true ,
+        precio : false,
+        descuento : true ,
         stock : false ,
         categorias : false ,
         marcas : false ,
-        description : false ,
+        descripcion : false ,
         img : true ,
         img2 : true ,
         img3 : true ,

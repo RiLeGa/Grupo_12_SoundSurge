@@ -306,7 +306,29 @@ module.exports = {
             })
             .catch(error => res.send(error))
         } else {
-            return res.render('admin/crearProductos')
+           
+        let idParams = +req.params.id
+        let categorias = db.Categorias.findAll()
+        let marcas = db.Marcas.findAll()
+        let producto = db.Productos.findOne({
+            where: {
+                id : idParams
+            },
+            include: [{
+                all:true
+            }]
+        })
+        Promise.all([categorias,marcas,producto])
+        .then(([categorias,marcas,producto]) => {
+                /* return res.send(imagenes) //Comprobar que esta llegando bien el elemento */
+                return res.render('admin/editarProductos', {
+                    producto,
+                    categorias,
+                    marcas,
+                    errors: errors.mapped()
+                })
+        })
+        .catch(error => res.send(error))
         } 
     },
     borrar: (req, res) => {

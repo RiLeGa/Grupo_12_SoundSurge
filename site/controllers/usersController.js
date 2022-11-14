@@ -62,7 +62,7 @@ module.exports = {
     } else {
       let ruta = (dato) =>
         fs.existsSync(
-          path.join(__dirname, "..", "..", "public", "images", "users", dato)
+          path.join(__dirname, "..", "public", "images", "users", dato)
         );
 
       if (
@@ -70,13 +70,13 @@ module.exports = {
         req.file.filename !== "default-image.png"
       ) {
         fs.unlinkSync(
-          path.join(__dirname,"..","..","public","images","users",req.file.filename
+          path.join(__dirname,"..","public","images","users",req.file.filename
           )
         );
       }
 
       /* return res.send(errors.mapped()) */
-      return res.render("users/register", {
+      return res.render("register", {
         errors: errors.mapped(),
         old: req.body,
       });

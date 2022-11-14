@@ -9,17 +9,19 @@
         </section>
         <h1>Bienvenido</h1>
         <h4>---------------Ingresar con email---------------</h4>
-        <form action="/users/login" method="post">
+        <form action="/users/login" method="post" id="formularioLogin">
             <div class="container">
                 <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Ingresa tu email">
+                    <div id="emailContainer"></div>
                     <% if (locals.errors && errors.email) { %>
                         <small><%= errors.email.msg %></small>
                     <% } %>
             </div>
             <div class="container">
                 <label for="contrasenia">Contraseña</label>
-                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa tu contraseña">
+                    <input type="password" name="contrasenia" id="clave" placeholder="Ingresa tu contraseña">
+                    <div id="passContainer"></div>
                     <% if (locals.errors && errors.contrasenia) { %>
                         <small><%= errors.contrasenia.msg %></small>
                     <% } %>
@@ -49,5 +51,6 @@
                 <video muted autoplay loop><source src="/videos/Guitar-Center-Showtime-Commercial.mp4"></video>
             </section>
     </main>
+    <script src="/javascript/login.js"></script>
 </body>
 </html>

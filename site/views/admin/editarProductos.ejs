@@ -81,10 +81,11 @@
                 </div>
                 <div class="mb-3">
                 <label for="formGroupExampleInput2" class="form-label">Imagenes</label>
-                <input type="file" class="form-control" id="imagen" name="imagen" placeholder="Introduzca la imagen del producto"   >
-                <input type="file" class="form-control" id="imagen2" name="imagen2" placeholder="Introduzca la imagen del producto"   >
-                <input type="file" class="form-control" id="imagen3" name="imagen3" placeholder="Introduzca la imagen del producto"   >
-                <input type="file" class="form-control" id="imagen4" name="imagen4" placeholder="Introduzca la imagen del producto"   >
+                <input type="file" class="form-control"  name="imagen1" placeholder="Introduzca la imagen del producto"   >
+                <input type="file" class="form-control"  name="imagen2" placeholder="Introduzca la imagen del producto"   >
+                <input type="file" class="form-control"  name="imagen3" placeholder="Introduzca la imagen del producto"   >
+                <input type="file" class="form-control"  name="imagen4" placeholder="Introduzca la imagen del producto"   >
+                
                 <p class="error" id="imagen">
                     <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                 </p>
@@ -95,7 +96,7 @@
                 </div>
             </form>
         </section>
-    </main>  
+    </main>    
     <script src="/javascripts/validacionProductos.js"></script>  
 </body>
 </html>

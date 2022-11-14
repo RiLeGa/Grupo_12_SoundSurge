@@ -1,7 +1,10 @@
 window.onload = function() {
+  let $ = (elemento) => document.querySelector(elemento)
+    console.log("Register vinculado");
+    
 const swalWithBootstrapButtons = Swal.mixin({
     customClass: {
-      confirmButton: 'btn btn-del',
+      confirmButton: 'btn btn-conf',
       cancelButton: 'btn btn-danger'
     },
     buttonsStyling: false

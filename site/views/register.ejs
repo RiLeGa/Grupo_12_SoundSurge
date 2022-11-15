@@ -8,7 +8,7 @@
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
         <form action="/users/register" method="post" enctype="multipart/form-data" id="formulario">
             <div class="icons">
-                <input type="file" name="imagen" id="file">
+                <input type="file" name="image" id="file" accept="imagen/*">
                 <div id="preview" class="styleImage"></div>
             </div>
             <div class="container">
@@ -62,9 +62,9 @@
                 <% } %>
                 <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
-            
-            <button type="submit" class="enviar">Enviar</button>
-            
+            <div>
+                <button type="submit" class="enviar">Enviar</button>
+            </div>
         <h4>--------------- Registrarse con -----------------</h4>
             <button type="submit" class="facebook"><i class="fab fa-facebook"></i> Registrarte con Facebook</button>
             

@@ -5,8 +5,7 @@ const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require("../database/models");
 const usuarios = require("../database/models/usuarios");
-const { literal } = require("sequelize");
-const { log } = require("console");
+
 /* const guardar = (dato) =>
   fs.writeFileSync(
     path.join(__dirname, "../data/usuarios.json"),
@@ -26,16 +25,18 @@ module.exports = {
     return res.render("register");
   },
   newUser: (req, res) => {
+    /* return res.send(req.body) */
     let errors = validationResult(req);
     if (req.fileValidationError) {
       let imagen = {
-        param: "imagen",
+        param: "image",
         msg: req.fileValidationError,
       };
       errors.errors.push(imagen);
     }
+    return res.send(errors)
     if (errors.isEmpty()) {
-      /* return res.send(req.body) */
+      
       let { nombre, apellido, email, contrasenia } = req.body;
 
       db.Usuarios.create({
@@ -48,21 +49,33 @@ module.exports = {
         imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
         rolId: 2,
       })
-
-        .then((usuario) => {
-          req.session.userLogin = {
-            id: usuario.id,
-            nombre: usuario.nombre,
-            imagen: usuario.imagen,
-            rol: usuario.rolId,
-          };
-          return res.redirect("/");
-        })
-        .catch((errores) => res.send(errores));
+      .then(data=> {
+        db.Usuarios.findOne({
+          id: +req.params.id
+      })
+          .then(usuario => { 
+              
+              req.session.userLogin = {
+                id: usuario.id,
+                nombre: usuario.nombre,
+                imagen: usuario.imagen,
+                rol: usuario.rolId,
+              };
+            })
+            if (recordarme) {
+              res.cookie("SoundSurge", req.session.userLogin, {
+                maxAge: 1000 * 60 * 60,
+              });
+            }
+            return res.redirect("/users/perfil");
+          })
+          .catch((error) => {return res.send(error);
+          })
+      .catch((errores) => res.send(errores));
     } else {
       let ruta = (dato) =>
         fs.existsSync(
-          path.join(__dirname, "..", "public", "images", "users", dato)
+          path.join(__dirname,"..", "..", "public", "images", "users", dato)
         );
 
       if (
@@ -70,7 +83,7 @@ module.exports = {
         req.file.filename !== "default-image.png"
       ) {
         fs.unlinkSync(
-          path.join(__dirname,"..","public","images","users",req.file.filename
+          path.join(__dirname,"..", "..", "public","images","users",req.file.filename
           )
         );
       }
@@ -81,40 +94,6 @@ module.exports = {
         old: req.body,
       });
 
-      //----------------------------------------//
-
-      /* let { nombre, apellido, email, contrasenia } = req.body;
-
-      let nuevoUsuario = {
-        id: usuarios[usuarios.length - 1].id + 1,
-        nombre,
-        apellido,
-        direccion: "",
-        telefono: "",
-        email,
-        contrasenia: bcrypt.hashSync(contrasenia, 12),
-        imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
-        rol: "usuario",
-      };
-
-      usuarios.push(nuevoUsuario);
-      guardar(usuarios); */
-
-      /* if (recordarme) {
-            res.cookie("SoundSurge", req.session.userLogin, {
-              maxAge: 1000 * 60 * 60,
-            });
-            res.redirect("/");
-          } else { */
-
-      /* Redirecciona a login */
-      /* return res.send(errors.mapped()) */
-      /* return res.render("register", {
-              errors: errors.mapped(),
-              old: req.body,
-            });
-          }
-        }); */
     }
   },
   login: (req, res) => {
@@ -128,14 +107,6 @@ module.exports = {
     /* return res.send(errors) */
     if (errors.isEmpty()) {
       const { email, recordarme } = req.body;
-      /* let usuario = usuarios.find((user) => user.email === email);
-/* 
-      req.session.userLogin = {
-        id: usuario.id,
-        nombre: usuario.nombre,
-        imagen: usuario.imagen,
-        rol: usuario.rol,
-      } */
 
       db.Usuarios.findOne({
         where: {
@@ -195,22 +166,22 @@ module.exports = {
         db.Usuarios.findOne({
             id: +req.params.id
         })
-        .then(user => {
+        .then(usuario => {
             db.Usuarios.update({
               nombre: nombre.trim(),
               apellido: apellido.trim(),
               direccion: direccion,
               telefono: telefono,
-              imagen: req.file ? req.file.filename : user.imagen
+              imagen: req.file ? req.file.filename : usuario.imagen
             },{
                 where: {
                     id: +req.params.id
                 }
             })
             .then(data=> {
-                db.Usuarios.findOne({
-                    id: +req.params.id
-                })
+              db.Usuarios.findOne({
+                id: +req.params.id
+            })
                 .then(usuario => { 
                     
                     req.session.userLogin = {

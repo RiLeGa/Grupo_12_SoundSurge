@@ -13,11 +13,21 @@
                 <div class="mb-3">
                     <label for="marcas" class="form-label">MARCAS</label>
                 <select class="form-select" id="marcas" name="marcas" aria-label="select example">
-                       
-                    <option selected hidden value="">Selecciona una opcion</option>
+                    <% if (locals.errors && old.marcas) { %>
+                        <option hidden value="">Selecciona una opcion</option>
+                        <% marcas.forEach(marcas => { %>
+                            <% if (marcas.id == old.marcas) { %>
+                                <option value="<%= marcas.id %>" selected><%= marcas.nombre %></option>
+                            <% } %>
+                            <option value="<%= marcas.id %>"><%= marcas.nombre %></option>
+                        <% }) %>
+                    <% }else{ %>
+                        <option selected hidden value="">Selecciona una opcion</option>
                                     <% marcas.forEach(marca => { %>
                                         <option value="<%= marca.id %>"><%= marca.nombre %></option>
                                     <% }) %>
+                    <% } %>
+                    
                 </select>
                 <p class="error" id="marcaError">
                     <%= locals.errors && errors.marcas ? errors.marcas.msg : null %>
@@ -35,10 +45,20 @@
                 <div class="mb-3">
                     <label for="categorias" class="form-label">categorias</label>
                     <select class="form-select" name="categorias" id="categorias" aria-label="select example">
+                        <% if (locals.errors && old.categorias) { %>
+                        <option hidden value="">Selecciona una opcion</option>
+                        <% categorias.forEach(categorias => { %>
+                            <% if (categorias.id == old.categorias) { %>
+                                <option value="<%= categorias.id %>" selected><%= categorias.nombre %></option>
+                            <% } %>
+                            <option value="<%= categorias.id %>"><%= categorias.nombre %></option>
+                        <% }) %>
+                    <% }else{ %>
                         <option selected hidden value="">Selecciona una opcion</option>
-                            <% categorias.forEach(categoria => { %>
-                                <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
-                            <% }) %>
+                        <% categorias.forEach(categoria => { %>
+                            <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                        <% }) %>
+                        <% } %> 
                     </select>
                     <p class="error" id="categoriaError">
                         <%= locals.errors && errors.categorias ? errors.categorias.msg : null %>

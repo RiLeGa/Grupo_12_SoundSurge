@@ -100,11 +100,11 @@ module.exports = {
         })
         .catch(error => res.send(error))
     } else {
-        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images',  dato))
+        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'images',  dato))
 
         req.files.forEach(imagen => {
             if (ruta(imagen) && (imagen !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images',  imagen))
+                fs.unlinkSync(path.join(__dirname, '..', 'public', 'images',  imagen))
             }
         })
         /* return res.send(errors.mapped()) */
@@ -207,8 +207,8 @@ module.exports = {
                             }
                         }))
                         /* Borramos la imagen anterior */
-                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen1))){
-                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen1))
+                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen1))){
+                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen1))
                         }
                     }
                 }else{
@@ -236,8 +236,8 @@ module.exports = {
                                 id : producto.imagenes[1].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen2))){
-                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen2))
+                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen2))){
+                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen2))
                         }
                     }
                 }else{
@@ -261,8 +261,8 @@ module.exports = {
                                 id : producto.imagenes[2].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen3))){
-                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen3))
+                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen3))){
+                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen3))
                         }
                     }
                 }else{
@@ -286,8 +286,8 @@ module.exports = {
                                 id : producto.imagenes[3].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen4))){
-                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen4))
+                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen4))){
+                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen4))
                         }
                     }
                 }else{

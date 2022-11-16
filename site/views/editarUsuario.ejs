@@ -7,7 +7,7 @@
             <h1>Edicion de Perfil</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
 
-            <form action="/users/editar/<%=usuario.params%>?_method=put" method="post" enctype="multipart/form-data" >
+            <form action="/users/editar/<%=usuario.id%>?_method=put" method="post" >
 
             <!-- <div class="icons">
                 <label for="image">
@@ -17,7 +17,7 @@
                  
             </div> -->
 
-            <div class="icons">
+            <!-- <div class="icons">
                 <label class="selectImg" for="product-img">
                     <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/images/users/<%= usuario.imagen%>" alt="">
                     <div class="imgHover">
@@ -27,7 +27,7 @@
                 <div class="form-admin__box inactivo">
                     <input class="d-none" id="product-img" type="file" name="imagen" placeholder="Imagen del Producto" accept="imagen/*" multiple >
                 </div>
-            </div>
+            </div> -->
 
             <div class="container">
                 <label for="nombre">nombre</label>

@@ -167,7 +167,7 @@ module.exports = {
               apellido: apellido,
               direccion: direccion,
               telefono: telefono,
-              imagen: req.file ? req.file.filename : usuario.imagen
+              /* imagen: req.file ? req.file.filename : usuario.imagen */
             },{
                 where: {
                     id: +req.params.id

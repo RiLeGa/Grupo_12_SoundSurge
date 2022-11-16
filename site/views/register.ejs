@@ -7,10 +7,10 @@
             <h1>Registro</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
         <form action="/users/register" method="post" enctype="multipart/form-data" id="formulario">
-            <div class="icons">
-                <input type="file" name="image" id="file" accept="imagen/*">
+           <!--  <div class="icons">
+                <input type="file" name="image" id="file">
                 <div id="preview" class="styleImage"></div>
-            </div>
+            </div> -->
             <div class="container">
                 <label for="nombre">nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null%>">

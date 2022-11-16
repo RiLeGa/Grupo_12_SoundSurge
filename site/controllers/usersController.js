@@ -1,10 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-/* let usuarios = require("../data/usuarios.json"); */
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require("../database/models");
-const usuarios = require("../database/models/usuarios");
+/* const Usuarios = require("../database/models/usuarios"); */
 
 /* const guardar = (dato) =>
   fs.writeFileSync(
@@ -34,7 +33,7 @@ module.exports = {
       };
       errors.errors.push(imagen);
     }
-    return res.send(errors)
+    /* return res.send(errors) */
     if (errors.isEmpty()) {
       
       let { nombre, apellido, email, contrasenia } = req.body;
@@ -46,56 +45,52 @@ module.exports = {
         telefono: "",
         email,
         contrasenia: bcrypt.hashSync(contrasenia, 12),
-        imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
+        /* imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png", */
         rolId: 2,
       })
-      .then(data=> {
-        db.Usuarios.findOne({
-          id: +req.params.id
+      .then((usuario) => {
+        /* usuario = usuario.dataValues; */
+
+        req.session.userLogin = {
+          id: usuario.id,
+          nombre: usuario.nombre,
+          imagen: usuario.imagen,
+          rol: usuario.rolId,
+        };
+        if (recordarme) {
+          res.cookie("SoundSurge", req.session.userLogin, {
+            maxAge: 1000 * 60 * 60,
+          });
+        }
+        return res.redirect("/");
       })
-          .then(usuario => { 
-              
-              req.session.userLogin = {
-                id: usuario.id,
-                nombre: usuario.nombre,
-                imagen: usuario.imagen,
-                rol: usuario.rolId,
-              };
-            })
-            if (recordarme) {
-              res.cookie("SoundSurge", req.session.userLogin, {
-                maxAge: 1000 * 60 * 60,
-              });
-            }
-            return res.redirect("/users/perfil");
-          })
-          .catch((error) => {return res.send(error);
-          })
-      .catch((errores) => res.send(errores));
-    } else {
-      let ruta = (dato) =>
-        fs.existsSync(
-          path.join(__dirname,"..", "..", "public", "images", "users", dato)
-        );
-
-      if (
-        ruta(req.file.filename) &&
-        req.file.filename !== "default-image.png"
-      ) {
-        fs.unlinkSync(
-          path.join(__dirname,"..", "..", "public","images","users",req.file.filename
-          )
-        );
-      }
-
-      /* return res.send(errors.mapped()) */
-      return res.render("register", {
-        errors: errors.mapped(),
-        old: req.body,
+      .catch((error) => {
+        return res.send(error);
       });
+  } else {
+    let ruta = (dato) =>
+    fs.existsSync(
+      path.join(__dirname,"..", "..", "public", "images", "users", dato)
+    );
 
-    }
-  },
+  if (
+    ruta(req.file.filename) &&
+    req.file.filename !== "avatar-porDefecto.png"
+  ) {
+    fs.unlinkSync(
+      path.join(__dirname,"..", "..", "public","images","users",req.file.filename
+      )
+    );
+  }
+    
+
+    /*       return res.send(errors.mapped())
+     */ return res.render("login", {
+    errors: errors.mapped(),
+    old: req.body,
+  });
+  }
+},
   login: (req, res) => {
     return res.render("login");
   },
@@ -168,8 +163,8 @@ module.exports = {
         })
         .then(usuario => {
             db.Usuarios.update({
-              nombre: nombre.trim(),
-              apellido: apellido.trim(),
+              nombre: nombre,
+              apellido: apellido,
               direccion: direccion,
               telefono: telefono,
               imagen: req.file ? req.file.filename : usuario.imagen

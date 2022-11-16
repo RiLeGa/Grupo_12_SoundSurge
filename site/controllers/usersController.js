@@ -26,13 +26,6 @@ module.exports = {
   newUser: (req, res) => {
     /* return res.send(req.body) */
     let errors = validationResult(req);
-    if (req.fileValidationError) {
-      let imagen = {
-        param: "image",
-        msg: req.fileValidationError,
-      };
-      errors.errors.push(imagen);
-    }
     /* return res.send(errors) */
     if (errors.isEmpty()) {
       

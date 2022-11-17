@@ -1,14 +1,21 @@
+const db = require("../../database/models");
+
 module.exports = {
     usuarios: (req,res) => {
-        let response = {
-            status : 200,
-            meta : {
-                length : "Usuarios.length",
-                url:"www.rutagenerica.com"
-            },
-            data : "Usuarios"
-        }
-        return res.status(200).json(response)
+        db.Usuarios.findAll()
+        .then(usuarios => {
+            let response = {
+                status : 200,
+                meta : {
+                    length : usuarios.length,
+                    url: "www.rutagenerica.com"
+                },
+                data : usuarios
+            }
+            return res.status(200).json(response)
+        })
+
+        
     },
     usuarioEspecifico:(req,res) => {
         let response = {

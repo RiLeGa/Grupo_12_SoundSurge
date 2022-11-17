@@ -3,85 +3,54 @@ const path = require("path");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require("../database/models");
-/* const Usuarios = require("../database/models/usuarios"); */
-
-/* const guardar = (dato) =>
-  fs.writeFileSync(
-    path.join(__dirname, "../data/usuarios.json"),
-    JSON.stringify(dato, null, 4),
-    "utf-8"
-  );
-
-const guardarU = (dato) =>
-  fs.writeFileSync(
-    path.join(__dirname, "../data/usuarios.json"),
-    JSON.stringify(dato, null, 4),
-    "utf-8"
-  ); */
 
 module.exports = {
   register: (req, res) => {
     return res.render("register");
   },
   newUser: (req, res) => {
-    /* return res.send(req.body) */
-    let errors = validationResult(req);
-    /* return res.send(errors) */
+        /* return res.send(req.body) */
+    let errors = validationResult(req)
+    if (req.fileValidationError) {
+        let imagen = {
+            param: 'imagen',
+            msg: req.fileValidationError,
+        }
+        errors.errors.push(imagen)
+    }
     if (errors.isEmpty()) {
-      
+
       let { nombre, apellido, email, contrasenia } = req.body;
 
-      db.Usuarios.create({
+        db.Usuarios.create({
         nombre,
         apellido,
         direccion: "",
         telefono: "",
         email,
         contrasenia: bcrypt.hashSync(contrasenia, 12),
-        /* imagen: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png", */
         rolId: 2,
-      })
-      .then((usuario) => {
-        /* usuario = usuario.dataValues; */
+        imagen: req.file ? req.file.filename : 'default-image-user.jpg'
+        })
+        .then(usuario => {
+                
+          req.session.userLogin = {
+              id : usuario.id,
+              nombre : usuario.nombre,
+              imagen : usuario.imagen,
+              rol : usuario.rolId
+          }
 
-        req.session.userLogin = {
-          id: usuario.id,
-          nombre: usuario.nombre,
-          imagen: usuario.imagen,
-          rol: usuario.rolId,
-        };
-        if (recordarme) {
-          res.cookie("SoundSurge", req.session.userLogin, {
-            maxAge: 1000 * 60 * 60,
-          });
-        }
-        return res.redirect("/");
+          return res.redirect('/')
       })
-      .catch((error) => {
-        return res.send(error);
-      });
+      .catch(errores => res.send(errores));
+          
   } else {
-    let ruta = (dato) =>
-    fs.existsSync(
-      path.join(__dirname,"..", "..", "public", "images", "users", dato)
-    );
-
-  if (
-    ruta(req.file.filename) &&
-    req.file.filename !== "avatar-porDefecto.png"
-  ) {
-    fs.unlinkSync(
-      path.join(__dirname,"..", "..", "public","images","users",req.file.filename
-      )
-    );
-  }
-    
-
-    /*       return res.send(errors.mapped())
-     */ return res.render("login", {
-    errors: errors.mapped(),
-    old: req.body,
-  });
+            
+      return res.render('register', {
+          errors: errors.mapped(),
+          old: req.body
+      })
   }
 },
   login: (req, res) => {

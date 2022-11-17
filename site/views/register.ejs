@@ -7,10 +7,7 @@
             <h1>Registro</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
         <form action="/users/register" method="post" enctype="multipart/form-data" id="formulario">
-           <!--  <div class="icons">
-                <input type="file" name="image" id="file">
-                <div id="preview" class="styleImage"></div>
-            </div> -->
+
             <div class="container">
                 <label for="nombre">nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null%>">
@@ -38,7 +35,7 @@
             </div>
             <div class="container">
                 <label for="contrasenia">contrasenia</label>
-                <input type="password" name="contrasenia" id="clave" placeholder="Ingresa tu contraseña">
+                <input type="password" name="contrasenia" id="clave" placeholder="Ingresa tu contraseña" autocomplete="off">
                 <div id="passContainer"></div>
                 <% if (locals.errors && errors.contrasenia) { %>
                     <small><%= errors.contrasenia.msg %></small>
@@ -46,7 +43,7 @@
             </div>
             <div class="container">
                 <label for="confirmar">Confirmar contraseña</label>
-                <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña">
+                <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña" autocomplete="off">
                 <div id="passContainer2"></div>
                 <% if (locals.errors && errors.confirmar) { %>
                     <small><%= errors.confirmar.msg %></small>
@@ -62,6 +59,12 @@
                 <% } %>
                 <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
+            
+            <div class="icons">
+                <div id="preview" class="styleImage"></div>
+                <label for="file"><i class="fa-solid fa-user"></i></label>
+                <input type="file" name="imagen" id="file"> 
+            </div> 
             <div>
                 <button type="submit" class="enviar">Enviar</button>
             </div>

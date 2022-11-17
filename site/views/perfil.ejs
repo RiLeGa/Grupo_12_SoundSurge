@@ -22,11 +22,11 @@
             <section class="edit-delete-logout">
 
                 <form class="exit" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
-                    <button class="logout" type="submit"><i class="fas fa-user-times"></i>Eliminar usuario</button>
+                    <button class="logout" id="tn btn-del" type="submit"><i class="fas fa-user-times"></i>Eliminar usuario</button>
                 </form>
         
                 <a href="/users/editar/<%= locals.userLogin.id%>">
-                    <button type="button" id="tn btn-del" class="btn btn-success"><i class="fas fa-edit"> </i>Editar usuario</button>
+                    <button type="button" class="btn btn-success"><i class="fas fa-edit"> </i>Editar usuario</button>
                 </a>
         
                 <form class="exit" action="/users/logout?_method=DELETE" method="post">
@@ -39,7 +39,7 @@
             </section> -->
     </main>
     <%- include ("./partials/footer") %> 
-
+    <script src="/javascript/eliminarU.js"></script>
     
 </body>
 </html>

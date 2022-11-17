@@ -75,8 +75,9 @@ module.exports = {
         
 
         .then(productoNuevo => {
-
-            if (req.files) {
+console.log(req.files)
+            if (req.files.length !== 0) {
+                console.log("hola")
                 let img = req.files.map(imagen => {
                     let nuevo = {
                         nombre: imagen.filename,
@@ -89,6 +90,7 @@ module.exports = {
                     return res.redirect('/admin/lista')
                 })
             }else{
+                console.log("imagen por defecto")
                 db.Imagenes.create({
                     nombre: 'default-image.png',
                     productosId: productoNuevo.id

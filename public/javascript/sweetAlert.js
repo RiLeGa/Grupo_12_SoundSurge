@@ -1,3 +1,3 @@
 window.addEventListener("load", () => {
-    Swal.fire('Hola')
+    Swal.fire('Bienvenido a SounSurge')
 })

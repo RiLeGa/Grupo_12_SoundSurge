@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     let terminos = $('#terminos')
     let inputPass = $('#clave')
     let inputPass2 = $('#confirmar')
-    let imagen = $("#file")
+    /* let imagen = $("#file") */
 
     let errores = [{
         id: 1,
@@ -73,16 +73,16 @@ window.addEventListener('load', () => {
     }) */
 
 
-        document.getElementById("file").onchange=function(e){
-            let reader = new FileReader();
-            reader.readAsDataURL(e.target.files[0]);
-            reader.onload=function(){
-                let preview = document.getElementById("preview");
-                imagen=document.createElement("img");
-                imagen.src=reader.result;
-                preview.append(imagen);
+    document.getElementById("file").onchange=function(e){
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload=function(){
+            let preview = document.getElementById("preview");
+            imagen=document.createElement("img");
+            imagen.src=reader.result;
+            preview.append(imagen);
 
-            }
+        }
             let variable = true
             switch (true) {
                 case regExExt.test(imagen.value):
@@ -349,12 +349,12 @@ window.addEventListener('load', () => {
         console.log(terminos.checked);
     })
 
-    form.addEventListener('submit',(e) => {
+   /*  form.addEventListener('submit',(e) => {
         e.preventDefault();
 
         console.log(form.elements);
         if(errores.length > 0){
             form.submit()
         }
-    })
+    }) */
 })

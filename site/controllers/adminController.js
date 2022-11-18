@@ -75,8 +75,9 @@ module.exports = {
         
 
         .then(productoNuevo => {
-
-            if (req.files) {
+console.log(req.files)
+            if (req.files.length !== 0) {
+                console.log("hola")
                 let img = req.files.map(imagen => {
                     let nuevo = {
                         nombre: imagen.filename,
@@ -89,6 +90,7 @@ module.exports = {
                     return res.redirect('/admin/lista')
                 })
             }else{
+                console.log("imagen por defecto")
                 db.Imagenes.create({
                     nombre: 'default-image.png',
                     productosId: productoNuevo.id
@@ -100,11 +102,11 @@ module.exports = {
         })
         .catch(error => res.send(error))
     } else {
-        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images',  dato))
+        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'images',  dato))
 
         req.files.forEach(imagen => {
             if (ruta(imagen) && (imagen !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images',  imagen))
+                fs.unlinkSync(path.join(__dirname, '..', 'public', 'images',  imagen))
             }
         })
         /* return res.send(errors.mapped()) */
@@ -157,7 +159,7 @@ module.exports = {
         if (errors.isEmpty()) {
             const idParams = +req.params.id
           
-            const { marca, titulo, categoria, precio, descuento, stock, descripcion } = req.body
+            const { marcas, titulo, categorias, precio, descuento, stock, descripcion } = req.body
            
             let producto = db.Productos.findOne({
                 where: {
@@ -173,8 +175,8 @@ module.exports = {
                 descuento: +descuento,
                 stock: +stock,
                 descripcion,
-                categoriasId: +categoria,
-                marcasId: +marca,
+                categoriasId: +categorias,
+                marcasId: +marcas,
             },{
                 where: {
                     id : idParams
@@ -207,8 +209,8 @@ module.exports = {
                             }
                         }))
                         /* Borramos la imagen anterior */
-                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen1))){
-                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen1))
+                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen1))){
+                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen1))
                         }
                     }
                 }else{
@@ -236,8 +238,8 @@ module.exports = {
                                 id : producto.imagenes[1].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen2))){
-                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen2))
+                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen2))){
+                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen2))
                         }
                     }
                 }else{
@@ -261,8 +263,8 @@ module.exports = {
                                 id : producto.imagenes[2].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen3))){
-                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen3))
+                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen3))){
+                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen3))
                         }
                     }
                 }else{
@@ -286,8 +288,8 @@ module.exports = {
                                 id : producto.imagenes[3].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen4))){
-                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen4))
+                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen4))){
+                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen4))
                         }
                     }
                 }else{
@@ -306,7 +308,29 @@ module.exports = {
             })
             .catch(error => res.send(error))
         } else {
-            return res.render('admin/crearProductos')
+           
+        let idParams = +req.params.id
+        let categorias = db.Categorias.findAll()
+        let marcas = db.Marcas.findAll()
+        let producto = db.Productos.findOne({
+            where: {
+                id : idParams
+            },
+            include: [{
+                all:true
+            }]
+        })
+        Promise.all([categorias,marcas,producto])
+        .then(([categorias,marcas,producto]) => {
+                /* return res.send(imagenes) //Comprobar que esta llegando bien el elemento */
+                return res.render('admin/editarProductos', {
+                    producto,
+                    categorias,
+                    marcas,
+                    errors: errors.mapped()
+                })
+        })
+        .catch(error => res.send(error))
         } 
     },
     borrar: (req, res) => {

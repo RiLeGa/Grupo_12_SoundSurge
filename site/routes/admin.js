@@ -17,7 +17,7 @@ router.put('/editar/:id',upload.fields([
     {name:'imagen2',maxCount: 1},
     {name:'imagen3',maxCount: 1},
     {name:'imagen4',maxCount: 1}
-]), actualizar);
+]),productValidator, actualizar);
 
 router.delete('/borrar/:id', adminCheck, borrar);
 router.delete('/borrarUsuario/:id', borrarUsuario);

@@ -14,6 +14,20 @@
 
 /* global define */
 
+let vinculacion = "Documento vinculado con exito"
+    console.log(vinculacion);
+
+    new Glider(document.querySelector('.glider'), {
+      slidesToShow: 1,
+      dots: '#dots',
+      draggable: true,
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+      }
+    });
+
+
 (function (factory) {
     typeof define === 'function' && define.amd
       ? define(factory)

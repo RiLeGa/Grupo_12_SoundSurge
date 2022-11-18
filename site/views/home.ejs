@@ -4,23 +4,19 @@
 <body class="home">
     <%- include ("./partials/header") %> 
     <main>
-        <!-- <div class="carrousel">
-            <ul>
-                <div class="img-carrousel" id="item-1">
-                    <img src="/images/Audiomusica-Jockey-Plaza1.jpg" alt="Casa 1">
-                </div>
-                <div class="img-carrousel" id="item-2">
-                    <img src="/images/gc-md-hf-big-bang-2-07-13-22.jpg" alt="">
-                </div> 
-                <div class="img-carrousel" id="item-3">
-                    <img src="/images/giphy.gif" alt="Reci">
-                </div>
-                <div class="img-carrousel" id="item-4">
-                    <img src="/images/sweetwater2-1024x571.jpg" alt="Casa 2">
-                </div> 
-            </ul>     
-        </div> -->
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="glider-contain">
+            <div class="glider">
+              <div><img src="/images/Audiomusica-Jockey-Plaza1.jpg" alt="Casa 1"></div>
+              <div><img src="/images/gc-md-hf-big-bang-2-07-13-22.jpg" alt=""></div>
+              <div><img src="/images/giphy.gif" alt="Reci"></div>
+              <div><img src="/images/sweetwater2-1024x571.jpg" alt="Casa 2"></div>
+            </div>
+          
+            <button aria-label="Previous" class="glider-prev"><i class="fas fa-arrow-circle-left"></i></button>
+            <button aria-label="Next" class="glider-next"><i class="fas fa-arrow-circle-right"></i></button>
+            <div role="tablist" class="dots"></div>
+          </div>
+        <!-- <div id="carouselExampleInterval" class="glider slide">
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="10000">
                 <img src="/images/Audiomusica-Jockey-Plaza1.jpg" alt="Casa 1">
@@ -35,15 +31,15 @@
                 <img src="/images/sweetwater2-1024x571.jpg" alt="Casa 2">
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <button class="glider-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <button class="glider-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+          </div> -->
         
             <div class="categorias-home">
                 <h3 class="secciones"> Novedades </h3>

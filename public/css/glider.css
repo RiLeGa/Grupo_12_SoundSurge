@@ -39,7 +39,8 @@
   width: 100%;
 }
 .glider-slide img {
-  max-width: 100%;
+  width: 100vw;
+  height: 450px;
 }
 .glider::-webkit-scrollbar {
   opacity: 0;
@@ -52,13 +53,13 @@
   background: none;
   padding: 0;
   z-index: 2;
-  font-size: 40px;
+  font-size: 50px;
   text-decoration: none;
-  left: -23px;
+  left: 15px;
   border: 0;
-  top: 30%;
+  top: 45%;
   cursor: pointer;
-  color: #666;
+  color: rgb(10, 10, 10);
   opacity: 1;
   line-height: 1;
   transition: opacity .5s cubic-bezier(.17,.67,.83,.67),
@@ -68,16 +69,16 @@
 .glider-next:hover,
 .glider-prev:focus,
 .glider-next:focus {
-  color: #a89cc8;
+  color: #801fa6;
 }
 .glider-next {
-  right: -23px;
+  right: 20px;
   left: auto;
 }
 .glider-next.disabled,
 .glider-prev.disabled {
   opacity: .25;
-  color: #666;
+  color: rgba(12, 12, 12, 0.96);
   cursor: default;
 }
 .glider-slide {
@@ -126,4 +127,4 @@
     background-color: rgba(156, 156, 156, 0.25);
     box-shadow: 0 0 1px rgba(255,255,255,.25);
   }
-}
+}  

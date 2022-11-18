@@ -29,15 +29,18 @@ module.exports = {
         return res.status(200).json(response)
     },
     productos:(req,res) => {
+        db.Productos.findAll()
+        .then(productos => {
         let response = {
             status : 200,
             meta : {
-                length : "Productos.length",
+                length : productos.length,
                 url:"www.rutagenerica.com"
             },
-            data : "Productos"
+            data : productos
         }
         return res.status(200).json(response)
+    })
     },
     productoEspecifico:(req,res) => {
         let response = {

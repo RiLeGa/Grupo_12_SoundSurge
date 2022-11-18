@@ -1,5 +1,5 @@
 const express = require('express');
-const { usuarios } = require('../controllers/api/apiController');
+const { usuarios, productos } = require('../controllers/api/apiController');
 const router = express.Router();
 const {home, search} = require('../controllers/indexController');
 
@@ -7,6 +7,7 @@ const {home, search} = require('../controllers/indexController');
 router.get('/', home);
 router.get('/busqueda', search);
 router.get('/usuarios', usuarios);
+router.get('/productos', productos);
 
 
 module.exports = router;

@@ -113,6 +113,13 @@ module.exports = {
   },
   editarUsuario: (req, res) => {
     /* return res.send(req.body) */
+    if (req.fileValidationError) {
+      let imagen = {
+          param: 'imagen',
+          msg: req.fileValidationError,
+      }
+      errors.errors.push(imagen)
+  }
 
     let errors = validationResult(req)
 
@@ -121,7 +128,9 @@ module.exports = {
         const {nombre, apellido, direccion, telefono } = req.body
 
         db.Usuarios.findOne({
+          where:{
             id: +req.params.id
+          }
         })
         .then(usuario => {
             db.Usuarios.update({
@@ -129,7 +138,7 @@ module.exports = {
               apellido: apellido,
               direccion: direccion,
               telefono: telefono,
-              /* imagen: req.file ? req.file.filename : usuario.imagen */
+              imagen: req.file ? req.file.filename : usuario.imagen
             },{
                 where: {
                     id: +req.params.id
@@ -137,7 +146,9 @@ module.exports = {
             })
             .then(data=> {
               db.Usuarios.findOne({
+                where : {
                 id: +req.params.id
+                }
             })
                 .then(usuario => { 
                     

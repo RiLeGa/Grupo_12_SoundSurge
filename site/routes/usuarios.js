@@ -17,7 +17,7 @@ router.post('/login', loginValidator, inLogin);
 router.get('/perfil', userLoginCheck, perfil);
 
 router.get('/editar/:id', editarU);
-router.put('/editar/:id',userLoginCheck,upload.single('imagen'), editarUsuario);
+router.put('/editar/:id',upload.single('imagen'), userLoginCheck, editarUsuario);
 
 router.delete('/logout', logout);
 router.delete('/eliminarUsuario/:id', eliminarUsuario);

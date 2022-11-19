@@ -2,7 +2,7 @@ window.onload = function() {
   let $ = (elemento) => document.querySelector(elemento)
     console.log("Register vinculado");
     
-    document.getElementById("tn btn-del").onchange=function(e){
+    document.getElementById("btn btn-del").onchange=function(e){
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: 'btn btn-success',

@@ -40,7 +40,7 @@
 }
 .glider-slide img {
   width: 100vw;
-  height: 450px;
+  height: 350px;
 }
 .glider::-webkit-scrollbar {
   opacity: 0;
@@ -57,7 +57,7 @@
   text-decoration: none;
   left: 15px;
   border: 0;
-  top: 45%;
+  top: 35%;
   cursor: pointer;
   color: rgb(10, 10, 10);
   opacity: 1;

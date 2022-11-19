@@ -337,7 +337,7 @@ header .navegacion div.usuario{
     header .navegacion input#perfil:checked ~ nav.opcionesDePerfil {
         display: flex;
         position: absolute;
-        z-index: 1;
+        z-index: 3;
     }
 
     header .navegacion nav.opcionesDePerfil{

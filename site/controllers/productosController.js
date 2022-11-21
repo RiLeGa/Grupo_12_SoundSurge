@@ -35,6 +35,7 @@ module.exports = {
     },
 
     carrito : (req,res) => {
+        let compra = []
         let idParams = +req.params.id
         db.Productos.findByPk(idParams, {
             include: [{ all: true}]
@@ -45,8 +46,9 @@ module.exports = {
                             producto
                             
                         })
+                        
                     })
-            
+                    return compra.push(producto)
             .catch(error => res.send(error))
     },
     listarCategorias : (req,res) => {

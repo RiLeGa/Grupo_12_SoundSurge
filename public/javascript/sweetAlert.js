@@ -1,3 +1,10 @@
 window.addEventListener("load", () => {
-    Swal.fire('Bienvenido a SounSurge')
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Bienvenido a SounSurge',
+        text: ''
+
+    })
+
 })

@@ -1,22 +1,30 @@
-/* window.onload = function() {
 
-    let vinculacion = "Documento vinculado con exito"
+
+window.addEventListener('load', () => {
+
+    let vinculacion = 'Documento vinculado con exito'
     console.log(vinculacion);
+    
+    let $ = (elemento) => document.querySelector(elemento)
+    let selectorAll = (elemento) => document.querySelectorAll(elemento)
 
-    let $ = (e) => document.querySelector(e)
-
-    let buscador = $("#search")
+    let buscador = $('#inputSearch')
+    let botones = selectorAll('.botonRedireccion')
     let palabra = ""
-    buscador.onkeydown = (e) => {
-        let letra = e.key
-        letra === "Backspace" ? palabra = palabra.substring(0, palabra.length -1) : letra.length > 1 ? null:
-        palabra = palabra += letra
-        console.log(event.key);
-        console.log(palabra);
+    buscador.onkeydown = (event) => {
+        let letra = event.key
+        letra === 'Backspace' ? palabra = palabra.substring(0, palabra.length - 1) : letra.length > 1 ? null : palabra = palabra += letra
+        if (palabra === 'gibson') {
+            botones.forEach(element => {
+                element.style.backgroundColor = 'var(--colorFondo)'
+            });
+        }
     }
-} */
+    
+})
 
-window.onload = function() {
+
+/* window.onload = function() {
 
     let vinculacion = "Documento vinculado con exito"
     console.log(vinculacion);
@@ -46,5 +54,5 @@ function buscador(){
     }
     
 }
-}
+} */
 

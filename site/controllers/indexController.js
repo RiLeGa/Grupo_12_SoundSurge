@@ -26,14 +26,14 @@ module.exports = {
             where : {
                 [Op.or] : [
                     {titulo : {[Op.substring] : elemento}},
-                    {descripcion : {[Op.substring] : elemento}}
                 ]
             }
-        })
+        }).then(resultado=>{
         return res.render('busqueda', 
-        {
+        { 
             busqueda: elemento,
-            resultados
+            resultado
         });
-    }
+    })
+ }
 }

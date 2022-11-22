@@ -236,12 +236,12 @@ window.addEventListener('load', () => {
     /* Validacion */
     const validate = {
         titulo : false,
-        price : false,
-        discount : true ,
+        precio : false,
+        descuento : true ,
         stock : false ,
         categorias : false ,
         marcas : false ,
-        description : false ,
+        descripcion : false ,
         img : true ,
         img2 : true ,
         img3 : true ,

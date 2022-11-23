@@ -9,6 +9,9 @@
 
 @import url("./footer.css");
 @import url("./home.css");
+@import url("./marcas.css");
+@import url("./categorias.css");
+
 @import url("./lista.css");
 @import url("./carrousel-home.css");
 @import url("./detalle.css");

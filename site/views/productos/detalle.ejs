@@ -48,6 +48,21 @@
             <h2>descripcion</h2>
             <p class="descripcion"><%= producto.descripcion %></p>
         </section>
+
+        <h2>Productos relacionados</h2>
+<section class="similares">
+    <ul>
+        <% productos.forEach(producto => { %>
+                <article>
+                    <a href="/productos/detalle/<%= producto.id %>">
+                    <div class="producto"  style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')"></div>
+                    <h4><%= producto.titulo %></h4>
+                    <p>$<%= producto.precio %></p>
+                    </a>
+                </article>
+        <% }) %>
+    </ul>
+</section>
        
     </main>
     <%- include ("../partials/footer") %> 

@@ -18,26 +18,5 @@ module.exports = {
         })
         .catch(error => res.send(error))
         
-    },
-    search : (req,res) => {
-        let elemento = req.query.search
-
-        db.Productos.findAll( {
-            where : {
-                [Op.or] : [
-                    {
-                        
-                        titulo : {[Op.substring] : elemento},
-                        
-        },
-                ]
-            }
-        }).then(resultado=>{
-        return res.render('busqueda', 
-        { 
-            busqueda: elemento,
-            resultado,
-        });
-    })
- }
+    }
 }

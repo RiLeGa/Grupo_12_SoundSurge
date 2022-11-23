@@ -2,7 +2,7 @@
 <html lang="es">
     <%- include ("./partials/head",{title: "SoundSurge"}) %>
 <body class="home">
-    <%- include ("./partials/header") %> 
+    <%- include ("./partials/header") %>
     <main>
         <div class="glider-contain">
             <div class="glider">
@@ -17,6 +17,34 @@
             <button aria-label="Next" class="glider-next"><i class="fas fa-arrow-circle-right"></i></button>
             <div role="tablist" class="dots"></div>
           </div>
+
+          <section class="busqueda">
+            <!-- <form action="/busqueda" method="get"> -->
+                <input type="text" name="search" id="inputSearch" placeholder="¿Que estas Buscando?">
+                
+                    <div class="filtrado">
+                        <ul>
+                        <% productos.forEach(producto => { %>
+                          
+                            <li class="producto-buscador">
+                                <a href="/productos/detalle/<%= producto.id %>">
+                                    <img class="imagen-filtrado" src="/images/<%= producto.imagenes[0].nombre %>" alt="">
+                                    <h4>
+                                    <%-producto.titulo%>
+                                    </h4>
+                                </a>
+                            </li> 
+                        <% }) %>
+                    </ul>
+                    </div>
+            
+                
+            <!-- </form> -->
+
+            <!-- <button type="submit" class="lupa"><i class="fas fa-search"></i></button> -->
+            
+
+        </section>
        
             <div class="categorias-home">
                 <h3 class="secciones"> Novedades </h3>
@@ -103,7 +131,7 @@
     <%- include ("./partials/footer") %> 
 
     <script src="/javascript/glider.js"></script>
-    <script src="/javascript/sweetAlert.js"></script>
+    <!-- <script src="/javascript/sweetAlert.js"></script> -->
 </body>
 </html>
 

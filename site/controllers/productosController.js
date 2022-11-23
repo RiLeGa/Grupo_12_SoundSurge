@@ -30,6 +30,20 @@ module.exports = {
                     })
             })
             .catch(error => res.send(error))
+
+        
+                db.Productos.findAll({
+               include:['category','marca','imagenes',]
+           })
+           Promise.all([productos])
+           .then(([productos])=> {
+               
+               
+               return productos
+   
+           })
+           .catch(error => res.send(error))
+
     },
 
     carrito : (req,res) => {
@@ -64,9 +78,22 @@ module.exports = {
         .catch(error => res.send(error))
     },
     listarMarcas : (req,res) => {
-        return res.render("productos/marcas")
+        let marcas = db.Marcas.findAll({
+            include:[{ all: true}]
+        })
+        Promise.all([marcas])
+        .then(([marcas])=> {
+            
+            
+            return res.render('productos/marcas', {
+                marcas
+            })
+        })
+        .catch(error => res.send(error))
     },
-    listarTendencia : (req,res) => {
-        return res.render("productos/loMasVendido")
+    listarTodos : (req,res) => {
+        return res.render("productos/todos",{
+            productos
+        })
     }
 }

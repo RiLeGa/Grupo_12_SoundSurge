@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {crear, editar, lista, store, actualizar, borrar, papelera, userlist, borrarUsuario} = require('../controllers/adminController')
+const {crear, editar, lista, store, actualizar, borrar, papelera, userlist, borrarUsuario} = require('../controllers/adminController');
+const { usuarios } = require('../controllers/api/apiController');
 const adminCheck = require('../middlewares/adminCheck')
 const upload = require('../middlewares/multerProductos')
 const productValidator = require("../validations/productsValidation")
@@ -26,7 +27,8 @@ router.get('/papelera',adminCheck, papelera)
 
 router.get('/lista', adminCheck, lista);
 
-router.get('/userlist', userlist)
+router.get('/usuarios', adminCheck, usuarios);
+router.get('/usersList', adminCheck, userlist);
 
 
 module.exports = router;

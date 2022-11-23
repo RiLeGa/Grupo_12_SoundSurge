@@ -2,12 +2,14 @@
     height: 100vh ;
 }
 .marcas .brand:first-child{
-    background-image: url(/images/marcas/fondoGibson.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .marcas .brand:nth-child(2){
-    background-image: url(/images/marcas/fondofender.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.marcas .brand:nth-child(3){
     background-size: cover;
     background-repeat: no-repeat;
 }

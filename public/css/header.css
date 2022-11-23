@@ -184,7 +184,7 @@ header .navegacion div.usuario{
     header{
         background-color: black;
         width:  100%;
-        height: 60px;
+        height: 70px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -192,7 +192,7 @@ header .navegacion div.usuario{
 
     header section{
         background-color: black;
-        width:  30%;
+        width:  50%;
         height: 60px;
         display: flex;
         justify-content: space-around;
@@ -215,11 +215,44 @@ header .navegacion div.usuario{
         margin-top: 0;
         position: inherit;
     }
-    header .navegacion .busqueda form {
+    header .navegacion .busqueda {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: start;
         justify-content: center;
+    }
+
+    header .navegacion .busqueda .filtrado{
+        width: 35vw;
+        height: 100px;
+    }
+    .filtro{
+        display: none;
+    }
+    header .navegacion .busqueda .filtrado ul{
+        width: 30vw;
+        height: fit-content;
+        background-color: rgb(253, 253, 253);
+        position: absolute;
+        z-index: 1;
+    }
+    header .navegacion .busqueda .filtrado ul li.producto-buscador {
+        margin: 10px;
+    }
+    header .navegacion .busqueda .filtrado ul li.producto-buscador a{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    header .navegacion .busqueda .filtrado ul li.producto-buscador h4{
+        font-size: 15px;
+        color: black;
+    }
+    
+    header .navegacion .busqueda .filtrado ul .imagen-filtrado{
+        width: 40px;
+        height: 40px;
     }
 
     header .navegacion nav.opcionesDePerfil{

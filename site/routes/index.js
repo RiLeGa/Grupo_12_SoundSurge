@@ -5,7 +5,7 @@ const {home, search} = require('../controllers/indexController');
 
 /* GET home page. */
 router.get('/', home);
-router.get('/busqueda', search);
+router.get('/busqueda/', search);
 router.get('/usuarios', usuarios);
 router.get('/productos', productos);
 

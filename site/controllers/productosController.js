@@ -1,5 +1,3 @@
-
-
 let db = require('../database/models')
 let Sequelize = require('sequelize')
 
@@ -52,7 +50,18 @@ module.exports = {
             .catch(error => res.send(error))
     },
     listarCategorias : (req,res) => {
-        return res.render("productos/categorias")
+        let categorias = db.Categorias.findAll({
+            include:[{ all: true}]
+        })
+        Promise.all([categorias])
+        .then(([categorias])=> {
+            
+            
+            return res.render('productos/categorias', {
+                categorias
+            })
+        })
+        .catch(error => res.send(error))
     },
     listarMarcas : (req,res) => {
         return res.render("productos/marcas")

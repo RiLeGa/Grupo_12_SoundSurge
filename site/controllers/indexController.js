@@ -25,14 +25,18 @@ module.exports = {
         db.Productos.findAll( {
             where : {
                 [Op.or] : [
-                    {titulo : {[Op.substring] : elemento}},
+                    {
+                        
+                        titulo : {[Op.substring] : elemento},
+                        
+        },
                 ]
             }
         }).then(resultado=>{
         return res.render('busqueda', 
         { 
             busqueda: elemento,
-            resultado
+            resultado,
         });
     })
  }

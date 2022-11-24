@@ -82,17 +82,27 @@
                 <div class="mb-3">
                 
                 <label  class="form-label">Imagen 1</label>
-                <input type="file" class="form-control"  name="imagen1" placeholder="Introduzca la imagen del producto"   >
-                <label  class="form-label">Imagen 2</label>
-                <input type="file" class="form-control"  name="imagen2" placeholder="Introduzca la imagen del producto"   >
-                <label  class="form-label">Imagen 3</label>
-                <input type="file" class="form-control"  name="imagen3" placeholder="Introduzca la imagen del producto"   >
-                <label  class="form-label">Imagen 4</label>
-                <input type="file" class="form-control"  name="imagen4" placeholder="Introduzca la imagen del producto"   >
-                
-                <p class="error" id="imagen">
+                <input type="file" class="form-control"  id="imagen" name="imagen" placeholder="Introduzca la imagen del producto"   >
+                <p class="error" id="imagenError">
                     <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                 </p>
+                <label  class="form-label">Imagen 2</label>
+                <input type="file" class="form-control"  name="imagen2" id="imagen2" placeholder="Introduzca la imagen del producto"   >
+                <p class="error" id="imagenError2">
+                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                </p>
+                <label  class="form-label">Imagen 3</label>
+                <input type="file" class="form-control" id="imagen3"  name="imagen3" placeholder="Introduzca la imagen del producto"   >
+                <p class="error" id="imagenError3">
+                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                </p>
+                <label  class="form-label">Imagen 4</label>
+                <input type="file" class="form-control" id="imagen4"  name="imagen4" placeholder="Introduzca la imagen del producto"   >
+                <p class="error" id="imagenError4">
+                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                </p>
+                
+                
                 </div>
                 <div class="botones">
                 <button class="btn btn-primary" id='#btn-submit' type="submit">Confirma</button>

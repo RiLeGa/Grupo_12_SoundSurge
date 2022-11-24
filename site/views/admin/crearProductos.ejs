@@ -96,7 +96,7 @@
                 <div class="mb-3">
                 <label for="imagenes" class="form-label">imagenes</label>
                 <input type="file" class="form-control" id="imagen" name="imagen" aria-label="file example"  multiple>
-                <p class="error" id="imagen">
+                <p class="error" id="imagenError">
                     <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                 </p>
                 </div>
@@ -107,6 +107,6 @@
             </form>
         </section>
     </main>    
-    <script src="../javascript/validacionProdcutos.js"></script>
+    <script src="../javascript/validacionProductos.js"></script>
 </body>
 </html>

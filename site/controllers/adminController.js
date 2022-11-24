@@ -75,9 +75,9 @@ module.exports = {
         
 
         .then(productoNuevo => {
-console.log(req.files)
+
             if (req.files.length !== 0) {
-                console.log("hola")
+                
                 let img = req.files.map(imagen => {
                     let nuevo = {
                         nombre: imagen.filename,
@@ -90,7 +90,7 @@ console.log(req.files)
                     return res.redirect('/admin/lista')
                 })
             }else{
-                console.log("imagen por defecto")
+                
                 db.Imagenes.create({
                     nombre: 'default-image.png',
                     productosId: productoNuevo.id
@@ -102,11 +102,11 @@ console.log(req.files)
         })
         .catch(error => res.send(error))
     } else {
-        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'images',  dato))
+        let ruta = (dato) => fs.existsSync(path.join(__dirname,'..', '..', 'public', 'images',  dato))
 
         req.files.forEach(imagen => {
             if (ruta(imagen) && (imagen !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', 'public', 'images',  imagen))
+                fs.unlinkSync(path.join(__dirname, '..','..', 'public', 'images',  imagen))
             }
         })
         /* return res.send(errors.mapped()) */
@@ -194,7 +194,7 @@ console.log(req.files)
 
                 /* Imagen 1 */
                 /* Existe en la base de datos */
-                if (producto.imagenes[0].length !== 0) {
+                if (producto.imagenes[0]) {
                     /* viene una imagen nueva */
                     if(!!req.files.imagen1){
                         /* Guardo el nombre en una variable para despues borrarla */
@@ -209,8 +209,8 @@ console.log(req.files)
                             }
                         }))
                         /* Borramos la imagen anterior */
-                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen1))){
-                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen1))
+                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen1))){
+                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen1))
                         }
                     }
                 }else{
@@ -227,7 +227,9 @@ console.log(req.files)
                 }
 
                 /* Imagen 2 */
-                if (producto.imagenes[1].length !== 0) {
+                
+                if (producto.imagenes[1] ) {
+                   
                     if(!!req.files.imagen2){
                         imagen2 = producto.imagenes[1].nombre
                         promesas.push(
@@ -238,21 +240,24 @@ console.log(req.files)
                                 id : producto.imagenes[1].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen2))){
-                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen2))
+                        
+                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen2))){
+                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen2))
                         }
                     }
                 }else{
+                    console.log("hola4")
                     if(!!req.files.imagen2){
+                        
                         promesas.push(
                         db.Imagenes.create({
                             nombre: req.files.imagen2[0].filename,
                             productosId: producto.id
                         }))
                     }
-                }
+                } 
                 /* Imagen 3 */
-                if (producto.imagenes[2].length !== 0) {
+                if (producto.imagenes[2]) {
                     if(!!req.files.imagen3){
                         imagen3 = producto.imagenes[2].nombre
                         promesas.push(
@@ -263,8 +268,8 @@ console.log(req.files)
                                 id : producto.imagenes[2].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen3))){
-                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen3))
+                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen3))){
+                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen3))
                         }
                     }
                 }else{
@@ -277,7 +282,7 @@ console.log(req.files)
                     }
                 }
                 /* Imagen 4 */
-                if (producto.imagenes[3].length !== 0) {
+                if (producto.imagenes[3]) {
                     if(!!req.files.imagen4){
                         imagen4 = producto.imagenes[3].nombre
                         promesas.push(
@@ -288,8 +293,8 @@ console.log(req.files)
                                 id : producto.imagenes[3].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen4))){
-                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen4))
+                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen4))){
+                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen4))
                         }
                     }
                 }else{

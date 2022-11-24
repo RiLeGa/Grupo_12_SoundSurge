@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
         console.log(arr);
         if (!arr.includes(false)) {
             btn.disabled = false
-            btn.style.backgroundColor = 'green'
+            btn.style.backgroundColor = 'blue'
         }else{
             btn.disabled = true
             btn.style.backgroundColor = 'red'
@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
     let img3 = $('#imagen3')
     let img4 = $('#imagen4')
 
-    let btn = $('#btn-submit')
+    let btn = $('.btn btn-primary')
 
     /* Expresiones regulares para utilizar */
     let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/
@@ -182,11 +182,11 @@ window.addEventListener('load', () => {
     img.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(img.value):
-                $('#imagen').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img = false
                 break;
             default:
-                $('#imagen').innerHTML = null
+                $('#imagenError').innerHTML = null
                 validate.img = true
                 break;
         }
@@ -196,11 +196,11 @@ window.addEventListener('load', () => {
     img2.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(img2.value):
-                $('#imagen2').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError2').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img2 = false
                 break;
             default:
-                $('#imagen2').innerHTML = null
+                $('#imagenError2').innerHTML = null
                 validate.img2 = true
                 break;
         }
@@ -209,11 +209,11 @@ window.addEventListener('load', () => {
     img3.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(img3.value):
-                $('#imagen3').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError3').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img3 = false
                 break;
             default:
-                $('#imagen3').innerHTML = null
+                $('#imagenError3').innerHTML = null
                 validate.img3 = true
                 break;
         }
@@ -222,11 +222,11 @@ window.addEventListener('load', () => {
     img4.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(img4.value):
-                $('#imagen4').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError4').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img4 = false
                 break;
             default:
-                $('#imagen4').innerHTML = null
+                $('#imagenError4').innerHTML = null
                 validate.img4 = true
                 break;
         }

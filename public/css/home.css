@@ -420,23 +420,29 @@
         width: 35vw;
         height: 100px;
     }
-    .filtro{
-        display: none;
-    }
-    .home .busqueda .filtrado ul{
+
+    .home .busqueda .filtrado ul.list-result{
         left: 10vw;
         width: 80vw;
         height: fit-content;
         background-color: rgb(253, 253, 253);
         position: absolute;
         z-index: 1;
-        border-radius: 15px;
-        
+        border-radius: 15px; 
     }
-    .home .busqueda .filtrado ul li.producto-buscador {
+    .filtro{
         display: none;
+    }
+    /* .home .busqueda .filtrado ul.list-result{
+        display: none;
+    } */
+    
+    .home .busqueda .filtrado ul li.producto-buscador {
         margin: 10px;
     }
+   
+
+
     .home .busqueda .filtrado ul li.producto-buscador a{
         display: flex;
         justify-content: flex-start;
@@ -452,4 +458,5 @@
         width: 40px;
         height: 40px;
     }
+
 }

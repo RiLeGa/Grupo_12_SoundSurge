@@ -1,10 +1,10 @@
-/* window.onload = function() {
+window.onload = function() {
   let $ = (elemento) => document.querySelector(elemento)
     console.log("Register vinculado");
     
-  document.getElementById("tn btn-del").onchange=function(e) */
+  document.getElementById("tn btn-del").onclick=function(e){
   
-function eliminarUsuario(){
+
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -29,4 +29,5 @@ function eliminarUsuario(){
         )
       }
     })
+}
 }

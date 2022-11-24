@@ -8,8 +8,8 @@ document.addEventListener("keyup", e=>{
     if(e.target.matches("#inputSearch"))
     document.querySelectorAll(".producto-buscador").forEach(producto =>{
         producto.textContent.toLowerCase().includes(e.target.value)
-        ? producto.classList.remove('filtro') 
-        : producto.classList.add('filtro')
+        ? producto.classList.add('filtro')
+        : producto.classList.remove('filtro') 
     })
    
 })

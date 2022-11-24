@@ -9,13 +9,13 @@
 
         <div class="filtrado">
           <ul>
-          <% productos.forEach(producto => { %>
+          <% response.forEach(data => { %>
             
               <li class="producto-buscador">
-                  <a href="/productos/detalle/<%= producto.id %>">
-                      <img class="imagen-filtrado" src="/images/<%= producto.imagenes[0].nombre %>" alt="">
+                  <a href="/productos/detalle/<%= data.id %>">
+                      <img class="imagen-filtrado" src="/images/<%= data.imagenes[0].nombre %>" alt="">
                       <h4>
-                      <%-producto.titulo%>
+                      <%-data.titulo%>
                       </h4>
                   </a>
               </li> 

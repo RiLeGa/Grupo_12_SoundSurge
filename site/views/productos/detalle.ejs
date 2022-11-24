@@ -40,7 +40,11 @@
                 </div>
                 <div class="agregar">
                     <button class="a-favorito" type="submit">Agregar a favoritos</button>
+                    <% if (locals.userLogin) { %>
                     <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
+                    <% }else{ %>
+                        <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
+                    <% } %>
                 </div>
             </div>
         </section>

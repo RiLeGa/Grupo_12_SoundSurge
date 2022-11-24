@@ -11,7 +11,7 @@ module.exports = {
             }]
         })
             .then(producto => {
-                db.Productos.findAll({
+               let productosPorCategoria = db.Productos.findAll({
                     where: {
                         categoriasId: producto.categoriasId
                     },
@@ -21,28 +21,34 @@ module.exports = {
                         all: true
                     }]
                 })
-                    .then(productos => {
+                let productosAlAzar = db.Productos.findAll({
+                    limit: 4,
+                    order: [[Sequelize.literal("RAND()")]],
+                    include: [{
+                        all: true
+                    }]
+                })
+                    Promise.all([productosPorCategoria, productosAlAzar])
+                    .then(([productosPorCategoria, productosAlAzar])=> {
+                        let productos = []
+                        productosPorCategoria.forEach(elemento => {
+                            productos.push(elemento)
+                        });
+                        console.log(productos.length)
+                        for (let i = 0; i < ( 6 - productos.length) ; i++) {
+                              productos.push(productosAlAzar[i])
+                        }
+                        console.log(productos.length);
                         /* return res.send(productos) */
                         return res.render('productos/detalle', {
                             producto,
                             productos
                         })
+
                     })
+
             })
             .catch(error => res.send(error))
-
-        
-                db.Productos.findAll({
-               include:['category','marca','imagenes',]
-           })
-           Promise.all([productos])
-           .then(([productos])=> {
-               
-               
-               return productos
-   
-           })
-           .catch(error => res.send(error))
 
     },
 

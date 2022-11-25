@@ -25,7 +25,7 @@ module.exports = {
                 })
                     .then(productos => {
                         /* return res.send(productos) */
-                        return res.render('detalle', {
+                        return res.render('productos/detalle', {
                             producto,
                             productos
                         })
@@ -50,12 +50,12 @@ module.exports = {
             .catch(error => res.send(error))
     },
     listarCategorias : (req,res) => {
-        return res.render("categorias")
+        return res.render("productos/categorias")
     },
     listarMarcas : (req,res) => {
-        return res.render("marcas")
+        return res.render("productos/marcas")
     },
     listarTendencia : (req,res) => {
-        return res.render("loMasVendido")
+        return res.render("productos/loMasVendido")
     }
 }

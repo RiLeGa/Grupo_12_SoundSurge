@@ -75,7 +75,7 @@ module.exports = {
         
 
         .then(productoNuevo => {
-console.log(req.files)
+
             if (req.files.length !== 0) {
                 
                 let img = req.files.map(imagen => {
@@ -102,11 +102,11 @@ console.log(req.files)
         })
         .catch(error => res.send(error))
     } else {
-        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'images',  dato))
+        let ruta = (dato) => fs.existsSync(path.join(__dirname,'..', '..', 'public', 'images',  dato))
 
         req.files.forEach(imagen => {
             if (ruta(imagen) && (imagen !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', 'public', 'images',  imagen))
+                fs.unlinkSync(path.join(__dirname, '..','..', 'public', 'images',  imagen))
             }
         })
         /* return res.send(errors.mapped()) */
@@ -209,8 +209,8 @@ console.log(req.files)
                             }
                         }))
                         /* Borramos la imagen anterior */
-                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen1))){
-                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen1))
+                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen1))){
+                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen1))
                         }
                     }
                 }else{
@@ -241,8 +241,8 @@ console.log(req.files)
                             }
                         }))
                         
-                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen2))){
-                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen2))
+                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen2))){
+                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen2))
                         }
                     }
                 }else{
@@ -268,8 +268,8 @@ console.log(req.files)
                                 id : producto.imagenes[2].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen3))){
-                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen3))
+                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen3))){
+                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen3))
                         }
                     }
                 }else{
@@ -293,8 +293,8 @@ console.log(req.files)
                                 id : producto.imagenes[3].id
                             }
                         }))
-                        if(fs.existsSync(path.join(__dirname,'../public/images',imagen4))){
-                            fs.unlinkSync(path.join(__dirname, '../public/images', imagen4))
+                        if(fs.existsSync(path.join(__dirname,'../../public/images',imagen4))){
+                            fs.unlinkSync(path.join(__dirname, '../../public/images', imagen4))
                         }
                     }
                 }else{

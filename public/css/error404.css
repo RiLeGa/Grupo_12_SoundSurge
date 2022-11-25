@@ -1,0 +1,505 @@
+.error main section {
+    background-color: #17021d;
+    background-size: cover;
+}
+
+.error main section h2 {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 25px;
+}
+
+.error main section h1 {
+    background-color: #08267a;
+    color: #ff2ee6;
+    border-radius: 45px;
+    letter-spacing: -7px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+    border: 3px solid #008ffd;
+    display: flex;
+    margin: 51px 47px;
+    justify-content: center;
+    font-size: 88px;
+    font-weight: bold;
+}
+
+/* ----------------------------------- */
+
+/* Animacion del error 404 */
+
+.error main section h1{
+animation: parpadear 2s infinite backwards;
+}
+
+@keyframes parpadear {
+    to{
+        color: #7c0073;
+        text-shadow: none;
+    }
+}
+
+/* ----------------------------------- */
+
+.error main section h3 {
+    color: #ffffff;
+    text-align: start;
+    font-size: 18px;
+    padding-left: 33px;
+}
+.error main section h3.first {
+    color: #ffffff;
+    text-align: start;
+    font-size: 18px;
+    padding-left: 33px;
+}
+
+.error main section h3.second {
+    color: #ffffff;
+    text-align: start;
+    font-size: 18px;
+    padding-left: 33px;
+    margin-top: 15px;
+}
+
+.error main section ul li {
+    color: #00A6FF;
+    padding-left: 17%;
+    margin-top: 18px;
+}
+
+.error main section ul li a {
+    text-decoration: none;
+    color: #00A6FF;    
+}
+
+.error main .foto img{
+    margin-top: 50px;
+    width: 100%;
+}
+
+.error main .foto {
+width: 100%;
+}
+
+.error main .logo img{
+    background-color: black;
+    border: 2px solid #00a6ff;
+    border-radius: 28%;
+    width: 200px;
+    padding: 2px;
+    margin: 16px;
+}
+
+.error main section .logo{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue;
+    border-radius: 50%;
+}
+
+/* ----------------------------------- */
+
+/* Animacion del logo */
+
+.error main section .logo{
+    animation: flicker 2s infinite backwards;
+    }
+    
+@keyframes flicker {
+    to{
+        color: #7676fc;
+        text-shadow: none;
+    }
+}
+
+/* ----------------------------------- */
+
+.error main section h4{
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 23px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+/*   T  A B L E T   */
+
+
+
+
+
+ @media (min-width: 461px) {
+    .error main section {
+        background-color: #17021d;
+        background-size: cover;
+    }
+    
+    .error main section h2 {
+        color: rgb(255, 255, 255);
+        text-decoration: underline;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 40px;
+    }
+    
+    .error main section h1 {
+        background-color: #08267a;
+        color: #ff2ee6;
+        border-radius: 45px;
+        letter-spacing: -9px;
+        text-align: center;
+        text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+        border: 3px solid #008ffd;
+        display: flex;
+        margin: 53px 46px;
+        justify-content: center;
+        font-size: 86px;
+        font-weight: bold;
+    }
+    }
+    
+    /* ----------------------------------- */
+    
+    /* Animacion del error 404 */
+    
+    .error main section h1{
+    animation: parpadear 2s infinite backwards;
+    }
+    
+    @keyframes parpadear {
+        to{
+            color: #7c0073;
+            text-shadow: none;
+        }
+    }
+    @media (min-width: 525px){
+        .error main section h1 {
+            background-color: #08267a;
+            color: #ff2ee6;
+            border-radius: 45px;
+            letter-spacing: -7px;
+            text-align: center;
+            text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+            border: 3px solid #008ffd;
+            display: flex;
+            margin: 53px 46px;
+            justify-content: center;
+            font-size: 100px;
+            font-weight: bold;
+    }
+}
+
+    /* ----------------------------------- */
+    
+    .error main section h3 {
+        color: #ffffff;
+        text-align: start;
+        font-size: 31px;
+        padding-left: 33px;
+    }
+    .error main section h3.first {
+        color: #ffffff;
+        text-align: start;
+        font-size: 31px;
+        padding-left: 33px;
+    }
+    
+    .error main section h3.second {
+        color: #ffffff;
+        text-align: start;
+        font-size: 31px;
+        padding-left: 33px;
+        margin-top: 15px;
+    }
+    
+    .error main section ul li {
+        color: #00A6FF;
+        padding-left: 17%;
+        margin-top: 18px;
+        font-size: 21px;
+    }
+    
+    .error main section ul li a {
+        text-decoration: none;
+        color: #00A6FF;    
+    }
+    
+    .error main .foto img{
+        margin-top: 50px;
+        width: 100%;
+    }
+    
+    .error main .foto {
+    width: 100%;
+    }
+    
+    .error main .logo img{
+        background-color: black;
+        border: 2px solid #00a6ff;
+        border-radius: 28%;
+        width: 282px;
+        padding: 2px;
+        margin: 16px;
+    }
+    
+    .error main section .logo{
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue;
+        border-radius: 50%;
+    }
+    
+    /* ----------------------------------- */
+    
+    /* Animacion del logo */
+    
+    .error main section .logo{
+        animation: flicker 2s infinite backwards;
+        }
+        
+    @keyframes flicker {
+        to{
+            color: #7676fc;
+            text-shadow: none;
+        }
+    }
+    
+    /* ----------------------------------- */
+    
+    .error main section h4{
+        color: white;
+        text-align: center;
+        font-size: 17px;
+        padding-top: 28px;
+        padding-bottom: 23px;
+    }
+
+
+
+
+
+
+    @media (min-width: 526px){
+    .error main section h1 {
+    background-color: #08267a;
+    color: #ff2ee6;
+    border-radius: 45px;
+    letter-spacing: -7px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+    border: 3px solid #008ffd;
+    display: flex;
+    margin: 53px 46px;
+    justify-content: center;
+    font-size: 114px;
+    font-weight: bold;
+    }
+}
+@media (min-width: 601px){
+.error main section h1 {
+    background-color: #08267a;
+    color: #ff2ee6;
+    border-radius: 45px;
+    letter-spacing: -7px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+    border: 3px solid #008ffd;
+    display: flex;
+    margin: 53px 46px;
+    justify-content: center;
+    font-size: 131px;
+    font-weight: bold;
+    }
+}
+@media (min-width: 649px){
+.error main section h1 {
+    background-color: #08267a;
+    color: #ff2ee6;
+    border-radius: 45px;
+    letter-spacing: -7px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+    border: 3px solid #008ffd;
+    display: flex;
+    margin: 53px 46px;
+    justify-content: center;
+    font-size: 131px;
+    font-weight: bold;
+}
+}
+@media (min-width: 691px){
+.error main section h1 {
+    background-color: #08267a;
+    color: #ff2ee6;
+    border-radius: 45px;
+    letter-spacing: -7px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+    border: 3px solid #008ffd;
+    display: flex;
+    margin: 53px 46px;
+    justify-content: center;
+    font-size: 154px;
+    font-weight: bold;
+}
+}
+    
+/*  D E S K T O P  */
+
+
+
+
+@media (min-width: 791px) {
+    .error main section {
+        background-color: #17021d;
+        background-size: cover;
+    }
+    
+    .error main section h2 {
+        color: rgb(255, 255, 255);
+        text-decoration: underline;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 56px;
+    }
+    
+    .error main section h1 {
+        background-color: #08267a;
+        color: #ff2ee6;
+        border-radius: 176px;
+        letter-spacing: -7px;
+        text-align: center;
+        text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+        border: 3px solid #008ffd;
+        display: flex;
+        margin: 51px 25%;
+        justify-content: center;
+        font-size: 200px;
+        font-weight: bold;
+    }
+    
+    /* ----------------------------------- */
+    
+    /* Animacion del error 404 */
+    
+    .error main section h1{
+    animation: parpadear 2s infinite backwards;
+    }
+    
+    @keyframes parpadear {
+        to{
+            color: #7c0073;
+            text-shadow: none;
+        }
+    }
+    
+    /* ----------------------------------- */
+    
+    .error main section h3 {
+        color: #ffffff;
+        text-align: center;
+        font-size: 55px;
+        padding-left: 33px;
+    }
+    .error main section h3.first {
+        color: #ffffff;
+        text-align: center;
+        font-size: 55px;
+        padding-left: 33px;
+    }
+    
+    .error main section h3.second {
+        color: #ffffff;
+        text-align: center;
+        font-size: 55px;
+        padding-left: 33px;
+        margin-top: 15px;
+    }
+    
+    .error main section ul li {
+    color: #00A6FF;
+    padding-left: 24%;
+    margin-top: 20px;
+    font-size: 31px;
+    }
+    
+    .error main section ul li a {
+        text-decoration: none;
+        color: #00A6FF;    
+    }
+    
+    .error main .foto img{
+        margin-top: 50px;
+        margin-left: 20%;
+        width: 60%;
+    }
+    
+    .error main .foto {
+    width: 100%;
+    }
+    
+    .error main .logo img{
+        background-color: black;
+        border: 2px solid #00a6ff;
+        border-radius: 28%;
+        width: 41%;
+        padding: 2px;
+        margin: 16px;
+    }
+    
+    .error main section .logo{
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 0 5px blue, 0 0 15px blue, 0 0 30px blue;
+        border-radius: 50%;
+    }
+    
+    /* ----------------------------------- */
+    
+    /* Animacion del logo */
+    
+    .error main section .logo{
+        animation: flicker 2s infinite backwards;
+        }
+        
+    @keyframes flicker {
+        to{
+            color: #7676fc;
+            text-shadow: none;
+        }
+    }
+    
+    /* ----------------------------------- */
+    
+    .error main section h4{
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 23px;
+        padding-bottom: 20px;
+    }
+}
+@media (min-width: 1024px) {
+    .error main section h1 {
+        background-color: #08267a;
+        color: #ff2ee6;
+        border-radius: 176px;
+        letter-spacing: -7px;
+        text-align: center;
+        text-shadow: 0 0 5px #ff00de, 0 0 15px #ff00de, 0 0 30px #ff00de, 0 0 50px #ff00de;
+        border: 3px solid #008ffd;
+        display: flex;
+        margin: 51px 25%;
+        justify-content: center;
+        font-size: 200px;
+        font-weight: bold;
+    }
+
+}

@@ -19,6 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 /* necesario para utilizar DELETE y PUT */
 app.use(methodOverride('_method'))
 
+app.use(express.static(path.join(__dirname, '../public')))
+
 app.use(cookieParser());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -34,7 +36,7 @@ app.use(userLogin)
 
 app.use(logger('dev'));
 
-app.use(express.static("public"))
+/* app.use(express.static("public")) */
 
 const indexRouter = require('./routes/index');
 const productosRouter = require('./routes/productos');

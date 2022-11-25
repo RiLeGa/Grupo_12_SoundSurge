@@ -6,13 +6,12 @@
         <section class="container-register">
             <h1>Registro</h1>
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
-        <form action="/users/register" method="post" enctype="multipart/form-data">
-            <div class="icons">
-                <i class="fas fa-user"> <input type="file" name="imagen" id="imagen"> </i>
-            </div>
+        <form action="/users/register" method="post" enctype="multipart/form-data" id="formulario">
+
             <div class="container">
                 <label for="nombre">nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null%>">
+                <div id="nombreContainer"></div>
                 <% if (locals.errors && errors.nombre) { %>
                     <small><%= errors.nombre.msg %></small>
                 <% } %>
@@ -20,6 +19,7 @@
             <div class="container">
                 <label for="apellido">apellido</label>
                 <input type="text" name="apellido" id="apellido" placeholder="Ingresa tu apellido"value="<%= locals.old && old.apellido ? old.apellido : null%>">
+                <div id="apellidoContainer"></div>
                 <% if (locals.errors && errors.apellido) { %>
                     <small><%= errors.apellido.msg %></small>
                 <% } %>
@@ -28,20 +28,23 @@
             <div class="container">
                 <label for="email">email</label>
                 <input type="email" name="email" id="email" placeholder="Ingresa tu email"value="<%= locals.old && old.email ? old.email : null%>">
+                <div id="emailContainer"></div>
                 <% if (locals.errors && errors.email) { %>
                     <small><%= errors.email.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="contrasenia">contrasenia</label>
-                <input type="password" name="contrasenia" id="contrasenia" placeholder="Ingresa tu contraseña">
+                <input type="password" name="contrasenia" id="clave" placeholder="Ingresa tu contraseña" autocomplete="off">
+                <div id="passContainer"></div>
                 <% if (locals.errors && errors.contrasenia) { %>
                     <small><%= errors.contrasenia.msg %></small>
                 <% } %>
             </div>
             <div class="container">
                 <label for="confirmar">Confirmar contraseña</label>
-                <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña">
+                <input type="password" name="confirmar" id="confirmar" placeholder="Confirma tu contraseña" autocomplete="off">
+                <div id="passContainer2"></div>
                 <% if (locals.errors && errors.confirmar) { %>
                     <small><%= errors.confirmar.msg %></small>
                 <% } %>
@@ -50,14 +53,21 @@
 
             <div class="terminos">
                 <input type="checkbox" name="terminos" id="terminos">
+                <div id="terminosContainer"></div>
                 <% if (locals.errors && errors.terminos) { %>
-                    <small class="terms"><%= errors.terminos.msg %></small>
+                    <small><%= errors.terminos.msg %></small>
                 <% } %>
                 <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
             
-            <button type="submit" class="enviar">Enviar</button>
-            
+            <div class="icons">
+                <div id="preview" class="styleImage"></div>
+                <label for="file"><i class="fa-solid fa-user"></i></label>
+                <input type="file" name="imagen" id="file"> 
+            </div> 
+            <div>
+                <button type="submit" class="enviar">Enviar</button>
+            </div>
         <h4>--------------- Registrarse con -----------------</h4>
             <button type="submit" class="facebook"><i class="fab fa-facebook"></i> Registrarte con Facebook</button>
             
@@ -72,5 +82,6 @@
         </div>
     </section>                  
     </main>
+    <script src="/javascript/register.js"></script>
 </body>
 </html>

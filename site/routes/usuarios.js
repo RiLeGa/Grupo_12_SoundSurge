@@ -9,7 +9,7 @@ const userLoginCheck = require('../middlewares/userLoginCheck')
 
 
 router.get('/register', register);
-router.post('/register', upload.single('imagen'),registerValidations, newUser);
+router.post('/register', upload.single('imagen'), registerValidations,  newUser);
 
 router.get('/login', login);
 router.post('/login', loginValidator, inLogin);
@@ -17,7 +17,7 @@ router.post('/login', loginValidator, inLogin);
 router.get('/perfil', userLoginCheck, perfil);
 
 router.get('/editar/:id', editarU);
-router.put('/editar/:id',userLoginCheck, editarUsuario);
+router.put('/editar/:id',upload.single('imagen'), userLoginCheck, editarUsuario);
 
 router.delete('/logout', logout);
 router.delete('/eliminarUsuario/:id', eliminarUsuario);

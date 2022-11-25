@@ -1,0 +1,267 @@
+.detalle{
+    background-color:rgb(255, 255, 255);
+}
+.detalle h2{
+    text-align: center;
+}
+.detalle::-webkit-scrollbar{
+    display: none;
+}
+.detalle main.detalleDeProd .sectionDetail div.vistas ul{
+    display: none;
+}
+.detalle main.detalleDeProd .sectionDetail .detallado {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.detalle main.detalleDeProd .sectionDetail div.vistas .detallado i.fas.fa-percentage{
+    display: flex;
+    height: 70px;
+    padding: 10px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed black;
+    border-radius: 50%;
+    color: darkviolet;
+    position: absolute;
+}
+.detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal{
+    width: 100%;
+    height: 280px;
+}
+.detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal-movil{
+    width: 100%;
+    height: 450px;
+    margin: 0 50px 0 50px;
+}
+
+.detalle main.detalleDeProd .sectionDetail div.detalle{
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 365px;
+    margin: 10px 10px 50px 0;
+}
+
+.detalle main.detalleDeProd .sectionDetail div.detalle div.precio-descuento{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    margin: 5px 0 10px 0;
+}
+
+.detalle main.detalleDeProd .sectionDetail div.detalle div.precio-descuento .descuento{
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.detalle main.detalleDeProd .sectionDetail div.detalle .botones{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.detalle main.detalleDeProd .sectionDetail div.detalle .botones .sumar, .restar{
+    width: 25px;
+    height: 25px;
+}
+.detalle main.detalleDeProd .sectionDetail div.detalle .botones .cantidad{
+    width: 30px;
+    height: 25px;
+
+}
+
+.detalle main.detalleDeProd h1, h2, span{
+    text-align: center;
+}
+
+.detalle main.detalleDeProd .sectionDetail div.detalle .agregar{
+    width: 100%;
+    margin-top: 20px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detalle main.detalleDeProd .sectionDetail div.detalle .agregar .a-favorito, .a-carrito{
+    width: 60%;
+    height: 30px;
+    
+}
+.detalle .a-carrito a{
+color: black;
+}
+
+
+.detalle main.detalleDeProd p.descripcion{
+    width: 90vw;
+    margin-left: 4vw;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.detalle main.detalleDeProd .similares ul{
+    display: flex;
+    width: 98%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+.detalle main.detalleDeProd .similares ul article{
+    width: 100vw;
+    height: 250px;
+    margin-top: 50px;
+}
+.detalle main.detalleDeProd .similares ul::-webkit-scrollbar{
+    display: none;
+}
+
+.detalle main.detalleDeProd .similares ul article{
+    width: 25%;
+    height: 200px;
+}
+.detalle main.detalleDeProd .similares article div.producto{
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15vh;
+    width: 40vw;
+    padding: 1vw;
+}
+
+.detalle main.detalleDeProd .similares article p{
+    color: black;
+    text-align: center;
+
+}
+
+.detalle main.detalleDeProd .similares article h4{
+    color: black;
+    text-align: center;
+}
+
+.detalle main.detalleDeProd .similares ul{
+    width: 94vw;
+    height: 17rem;
+    margin-left: 3vw;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+
+@media (min-width: 791px) {
+
+    .detalle main.detalleDeProd .sectionDetail {
+        display: flex;
+        width: 98vw;
+        height: 395px;
+        margin: 1vw;
+        margin-bottom: 100px;
+        border-bottom: 2px solid black;
+    }
+    .detalle main.detalleDeProd .sectionDetail .detallado {
+        display: flex;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .detalle main.detalleDeProd .sectionDetail div.vistas{
+        display: flex;
+        width: 60%;
+        background-color: white;
+        height: 375px;
+        margin: 10px 10px 10px 0px;
+    }
+    .detalle main.detalleDeProd .sectionDetail div.detalle{
+        display: flex;
+        flex-direction: column;
+        color: rgb(0, 0, 0);
+        width: 46%;
+        height: 375px;
+        padding-left: 5px;
+        margin: 10px 10px 50px 10px;
+        border-left: 2px solid black;
+    }
+
+    .detalle main.detalleDeProd .sectionDetail div.vistas ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: min-content;
+        background-color: white;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        padding-right: 10px;
+        border-right: 2px solid black;
+    }
+
+    .detalle main.detalleDeProd .sectionDetail div.vistas ul li{
+        list-style: none;
+    }
+    .detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal{
+        width: 40vw;
+        height: 350px;
+    }
+    .detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal-movil{
+        display: none;
+    }
+
+    .detalle main.detalleDeProd .sectionDetail div.vistas img{
+        width: 69px;
+        height: 70px;
+    }
+
+    .detalle main.detalleDeProd h1, h2, span{
+        text-align: center;
+    }
+
+    .detalle main.detalleDeProd .descripcion{
+        width: 98%;
+        margin: 1%;
+    }
+    .detalle main.detalleDeProd .similares ul article{
+        width: 25%;
+        height: 200px;
+    }
+    .detalle main.detalleDeProd .similares article div.producto{
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 150px;
+        width: 24vw;
+        padding: 1vw;
+    }
+
+    .detalle main.detalleDeProd .similares article p{
+        color: black;
+        text-align: center;
+
+    }
+
+    .detalle main.detalleDeProd .similares article h4{
+        color: black;
+        text-align: center;
+    }
+
+    .detalle main.detalleDeProd .similares ul{
+        width: 94vw;
+        height: 17rem;
+        margin-left: 3vw;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+    }
+}

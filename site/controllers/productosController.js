@@ -98,8 +98,20 @@ module.exports = {
         .catch(error => res.send(error))
     },
     listarTodos : (req,res) => {
-        return res.render("productos/todos",{
-            productos
+        let productos = db.Productos.findAll({
+            include:['category','marca','imagenes',]
         })
+        
+        Promise.all([productos])
+        .then(([productos])=> {
+            
+            return res.render('productos/todosLosProductos', {
+                productos
+            })
+            
+
+        })
+        .catch(error => res.send(error))
+        
     }
 }

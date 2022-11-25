@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include ("../partials/head",{title: "Detalle de producto"}) %>
-  <body class="detalle">
+  <body class="detalle" >
     <%- include ("../partials/header") %>
-    <main>
+    <main class="todosLosProductos">
 
         <h1>Todos los productos</h1>
 
-        <div class="filtrado">
-          <ul>
-          <% response.forEach(data => { %>
-            
-              <li class="producto-buscador">
-                  <a href="/productos/detalle/<%= data.id %>">
-                      <img class="imagen-filtrado" src="/images/<%= data.imagenes[0].nombre %>" alt="">
-                      <h4>
-                      <%-data.titulo%>
-                      </h4>
-                  </a>
-              </li> 
-          <% }) %>
-      </ul>
-      </div>
+        <section class="busqueda">
+          <!-- <form action="/busqueda" method="get"> -->
+              <input type="text" name="search" id="inputSearch" placeholder="¿Que estas Buscando?">
+        </section>
+        <section class="busqueda">
+                <div class="filtrado">
+                    <ul class="list-result">
+                      <% productos.forEach(producto => { %>
+                          <li class="producto-buscador">
+                              <a href="/productos/detalle/<%= producto.id %>">
+                                  <img class="imagen-filtrado" src="/images/<%= producto.imagenes[0].nombre %>" alt="">
+                                  <h4>
+                                  <%-producto.titulo%>
+                                  </h4>
+                                  <div class="agregar">
+                                    <button class="a-favorito" type="submit">Agregar a favoritos</button>
+                                    <% if (locals.userLogin) { %>
+                                    <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
+                                    <% }else{ %>
+                                        <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
+                                    <% } %>
+                                </div>
+                              </a>
+                          </li> 
+                      <% }) %>
+                    </ul>
+                </div>
+        </section>
 
     </main>
     <%- include ("../partials/footer") %> 

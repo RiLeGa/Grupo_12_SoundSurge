@@ -100,16 +100,7 @@ window.addEventListener('load', () => {
 
     stock.addEventListener('blur', function() {
         switch (true) {
-            case !this.value.trim():
-                $('#stockError').innerHTML = "Debes ingresar el stock de tu producto"
-                this.style.border='2px solid red'
-                validate.stock = false
-                break;
-            case !regExNumber.test(this.value.trim()):
-                $('#stockError').innerHTML = "Debes ingresar un numero menor a 100"
-                this.style.border='2px solid red'
-                validate.stock = false
-                break;
+           
             case !(this.value.trim().length >= 1 && this.value.trim().length <= 16):
                 $('#stockError').innerHTML = "El stock del producto debe contener 1 caracteres y maximo 10"
                 this.style.border='2px solid red'

@@ -9,6 +9,20 @@
     border-bottom: 2px solid black;
 }
 
+.carrito .sin-stock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    margin: 10%;
+    border: 2px solid rgba(212, 0, 255, 0.664) ;
+    box-shadow: 4px 4px 8px rgba(212, 0, 255, 0.664) ;
+    
+}
+.carrito .sin-stock img{
+    width: 20%;
+
+}
 .carrito main section ul.boleta{
     color: #000000;
     background-color: #ffffff;

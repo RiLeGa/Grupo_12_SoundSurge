@@ -4,11 +4,14 @@
 <body class="detalle">
     <%- include ("../partials/header") %> 
     <main class="detalleDeProd">
+        <% if (producto.stock !== 0) { %>
         <section class="sectionDetail">
+           
             <div class="vistas">
                 <ul>
                     <li>
                         <% producto.imagenes.forEach(img => { %>
+                           
                             <img class="secundarias" src="/images/<%= img.nombre %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('src','/images/<%= img.nombre %>')">
                         <% }) %>
                     </li>
@@ -43,11 +46,18 @@
                     <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
                 </div>
             </div>
+            
         </section>
         <section class="descripcion">
             <h2>descripcion</h2>
             <p class="descripcion"><%= producto.descripcion %></p>
         </section>
+        <% } else{ %>
+            <div class="sin-stock">
+            <img src="/images/dinosaurio.png" alt="">
+            <h3>Por el momento no hay stock de este producto.</h3>
+        </div>
+            <% } %>
        
     </main>
     <%- include ("../partials/footer") %> 

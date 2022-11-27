@@ -6,6 +6,7 @@
     <%- include ("./partials/header") %> 
                                                 <!--  M A I N  -->
     <main>
+        <% if (producto.stock !== 0) { %>
         <section>
             <h1>Mi carrito</h1>
         </section>
@@ -71,6 +72,11 @@
                 </div>
             </section>
         </section>
+        <% } else{%>
+            <div class="sin-stock">
+                <img src="/images/dinosaurio.png" alt="">
+                <h3>Por el momento no hay stock de este producto.</h3>
+            <% } %>
     </main>
                                             <!--  F O O T E R  -->
     <%- include ("./partials/footer") %> 

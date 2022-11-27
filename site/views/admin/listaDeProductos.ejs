@@ -40,11 +40,9 @@
                                 <a href="/admin/editar/<%= producto.id%>">
                                     <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                                 </a>
-                                <a href="/papelera">
-                                <form action="borrar/<%= producto.id%>?_method=DELETE" method="post">
-                                  <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                <form action="/admin/borrar/<%= producto.id%>?_method=DELETE" method="post">
+                                  <button type="submit" id="eliminar-producto" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                                 </form>
-                                </a>
                             </div>
                         </td>
                       

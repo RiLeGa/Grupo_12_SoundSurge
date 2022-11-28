@@ -12,6 +12,7 @@
     margin: 10%;
     border: 2px solid rgba(212, 0, 255, 0.664) ;
     box-shadow: 4px 4px 8px rgba(212, 0, 255, 0.664) ;
+    border-radius: 16px;
    
 }
 .detalle .sin-stock img{

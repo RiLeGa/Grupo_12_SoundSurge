@@ -97,13 +97,17 @@ main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
 }
 @media (min-width: 795px){
     main.todosLosProductos{
+        display: flex;
+        flex-direction: column;
         background: linear-gradient(#6487e6, #9437b1);;
         width: 100vw;
-        height: 200vh;
+        min-height: 300vh;
     }
-    main.todosLosProductos h1{
+    main.todosLosProductos h1.todos{
+        font-size: 2em;
         text-align: center;
-        margin-top: 0;
+        padding-top: 25px;
+        margin: 0;
     }
     
     main.todosLosProductos .busqueda {
@@ -134,7 +138,8 @@ main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
         margin-left: 10vw;
         width: 80vw;
         height: 35px;
-        border-radius: 15px;
+        border: 2px solid black;
+        border-radius: 15px;;
         padding: 15px;
     }
     
@@ -150,7 +155,8 @@ main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
         grid-template-columns: repeat(4, 1fr);
         justify-content: space-around;
         align-items: center;
-        width: 100vw;
+        width: 90vw;
+        margin-left: 5vw;
         height: fit-content;
         background-color: transparent;
         border-radius: 15px;

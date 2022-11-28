@@ -1,0 +1,204 @@
+main.todosLosProductos{
+    background-image: url(images/LogoSoundSurge.png);
+    width: 100vw;
+    height: 200vh;
+}
+main.todosLosProductos h1{
+    text-align: center;
+}
+
+main.todosLosProductos .busqueda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    width: 100vw;
+    height: fit-content;
+}
+
+
+main.todosLosProductos .busqueda li.producto-buscador{
+    margin: 20px;
+    width: 85%;
+    border: 1px solid black;
+    transition: 0.5s;
+    box-shadow: 0 0 15px rgb(0 0 0 / 95%);
+}
+
+
+main.todosLosProductos .busqueda input{
+    margin-top: 25px;
+    margin-left: 10vw;
+    width: 80vw;
+    height: 35px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+main.todosLosProductos .busqueda .filtrado{
+    width: 100vw;
+    height: 100px;
+}
+
+main.todosLosProductos .busqueda .filtrado ul.list-result{
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    background-color: rgb(253, 253, 253);
+    border-radius: 15px;
+}
+.filtro{
+    display: none;
+}
+/* .todosLosProductos .busqueda .filtrado ul.list-result{
+    display: none;
+} */
+
+
+
+main.todosLosProductos .busqueda .filtrado ul li.producto-buscador .agregar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main.todosLosProductos .busqueda .filtrado ul li.producto-buscador .agregar button{
+    width: fit-content;
+}
+
+
+
+main.todosLosProductos .busqueda .filtrado ul li.producto-buscador a{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+main.todosLosProductos .busqueda .filtrado ul li.producto-buscador h4{
+    font-size: 20px;
+    color: black;
+}
+
+main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
+    width: 150px;
+    height: 150px;
+}
+
+@media (min-width: 461px){
+
+}
+@media (min-width: 795px){
+    main.todosLosProductos{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(#6487e6, #9437b1);;
+        width: 100vw;
+        min-height: 300vh;
+    }
+    main.todosLosProductos h1.todos{
+        font-size: 2em;
+        text-align: center;
+        padding-top: 25px;
+        margin: 0;
+    }
+    
+    main.todosLosProductos .busqueda {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: space-between;
+        width: 100vw;
+        height: fit-content;
+    }
+    
+    main.todosLosProductos .busqueda li.producto-buscador:hover{
+        transform: scale(1.1);
+    }
+    main.todosLosProductos .busqueda li.producto-buscador{
+        margin: 20px;
+        width: 20vw;
+        height: 300px;
+        background-color: white;
+        border: 1px solid black;
+        transition: 0.5s;
+        box-shadow: 0 0 15px rgb(0 0 0 / 95%);
+    }
+    
+    
+    main.todosLosProductos .busqueda input{
+        margin-top: 25px;
+        margin-left: 10vw;
+        width: 80vw;
+        height: 35px;
+        border: 2px solid black;
+        border-radius: 15px;;
+        padding: 15px;
+    }
+    
+    main.todosLosProductos .busqueda .filtrado{
+        width: 100vw;
+        height: 100px;
+    }
+    
+    main.todosLosProductos .busqueda .filtrado ul.list-result{
+        /* display: flex;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-around;
+        align-items: center;
+        width: 90vw;
+        margin-left: 5vw;
+        height: fit-content;
+        background-color: transparent;
+        border-radius: 15px;
+    }
+    .filtro{
+        display: none;
+    }
+    /* .todosLosProductos .busqueda .filtrado ul.list-result{
+        display: none;
+    } */
+    
+    
+    
+    main.todosLosProductos .busqueda .filtrado ul li.producto-buscador .agregar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    main.todosLosProductos .busqueda .filtrado ul li.producto-buscador .agregar button{
+        width: fit-content;
+    }
+    
+    
+    
+    main.todosLosProductos .busqueda .filtrado ul li.producto-buscador a{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; 
+    }
+    
+    main.todosLosProductos .busqueda .filtrado ul li.producto-buscador h4{
+        font-size: 20px;
+        color: black;
+    }
+    
+    main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
+        width: 150px;
+        height: 150px;
+    }
+
+}

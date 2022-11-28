@@ -3,11 +3,33 @@
   <%- include ("../partials/head",{title: "Detalle de producto"}) %>
   <body class="detalle">
     <%- include ("../partials/header") %>
-    <main>
+    <main class="marcas">
 
-        <h1>Marcas papu</h1>
+        <h1>Marcas</h1>
+
+        <div class="glider-contain-marcas">
+          <div class="glider-marcas">
+            <div class="brand"><img src="/images/marcas/logo-Gibson-768x432.png" alt="gibson"></div>
+            <div class="brand"><img src="/images/marcas/Logo-Fender-768x480.png" alt="fender"></div>
+            <div class="brand"><img src="/images/marcas/logo-Gibson-768x432.png" alt="gibson"></div>
+            <div class="brand"><img src="/images/marcas/Logo-Fender-768x480.png" alt="fender"></div>  
+            <div class="brand"><img src="/images/marcas/logo-Gibson-768x432.png" alt="gibson"></div>
+            <div class="brand"><img src="/images/marcas/Logo-Fender-768x480.png" alt="fender"></div>
+            <div class="brand"><img src="/images/marcas/logo-Gibson-768x432.png" alt="gibson"></div>
+            <div class="brand"><img src="/images/marcas/Logo-Fender-768x480.png" alt="fender"></div>
+            <div class="brand"><img src="/images/marcas/logo-Gibson-768x432.png" alt="gibson"></div>
+            <div class="brand"><img src="/images/marcas/Logo-Fender-768x480.png" alt="fender"></div>
+          </div>
+        
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <button aria-label="Next" class="glider-next">»</button>
+          <div role="tablist" class="dots"></div>
+        </div>
+        
 
     </main>
     <%- include ("../partials/footer") %> 
+
+    <script src="/javascript/marcas.js"></script>
   </body>
 </html>

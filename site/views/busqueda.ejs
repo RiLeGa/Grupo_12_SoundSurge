@@ -2,22 +2,15 @@
 <html lang="en">
   <%- include('./partials/head', {title: 'Busqueda'}) %>
 
-  <body class="busqueda">
+  <body>
     <%- include('./partials/header') %>
     <main>
       <% if (resultados.length != 0) { %>
-      <h1>Resultado de la busqueda: <%= busqueda %></h1>
-      <section class="resultados">
-        <% resultados.forEach(producto => { %>
-            <%- include('./partials/card',{
-              id:producto.id,
-              imagen:producto.imagenes[0],
-              nombre:producto.titulo,
-              descuento:producto.descuento,
-              precio:producto.precio 
-            }) %> 
-        <% }) %>
-      </section>
+        <ul>
+          <% for( let i = 0; i <= resultados.length ; i++ ) { %>
+              <div><%- resultados.nombre %> </div>
+          <% } %>
+        </ul>
       <% }else { %>
       <h1>
         No se encontraron coincidencias con la busqueda de: <%= busqueda %>

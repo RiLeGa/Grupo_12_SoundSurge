@@ -1,0 +1,13 @@
+main.categorias{
+
+}
+
+main.categorias ul{
+    display: flex;
+    flex-direction: row;
+}
+
+main.categorias a h2{
+    font-size: 25px;
+    color: black;
+}

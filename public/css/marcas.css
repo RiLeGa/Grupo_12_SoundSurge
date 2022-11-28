@@ -1,0 +1,15 @@
+.marcas{
+    height: 100vh ;
+}
+.marcas .brand:first-child{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.marcas .brand:nth-child(2){
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.marcas .brand:nth-child(3){
+    background-size: cover;
+    background-repeat: no-repeat;
+}

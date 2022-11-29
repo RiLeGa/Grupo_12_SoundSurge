@@ -18,6 +18,18 @@
     margin-top: 15px;
 }
 
+.lista .busqueda{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 25px;
+}
+.lista .category{
+    display: none;
+}
+.lista .titulo-nombre{
+    overflow: hidden;
+}
+
 .lista .direct-crear{
     width: 80vw;
     margin-left: 10vw;

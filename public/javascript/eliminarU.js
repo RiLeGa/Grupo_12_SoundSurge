@@ -1,11 +1,16 @@
-window.onload = function() {
+window.addEventListener('load', () => {
   let $ = (elemento) => document.querySelector(elemento)
     console.log("Register vinculado");
     
-  document.getElementById("tn btn-del").onclick=function(e){
-  
-
-    Swal.fire({
+    let forms = document.querySelectorAll('#del');
+    for (let i = 0; i < forms.length; i++) {
+        forms[i].addEventListener('submit', event => {
+                event.preventDefault();
+                Swal.fire({
+                customClass: {
+                    confirmButton: 'swalBtnColor',
+                    cancelButton: 'swalBtnColor'
+                },
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
       icon: 'warning',
@@ -15,7 +20,7 @@ window.onload = function() {
       confirmButtonText: 'Yes, delete it!'
     })
     .then((result) => {
-      if (result.i) {
+      if (result.isConfirmed) {
         Swal.fire(
           'Deleted!',
           'Your file has been deleted.',
@@ -25,9 +30,9 @@ window.onload = function() {
         Swal.fire(
           'no Deleted!',
           'Your file hasn´t been deleted.',
-          'error'
-        )
-      }
+          'error')
+        }
+      })
     })
 }
-}
+})

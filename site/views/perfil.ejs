@@ -21,7 +21,7 @@
             </div>  
             <section class="edit-delete-logout">
                 
-                <form class="exit" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
+                <form id="del" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
                     <button class="logout" id="tn btn-del" type="submit"><i class="fas fa-user-times"></i>Eliminar usuario</button>
                 </form>
         
@@ -30,7 +30,7 @@
                 </a>
         
                 <form class="exit" action="/users/logout?_method=DELETE" method="post">
-                    <button class="btn btn-del" type="submit"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</button>
+                    <button  class="btn btn-del" type="submit"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</button>
                 </form>
             
             </section>

@@ -34,14 +34,15 @@
             <div class="container">
                 <label for="email">email</label>
                 <input type="email" name="email" id="email" placeholder="Ingresa tu email" value="<%=`${usuario.email}`%>" disabled>
-                <!-- buscar como deshabilitar un input -->
             </div>
 
             <div class="icons">
                 <div id="preview" class="styleImage"><%= usuario.imagen%></div>
-                <label for="file"><i class="fa-solid fa-user"></i></label>
                 <input type="file" name="imagen" id="file"> 
-                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/images/users/<%= usuario.imagen%>" alt="">
+                <label for="file">
+                    <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/images/users/<%= usuario.imagen%>" alt="">
+                </label>
+                
             </div> 
             <div>
             

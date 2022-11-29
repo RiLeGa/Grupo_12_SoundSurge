@@ -6,9 +6,7 @@
   <%- include('../partials/header') %> 
     <main >
         <h1>Lista de productos</h1>
-        <section class="busqueda">
-              <input type="text" name="search" id="inputSearch" placeholder="¿Que estas Buscando?">
-        </section>
+        
         <a class="direct-crear" href="crear">
             <button type="button" class="btn btn-primary">Crear Producto</button>
         </a>
@@ -18,13 +16,17 @@
         <a class="direct-crear" href="usuarios">
           <button type="button" class="btn btn-primary">Lista de usuarios</button>
       </a>
+      <section class="busqueda">
+        <input type="text" name="search" id="inputSearch" placeholder="¿Que estas Buscando?">
+      </section>
         <div class="table-responsive">
         <table class="table table-hover">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Marca</th>
                 <th scope="col">Nombre</th>
+                <th class="category" scope="col">categoria</th>
+                <th scope="col">Marca</th>
                 <th scope="col">stock</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Des</th>
@@ -36,8 +38,9 @@
                   <tr class="producto-buscador">
                       
                         <th scope="row"><a href="/productos/detalle/<%= producto.id %>"><%= producto.id %> </a></th>
+                        <td class="titulo-nombre"><a href="/productos/detalle/<%= producto.id %>"><%= producto.titulo %></a></td>
+                        <td class="category"><a href="/productos/detalle/<%= producto.id %>"><%= producto.category.nombre %></a></td>
                         <td><a href="/productos/detalle/<%= producto.id %>"><%= producto.marca.nombre %></a></td>
-                        <td colspan="1"><a href="/productos/detalle/<%= producto.id %>"><%= producto.titulo %></a></td>
                         <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.stock %></a></td>
                         <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.precio %></a></td>
                         <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.descuento %></a></td>
@@ -58,6 +61,7 @@
           </table>
         </div>
     </main>
+    <%- include ("../partials/footer") %> 
     <script src="../javascript/sweetAlert.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script> -->

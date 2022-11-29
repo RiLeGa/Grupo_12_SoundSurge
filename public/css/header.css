@@ -92,7 +92,7 @@ header .navegacion .busqueda i.fas.fa-search{
     margin-left: 100px;
 }
 
-header .navegacion .carrito i.fas.fa-shopping-cart{
+header .navegacion .carrito1 i.fas.fa-shopping-cart{
     color: #ffffff;
     font-size: 20px;
     margin-top: 20px;
@@ -166,7 +166,7 @@ header .navegacion div.usuario{
         padding: 0 5px;
     }
 
-    header .navegacion .carrito i.fas.fa-shopping-cart{
+    header .navegacion .carrito1 i.fas.fa-shopping-cart{
         color: #ffffff;
         font-size: 20px;
         margin-top: 20px;
@@ -252,7 +252,7 @@ header .navegacion div.usuario{
          display: none;
     }
 
-    header .navegacion .carrito i.fas.fa-shopping-cart{
+    header .navegacion .carrito1 i.fas.fa-shopping-cart{
         color: #ffffff;
         font-size: 20px;
         margin-top: 7px;

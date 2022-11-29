@@ -86,7 +86,7 @@
     border: #c51dbe solid 4px;
     border-radius: 10px;
     padding: 4px;
-    margin-top: 138%;
+    margin-top: 130%;
 }
 .carrito .precio-final{
     font-size: 24px;
@@ -273,7 +273,7 @@ padding: 5px;
     margin-bottom: 10px;
 
 }
-@media (min-width: 425px) {
+@media (min-width: 325px) {
     
     .carrito main section div .cantidad_2{
         display: flex;
@@ -289,97 +289,114 @@ padding: 5px;
         font-weight: 900;
         margin-top: 20px;
     }
-   
-    
+    .carrito main section div article{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
     }
-    
+    .carrito main section div article .primerprecio,.primer-descuento{
+        margin-top: 10px;
+    }
+    .carrito main section div article .primer-descuento{
+        margin-top: 2px;
+    }
+    .carrito main section div article div .guitarra{
+       width: 70%;
+    height: 50%;
+    }
+    .carrito .caja-guitarra{
+        height: 60%;
+    }
+    .carrito .caja-guitarra p{
+        background-color: #ffffff;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 100%;
+        height: 12%;
+    }
+    .carrito .caja-secundaria{
+        display: flex;
+        width: 75%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .carrito .caja-secundaria#contador{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        margin-bottom: 25px;
+    }
+    .carrito .caja-secundaria h2#cantidad{
+      display: none;
+    }
+    .carrito .precio{
+        margin-top: 1px;
+    }
+    .carrito .caja-secundaria h2{
+        font-size: 16px;
+        margin: 5px;
+    }
+    .carrito main section div article .primer-descuento{
+        font-size: 24px;
+    }
+    .carrito .caja-carrito2{
+        display: none;
+       }
+   
+    }
+   
     
 
 /* T A B L E T */
 @media (min-width: 461px){
-        .carrito main section div article{
-            background-color: #5b5b5bbd;
-            border: 1px solid black;
-            border-radius: 4px 4px 0px 0px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
 
-        .carrito main section div article .guitarra{
-            width: 15%;
-            
-            margin: 20px
-        }
-        .carrito main section div article .bateria{
-            width: 15%;
-            height: 200px;
-            margin: 20px
-        }
-        .carrito main section div article span {
-            width: 125px;
-            font-size: 24px;
-        }
-        .carrito main section .cuenta .precio1 {
-            text-align: center;
-            font-size: 24px;
-            position: absolute;
-            margin-left: 51%;
-            padding-top: 13px;
-        }
-        .carrito main section .cuenta .precio2 {
-            text-align: center;
-            font-size: 24px;
-            position: absolute;
-            margin-left: 51%;
-            padding-top: 63px;
-        }
-        .carrito main section div .comprar {
-            font-size: 18px;
-            font-weight: 900;
-            border-radius: 18px;
-            width: 50vw;
-            margin-left: 25vw;
-            color: white;
-            height: 41px;
-            margin-top: 33px;
-        }
-        .carrito main section div .mas {
-            background-color: #2d5a2d;
-            font-size: 11px;
-            font-weight: 900;
-            border-radius: 11px;
-            width: 50vw;
-            margin-left: 25vw;
-            color: white;
-            height: 41px;
-            margin-top: 33px;
-        }
-        .carrito main section p {
-            color: white;
-            background-color: #ffffff;
-            height: 75px;
-            width: 100%;
-            padding-left: 15px;
-            padding-right: 9%;
-            text-align: center;
-            font-size: 19px;
-        }
+   .carrito main section .caja-carrito{
+    display: none;
+}
+
+   .carrito .caja-carrito2{
+    display: flex;
+    justify-content: center;
+   }
+   .carrito .caja-carrito2 article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10%;
+   }
+   .carrito .caja-carrito2 article .caja-guitarra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+    width: 50%;
+   }
+   .carrito .caja-carrito2 article .caja-secundaria{
+    width: 50%;
+   }
+   .carrito .caja-carrito2 article .caja-guitarra p{
+    font-size: 100%;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   }
+   
         
-        .carrito main section div .cantidad_2{
-            background-color: #ffffff;
-            margin-left: -3rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            position: absolute;
-            right: 7rem;
-            }
     }
 
+    
+     
 /* DESKTOP */
-@media (min-width: 791px) {
+@media (min-width: 925px) {
 
+    .carrito .caja-secundaria h2#cantidad{
+        display: block;
+      }
+    .carrito .caja-carrito2{
+        display: none;
+       }
 .carrito main section div article span.segundoprecio{
     font-size: 24px;
     margin-right: 19px;
@@ -390,22 +407,16 @@ padding: 5px;
         display: flex;
         justify-content: center;
         width: 100%;
+        height: 100%;
     }
     .carrito .caja-guitarra{
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100%;
+        width: 20%;
     }
-    .carrito .caja-guitarra p{
-        display: block;
-        color: #000000;
-        height: 1%;
-        width: 70%;
-        font-size: 24px;
-        margin-bottom: 5%;
-        border: solid 2px black;
-        border-radius: 16px;
-    }
+    
 
 .carrito main section  .cantidad div{
     
@@ -458,6 +469,7 @@ padding: 5px;
         width: 90%;
         padding-top: 5px;
     }
+    
     .carrito main section div article .primerprecio{
         font-size: 24px;
         background-color: #ffffff;
@@ -465,14 +477,14 @@ padding: 5px;
         border: 2px solid black;
         border-radius: 10px;
         padding: 2px;
-        margin-top: 130%;
+        margin-top: 50%;
         }
         .carrito main section div article .contador{
             font-size: 24px;
             background-color: #5b5b5bbd;
             color: #000000;
             padding: 2px;
-            margin-top: 148%;
+            margin-top: 57%;
             }
 
     .carrito main section div article section{
@@ -494,6 +506,84 @@ padding: 5px;
         width: 15vw;
         height: 100px;
         margin: 20px -12px 20px 10px;
+    }
+    .carrito .caja-principal-carrito{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .carrito main section .caja-carrito{
+        display: flex;
+        justify-content: center;
+        
+    }
+   
+    .carrito .caja-guitarra p{
+        display: block;
+        color: #000000;
+        background-color: #ffffff;
+        height: 30%;
+        width: 70%;
+        font-size: 24px;
+        margin-bottom: 5%;
+        border: solid 2px black;
+        border-radius: 16px;
+    }
+    .carrito .caja-guitarra h2{
+        color: #ffffff;
+        background-color: #000000;
+        border: #ffffff solid 2px;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+.carrito main section div article div .guitarra{
+    width: 15vw;
+   height: 220px;
+    margin: 20px -12px 20px 10px;
+    border: solid 3px black;
+    border-radius: 16px;
+}
+.carrito .caja-secundaria{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 20%;
+}
+.carrito .caja-secundaria h2{
+color: #ffffff;
+background-color: #000000;
+border: #ffffff solid 2px;
+border-radius: 10px;
+padding: 5px;
+font-size: 24px;
+}
+
+    .carrito main section div article .contador{
+        font-size: 24px;
+        background-color:#5b5b5bbd;   
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+    }
+    .carrito main section div article .primer-descuento{
+        background-color: #c51dbe;
+        color: #ffffff;
+        border: solid 2px #ffffff;
+        border-radius: 10px;
+        padding: 2px;
+        margin-top: 50%;
+    }
+    .carrito .precio{
+        font-size: 24px;
+        background-color: #ffffff;
+        color: #000000;
+        border: #c51dbe solid 4px;
+        border-radius: 10px;
+        padding: 4px;
+        margin-top: 50%;
     }
 }
 /* @media (min-width: 1443px) {

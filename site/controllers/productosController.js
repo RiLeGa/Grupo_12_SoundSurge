@@ -113,5 +113,22 @@ module.exports = {
         })
         .catch(error => res.send(error))
         
+    },
+    listarMasVendidos : (req,res) => {
+        let productos = db.Productos.findAll({
+            include:['category','marca','imagenes',]
+        })
+        
+        Promise.all([productos])
+        .then(([productos])=> {
+            
+            return res.render('productos/lo+Vendido', {
+                productos
+            })
+            
+
+        })
+        .catch(error => res.send(error))
+        
     }
 }

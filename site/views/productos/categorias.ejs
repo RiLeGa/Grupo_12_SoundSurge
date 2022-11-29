@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include ("../partials/head",{title: "Detalle de producto"}) %>
-  <body class="detalle">
+  <body>
     <%- include ("../partials/header") %>
-    <main>
+    <main class="categorias">
 
-        <h1>Categorias papu</h1>
+        <h1>Categorias</h1>
+        <div>
+            <% categorias.forEach(categoria => { %>
+              <ul>
+                <li>
+                <a href="#"><h2><%-categoria.nombre %></h2></a>
+                </li> 
+              </ul>
+            <% }) %>
+        </div>
 
     </main>
     <%- include ("../partials/footer") %> 

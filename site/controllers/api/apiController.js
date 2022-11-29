@@ -39,6 +39,10 @@ module.exports = {
             },
             data : productos
         }
+        
+        return res.render('../todosLosProductos', {
+            response
+        })
         return res.status(200).json(response)
     })
     },

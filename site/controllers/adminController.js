@@ -7,6 +7,7 @@ let usuarios = require('../data/usuarios.json')
 
 let db = require('../database/models')
 let Sequelize = require('sequelize')
+const { all } = require('../routes')
 
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
@@ -55,7 +56,8 @@ module.exports = {
             }
             errors.errors.push(imagen)
         }
-
+        /* return res.send(req.body)
+ */
         if (errors.isEmpty()) {
           
         let {marcas, titulo, categorias, precio, descuento, stock, descripcion} = req.body
@@ -72,7 +74,6 @@ module.exports = {
             descripcion,
             
         })
-        
 
         .then(productoNuevo => {
 
@@ -102,11 +103,11 @@ module.exports = {
         })
         .catch(error => res.send(error))
     } else {
-        let ruta = (dato) => fs.existsSync(path.join(__dirname,'..', '..', 'public', 'images',  dato))
+        let ruta = (dato) => fs.existsSync(path.join(__dirname, ".." , '..', 'public', 'images',  dato))
 
         req.files.forEach(imagen => {
             if (ruta(imagen) && (imagen !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..','..', 'public', 'images',  imagen))
+                fs.unlinkSync(path.join(__dirname, ".." , '..', 'public', 'images',  imagen))
             }
         })
         /* return res.send(errors.mapped()) */
@@ -372,35 +373,20 @@ module.exports = {
     
     //visualiza vista con listado de usuarios//
     userlist : (req,res) => {
-
-        let usuarios = []
-        db.Usuarios.findAll()     
-        .then((todos) => {
-            usuarios = todos
+        let usuarios = db.Usuarios.findAll({
+            include:[{ all : true}]
         })
-
-        res.send(usuarios)
-          /*   return res.render('admin/listaDeUsuarios',{
+        Promise.all([usuarios])
+        .then(([usuarios])=> {
+            
+            
+            return res.render('listaDeUsuarios', {
                 usuarios
-              })
- */
-       
+            })
 
-        /* let response = {
-            status : 200,
-            meta : {
-                length : usuarios.length,
-                path : "ruta"
-            },
-            data: usuarios  
-                            
-        }  */
-
-        /* return res.status(200).json(response) */
-
-        .catch((error) => {
-            return res.send(error)
-          });
+        })
+        .catch(error => res.send(error))
+        
     },
     borrarUsuario: (req, res) => {
         idParams = +req.params.id

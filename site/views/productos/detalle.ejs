@@ -43,7 +43,11 @@
                 </div>
                 <div class="agregar">
                     <button class="a-favorito" type="submit">Agregar a favoritos</button>
+                    <% if (locals.userLogin) { %>
                     <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
+                    <% }else{ %>
+                        <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
+                    <% } %>
                 </div>
             </div>
             
@@ -58,6 +62,21 @@
             <h3>Por el momento no hay stock de este producto.</h3>
         </div>
             <% } %>
+
+        <h2>Productos relacionados</h2>
+<section class="similares">
+    <ul>
+        <% productos.forEach(producto => { %>
+                <article>
+                    <a href="/productos/detalle/<%= producto.id %>">
+                    <div class="producto"  style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')"></div>
+                    <h4><%= producto.titulo %></h4>
+                    <p>$<%= producto.precio %></p>
+                    </a>
+                </article>
+        <% }) %>
+    </ul>
+</section>
        
     </main>
     <%- include ("../partials/footer") %> 

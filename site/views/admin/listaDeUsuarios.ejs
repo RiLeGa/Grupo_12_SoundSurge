@@ -23,24 +23,24 @@
             <% for( let i = 0; i <= usuarios.length; i++ ) { %> %>
             <tr>
               <th scope="row"><%= usuario.[i]id %></th>
-              <td><%= usuario.nombre %></td>
-              <td colspan="1"><%= usuario.apellido %></td>
-              <td><%= usuario.direccion %></td>
-              <td><%= usuario.telefono %></td>
-              <td><%= usuario.email %></td>
-              <td><%= usuario.rol %></td>
+              <td><%= usuario.[i].nombre %></td>
+              <td colspan="1"><%= usuario.[i].apellido %></td>
+              <td><%= usuario.[i].direccion %></td>
+              <td><%= usuario.[i].telefono %></td>
+              <td><%= usuario.[i].email %></td>
+              <td><%= usuario.[i].rol %></td>
               <td>
                 <img
                   class="usuario"
                   id="imgMain"
-                  src="/images/users/<%= usuario.imagen %>"
+                  src="/images/users/<%= usuario[i].imagen %>"
                   alt="Imagen principal"
                 />
               </td>
               <td>
                 <div class="edicion">
                   <form
-                    action="borrarUsuario/<%= usuario.id%>?_method=DELETE"
+                    action="borrarUsuario/<%= usuario[i].id%>?_method=DELETE"
                     method="post"
                   >
                     <button type="submit" class="btn btn-danger">

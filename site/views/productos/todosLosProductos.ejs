@@ -21,6 +21,11 @@
                                   <h4>
                                   <%-producto.titulo%>
                                   </h4>
+                                  <div class="info-find">
+                                  <%= producto.category.nombre%>
+                                  <%= producto.marca.nombre%>
+                                  <%= producto.descripcion%>
+                                  </div>
                                   <div class="agregar">
                                     <button class="a-favorito" type="submit">Agregar a favoritos</button>
                                     <% if (locals.userLogin) { %>

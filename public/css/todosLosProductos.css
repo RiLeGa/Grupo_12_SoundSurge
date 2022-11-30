@@ -1,7 +1,6 @@
 main.todosLosProductos{
     background-image: url(images/LogoSoundSurge.png);
     width: 100vw;
-    height: 200vh;
 }
 main.todosLosProductos h1{
     text-align: center;
@@ -25,6 +24,9 @@ main.todosLosProductos .busqueda li.producto-buscador{
     box-shadow: 0 0 15px rgb(0 0 0 / 95%);
 }
 
+main.todosLosProductos .busqueda li.producto-buscador .info-find{
+    display: none;
+}
 
 main.todosLosProductos .busqueda input{
     margin-top: 25px;
@@ -37,7 +39,7 @@ main.todosLosProductos .busqueda input{
 
 main.todosLosProductos .busqueda .filtrado{
     width: 100vw;
-    height: 100px;
+    height: auto;
 }
 
 main.todosLosProductos .busqueda .filtrado ul.list-result{
@@ -101,7 +103,6 @@ main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
         flex-direction: column;
         background: linear-gradient(#6487e6, #9437b1);;
         width: 100vw;
-        min-height: 300vh;
     }
     main.todosLosProductos h1.todos{
         font-size: 2em;
@@ -145,7 +146,7 @@ main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
     
     main.todosLosProductos .busqueda .filtrado{
         width: 100vw;
-        height: 100px;
+        height: auto;
     }
     
     main.todosLosProductos .busqueda .filtrado ul.list-result{

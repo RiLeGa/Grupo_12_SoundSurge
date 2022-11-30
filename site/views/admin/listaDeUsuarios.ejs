@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include ("./partials/head",{title: "Lista de usuarios"}) %>
+  <%- include ("../partials/head",{title: "Lista de usuarios"}) %>
   <body class="lista">
-    <%- include ("./partials/header") %>
+    <%- include ("../partials/header") %>
     <main>
       <h1>Lista de usuarios</h1>
       <div class="table-responsive">
@@ -22,13 +22,13 @@
           <tbody>
             <% usuarios.forEach(usuario => { %>
             <tr>
-              <th scope="row"><%= usuarioid %></th>
+              <th scope="row"><%= usuario.id %></th>
               <td><%= usuario.nombre %></td>
               <td colspan="1"><%= usuario.apellido %></td>
               <td><%= usuario.direccion %></td>
               <td><%= usuario.telefono %></td>
               <td><%= usuario.email %></td>
-              <td><%= usuario.rol %></td>
+              <td><%= usuario.rolId %></td>
               <td>
                 <img
                   class="usuario"

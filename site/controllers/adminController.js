@@ -374,13 +374,13 @@ module.exports = {
     //visualiza vista con listado de usuarios//
     userlist : (req,res) => {
         let usuarios = db.Usuarios.findAll({
-            include:[{ all : true}]
+            include:[{all : true}]
         })
         Promise.all([usuarios])
         .then(([usuarios])=> {
             
             
-            return res.render('listaDeUsuarios', {
+            return res.render('admin/listaDeUsuarios', {
                 usuarios
             })
 

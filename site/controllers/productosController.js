@@ -73,12 +73,16 @@ module.exports = {
         let categorias = db.Categorias.findAll({
             include:[{ all: true}]
         })
-        Promise.all([categorias])
-        .then(([categorias])=> {
-            
+        let productos = db.Productos.findAll({
+            include:[{ all: true}]
+        })
+
+        Promise.all([categorias, productos])
+        .then(([categorias, productos])=> {
             
             return res.render('productos/categorias', {
-                categorias
+                categorias,
+                productos
             })
         })
         .catch(error => res.send(error))

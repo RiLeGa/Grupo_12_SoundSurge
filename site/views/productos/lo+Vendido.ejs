@@ -10,28 +10,34 @@
         </div>
 
         
+          
+        
 
         <section class="contenedor">
                 
                 <div class="filtrado">
+                 
                     <ul class="list-result">
 
                       <% productos.forEach(producto => { %>
                         <% if (producto.stock <= 10) { %>
                           <li class="producto-buscador">
-                              <a href="/productos/detalle/<%= producto.id %>">
-                                  <img class="imagen-filtrado" src="/images/<%= producto.imagenes[0].nombre %>" alt="">
-                                  <h4>
-                                  <%-producto.titulo%>
-                                  </h4>
-                                  <div class="agregar">
-                                    <button class="a-favorito" type="submit">Agregar a favoritos</button>
-                                    <% if (locals.userLogin) { %>
-                                    <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
-                                    <% }else{ %>
-                                        <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
+                            <div class="loMasV" >
+                              <img src="/images/loMas.png" alt="">
+                            </div>
+                            <a href="/productos/detalle/<%= producto.id %>">
+                              <img class="imagen-filtrado" src="/images/<%= producto.imagenes[0].nombre %>" alt="">
+                              <h4>
+                                <%-producto.titulo%>
+                              </h4>
+                              <div class="agregar">
+                                <button class="a-favorito" type="submit">Agregar a favoritos</button>
+                                <% if (locals.userLogin) { %>
+                                  <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
+                                  <% }else{ %>
+                                    <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
                                     <% } %>
-                                </div>
+                                  </div>
                               </a>
                           </li> 
                           <% } %>

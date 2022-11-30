@@ -16,6 +16,16 @@ main.loMas h1.todos{
     margin: 0;
 }
 
+main.loMas .loMasV {
+    width: 20%;
+    height: 100px;
+    position: absolute;
+}
+main.loMas .loMasV img  {
+    width: 250px;
+    height: 200px;
+    transform: rotate(-50deg);
+}
 main.loMas .contenedor {
     display: flex;
     flex-wrap: nowrap;
@@ -30,7 +40,7 @@ main.loMas .contenedor li.producto-buscador:hover{
 main.loMas .contenedor li.producto-buscador{
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 80vw;
+    width: 25vw;
     height: 300px;
     background-color: white;
     border: 1px solid black;

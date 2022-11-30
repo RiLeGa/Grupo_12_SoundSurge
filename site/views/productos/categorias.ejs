@@ -8,12 +8,35 @@
         <h1>Categorias</h1>
         <div>
             <% categorias.forEach(categoria => { %>
-              <ul>
-                <li>
-                <a href="#"><h2><%-categoria.nombre %></h2></a>
-                </li> 
-              </ul>
-            <% }) %>
+              <section>
+              <h2><%-categoria.nombre %></h2>
+              
+              
+              <div class="filtrado">
+                
+                <ul class="list-result">
+                  <% productos.forEach(producto => { %>
+                      <li class="producto-buscador">
+                          <a href="/productos/detalle/<%= producto.id %>">
+                              <img class="imagen-filtrado" src="/images/<%= producto.imagenes[0].nombre %>" alt="">
+                              <h4>
+                              <%-producto.titulo%>
+                              </h4>
+                              <div class="agregar">
+                                <button class="a-favorito" type="submit">Agregar a favoritos</button>
+                                <% if (locals.userLogin) { %>
+                                <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
+                                <% }else{ %>
+                                    <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
+                                <% } %>
+                            </div>
+                          </a>
+                      </li> 
+                  <% }) %>
+                </ul>
+            </div>
+              </section>
+              <% }) %>
         </div>
 
     </main>

@@ -27,8 +27,8 @@ router.delete('/borrarUsuario/:id', borrarUsuario);
 
 router.get('/lista', adminCheck, lista);
 
-router.get('/usuarios', adminCheck, usuarios);
-router.get('/usersList', adminCheck, userlist);
+router.get('/usuarios', usuarios);
+router.get('/usersList', userlist);
 
 router.get('/todos', productos);
 

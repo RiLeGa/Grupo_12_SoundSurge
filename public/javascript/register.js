@@ -349,12 +349,12 @@ window.addEventListener('load', () => {
         console.log(terminos.checked);
     })
 
-   /*  form.addEventListener('submit',(e) => {
+    form.addEventListener('submit',(e) => {
         e.preventDefault();
 
         console.log(form.elements);
         if(errores.length > 0){
             form.submit()
         }
-    }) */
+    })
 })

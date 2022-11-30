@@ -19,9 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 /* necesario para utilizar DELETE y PUT */
 app.use(methodOverride('_method'))
 
-app.use(express.static(path.join(__dirname, '../public')))
 
-app.use(cookieParser());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -29,8 +27,13 @@ dbConnectionTest()
 
 
 app.use(session({
-  secret: "Feel the Sound"
+  secret: "FeelTheSound",
+  resave: true,
+  saveUninitialized: true
 }))
+
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '../public')))
 
 app.use(userLogin)
 
@@ -42,6 +45,7 @@ const indexRouter = require('./routes/index');
 const productosRouter = require('./routes/productos');
 const adminController = require('./routes/admin');
 const usuariosRouter = require('./routes/usuarios');
+const apiCarrito = require('./routes/api/apiCarrito');
 
 dbConnectionTest()
 
@@ -49,7 +53,7 @@ app.use('/', indexRouter);
 app.use('/admin', adminController);
 app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
-
+app.use('/api/carrito',apiCarrito);
 
 app.use((req, res, next) => {
     res.status(404).render("error404")

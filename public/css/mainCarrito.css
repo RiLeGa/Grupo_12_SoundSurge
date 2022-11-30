@@ -274,6 +274,11 @@ padding: 5px;
 
 }
 @media (min-width: 325px) {
+    .carrito {
+        background-image:url(/images/fondo-carrito2.jpg); 
+        background-repeat: no-repeat;
+        background-size: 100vw 120vh;
+    }
     
     .carrito main section div .cantidad_2{
         display: flex;
@@ -350,6 +355,11 @@ padding: 5px;
 
 /* T A B L E T */
 @media (min-width: 461px){
+    .carrito {
+        background-image:url(/images/fondo-carrito.jpg); 
+        background-repeat: no-repeat;
+        background-size: 100vw 120vh;
+    }
 
    .carrito main section .caja-carrito{
     display: none;

@@ -1,6 +1,4 @@
-.detalle{
-    background-color:rgb(255, 255, 255);
-}
+
 .detalle h2{
     text-align: center;
 }
@@ -14,6 +12,11 @@
     box-shadow: 4px 4px 8px rgba(212, 0, 255, 0.664) ;
     border-radius: 16px;
    
+}
+.detalle .detalleDeProd{
+    background-repeat: repeat;
+    background-size: 100px;
+    
 }
 .detalle .sin-stock img{
     width: 20%;
@@ -29,24 +32,34 @@
     width: 80%;
     margin-left: 10%;
     display: flex;
-    overflow-y: hidden;
+    flex-direction: column;
+    align-items: center;
 }
 
-.detalle main.detalleDeProd .sectionDetail div.vistas .detallado i.fas.fa-percentage{
-    display: flex;
-    height: 70px;
-    padding: 10px;
-    font-size: 25px;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed black;
-    border-radius: 50%;
-    color: darkviolet;
-    position: absolute;
+.detalle main.detalleDeProd .sectionDetail div.vistas{
+    margin-top: 10px;
 }
-.detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal{
-    width: 100%;
-    height: 280px;
+.detalle main.detalleDeProd .sectionDetail div.vistas .detallado i.fas.fa-percentage {
+    display: flex;
+    height: 5%;
+    width: 15%;
+    padding: 10px;
+    font-size: 80%;
+    justify-content: center;
+    background-color: rgb(43, 41, 41);
+    align-items: center;
+    border: 2px solid rgb(238, 176, 186);
+    border-radius: 50%;
+    color: rgb(238, 176, 186);
+    position: absolute;
+    left: 64%;
+    bottom: 68%;
+}
+.detalle main.detalleDeProd .sectionDetail div.vistas .detallado .principal{
+    width: 90%;
+    height: 220px;
+    border:blueviolet solid 2px;
+    border-radius: 16px;
 }
 .detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal-movil{
     width: 100%;
@@ -54,16 +67,30 @@
     margin: 0 50px 0 50px;
 }
 
-.detalle main.detalleDeProd .sectionDetail div.detalle{
+.detalle main.detalleDeProd .sectionDetail .detalle{
     display: flex;
     flex-direction: column;
     color: rgb(0, 0, 0);
     width: 100%;
     height: 365px;
     margin: 10px 10px 50px 0;
+    align-items: center;
 }
 
-.detalle main.detalleDeProd .sectionDetail div.detalle div.precio-descuento{
+.detalle main.detalleDeProd .sectionDetail .detalle  h3,h4{
+color: black;
+background-color: aqua;
+border: rgb(7, 174, 252) solid 2px; 
+border-radius: 10px;
+width: 60%;
+padding: 5px;
+margin: 5px;
+}
+.detalle main.detalleDeProd .sectionDetail .detalle .precio{
+    width: 100%;
+}
+
+.detalle main.detalleDeProd .sectionDetail div.detalle .precio-descuento{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -75,6 +102,12 @@
 .detalle main.detalleDeProd .sectionDetail div.detalle div.precio-descuento .descuento{
     text-decoration: line-through;
     margin-left: 5px;
+    color: black;
+    background-color: pink;
+    border: rgb(235, 129, 146) 2px solid;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 3px;
 }
 
 .detalle main.detalleDeProd .sectionDetail div.detalle .botones{
@@ -110,21 +143,38 @@
     align-items: center;
 }
 
-.detalle main.detalleDeProd .sectionDetail div.detalle .agregar .a-favorito, .a-carrito{
-    width: 60%;
-    height: 30px;
-    
+.detalle main.detalleDeProd .sectionDetail div.detalle .agregar  .a-carrito{
+    width: 70%;
+    height: 40px;
+    background: blueviolet;
+    border-radius: 10px;
+    font-size: 22px;
+    box-shadow: 4px 4px 8px rgba(212, 0, 255, 0.664) ;
 }
 .detalle .a-carrito a{
-color: black;
+color: white;
 }
 
 
-.detalle main.detalleDeProd p.descripcion{
-    width: 90vw;
-    margin-left: 4vw;
-    margin-bottom: 5%;
+.detalle main.detalleDeProd .descripcion{
+    width: 80%;
     text-align: center;
+    color: white;
+    background-color: black;
+    border: blueviolet 2px solid;
+    border-radius: 16px;
+    padding: 3%;
+}
+.detalle main.detalleDeProd .caja-descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detalle main.detalleDeProd .caja-descripcion h2{
+    display: none;
+}
+.detalle main.detalleDeProd .similares{
+    display: none;
 }
 
 .detalle main.detalleDeProd .similares ul{
@@ -177,15 +227,21 @@ color: black;
     overflow-y: auto;
 }
 
+@media (min-width: 461px) {
 
+    .detalle main.detalleDeProd .caja-descripcion h2{
+        display: none;
+    }}
 @media (min-width: 791px) {
 
+    .detalle main.detalleDeProd .caja-descripcion h2{
+        display: none;
+    }
     .detalle main.detalleDeProd .sectionDetail {
         display: flex;
         width: 98vw;
         height: 395px;
         margin: 1vw;
-        margin-bottom: 100px;
         border-bottom: 2px solid black;
     }
     .detalle main.detalleDeProd .sectionDetail .detallado {

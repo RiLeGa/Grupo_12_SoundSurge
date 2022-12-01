@@ -30,7 +30,7 @@ header .navegacion input{
 }
 header .navegacion input:checked ~ nav.opcionesDePerfil-Movil {
     display: block;
-    z-index: 1;
+    z-index: 3;
 }
 header .navegacion .busqueda{
     display: flex;

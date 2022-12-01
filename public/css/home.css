@@ -37,7 +37,7 @@
     background-color: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 45px;
+    background-position-y: 30px;
     background-size: 65%;
     display: block;
     text-align: center;
@@ -63,21 +63,22 @@
 }
 
 .home main .contenedor ul{
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
+    display: flex;
     width: 98%;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
-    overflow-y: hidden;
+    flex-wrap: wrap;
 }
 
 .home main .contenedor ul article div.producto, .contenedor-2 ul article div.producto{
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    width: 90vw;
-    padding: 20px;
-    height: 310px;
+    justify-content: end;
+    width: 40vw;
+    height: 212px;
+    margin-bottom: 25px;
 }
 
 .home main .contenedor img, .contenedor-2 img{

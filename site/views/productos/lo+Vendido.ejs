@@ -6,7 +6,7 @@
 
     <main class="loMas">
         <div class="categorias-home">
-            <h3 class="secciones"> Lo + Vendido </h3>
+            <h3> Lo + Vendido </h3>
         </div>
 
         
@@ -23,7 +23,7 @@
                         <% if (producto.stock <= 10) { %>
                           <li class="producto-buscador">
                             <div class="loMasV" >
-                              <img src="/images/loMas.png" alt="">
+                              <img src="/images/100Quality.png" alt="">
                             </div>
                             <a href="/productos/detalle/<%= producto.id %>">
                               <img class="imagen-filtrado" src="/images/<%= producto.imagenes[0].nombre %>" alt="">
@@ -47,6 +47,7 @@
                 </div>
 
         </section>
+        
     </main>
 
     <%- include ("../partials/footer") %> 

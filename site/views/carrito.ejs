@@ -1,84 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ("./partials/head",{title: "Tu carrito"}) %>
-</head>
-<body class="carrito">
-    <%- include ("./partials/header") %> 
-                                                <!--  M A I N  -->
-    <main>
-        <% if (producto.stock !== 0) { %>
-        <section>
-            <h1>Mi carrito</h1>
-        </section>
-            <!-- Producto, precio, etc -->
-        <section>
-                
-        </section>
-            <!-- Productos -->
-        <section>
-            <ul class="boleta">
-                <h2>PRODUCTO</h2>
-                <h2>PRECIO</h2>
-                <h2>CANTIDAD</h2>
-                <h2>TOTAL</h2>
-            </ul>
-                <div>
-                    <article>
-                        
-                        <img class="guitarra" src="/images/<%= producto.imagenes[0].nombre %>" alt="Imagen principal">
-                        
-                        <span class="primerprecio">$<%= producto.precio %></span>
-                        
-                        <div class="cantidad">
-                        <button class="restar">-</button>
-                        <input type="number">
-                        <button class="sumar">+</button>
+<%- include ("./partials/head",{title: "Tu carrito" }) %>
+    </head>
+
+    <body class="carrito">
+        <%- include ("./partials/header") %>
+            <!--  M A I N  -->
+            <main>
+                <% if (producto.stock !==0) { %>
+                    <section>
+                        <h1>Mi carrito</h1>
+                    </section>
+                    <!-- Producto, precio, etc -->
+                    <section>
+
+                    </section>
+                    <!-- Productos -->
+                    <section class="caja-principal-carrito">
+
+                        <div class="caja-carrito">
+                            <article>
+                                <div class="caja-guitarra">
+                                    <h2>PRODUCTO</h2>
+                                    <img class="guitarra" src="/images/<%= producto.imagenes[0].nombre %>"
+                                        alt="Imagen principal">
+                                    <p>
+                                        <%= producto.titulo %>
+                                    </p>
+                                </div>
+
+
+                                <div class="caja-secundaria" id="contador">
+                                    <h2 id="cantidad">CANTIDAD</h2>
+                                    <div class="contador">
+                                        <button class="restar">-</button>
+                                        <input class="numero" type="number">
+                                        <button class="sumar">+</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="caja-secundaria">
+                                    <h2>PRECIO</h2>
+                                    <span class="primerprecio">$<%= producto.precio %></span>
+                                </div>
+                                <% if (producto.descuento>0 ) { %>
+                                <div class="caja-secundaria">
+                                    <h2>DESCUENTO</h2>
+                                    <span class="primer-descuento">-$<%= (producto.precio * producto.descuento / 100) %>
+                                            </span>
+                                </div>
+                                <% } %>
+
+
+                                <div class="caja-secundaria">
+                                    <h2>TOTAL</h2>
+                                    <% if (producto.descuento>0 ) { %>
+                                        <span class="precio">$<%= producto.precio - (producto.precio *
+                                                producto.descuento / 100)%></span>
+                                        <% }else { %>
+                                            <span class="precio">$<%= producto.precio %></span>
+                                            <% } %>
+                                </div>
+
+
+                            </article>
+
                         </div>
-                        <div class="precio-descuento">
-                            <h3 class="precio">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
-                            <% if (producto.descuento !== 0) { %>
-                                <p class="descuento">$<%= producto.precio %></p>
+                        <div class="caja-carrito2">
+                            <article>
+                                <div class="caja-guitarra">
+                                    <h2>PRODUCTO</h2>
+                                    <img class="guitarra" src="/images/<%= producto.imagenes[0].nombre %>"
+                                        alt="Imagen principal">
+                                    <p>
+                                        <%= producto.titulo %>
+                                    </p>
+                                    <div class="caja-secundaria" id="contador">
+                                        <h2 id="cantidad">CANTIDAD</h2>
+                                        <div class="contador">
+                                            <button class="restar">-</button>
+                                            <input class="numero" type="number">
+                                            <button class="sumar">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                             <div class="separador">
+                                
+
+
+                                <div class="caja-secundaria">
+                                    <h2>PRECIO</h2>
+                                    <span class="primerprecio">$<%= producto.precio %></span>
+                                </div>
+                                <% if (producto.descuento>0 ) { %>
+                                <div class="caja-secundaria">
+                                    <h2>DESCUENTO</h2>
+                                    <span class="primer-descuento">-$<%= (producto.precio * producto.descuento / 100) %>
+                                            </span>
+                                </div>
+                                <% } %>
+
+                                <div class="caja-secundaria">
+                                    <h2>TOTAL</h2>
+                                    <% if (producto.descuento>0 ) { %>
+                                        <span class="precio">$<%= producto.precio - (producto.precio *
+                                                producto.descuento / 100)%></span>
+                                        <% }else { %>
+                                            <span class="precio">$<%= producto.precio %></span>
+                                            <% } %>
+                                </div>
+                            </div>
+
+                            </article>
+
+                        </div>
+                    </section>
+
+                    <!-- Subtotal, Total -->
+                    <section>
+                        <ul class="cuenta">
+
+                            <h4 class="total">TOTAL : </h4>
+                            <div>
+                                <h3 class="precio-final">$<%= producto.precio - (producto.precio * producto.descuento /
+                                        100)%>
+                                </h3>
+                                <% if (producto.descuento !==0) { %>
+                                    <p class="precio-final">$<%= producto.precio %>
+                                    </p>
+                                    <% } %>
+                            </div>
+
+                        </ul>
+                    </section>
+                    <section class="botones">
+                        <div>
+                            <button class="comprar">FINALIZAR COMPRA</button>
+                        </div>
+                        <div>
+                            <a href="/">
+                                <button class="mas">BUSCAR MAS PRODUCTOS</button>
+                            </a>
+                        </div>
+                    </section>
+                    </section>
+                    <% } else{%>
+                        <div class="sin-stock">
+                            <img src="/images/dinosaurio.png" alt="">
+                            <h3>Por el momento no hay stock de este producto.</h3>
                             <% } %>
-                        </div>
-                        
-                        
-                    </article>
-                    
-                </div>
-            </section>
-            <!-- Recuadro verde con texto -->
-            <section>
-                <p>Entrega: 
-                    Vea todas las opciones de envio para sus productos, incluyendo los plazos y los precios de envio.</p>
-            </section>
-            <!-- Subtotal, Total -->
-            <section>
-                <ul class="cuenta">
-                    <li class="subtotal">Subtotal :  </li>
-                    <li class="total">Total : <div >
-                        <h3 class="precio">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
-                        <% if (producto.descuento !== 0) { %>
-                            <p class="descuento">$<%= producto.precio %></p>
-                        <% } %>
-                    </div> </li>
-                </ul>
-            </section>
-            <section class="botones">
-                <div>
-                    <button class="comprar">FINALIZAR COMPRA</button>
-                </div>
-                <div>
-                    <button class="mas">BUSCAR MAS PRODUCTOS</button>
-                </div>
-            </section>
-        </section>
-        <% } else{%>
-            <div class="sin-stock">
-                <img src="/images/dinosaurio.png" alt="">
-                <h3>Por el momento no hay stock de este producto.</h3>
-            <% } %>
-    </main>
-                                            <!--  F O O T E R  -->
-    <%- include ("./partials/footer") %> 
-</body>
+            </main>
+            <!--  F O O T E R  -->
+            <%- include ("./partials/footer") %>
+    </body>
+
 </html>

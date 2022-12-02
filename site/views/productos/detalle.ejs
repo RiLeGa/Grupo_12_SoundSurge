@@ -9,7 +9,7 @@
            
             <div class="vistas">
                 <ul>
-                    <li>
+                    <li class="caja-secundarias">
                         <% producto.imagenes.forEach(img => { %>
                            
                             <img class="secundarias"  src="/images/<%= img.nombre %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('src','/images/<%= img.nombre %>')">
@@ -49,29 +49,34 @@
             
         </section>
        
-        <% } else{ %>
-            <div class="sin-stock">
-            <img src="/images/dinosaurio.png" alt="">
-            <h3>Por el momento no hay stock de este producto.</h3>
-        </div>
-            <% } %>
 
         
 <section class="similares">
     <h2 class="similares">Productos relacionados</h2>
+    
+    
     <ul>
         
         <% productos.forEach(producto => { %>
-                <article>
+            <% if (producto.stock !== 0) { %>
+            <article>
                     <a  class="tarjeta-detalle" href="/productos/detalle/<%= producto.id %>">
                     <div class="producto"  style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')"></div>
                     <h4 class="titulo-tarjeta"><%= producto.titulo %></h4>
                     <p class="precio-tarjeta">$<%= producto.precio %></p>
                     </a>
                 </article>
+                <% } %>
         <% }) %>
     </ul>
 </section>
+<% } else{ %>
+    <div class="sin-stock">
+    <img src="/images/dinosaurio.png" alt="">
+    <h3>Por el momento no hay stock de este producto.</h3>
+</div>
+<h4 class="volver"><a class="volvera" href="/">volver al inicio</a></h4>
+    <% } %>
        
     </main>
     <%- include ("../partials/footer") %> 

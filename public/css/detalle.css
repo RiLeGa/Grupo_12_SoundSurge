@@ -11,11 +11,23 @@
     flex-direction: column;
     align-items: center;
     padding: 2%;
-    margin: 10%;
+   
     border: 2px solid rgba(212, 0, 255, 0.664) ;
     box-shadow: 4px 4px 8px rgba(212, 0, 255, 0.664) ;
     border-radius: 16px;
-   
+   background-color: white;
+}
+.detalle  .volver {
+    
+        text-decoration: none;
+        color: white;
+        background-color: blueviolet;
+        padding: 10px;
+        font-size: 27px;
+        border: solid black 2px;
+        border-radius: 15px;
+        margin-top: 40px;
+    
 }
 .detalle .detalleDeProd{
     background-repeat: repeat;
@@ -247,7 +259,11 @@ color: white;
 @media (min-width: 461px) {
     
     .detalle main.detalleDeProd .sectionDetail div.vistas .detallado i.fas.fa-percentage {
-        bottom: 60%;
+        bottom: 57%;
+        width: 11%;
+        left: 71%;
+        height: 66px;
+        font-size: 20px;
     }
     
     .detalle main.detalleDeProd .caja-descripcion h2{
@@ -303,64 +319,90 @@ color: white;
 @media (min-width: 791px) {
 
     .detalle main.detalleDeProd .caja-descripcion h2{
-        display: none;
+        display: block;
+        color: white;
+        background-color: black;
+        border:  rgb(7, 174, 252) solid 2px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .detalle main.detalleDeProd .sectionDetail div.vistas .detallado .principal{
+        margin-top: 0px;
+        margin-bottom: 15px;
+       
     }
     .detalle main.detalleDeProd .sectionDetail {
         display: flex;
         width: 98vw;
         height: 395px;
-        margin: 1vw;
-        border-bottom: 2px solid black;
+        
+       
     }
     .detalle main.detalleDeProd .sectionDetail .detallado {
         display: flex;
         width: 100%;
         overflow-y: hidden;
+        height: 430px;
     }
     .detalle main.detalleDeProd .sectionDetail div.vistas{
         display: flex;
-        width: 60%;
-        background-color: white;
-        height: 375px;
-        margin: 10px 10px 10px 0px;
+        width: 52%;
+       justify-content: center;
+        height: 520px;
+        flex-direction: column-reverse;
+        align-items: center;
+        
     }
-    .detalle main.detalleDeProd .sectionDetail div.detalle{
+    .detalle main.detalleDeProd .sectionDetail div.vistas ul .caja-secundarias{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .detalle main.detalleDeProd .sectionDetail div.vistas .detallado i.fas.fa-percentage {
+        bottom: 53%;
+        left: 36%;
+        width: 5%;
+        height: 50px;
+        font-size: 15px;
+    }
+    .detalle main.detalleDeProd .sectionDetail div.detalle {
         display: flex;
         flex-direction: column;
-        color: rgb(0, 0, 0);
         width: 46%;
-        height: 375px;
-        padding-left: 5px;
-        margin: 10px 10px 50px 10px;
-        border-left: 2px solid black;
+        height: 475px;
+        margin-top: 30px;
+        padding: 2%;
+        border: 2px solid blueviolet;
+        border-radius: 20px;
+        margin-right: 16px;
+        background-color: rgba(116, 116, 116, 0.329);
     }
 
     .detalle main.detalleDeProd .sectionDetail div.vistas ul{
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: min-content;
-        background-color: white;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        padding-right: 10px;
-        border-right: 2px solid black;
+       margin-left: 7%;
+        
     }
 
     .detalle main.detalleDeProd .sectionDetail div.vistas ul li{
         list-style: none;
     }
     .detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal{
-        width: 40vw;
-        height: 350px;
+        width: 30vw;
+        height: 400px;
+        margin-top: 30px;
+       
     }
     .detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal-movil{
         display: none;
     }
 
-    .detalle main.detalleDeProd .sectionDetail div.vistas img{
+    .detalle main.detalleDeProd .sectionDetail div.vistas .secundarias{
         width: 69px;
         height: 70px;
+        margin: 5px;
+        border: 2px solid black;
+        border-radius: 10px;
     }
 
     .detalle main.detalleDeProd h1, h2, span{
@@ -373,13 +415,13 @@ color: white;
     }
     .detalle main.detalleDeProd .similares ul article{
         width: 25%;
-        height: 200px;
+        height: 240px;
     }
     .detalle main.detalleDeProd .similares article div.producto{
         background-repeat: no-repeat;
         background-position: center;
         height: 150px;
-        width: 24vw;
+        width: 15vw;
         padding: 1vw;
     }
 
@@ -394,13 +436,21 @@ color: white;
         text-align: center;
     }
 
+    .detalle main.detalleDeProd h2.similares {
+        display: block;
+        background-color: rgb(245, 163, 176);
+        color: white;
+        border: white 2px solid;
+        padding: 5px;
+        position: absolute;
+        bottom: 26%;
+        left: 0%;
+        width: 100%;
+    }
     .detalle main.detalleDeProd .similares ul{
         width: 94vw;
-        height: 17rem;
+        height: 20rem;
         margin-left: 3vw;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: nowrap;
-        overflow-y: auto;
+       margin-top: 15%;
     }
 }

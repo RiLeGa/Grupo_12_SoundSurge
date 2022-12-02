@@ -3,7 +3,7 @@
     <%- include ("../partials/head",{title: "Detalle de producto"}) %>
 <body class="detalle" >
     <%- include ("../partials/header") %> 
-    <main class="detalleDeProd"    alt="Imagen principal" style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')">
+    <main class="detalleDeProd"    >
         <% if (producto.stock !== 0) { %>
         <section class="sectionDetail">
            
@@ -32,7 +32,7 @@
                 </section>
                
                 <div class="precio-descuento">
-                    <h3 class="titulo">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
+                    <h3 class="precio-detalle">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
                     <% if (producto.descuento !== 0) { %>
                         <p class="descuento">$<%= producto.precio %></p>
                     <% } %>
@@ -56,15 +56,17 @@
         </div>
             <% } %>
 
-        <h2 class="similares">Productos relacionados</h2>
+        
 <section class="similares">
+    <h2 class="similares">Productos relacionados</h2>
     <ul>
+        
         <% productos.forEach(producto => { %>
                 <article>
-                    <a href="/productos/detalle/<%= producto.id %>">
+                    <a  class="tarjeta-detalle" href="/productos/detalle/<%= producto.id %>">
                     <div class="producto"  style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')"></div>
-                    <h4><%= producto.titulo %></h4>
-                    <p>$<%= producto.precio %></p>
+                    <h4 class="titulo-tarjeta"><%= producto.titulo %></h4>
+                    <p class="precio-tarjeta">$<%= producto.precio %></p>
                     </a>
                 </article>
         <% }) %>

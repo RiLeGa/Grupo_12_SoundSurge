@@ -2,6 +2,10 @@
 .detalle h2{
     text-align: center;
 }
+
+.detalle .detalleDeProd{
+    background: linear-gradient(#6487e6, #ebe5ec);
+ }
 .detalle .sin-stock{
     display: flex;
     flex-direction: column;
@@ -37,9 +41,7 @@
     align-items: center;
 }
 
-.detalle main.detalleDeProd .sectionDetail div.vistas{
-    margin-top: 10px;
-}
+
 .detalle main.detalleDeProd .sectionDetail div.vistas .detallado i.fas.fa-percentage {
     display: flex;
     height: 5%;
@@ -61,6 +63,7 @@
     height: 220px;
     border:blueviolet solid 2px;
     border-radius: 16px;
+    margin-top: 10%;
 }
 .detalle main.detalleDeProd .sectionDetail div.vistas .detallado img.principal-movil{
     width: 100%;
@@ -89,6 +92,15 @@ margin: 5px;
 }
 .detalle main.detalleDeProd .sectionDetail .detalle .precio{
     width: 100%;
+}
+.detalle main.detalleDeProd .sectionDetail .detalle .precio-detalle{
+    color: black;
+background-color: aqua;
+border: rgb(7, 174, 252) solid 2px; 
+border-radius: 10px;
+width: 100%;
+padding: 5px;
+margin: 5px;
 }
 
 .detalle main.detalleDeProd .sectionDetail div.detalle .precio-descuento{
@@ -161,7 +173,7 @@ color: white;
     width: 80%;
     text-align: center;
     color: white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.795);
     border: blueviolet 2px solid;
     border-radius: 16px;
     padding: 3%;
@@ -198,6 +210,8 @@ color: white;
 .detalle main.detalleDeProd .similares ul article{
     width: 25%;
     height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 .detalle main.detalleDeProd .similares article div.producto{
     background-repeat: no-repeat;
@@ -219,17 +233,23 @@ color: white;
 }
 
 .detalle main.detalleDeProd .similares ul{
-    width: 94vw;
-    height: 17rem;
-    margin-left: 3vw;
+    
+    height: 16rem;
+    margin-left: 1vw;
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
     overflow-y: auto;
+    margin-top: 60px;
+    
 }
 
 @media (min-width: 461px) {
-
+    
+    .detalle main.detalleDeProd .sectionDetail div.vistas .detallado i.fas.fa-percentage {
+        bottom: 60%;
+    }
+    
     .detalle main.detalleDeProd .caja-descripcion h2{
         display: block;
         color: white;
@@ -241,13 +261,43 @@ color: white;
     .detalle main.detalleDeProd .similares{
         display: block;
     }
+    .detalle main.detalleDeProd h2.similares{
+        display: none;
+    }
     .detalle main.detalleDeProd .sectionDetail div.vistas .detallado .principal {
         height: 294px;
     }
     .detalle .detalleDeProd {
         background-repeat: repeat;
         background-size: 38px;
-        height: 1110px;
+        height: 1050px;
+    }
+    .detalle main.detalleDeProd .similares article .tarjeta-detalle{
+        text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black solid 2px;
+    border-radius: 10px;
+    background-color: white;
+    width: 90%;
+    margin: 6%;
+    }
+    .detalle main.detalleDeProd .similares article{
+        background-color: #6487e68c;
+    }
+    .detalle main.detalleDeProd .similares article .tarjeta-detalle .titulo-tarjeta{
+        color: black;
+    }
+    .detalle main.detalleDeProd .similares article .tarjeta-detalle .precio-tarjeta{
+        color: black;
+    }
+    .detalle main.detalleDeProd .similares article div.producto{
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100px;
+        
     }
     }
 @media (min-width: 791px) {

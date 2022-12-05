@@ -41,9 +41,11 @@
                 <div class="agregar">
                     <% if (locals.userLogin) { %>
                     <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
-                    <% }else{ %>
-                        <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
+                    <% }else{ %> 
+                        <button class="a-carrito" id="carrito" type="submit"><a id="carrito" href=""> Agregar al carrito</a></button>
+                    
                     <% } %>
+                    
                 </div>
             </div>
             
@@ -80,5 +82,6 @@
        
     </main>
     <%- include ("../partials/footer") %> 
+    <script src="/javascript/sweetAlertLogin.js"></script>
 </body>
 </html>

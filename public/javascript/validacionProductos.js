@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 
     const funcValidate = (obj) => {
         let arr = Object.values(obj)
-        console.log(arr);
+        console.log("hola");
         if (!arr.includes(false)) {
             btn.disabled = false
             btn.style.backgroundColor = 'blue'
@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
     let img3 = $('#imagen3')
     let img4 = $('#imagen4')
 
-    let btn = $('.btn btn-primary')
+    let btn = $('#btn btn-primary')
 
     /* Expresiones regulares para utilizar */
     let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/

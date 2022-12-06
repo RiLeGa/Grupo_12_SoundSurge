@@ -25,14 +25,14 @@
             </ul>
         </nav>
         <a class="logo" href="/"><img src="/images/LogoSoundSurge.png" alt="logoSoundSurge"></a>
-        <section>
+        <section class="opcionesDeProductos">
             <ul class="opcionesDeProductos">
                 <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
                     <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
                 <% } %>
                 <li><a class="btn-neon" href="/productos/categorias">Categorias</a></li>
                 <li><a class="btn-neon" href="/productos/marcas">Marcas</a></li> 
-                <li><a class="btn-neon" href="/productos/todos">Todos los productos</a></li>
+                <li><a class="btn-neon" href="/productos/todos">To2 los productos</a></li>
                 <li><a class="btn-neon" href="/productos/loMasVendido">Lo + Vendido</a></li>
             </ul>
         </section>

@@ -11,6 +11,12 @@
             <p>Completa el registro con lo solicitado<br>para tener la mejor experiencia en Sound<br>Surge.</p>
         <form action="/users/register" method="post" enctype="multipart/form-data" id="formulario">
 
+            <div class="icons">
+                <label for="file"><div id="preview" class="styleImage"></div></i></label>
+                <label for="file" id="iconUser"><i class="fa-solid fa-user"></i></label>
+                <input type="file" name="imagen" id="file"> 
+            </div> 
+
             <div class="container">
                 <label for="nombre">nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="<%= locals.old && old.nombre ? old.nombre : null%>">
@@ -62,12 +68,6 @@
                 <% } %>
                 <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
-            
-            <div class="icons">
-                <label for="file"><div id="preview" class="styleImage"></div></i></label>
-                <label for="file"><i class="fa-solid fa-user"></i></label>
-                <input type="file" name="imagen" id="file"> 
-            </div> 
             <div>
                 <button type="submit" class="enviar">Enviar</button>
             </div>

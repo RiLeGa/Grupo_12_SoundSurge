@@ -15,7 +15,8 @@ window.addEventListener('load', () => {
     let terminos = $('#terminos')
     let inputPass = $('#clave')
     let inputPass2 = $('#confirmar')
-    /* let imagen = $("#file") */
+    let imagen = $("#file")
+    let iconUser = $("#iconUser")
 
     let errores = [{
         id: 1,
@@ -41,12 +42,8 @@ window.addEventListener('load', () => {
         id: 6,
         elemento:"checkbox",
         mensaje: "Debe aceptar los terminos y condiciones"
-    },
-    {
-        id: 7,
-        elemento:"file",
-        mensaje: "Debe aceptar los terminos y condiciones"
-    }]
+    }
+    ]
 
     /* let eye = $('#eye-clave')
     let eye2 = $('#eye-confirmar')
@@ -83,22 +80,7 @@ window.addEventListener('load', () => {
             preview.append(imagen);
 
         }
-            let variable = true
-            switch (true) {
-                case regExExt.test(imagen.value):
-                    $('#preview').innerHTML = "<small>El Nombre solo acepta letras</small>"
-                    errores.forEach(e => {
-                        if(e.id === 7 ){
-                            e.mensaje = "El Nombre solo acepta letras"
-                            variable = false
-                        }
-                    });
-                    if (variable) {
-                        errores.push(error)
-                    }
-                    break;
-            }
-        }
+    }
 
     nombre.addEventListener('blur',() => {
         let error = {
@@ -330,7 +312,7 @@ window.addEventListener('load', () => {
             }   
         let variable = true
         if (terminos.checked) {
-            inputPass2.style.border = "1px solid black"
+            terminos.style.border = "1px solid black"
                 errores = errores.filter(error => {
                     return error.id !== 6
                 })
@@ -349,11 +331,16 @@ window.addEventListener('load', () => {
         console.log(terminos.checked);
     })
 
-    form.addEventListener('submit',(e) => {
-        e.preventDefault();
+    file.addEventListener("change", (e)=>{
+        iconUser.style.display = "none"
+    })
 
+    form.addEventListener('submit',(e) => {
+        
         console.log(form.elements);
         if(errores.length > 0){
+            e.preventDefault();
+        }else{
             form.submit()
         }
     })

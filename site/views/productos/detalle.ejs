@@ -3,7 +3,7 @@
     <%- include ("../partials/head",{title: "Detalle de producto"}) %>
 <body class="detalle" >
     <%- include ("../partials/header") %> 
-    <main class="detalleDeProd"    alt="Imagen principal" style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')">
+    <main class="detalleDeProd"    alt="Imagen principal" >
         <% if (producto.stock !== 0) { %>
         <section class="sectionDetail">
            
@@ -18,32 +18,29 @@
                 </ul>
                 <div class="detallado">
                     <% if (producto.descuento !== 0) { %>
-                    <i class="fas fa-percentage"><%= producto.descuento %></i>
+                    <i class="fas fa-percentage"><h3 class="numPercentage"><%=producto.descuento %></h3></i>
                     <% } %>
                     <img class="principal"  id="imgMain" src="/images/<%= producto.imagenes[0].nombre %>" alt="Imagen principal">
-                </div>
-            </div>
-            <div class="detalle">
-                <h4 class="titulo"><%= producto.marca.nombre %></h4>
-                <h3 class="marca"><%= producto.titulo %></h3>
-                <section class="caja-descripcion">
-                    <h2>descripcion</h2>
-                    <p class="descripcion"><%= producto.descripcion %></p>
-                </section>
-               
-                <div class="precio-descuento">
-                    <h3 class="titulo">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
-                    <% if (producto.descuento !== 0) { %>
-                        <p class="descuento">$<%= producto.precio %></p>
-                    <% } %>
-                </div>
                 
-                <div class="agregar">
-                    <% if (locals.userLogin) { %>
-                    <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
-                    <% }else{ %>
-                        <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
-                    <% } %>
+                    </div>
+                    <div class="detalle">
+                    <h4 class="titulo"><%= producto.marca.nombre %></h4>
+                    <h3 class="marca"><%= producto.titulo %></h3>
+               
+                    <div class="precio-descuento">
+                        <h3 class="titulo">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
+                        <% if (producto.descuento !== 0) { %>
+                            <p class="descuento">$<%= producto.precio %></p>
+                        <% } %>
+                    </div>
+                
+                    <div class="agregar">
+                        <% if (locals.userLogin) { %>
+                        <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
+                        <% }else{ %>
+                            <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
+                        <% } %>
+                    </div>
                 </div>
             </div>
             
@@ -55,6 +52,12 @@
             <h3>Por el momento no hay stock de este producto.</h3>
         </div>
             <% } %>
+
+
+            <section class="caja-descripcion">
+                <h2>descripcion</h2>
+                <p class="descripcion"><%= producto.descripcion %></p>
+            </section>
 
         <h2 class="similares">Productos relacionados</h2>
 <section class="similares">

@@ -4,6 +4,10 @@
     box-sizing: border-box;
     text-transform: capitalize;
     font-family: var(--fuenteGral);
+    
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 
 li{

@@ -25,32 +25,25 @@
             </ul>
         </nav>
         <a class="logo" href="/"><img src="/images/LogoSoundSurge.png" alt="logoSoundSurge"></a>
-        <section class="opcionesDeProductos">
-            <ul class="opcionesDeProductos">
-                <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
-                    <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
-                <% } %>
-                <li><a class="btn-neon" href="/productos/categorias">Categorias</a></li>
-                <li><a class="btn-neon" href="/productos/marcas">Marcas</a></li> 
-                <li><a class="btn-neon" href="/productos/todos">To2 los productos</a></li>
-                <li><a class="btn-neon" href="/productos/loMasVendido">Lo + Vendido</a></li>
-            </ul>
+
+        <section class="busqueda">
+
+            <div>
+            <input id="iconSearch" name="search" type="text" placeholder="¿Que estas Buscando?"> 
+            </div>
+    
+            <div>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+    
         </section>
             
-                <section class="busqueda">
 
-                    <div>
-                    <input id="iconSearch" name="search" type="text" placeholder="¿Que estas Buscando?"> 
-                    </div>
-
-                    <div>
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-
-                </section>
         <div class="carrito1">
             <a href="/productos/carrito" target="_blank" class="btn-neon"><i class="fas fa-shopping-cart"></i></a>
         </div>
+                
+       
         <div class="usuario">
             <input type="checkbox" name="perfil" id="perfil">   
             <% if (locals.userLogin) { %>
@@ -80,4 +73,18 @@
             </nav>
         </div>
     </section>
+
+    <section class="opcionesDeProductos">
+        <ul class="opcionesDeProductos">
+            <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
+                <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
+            <% } %>
+            <li><a class="btn-neon" href="/productos/categorias">Categorias</a></li>
+            <li><a class="btn-neon" href="/productos/marcas">Marcas</a></li> 
+            <li><a class="btn-neon" href="/productos/todos">To2 los productos</a></li>
+            <li><a class="btn-neon" href="/productos/loMasVendido">Lo + Vendido</a></li>
+        </ul>
+        
+    </section>
+    
 </header>

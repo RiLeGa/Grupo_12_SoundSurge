@@ -1,16 +1,32 @@
 .crear main h2{
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 45px;
     text-align: center;
+    text-shadow: 2px 2px 7px #979700;
 }
 .crear{
     display: flex;
     flex-direction: column;
+    background: linear-gradient(rgb(245, 242, 219),hsl(46, 99%, 50%), #333333);
+    
 }
-.crear {
-    background-image:url(/images/fondo-luthier5.jpg); 
-    background-repeat: no-repeat;
-    background-size: 100vw 120vh;
+.crear .direct-lista{
+    display: none;
+}
+.crear .direct-lista-flecha{
+    color: #000000;
+    font-size: 25px;
+    margin-left: 3%;
+
+}
+
+.crear form{
+    width: 80%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .crear .imagenes-sec{
     display: flex;
@@ -21,16 +37,21 @@
 .crear .error{
     margin: 10px;
     color: white;
-    background-color: red;
-    width: 20%;
-   display: flex;
-   justify-content: center;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 4px;
+    text-shadow: 5px 3px 4px red;
 }
 .crear .secundarias{
     width: 16%
 }
-.crear main section{
-    margin-top: 50px;
+.crear main section {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .crear .direct-lista{
@@ -41,16 +62,26 @@
     display: flex;
    flex-direction: column;
    align-items: center;
-   margin-right: 20%;
+   background-color: #00000047;
+   margin: 5px;
+   width: 90%;
+   border: 2px solid black;
 }
+  
+
 .crear main section .mb-3 label.form-label{
     display: flex;
     flex-direction: column;
-    width: 60vw;
-    margin-left: 20vw;
-    margin-top: 25px;
-    text-align: left;
+    padding: 7px;
+    width: 70%;
     font-size: 25px;
+    text-shadow: 2px 2px 7px #ffff00;
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    box-shadow: 4px 2px 2px yellow;
 }
 
 .crear main section .mb-3 .invalid-feedback{
@@ -66,20 +97,22 @@
 .crear main section .mb-3 input.form-control{
     width: 60vw;
     height: 30px;
-    margin-left: 20vw;
-    border: 2px solid black;
+   
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .crear main section .mb-3 select.form-select{
     width: 60vw;
     height: 30px;
-    margin-left: 20vw;
+   text-align: center;
     border: 2px solid black;
 }
 
 .crear main section .botones{
     width: 30vw;
-    margin-left: 35vw;
+    
     margin-top: 25px;
     display: flex;
     justify-content: space-around;
@@ -91,6 +124,9 @@
     color:black;
     border-radius: 15%;
     margin-bottom: 50px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin-right: 25%;
     
 }
 
@@ -101,4 +137,16 @@
     border-radius: 15%;
     margin-bottom: 50px;
     
+}
+
+@media (min-width: 461px) {
+    .crear {
+        background-image:url(/images/fondo-luthier5.jpg); 
+        background-repeat: no-repeat;
+        background-size: 110vw 140vh;
+    }
+    .crear .direct-lista{
+        display: block;
+    }
+
 }

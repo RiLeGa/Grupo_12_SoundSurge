@@ -47,14 +47,14 @@ window.addEventListener('load', () => {
                 this.style.border='2px solid red'
                 validate.titulo = false
                 break;
-            case !(this.value.trim().length > 2 && this.value.trim().length < 100):
-                $('#tituloError').innerHTML = "El titulo del producto debe tener mas de 2 letras y maximo 10"
+            case !(this.value.trim().length > 5 && this.value.trim().length < 100):
+                $('#tituloError').innerHTML = "El titulo del producto debe tener mas de 5 caracteres y un maximo de 10"
                 this.style.border='2px solid red'
                 validate.titulo = false
                 break;
             default:
                 $('#tituloError').innerHTML = null
-                this.style.border='2px solid green'
+                this.style.border='2px solid black'
                 validate.titulo = true
                 break;
         }
@@ -68,14 +68,19 @@ window.addEventListener('load', () => {
                 this.style.border='2px solid red'
                 validate.price = false
                 break;
-            case !(this.value.trim().length >= 2 && this.value.trim().length <= 16):
-                $('#precioError').innerHTML = "El precio del producto debe contener 2 caracteres y maximo 10"
+            case !(this.value.trim().length >= 2 && this.value.trim().length <= 10):
+                $('#precioError').innerHTML = "El precio del producto debe contener 2 numeros y maximo 10"
                 this.style.border='2px solid red'
                 validate.price = false
                 break;
+                case !(this.value.trim() > 0):
+                    $('#precioError').innerHTML = "Solo se permiten numeros positivos"
+                    this.style.border='2px solid red'
+                    validate.titulo = false
+                    break;
             default:
                 $('#precioError').innerHTML = null
-                this.style.border='2px solid green'
+                this.style.border='2px solid black'
                 validate.price = true
                 break;
         }
@@ -89,9 +94,14 @@ window.addEventListener('load', () => {
                 this.style.border='2px solid red'
                 validate.discount = false
                 break;
+                case !(this.value.trim() > 0):
+                    $('#descuentoError').innerHTML = "Solo se permiten numeros positivos"
+                    this.style.border='2px solid red'
+                    validate.titulo = false
+                    break;
             default:
                 $('#descuentoError').innerHTML = null
-                this.style.border='2px solid green'
+                this.style.border='2px solid black'
                 validate.discount = true
                 break;
         }
@@ -101,14 +111,19 @@ window.addEventListener('load', () => {
     stock.addEventListener('blur', function() {
         switch (true) {
            
-            case !(this.value.trim().length >= 1 && this.value.trim().length <= 16):
-                $('#stockError').innerHTML = "El stock del producto debe contener 1 caracteres y maximo 10"
+            case !(this.value.trim().length >= 1 && this.value.trim().length <= 10):
+                $('#stockError').innerHTML = "El stock del producto debe contener 1 numero y maximo 10"
                 this.style.border='2px solid red'
                 validate.stock = false
                 break;
+                case !(this.value.trim() >= 0):
+                    $('#stockError').innerHTML = "Solo se permiten numeros positivos o cero"
+                    this.style.border='2px solid red'
+                    validate.titulo = false
+                    break;
             default:
                 $('#stockError').innerHTML = null
-                this.style.border='2px solid green'
+                this.style.border='2px solid black'
                 validate.stock = true
                 break;
         }
@@ -118,14 +133,14 @@ window.addEventListener('load', () => {
     categorias.addEventListener('blur', function() {
         switch (true) {
             case !this.value.trim():
-                $('#categoriaError').innerHTML = "Debes ingresar una categoria"
+                $('#categoriaError').innerHTML = 'Debe seleccionar una categoria'
                 this.style.border='2px solid red'
                 validate.categorias = false
                 break;
             
             default:
                 $('#categoriaError').innerHTML = null
-                this.style.border='2px solid green'
+                this.style.border='2px solid black'
                 validate.categorias = true
                 break;
         }
@@ -141,7 +156,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#marcaError').innerHTML = null
-                this.style.border='2px solid green'
+                this.style.border='2px solid black'
                 validate.marcas = true
                 break;
         }
@@ -162,7 +177,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $('#descripcionError').innerHTML = null
-                this.style.border='2px solid green'
+                this.style.border='2px solid black'
                 validate.description = true
                 break;
         }

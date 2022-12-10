@@ -4,10 +4,14 @@
 <body class="crear">
     <%- include ("../partials/header") %> 
     <main>
-        <h2>Crear Producto</h2>
         <a class="direct-lista" href="lista">
             <button type="button" class="btn btn-primary">Lista de productos</button>
         </a>
+        <a class="direct-lista-flecha" href="lista">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h2>Crear Producto</h2>
+        
         <section>
             <form action="/admin/crear" method="post" enctype="multipart/form-data">
                 <div class="mb-3">

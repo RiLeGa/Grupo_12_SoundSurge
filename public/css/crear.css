@@ -141,12 +141,63 @@
 
 @media (min-width: 461px) {
     .crear {
-        background-image:url(/images/fondo-luthier5.jpg); 
+        background-image: url(/images/fondo-luthier5.jpg);
         background-repeat: no-repeat;
-        background-size: 110vw 140vh;
+        background-size: 130vw 160vh;
+        background-position-x: 29%;
+    }
+    .crear main h2 {
+      
+        text-shadow: 2px 2px 7px #ffff01;
     }
     .crear .direct-lista{
         display: block;
     }
+    .crear main section .mb-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000000ad;
+        margin: 5px;
+        width: 90%;
+        border: 2px solid #b7b324;
+        
+    }
+    .crear main section .mb-3 input.form-control{
+        width: 60vw;
+        height: 30px;
+        background-color: #ffd8b6
+        
 
 }
+.crear main section .mb-3 select.form-select {
+  background-color: #ffd8b6 ;
+}
+.crear .direct-lista{
+margin-top: 4%;
+width: 28%;
+margin-left: 4%;
+}
+.crear .direct-lista #boton{
+    padding: 3px;
+    background: black;
+    color: yellow;
+    box-shadow: 5px 4px 36px white;
+    }
+.crear .direct-lista-flecha{
+    display: none;
+}
+
+
+}
+
+    @media (min-width: 791px){
+        .crear main section .mb-3 input.form-control {
+            width: 60vw;
+            height: 30px;
+            border: 3px solid black;
+            background-color: #e5b46c;
+            border-radius: 5px;
+        }
+    }
+

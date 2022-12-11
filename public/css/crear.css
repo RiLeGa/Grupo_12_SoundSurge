@@ -157,7 +157,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #000000ad;
+        background-color: #000000d9;
         margin: 5px;
         width: 90%;
         border: 2px solid #b7b324;
@@ -192,12 +192,72 @@ margin-left: 4%;
 }
 
     @media (min-width: 791px){
+        .crear {
+            background-size: 57vw 74vh;
+            background-repeat: repeat;
+            background-position-x: 116%;
+        }
+        .crear main h2 {
+            text-shadow: 2px 2px 7px #ffff01;
+            background: #00000080;
+            width: 40%;
+            margin: 0%;
+            display: flex;
+            justify-content: center;
+            margin-left: 32%;
+            margin-bottom: 2%;
+            padding: 7px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 11px yellow;
+        }
         .crear main section .mb-3 input.form-control {
             width: 60vw;
             height: 30px;
             border: 3px solid black;
             background-color: #e5b46c;
             border-radius: 5px;
+        }
+        .crear .direct-lista {
+            margin-top: 2%;
+        }
+        .crear main section .mb-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #00000096;
+            margin: 5px;
+            width: 90%;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+        .crear form {
+            background-color: #000000bf;
+            padding-top: 2%;
+        }
+        .crear main section .mb-3 label.form-label {
+            width: 40%;
+            border: 2px solid yellow;
+            border-radius: 16px;
+        }
+        .crear main section .mb-3 select.form-select {
+            width: 50vw;
+            height: 38px;
+            border: 3px solid black;
+            background-color: #ffcc81;
+            border-radius: 5px;
+            margin-top: 8px;
+            font-size: 20px;
+        }
+        .crear main section .mb-3 input.form-control {
+            width: 50vw;
+            height: 38px;
+            border: 3px solid black;
+            background-color: #ffcc81;
+            border-radius: 5px;
+            margin-top: 8px;
+        }
+        .crear .error {
+            font-size: 20px;
         }
     }
 

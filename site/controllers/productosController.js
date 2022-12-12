@@ -91,12 +91,16 @@ module.exports = {
         let marcas = db.Marcas.findAll({
             include:[{ all: true}]
         })
-        Promise.all([marcas])
-        .then(([marcas])=> {
+        let productos = db.Productos.findAll({
+            include:[{ all: true}]
+        })
+        Promise.all([marcas, productos])
+        .then(([marcas, productos])=> {
             
             
             return res.render('productos/marcas', {
-                marcas
+                marcas,
+                productos
             })
         })
         .catch(error => res.send(error))

@@ -1,20 +1,20 @@
 <div class="card">
-      <ul>
-        <% for( let i = 0; i <= 7; i++ ) { %>
-            <article>
-                <a href="/productos/detalle/<%= productos[i].id %>">
-                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
-                    <div class="precio-1">
-                        <h3><%= productos[i].titulo %></h3>
-                        <span >$<%= productos[i].precio %></span>
-                    </div>
-                </div>
-                </a>
-            </article>
-        <% } %>
-      </ul>
-      <!-- <div >
-          <button>Comprar producto</button>
-      </div> -->
+    <a href="/productos/detalle/<%= id %>">
+      <div class="card-img">
+        <div class="card-img-background">
+          <img class="img-result" src="/images/<%=imagen%>" alt="">
+        </div>
+      </div>
+      <div class="card-text-box">
+        <h3 class="card-name"><%= titulo.slice(0,30) %></h3>
+        <div class="card-value">
+          <p class="card-discount"><%= descuento %>%</p>
+          <p class="card-price">$<%= precio - (precio * descuento / 100)%></p>
+        </div>
+      </div>
+      <div class="card-button">
+          <button onclick="addItem('<%= id %>')">Comprar producto</button>
+      </div>
+    </a>
   </div>
   

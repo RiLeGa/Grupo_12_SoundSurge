@@ -3,7 +3,7 @@
     background-image:url(/images/FondoMovil.jpg) ;
     background-repeat: no-repeat;
     background-position: right 0;
-    background-size: 100vw 100vh;
+    background-size: 100vw;
     background-color: black;
     font-family: var(--fuenteGral);
 }

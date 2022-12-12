@@ -2,8 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-family: var(--fuenteGral);
+    
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 
 li{

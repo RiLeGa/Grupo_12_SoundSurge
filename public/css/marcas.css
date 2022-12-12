@@ -1,15 +1,84 @@
 .marcas{
-    height: 100vh ;
+    display: flex;
+    width: 100vw;
+    align-items: baseline;
+    background-color: black;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
 }
-.marcas .brand:first-child{
-    background-size: cover;
-    background-repeat: no-repeat;
+
+.marcas h1{
+    text-align: center;
 }
-.marcas .brand:nth-child(2){
-    background-size: cover;
-    background-repeat: no-repeat;
+
+.marcas .indice{
+    width: 20vw;
+    margin-left: 1vw;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
-.marcas .brand:nth-child(3){
-    background-size: cover;
-    background-repeat: no-repeat;
+
+.marcas .muestra{
+    width: 77vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* box-shadow: 0 0 10px rgb(65 203 227 / 95%);
+    border-radius: 5px; */
+}
+
+.marcas a.category_item{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 19.8vw;
+    height: 40px;
+    margin-bottom: 5px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;/* 
+    border: 3px solid black; */
+    box-shadow: 0 0 20px rgba(165, 7, 197, 0.95);
+    border-radius: 5px;
+  }
+.category_tuneado{
+    background-color: rgb(65 203 227 / 95%);
+    display: flex;
+    width: 19.8vw;
+    height: 40px;
+    margin-bottom: 5px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;/* 
+    border: 3px solid black; */
+    box-shadow: 0 0 20px rgba(165, 7, 197, 0.95);
+    border-radius: 5px;
+}
+  .marcas a .brand{
+    color: black;
+  }
+
+  .marcas div.producto{ 
+    background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 45px;
+        background-size: 65%;
+        display: block;
+        text-align: center;
+        width: 18vw;
+        height: 40vh;
+        margin-bottom: 35px;
+        transition: 0.5s;
+        box-shadow: 0 0 55px rgba(165, 7, 197, 0.95);
+        border-radius: 5px;
+
 }

@@ -25,41 +25,31 @@
             </ul>
         </nav>
         <a class="logo" href="/"><img src="/images/LogoSoundSurge.png" alt="logoSoundSurge"></a>
-        <section class="opcionesDeProductos">
-            <ul class="opcionesDeProductos">
-                <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
-                    <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
-                <% } %>
-                <li><a class="btn-neon" href="/productos/categorias">Categorias</a></li>
-                <li><a class="btn-neon" href="/productos/marcas">Marcas</a></li> 
-                <li><a class="btn-neon" href="/productos/todos">To2 los productos</a></li>
-                <li><a class="btn-neon" href="/productos/loMasVendido">Lo + Vendido</a></li>
-            </ul>
+
+        <section class="busqueda">
+            <div>
+                <form class="form-search" action="/busqueda" method="get">
+                    <input type="text" name="search" id="search" placeholder="¿Que estas Buscando?">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
         </section>
             
-                <section class="busqueda">
 
-                    <div>
-                    <input id="iconSearch" name="search" type="text" placeholder="¿Que estas Buscando?"> 
-                    </div>
-
-                    <div>
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-
-                </section>
         <div class="carrito1">
             <a href="/productos/carrito" target="_blank" class="btn-neon"><i class="fas fa-shopping-cart"></i></a>
         </div>
+                
+       
         <div class="usuario">
             <input type="checkbox" name="perfil" id="perfil">   
             <% if (locals.userLogin) { %>
                 <input type="checkbox" name="perfil" id="perfil">
-                <label class="perfilU" for="perfil"><img class="usuario"  src="/images/users/<%= locals.userLogin.imagen %>" alt=""><h2>Hola! <%= locals.userLogin.nombre %></h2>
+                <label class="perfilU btn-neon" for="perfil"><img class="usuario"  src="/images/users/<%= locals.userLogin.imagen %>" alt=""><h2>Hola! <%= locals.userLogin.nombre %></h2>
                 </label>
             <% } else { %>
                 <input type="checkbox" name="perfil" id="perfil">
-                <label class="sinLog" for="perfil"><i class="fas fa-user-circle"></i><h2>Hola!</h2></label>
+                <label class="sinLog btn-neon" for="perfil"><i class="fas fa-user-circle"></i><h2>Hola!</h2></label>
             <% } %>
             <nav class="opcionesDePerfil">
                 <ul>
@@ -80,4 +70,18 @@
             </nav>
         </div>
     </section>
+
+    <section class="opcionesDeProductos">
+        <ul class="opcionesDeProductos">
+            <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
+                <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
+            <% } %>
+            <li><a class="btn-neon" href="/productos/categorias">Categorias</a></li>
+            <li><a class="btn-neon" href="/productos/marcas">Marcas</a></li> 
+            <li><a class="btn-neon" href="/productos/todos">To2 los productos</a></li>
+            <li><a class="btn-neon" href="/productos/loMasVendido">Lo + Vendido</a></li>
+        </ul>
+        
+    </section>
+    
 </header>

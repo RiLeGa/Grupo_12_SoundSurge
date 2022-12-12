@@ -4,28 +4,37 @@
 
   <body>
     <%- include('./partials/header') %>
-    <main>
-      <% if (resultados.length != 0) { %>
-        <ul>
-          <% for( let i = 0; i <= resultados.length ; i++ ) { %>
-              <div><%- resultados.nombre %> </div>
-          <% } %>
-        </ul>
-      <% }else { %>
-      <h1>
-        No se encontraron coincidencias con la busqueda de: <%= busqueda %>
-      </h1>
-      <section class="resultados">
-        <div class="card">
-          <div class="card-img">
-            <img src="/images/searchNotFound.png" alt="producto no encontrado" />
+    <main class="busqueda">
+
+      <h1>Resultado de la busqueda: <%= busqueda %> </h1>
+
+      <% if (productos.length != 0) { %>
+        <section class="resultados">
+          <% productos.forEach(producto => { %>
+              <%- include('./partials/card',{
+                id:producto.id,
+                imagen:producto.imagenes[0].nombre,
+                titulo:producto.titulo,
+                descuento:producto.descuento,
+                precio:producto.precio 
+              }) %> 
+          <% }) %>
+        </section>
+        <% }else { %>
+        <h1>
+          No se encontraron coincidencias con la busqueda de: <%= busqueda %>
+        </h1>
+        <section class="resultados">
+          <div>
+            <div class="card-img">
+              <img class="notFound" src="/images/travolta-gif-4.gif" alt="producto no encontrado" />
+            </div>
+            <div class="card-text-box">
+              <h3 class="card-name">No se encontraron productos relacionados con tu busqueda</h3>
+            </div>
           </div>
-          <div class="card-text-box">
-            <h3 class="card-name">No se entraron productos</h3>
-          </div>
-        </div>
-      </section>
-      <% } %>
+        </section>
+        <% } %>
     </main>
     <%- include('./partials/footer') %>
     

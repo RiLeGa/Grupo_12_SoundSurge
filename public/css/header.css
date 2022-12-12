@@ -1,5 +1,11 @@
 header{
+    background-color: black;
+    width:  100%;
+    height: 100px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .navegacion {
@@ -17,6 +23,7 @@ header .navegacion .logo{
     justify-content: center;
     display: flex;
     margin-left: 20px;
+    width: 74vw;
 }
 header .navegacion label.burguer i{
     width: 2vw;
@@ -32,12 +39,47 @@ header .navegacion input:checked ~ nav.opcionesDePerfil-Movil {
     display: block;
     z-index: 3;
 }
-header .navegacion .busqueda{
+
+header .navegacion .busqueda .form-search{
     display: flex;
-    padding: 0 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
 }
+
+header .navegacion .busqueda {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    width: 100vw;
+    margin-top: 15px;
+    padding-left: 10vh;
+}
+
 header .navegacion .busqueda input{
-    display: none;
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+    width: 70vw;
+    height: 20px;
+    border: none;
+    border-radius: 15px;
+}
+header .navegacion .busqueda button{
+    background: none;
+    border: none;
+}
+
+
+header .navegacion .busqueda i.fas.fa-search{
+    display: flex;
+    color: #8d1888;
+    font-size: 20px;
+    margin: 18px 10px 0 5px;
+    padding: 0 5px;
 }
 header .navegacion nav.opcionesDePerfil-Movil{
     display: none;
@@ -47,11 +89,13 @@ header .navegacion nav.opcionesDePerfil-Movil{
 }
 
 header .navegacion nav.opcionesDePerfil-Movil ul{
+    position: absolute;
     display: flex;
     background-color: #8d1888;
     flex-direction: column;
     justify-content: space-evenly;
     width: 100vw;
+    top: 40px;
     height: 55vh;
 }
 header .navegacion nav.opcionesDePerfil-Movil ul li{
@@ -78,19 +122,6 @@ header .navegacion nav.opcionesDePerfil-Movil button.logout{
     padding: 15px 12px;
     border: none;
 }
-header .navegacion .busqueda button{
-    background: none;
-    border: none;
-}
-
-header .navegacion .busqueda i.fas.fa-search{
-    display: block;
-    color: #8d1888;
-    font-size: 20px;
-    margin-top: 20px;
-    padding: 0 5px;
-    margin-left: 100px;
-}
 
 header .navegacion .carrito1 i.fas.fa-shopping-cart{
     color: #ffffff;
@@ -107,7 +138,7 @@ header .navegacion label.perfil{
 header .navegacion nav.opcionesDePerfil{
     display: none;
 }
-header .navegacion .opcionesDeProductos{
+header .opcionesDeProductos{
     display: none;
 }
 header .navegacion div.usuario{
@@ -118,6 +149,25 @@ header .navegacion div.usuario{
 /*Tablet*/
 
 @media (min-width: 461px){
+    header{
+        background-color: black;
+        width:  100%;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .navegacion {
+        background-color: rgb(0, 0, 0);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width:  100%;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+    }
     header section{
         width:  100%;
         height: 70px;
@@ -136,6 +186,7 @@ header .navegacion div.usuario{
     header .navegacion .logo{
         display: flex;
         justify-content: center;
+        width: 85vw;
     }
 
     header .navegacion img{
@@ -143,29 +194,60 @@ header .navegacion div.usuario{
         width: 100px;
         padding-right: 3px;
     }
-    header .navegacion .busqueda {
+
+    header .navegacion .busqueda .form-search{
         display: flex;
-        margin-top: 4px;
-        margin-right: 10px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
     }
+
+    header .navegacion .busqueda {
+        position: absolute;
+        top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        width: 100vw;
+        margin-top: 15px;
+        padding-left: 10vh;
+    }
+    header .navegacion .busqueda .form-search{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+    }
+    
 
     header .navegacion .busqueda input{
         display: flex;
         font-size: 15px;
         text-align: center;
-        width: 30vw;
+        width: 70vw;
         height: 20px;
-        margin-top: 18px;
+        border: none;
+        border-radius: 15px;
+    }
+    header .navegacion .busqueda button{
+        background: none;
         border: none;
     }
     
-    }
+    
     header .navegacion .busqueda i.fas.fa-search{
         display: flex;
         color: #8d1888;
         font-size: 20px;
         margin: 18px 10px 0 5px;
         padding: 0 5px;
+    }
+
+    header .navegacion .carrito1{
+        position: absolute;
+        right: 9px;
+        top: 10px;
     }
 
     header .navegacion .carrito1 i.fas.fa-shopping-cart{
@@ -177,6 +259,7 @@ header .navegacion div.usuario{
     header .navegacion label.perfil{
         display: none;
     }
+}
 
 
 /*Desktop*/
@@ -184,10 +267,28 @@ header .navegacion div.usuario{
     header{
         background-color: black;
         width:  100%;
-        height: 70px;
+        height: 100px;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
+    }
+    header .navegacion {
+        background-color: rgb(0, 0, 0);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width:  100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .navegacion .logo{
+        display: flex;
+        justify-content: center;
+        width: 9vw;
+        margin-top: 40px;
     }
 
     header section{
@@ -217,18 +318,28 @@ header .navegacion div.usuario{
     }
     header .navegacion .busqueda {
         display: flex;
-        width: 20vw;
+        position: unset;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        width: 64vw;
+        padding-left: 5px;
+    }
+    header .navegacion .busqueda .form-search{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        margin-top: -20px;
     }
     header .navegacion .busqueda input{
         display: flex;
         font-size: 15px;
         text-align: center;
-        width: 100%;
-        height: 20px;
-        margin-top: 18px;
+        width: 58vw;
+        height: 30px;
+        border-radius: 15px;
+        margin-top: 5px;
         border: none;
     }
     
@@ -236,12 +347,66 @@ header .navegacion div.usuario{
     header .navegacion nav.opcionesDePerfil{
         display: none;
     }
-    header .navegacion .opcionesDeProductos{
+    header .opcionesDeProductos{
         display: flex;
-        flex: auto;
+        width: 60vw;
+        height: 25px;
+        margin-bottom: 5px;
         justify-content: space-around;
-        align-items: self-end;
+        align-items: center;
     }
+    header .opcionesDeProductos a{
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        margin: 10px 0;
+        padding: 7px 8px;
+        text-decoration: none;
+        color: #f8f4f4;
+        font-family: sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        transition: 0.5s;
+        z-index: 1;
+    }
+    
+    header .opcionesDeProductos a:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 96%;
+        height: 100%;
+        border-left: 2px solid #8d1888;
+        border-right: 2px solid #8d1888;
+        transform: scalex(2);
+        opacity: 0;
+        transition: 0.3s;
+      }
+    header .opcionesDeProductos a:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 96%;
+        height: 100%;
+        background-color: #8d1888;
+        transform: scale(0);
+        opacity: 0;
+        transition: 0.3s;
+        z-index: -1;
+      }
+    header .opcionesDeProductos a:hover {
+        color: #fff;
+    }
+    header .opcionesDeProductos a:hover:before {
+          transform: scalex(1);
+          opacity: 1;
+        }
+    header .opcionesDeProductos a:hover:after {
+          transform: scalex(1);
+          opacity: 1;
+        }
 
     header .navegacion nav ul{
         display: flex;
@@ -269,6 +434,12 @@ header .navegacion div.usuario{
     }
     header .navegacion .burguer{
          display: none;
+    }
+
+    header .navegacion .carrito1{
+        position: absolute;
+        right: 100px;
+        top: 20px;
     }
 
     header .navegacion .carrito1 i.fas.fa-shopping-cart{
@@ -301,13 +472,14 @@ header .navegacion div.usuario{
         padding: 15px 7px 0 10px;
         transition: 0.2s;
         border-radius: 10%;
-        top: 4;
+        top: 18px;
     }
     header .navegacion label.sinLog{
         display: block;
         color: #fbfbfb;
-        padding: 15px 7px 8px 10px;
+        padding: 17px 9px 8px 11px;
         border-radius: 10%;
+        margin-top: 40px;
     }
 
     header .navegacion label.sinLog h2{
@@ -318,7 +490,8 @@ header .navegacion div.usuario{
     header .navegacion nav.opcionesDePerfil button.logout:hover,
     header .navegacion label.sinLog:hover,
     header .navegacion label.perfil:hover,
-    header .navegacion .btn-neon:hover{
+    header .navegacion .btn-neon:hover,
+    header .opcionesDeProductos .btn-neon:hover{
         background: #8d1888;
     }
 
@@ -326,8 +499,8 @@ header .navegacion div.usuario{
 
     header .navegacion div.usuario{
         display: block;
-        display: block;
-        width: 130px;
+        width: 75px;
+        margin-right: 20px;
     }
 
     header .navegacion label.perfil i.fas .fa-user-circle{

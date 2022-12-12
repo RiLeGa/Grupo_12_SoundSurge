@@ -11,8 +11,7 @@
     flex-direction: row-reverse;
 }
 .editar main .section-imagenes #imagen,#imagen2,#imagen3,#imagen4{
-   width: 125%;
-   margin-bottom: 16px;
+   display: none;
 }
 .editar{
     display: flex;
@@ -79,13 +78,13 @@
    align-items: center;
    background-color: #00000047;
    margin: 5px;
-   width: 90%;
+   width: 103%;
    border: 2px solid black;
 }
 .editar main section .mb-33 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: normal;
     
     margin: 5px;
     width: 35%;
@@ -95,7 +94,7 @@
     display: flex;
     flex-direction: column;
     padding: 7px;
-    width: 77%;
+    width: 100%;
     font-size: 19px;
     text-shadow: 2px 2px 7px #ffff00;
     color: yellow;
@@ -177,16 +176,23 @@
     
 }
 
+
 @media (min-width: 461px) {
     .editar {
-        background-image: url(/images/fondo-luthier6.jpg);
-        background-repeat: no-repeat;
-        background-size: 130vw 160vh;
-        background-position-x: 29%;
+        background-image: url(/images/guitarra-fondo-detalle.png);
+        background-repeat: repeat;
+        
+       
+        display: flex;
+        justify-content: center;
     }
     .editar main h2 {
-      
-        text-shadow: 2px 2px 7px #ffff01;
+        text-shadow: 3px 2px 35px #ffffff;
+        background-color: #000000d9;
+        color: yellow;
+        height: 100px;
+        padding-top: 4%;
+        text-align: center;
     }
     .editar .direct-lista{
         display: block;
@@ -195,11 +201,23 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #000000d9;
+        background-color: #000000b5;
         margin: 5px;
-        width: 90%;
         border: 2px solid #b7b324;
-        
+        height: 143px;
+        padding-top: 5%;
+        padding: 5%;
+    }
+    .editar main section #descripcion{
+        height: 260px;
+    }
+    .editar main section #descripcion textarea{
+        width: 68%;
+        margin-top: 5px;
+        padding: 2%;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: #ffd8b6;
     }
     .editar main section .mb-3 input.form-control{
         width: 60vw;
@@ -210,6 +228,7 @@
 }
 .editar main section .mb-3 select.form-select {
   background-color: #ffd8b6 ;
+  width: 90%;
 }
 .editar .direct-lista{
 margin-top: 4%;
@@ -224,6 +243,80 @@ margin-left: 4%;
     }
 .editar .direct-lista-flecha{
     display: none;
+}
+.editar main section .caja1,.caja2,.caja3 {
+width: 90%;
+margin-left: 4%;
+}
+.editar main section .articulo1,.articulo2{
+    width: 130%;
+}
+.editar main section .articulo2{
+    display: flex;
+    flex-direction: column-reverse;
+    
+    
+
+}
+.editar main .section-imagenes {
+    display: flex;
+    flex-direction: column;
+}
+.editar .imagenes-sec {
+    display: flex;
+    flex-direction:row ;
+}
+.editar .secundarias {
+    width: 51%;
+    margin: 5px;
+    padding: 3%;
+    background-color: black;
+    box-shadow: 5px 5px 10px yellow;
+}
+.editar main section .mb-33 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+width: 100%;
+justify-content: space-between;
+}
+.editar main section .botones {
+    width: 49vw;
+    /* margin-top: 25px; */
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000d9;
+    margin-bottom: 3%;
+    padding-top: 8%;
+    border: 2px solid wheat;
+    border-radius: 10px;
+    /* box-shadow: 9px 6px 16px #d7971f; */
+}
+.editar main section .botones .btn.btn-primary {
+    background-color: rgb(74, 82, 74);
+    padding: 15px;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin-right: 25%;
+    width: 45%;
+    box-shadow: 4px 3px 9px white;
+}
+.editar main section .botones .btn.btn-secundary {
+    background-color: rgb(186, 3, 3);
+    padding: 15px;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    width: 40%;
+    box-shadow: 5px 3px 10px pink;
+}
+.editar main section .botones{
+    padding-right: 4%;
+    padding-left: 4%;
 }
 
 

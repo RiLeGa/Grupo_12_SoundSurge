@@ -1,0 +1,296 @@
+.editar main h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 45px;
+    text-align: center;
+    text-shadow: 2px 2px 7px #979700;
+}
+.editar main .section-imagenes{
+    display: flex;
+   
+    flex-direction: row-reverse;
+}
+.editar main .section-imagenes #imagen,#imagen2,#imagen3,#imagen4{
+   width: 125%;
+   margin-bottom: 16px;
+}
+.editar{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(245, 242, 219),hsl(46, 99%, 50%), #333333);
+    
+    
+}
+.editar .direct-lista{
+    display: none;
+}
+.editar .direct-lista-flecha{
+    color: #000000;
+    font-size: 25px;
+    margin-left: 3%;
+
+}
+
+.editar form{
+    width: 80%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.editar .imagenes-sec{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 55%;
+   
+}
+.editar .error{
+    margin: 10px;
+    color: white;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 4px;
+    text-shadow: 5px 3px 4px red;
+}
+.editar .secundarias{
+    width: 68%;
+    margin: 20px;
+    padding: 3%;
+    background-color: black;
+    box-shadow: 5px 5px 10px yellow;
+}
+.editar main section {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editar .direct-lista{
+    width: 60vw;
+    margin-left: 20vw;
+}
+.editar main section .mb-3{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #00000047;
+   margin: 5px;
+   width: 90%;
+   border: 2px solid black;
+}
+.editar main section .mb-33 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 5px;
+    width: 35%;
+   
+}
+.editar main section .mb-33 label.form-label {
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    width: 77%;
+    font-size: 19px;
+    text-shadow: 2px 2px 7px #ffff00;
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    
+    box-shadow: 4px 2px 2px yellow;
+}
+  
+
+.editar main section .mb-3 label.form-label{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    width: 70%;
+    font-size: 25px;
+    text-shadow: 2px 2px 7px #ffff00;
+    color: yellow;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    box-shadow: 4px 2px 2px yellow;
+}
+
+.editar main section .mb-3 .invalid-feedback{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-left: 20vw;
+    text-align: left;
+    font-size: 15px;
+    color: red;
+}
+
+.editar main section .mb-3 input.form-control{
+    width: 60vw;
+    height: 30px;
+    text-align: center;
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.editar main section .mb-3 select.form-select{
+    width: 60vw;
+    height: 30px;
+   text-align: center;
+    border: 2px solid black;
+}
+
+.editar main section .botones{
+    width: 30vw;
+    
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.editar main section .botones .btn.btn-primary{
+    background-color: rgb(74, 82, 74);
+    padding: 15px;
+    color:black;
+    border-radius: 15%;
+    margin-bottom: 50px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin-right: 25%;
+    
+}
+
+.editar main section .botones .btn.btn-secundary{
+    background-color: rgb(186, 3, 3);
+    padding: 15px;
+    color:black;
+    border-radius: 15%;
+    margin-bottom: 50px;
+    
+}
+
+@media (min-width: 461px) {
+    .editar {
+        background-image: url(/images/fondo-luthier6.jpg);
+        background-repeat: no-repeat;
+        background-size: 130vw 160vh;
+        background-position-x: 29%;
+    }
+    .editar main h2 {
+      
+        text-shadow: 2px 2px 7px #ffff01;
+    }
+    .editar .direct-lista{
+        display: block;
+    }
+    .editar main section .mb-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000000d9;
+        margin: 5px;
+        width: 90%;
+        border: 2px solid #b7b324;
+        
+    }
+    .editar main section .mb-3 input.form-control{
+        width: 60vw;
+        height: 30px;
+        background-color: #ffd8b6
+        
+
+}
+.editar main section .mb-3 select.form-select {
+  background-color: #ffd8b6 ;
+}
+.editar .direct-lista{
+margin-top: 4%;
+width: 28%;
+margin-left: 4%;
+}
+.editar .direct-lista #boton{
+    padding: 3px;
+    background: black;
+    color: yellow;
+    box-shadow: 5px 4px 36px white;
+    }
+.editar .direct-lista-flecha{
+    display: none;
+}
+
+
+}
+
+    @media (min-width: 791px){
+        
+        .editar main h2 {
+            text-shadow: 2px 2px 7px #ffff01;
+            background: #00000080;
+            width: 40%;
+            margin: 0%;
+            display: flex;
+            justify-content: center;
+            margin-left: 32%;
+            margin-bottom: 2%;
+            padding: 7px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 11px yellow;
+        }
+        .editar main section .mb-3 input.form-control {
+            width: 60vw;
+            height: 30px;
+            border: 3px solid black;
+            background-color: #e5b46c;
+            border-radius: 5px;
+        }
+        .editar .direct-lista {
+            margin-top: 2%;
+        }
+        .editar main section .mb-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #00000096;
+            margin: 5px;
+            width: 90%;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+        .editar form {
+            background-color: #000000bf;
+            padding-top: 2%;
+        }
+        .editar main section .mb-3 label.form-label {
+            width: 40%;
+            border: 2px solid yellow;
+            border-radius: 16px;
+        }
+        .editar main section .mb-3 select.form-select {
+            width: 50vw;
+            height: 38px;
+            border: 3px solid black;
+            background-color: #ffcc81;
+            border-radius: 5px;
+            margin-top: 8px;
+            font-size: 20px;
+        }
+        .editar main section .mb-3 input.form-control {
+            width: 50vw;
+            height: 38px;
+            border: 3px solid black;
+            background-color: #ffcc81;
+            border-radius: 5px;
+            margin-top: 8px;
+        }
+        .editar .error {
+            font-size: 20px;
+        }
+    }

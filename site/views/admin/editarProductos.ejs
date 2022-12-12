@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include ("../partials/head",{title: "Editar Producto"}) %>
-<body class="crear">
+<body class="editar">
     <%- include ("../partials/header") %> 
     <main>
-        <a class="direct-lista" href="../lista">
-            <button type="submit" class="btn btn-primary">Lista de productos</button>
+        <a class="direct-lista" href="lista">
+            <button type="button" id="boton" class="btn btn-primary">Lista de productos</button>
         </a>
-        <a class="direct-lista-flecha" href="lista">
+        <a class="direct-lista-flecha" href="/admin/lista">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
         <h2>Modificar Producto</h2>
         
         <section>
             <form action="/admin/editar/<%= producto.id %>?_method=put" method="post"  enctype="multipart/form-data">
+               <section>
+                <article>
                 <div class="mb-3">
                     <label for="marcas" class="form-label">MARCAS</label>
                 <select class="form-select" name="marcas" id="marcas" aria-label="select example">
@@ -48,6 +50,8 @@
                         <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
                     </p>
                 </div>   
+            </article>
+            <article>
                 <div class="mb-3">
                     <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
                     <input type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Ingrese descripcion" value="<%= producto.descripcion %>">
@@ -77,13 +81,16 @@
                     </p>
                 </div>  
                 </div>
+            </article>
+            </section>
+            <section class="section-imagenes">
                 <div class="imagenes-sec">
                     <% producto.imagenes.forEach(img => { %>
                         <img class="secundarias" src="/images/<%= img.nombre %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('src','/images/<%= img.nombre %>')">
                     <% }) %>
                     
                 </div>
-                <div class="mb-3">
+                <div class="mb-33">
                 
                 <label  class="form-label">Imagen 1</label>
                 <input type="file" class="form-control"  id="imagen" name="imagen1" placeholder="Introduzca la imagen del producto"   >
@@ -108,10 +115,12 @@
                 
                 
                 </div>
+            </section>
                 <div class="botones">
                 <button class="btn btn-primary" id='#btn-submit' type="submit">Confirma</button>
                 <button class="btn btn-secundary" ><a  href="/admin/lista">Cancelar</a></button>
                 </div>
+            
             </form>
         </section>
     </main>    

@@ -191,6 +191,7 @@ window.addEventListener('load', () => {
                 $('#imagenError').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img = false
                 break;
+               
             default:
                 $('#imagenError').innerHTML = null
                 validate.img = true

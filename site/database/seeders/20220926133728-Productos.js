@@ -3,7 +3,7 @@
 let listado = require('../../data/productos.json')
 
 let listadoCategorias = ["Cuerdas","Percusion","Audio","Teclados/Pianos/Controladores","Otros"]
-let marcas = ["Epiphone","Yamaha","Gibson","Marshall","Ibanez","Behringer","Arturia","Line6","Zildjian","Orange ","MERCADOFLASH "]
+let marcas = ["Epiphone", "Yamaha", "Gibson", "Marshall", "Ibanez", "Behringer", "Arturia", "Line6", "Zildjian", "Orange", "Mercado Flash", "Nord", "Sequential", "Mesa", "Korg", "Steinberger"]
 
 let productos = []
 

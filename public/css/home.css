@@ -2,7 +2,7 @@
     background-image: url(/images/FondoMovil.jpg);
     background-color: #221d1da8;
     background-attachment: fixed;
-    background-size: 100vw;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -103,6 +103,7 @@
 .home main .secciones{
     text-align: center;
     font-size: 45px;
+    margin-top: 1.5em;
 }
 
 .home main span{
@@ -272,12 +273,6 @@
         height: 400px;
     }
       
-
-    
-    .home main .contenedor-2{
-        display: block;
-        
-    }
 
     .home main .contenedor{
         display: flex;

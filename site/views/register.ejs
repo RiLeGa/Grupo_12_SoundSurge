@@ -61,12 +61,12 @@
            
 
             <div class="terminos">
+                <label for="terminos">Acepto los terminos y condiciones</label>
                 <input type="checkbox" name="terminos" id="terminos">
                 <div id="terminosContainer"></div>
                 <% if (locals.errors && errors.terminos) { %>
                     <small><%= errors.terminos.msg %></small>
                 <% } %>
-                <label for="terminos">Acepto los terminos y condiciones</label>
             </div>
             <div>
                 <button type="submit" class="enviar">Enviar</button>

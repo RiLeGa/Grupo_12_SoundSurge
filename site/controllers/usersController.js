@@ -76,6 +76,10 @@ module.exports = {
           req.session.userLogin = {
             id: usuario.id,
             nombre: usuario.nombre,
+            apellido: usuario.apellido,
+            direccion: usuario.direccion,
+            telefono: usuario.telefono,
+            email: usuario.email,
             imagen: usuario.imagen,
             rol: usuario.rolId,
           };

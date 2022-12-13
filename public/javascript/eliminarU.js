@@ -4,8 +4,8 @@ window.addEventListener('load', () => {
     
     let forms = document.querySelectorAll('#del');
     for (let i = 0; i < forms.length; i++) {
-        forms[i].addEventListener('submit', event => {
-                event.preventDefault();
+        forms[i].addEventListener('submit', (e) => {
+                e.preventDefault();
                 Swal.fire({
                 customClass: {
                     confirmButton: 'swalBtnColor',
@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
     })
     .then((result) => {
       if (result.isConfirmed) {
+        forms[i].submit();
         Swal.fire(
           'Deleted!',
           'Your file has been deleted.',

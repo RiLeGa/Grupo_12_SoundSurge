@@ -18,7 +18,18 @@
                 <div class="logo">
                     <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
                 </div>
-            </div>  
+            </div> 
+            <div class="backCredencial credencial">
+                <h2><%= "Nombre:" + " " + `${locals.userLogin.nombre}`%> </h2>
+                <h2> <%= "Apellido:" + " " + `${locals.userLogin.apellido}`%> </h2>
+                <h2> <%= "Direccion:" + " " + `${locals.userLogin.direccion}`%> </h2>
+                <h2> <%= "Telefono:" + " " + `${locals.userLogin.telefono}`%> </h2>
+                <h2> <%= "Email:" + " " + `${locals.userLogin.email}`%> </h2>
+
+                <div class="logo">
+                    <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
+                </div>
+            </div> 
             <section class="edit-delete-logout">
                 
                 <form id="del" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">

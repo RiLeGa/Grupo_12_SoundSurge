@@ -319,7 +319,7 @@ window.addEventListener('load', () => {
         }else{
         $('#terminos').innerHTML = "<small>Debe aceptar los terminos y condiciones</small>"
         errores.forEach(e => {
-            if(e.id === 5 ){
+            if(e.id === 6 ){
                     error.mensaje = "Debe aceptar los terminos y condiciones"
                     variable = false
                 }

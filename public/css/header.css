@@ -375,11 +375,11 @@ header .navegacion div.usuario{
         position: absolute;
         top: 0;
         left: 0;
-        width: 96%;
-        height: 100%;
-        border-left: 2px solid #8d1888;
-        border-right: 2px solid #8d1888;
-        transform: scalex(2);
+        width: 100%;
+        height: 29px;
+        border-top: 2px solid #8d1888;
+        border-bottom: 2px solid #8d1888;
+        transform: scaleY(2);
         opacity: 0;
         transition: 0.3s;
       }
@@ -388,8 +388,8 @@ header .navegacion div.usuario{
         position: absolute;
         top: 0;
         left: 0;
-        width: 96%;
-        height: 100%;
+        width: 100%;
+        height: 25px;
         background-color: #8d1888;
         transform: scale(0);
         opacity: 0;
@@ -400,11 +400,11 @@ header .navegacion div.usuario{
         color: #fff;
     }
     header .opcionesDeProductos a:hover:before {
-          transform: scalex(1);
+          transform: scaleY(1);
           opacity: 1;
         }
     header .opcionesDeProductos a:hover:after {
-          transform: scalex(1);
+          transform: scaleY(1);
           opacity: 1;
         }
 
@@ -469,7 +469,7 @@ header .navegacion div.usuario{
     header .navegacion label.perfilU{
         position: relative;
         display: inline-block;
-        padding: 15px 7px 0 10px;
+        padding: 5px 0px 5px 0px;
         transition: 0.2s;
         border-radius: 10%;
         top: 18px;
@@ -529,6 +529,7 @@ header .navegacion div.usuario{
     header .navegacion input#perfil:checked ~ nav.opcionesDePerfil {
         display: flex;
         position: absolute;
+        top: 100px;
         z-index: 3;
     }
 

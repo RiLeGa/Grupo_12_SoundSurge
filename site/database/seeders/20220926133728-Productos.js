@@ -3,7 +3,7 @@
 let listado = require('../../data/productos.json')
 
 let listadoCategorias = ["Cuerdas","Percusion","Audio","Teclados/Pianos/Controladores","Otros"]
-let marcas = ["Epiphone", "Yamaha", "Gibson", "Marshall", "Ibanez", "Behringer", "Arturia", "Line6", "Zildjian", "Orange", "Mercado Flash", "Nord", "Sequential", "Mesa", "Korg", "Steinberger"]
+let marcas = ["Epiphone", "Yamaha", "Gibson", "Marshall", "Ibanez", "Behringer", "Arturia", "Line6", "Zildjian", "Orange", "Mercado-Flash", "Nord", "Sequential", "Mesa-Boogie", "Korg", "Steinberger"]
 
 let productos = []
 
@@ -18,7 +18,7 @@ listado.forEach(producto => {
   });
 
   marcas.forEach((elemento,index) => {
-    if ((elemento.toUpperCase()) === (producto.marca.toUpperCase())) {
+    if ((elemento) === (producto.marca)) {
         return marca = index + 1
     }
   });
@@ -29,8 +29,8 @@ listado.forEach(producto => {
     precio: producto.precio,
     descuento: producto.descuento,
     descripcion: producto.descripcion,
-    categoriasId: categoria,
-    marcasId: marca,
+    categoriasId: producto.categoriasId,
+    marcasId: producto.marcasId,
     createdAt:new Date,
     updatedAt:new Date
   }

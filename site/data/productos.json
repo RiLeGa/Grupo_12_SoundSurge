@@ -6,8 +6,8 @@
         "precio": 345000,
         "descuento": 10,
         "descripcion": "Guitarra eléctrica Modelo de cuerpo Semi-Hollow con calados en F, Cuerpo y tapa de madera de arce laminada, Binding de color crema, Mástil de caoba, Perfil del mástil Rounded C, Dispasón de laurel indio, Anchura de la cejuela: 43mm….",
-        "categoria": "Cuerdas",
-            "marca": "epiphone",
+        "categoriasId": 1,
+        "marcasId": 1,
         "imagenes": [
             "epi-royal-1.jpg",
             "epi-royal-2.jpg",
@@ -22,8 +22,8 @@
         "precio": 230205,
         "descuento": 15,
         "descripcion": "BATERIA ACUSTICA YAMAHA 5 CUERPOS RDP2F5 BURGANDY GLITTER, NO INCLUYE FIERROS, PLATILLOS Y PEDALES, Bombo de 22” x 16”, Timbal base de 16” x 15”, Tom de 12” x 8”, Tom de 10” x 7”, Caja de 14” x 5,5”, Sujeciones de tom CL940LB x 2, Sujeciones de toms y abrazaderas de tubos originales Yamaha. Dos sujeciones de toms de 22,2 mm de diámetro y una abrazadera de tubo. Una bola articulada proporciona máxima libertad para montar los toms en cualquier ángulo, y permite incorporar otro hardware* para poder crear la configuración perfecta para cada baterista. * El hardware debe cumplir con la especificación estándar de Yamaha de 22,2 mm.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 2,
+        "categoriasId": 2,
         "imagenes": [
             "bateria-yamaha-1.jpg",
             "bateria-yamaha-2.jpg",
@@ -38,8 +38,8 @@
         "precio": 716206,
         "descuento": 30,
         "descripcion": "Fabricada en arce/caoba con acabado brillante, Con 6 cuerdas y 22 trastes de tamaño medium jumbo, El largo de escala es de 24.75'' El puente es fijo, Incluye 2 micrófonos humbucker, Controles de selector de micrófonos, tono y volumen.Sonidos fuertes y firmes con un estilo propio.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 3,
+        "categoriasId": 1,
         "imagenes": [
             "les-paul.jpg",
             "les-paul-principal.jpg",
@@ -54,8 +54,8 @@
         "precio": 84042,
         "descuento": 0,
         "descripcion": "Amplificador combo. Potencia de salida 25 W. Tipo de conector de entrada: Jack 3.5 mm. Tipo de conector de salida: Jack 3.5 mm. Conseguí un sonido con características naturales y propias del instrumento. Pesa 8 kg. Dimensiones: 340 mm de alto x 350 mm de ancho x 215 mm de profundidad.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 4,
+        "categoriasId": 3,
         "imagenes": [
             "ampli-marshal25-1.jpg",
             "ampli-marshal25-2.jpg",
@@ -70,8 +70,8 @@
         "precio": 170000,
         "descuento": 20,
         "descripcion": "Bajo de 4 cuerdas GSR perteneciente a la serie GIO basada en los Soundgears, estos bajos no solo se tocan y se ven mejor que cualquier otro en su rango de precio, sino que también cada bajo GSR recibe el ajuste e inspección de su contraparte más cara. Los bajos GSR ofrecen la famosa sofisticación, comodidad, tono y facilidad de tocar de los Soundgear, pero a un precio más económico.Características:-Cuerpo en Araucaria Agathis,-Mástil GSR4 de Arce,-Diapasón de Palo de Rosa,-22 trastes,-Tamaños de trastes Medium,-Escala: 864mm/34'',-Herrajes Negros,-Ecualizador Activo Phat II EQ/Boost,-2 controles de volumen, 1 control de tono,-Color: Natural Gray Bur.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 5,
+        "categoriasId": 1,
         "imagenes": [
             "bajo-ibanez-1.jpg",
             "bajo-ibanez-2.jpg",
@@ -86,8 +86,8 @@
         "precio": 75000,
         "descuento": 20,
         "descripcion": "Fabricada en caoba con acabado brillante. Con 6 cuerdas y 22 trastes de tamaño medium jumbo. El largo de escala es de 25.5''. El puente es tremolo. Incluye 3 micrófonos humbucker, simples. Controles de selector de micrófonos, tono y volumen. Palanca incluida. Sonidos fuertes y firmes con un estilo propio.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 2,
+        "categoriasId": 1,
         "imagenes": [
             "guit-Yamaha-1.jpg",
             "guit-Yamaha-2.jpg",
@@ -102,8 +102,8 @@
         "precio": 35707,
         "descuento": 10,
         "descripcion": "Lográ la grabación completa Este aparato cuenta con 2 entradas, lo que te permitirá ingresar varios sonidos a la vez. La regla es que necesitás tantas entradas co líneas quieras grabar simultáneamente, es decir que podrás utilizarla para micrófonos e instrumentos y obtener una grabación completa una sola vez. Además, cuenta con 2 salidas que te permitirán conectar a tu computadora y así hacer el trabajo de forma integral. Sumá calidad Gracias a sus 48 kHz y su resolución de audio de 16 bit vas a lograr que todas tus grabaciones tengan una calidad sobresaliente y resalten las melodías de cada instrumento y cada voz. Poder fantasma activo Para dar más potencia a la señal que conectes a la interface, este producto cuenta con alimentación fantasma o phantom, que optimiza señal y brinda corriente de manera constante a todos los dispositivos de audio que conectes.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 6,
+        "categoriasId": 3,
         "imagenes": [
             "interface-berin-1.jpg",
             "interface-berin-2.jpg",
@@ -118,8 +118,8 @@
         "precio": 68474,
         "descuento": 0,
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam, placeat eius perferendis aspernatur doloribus aliquid, quibusdam aperiam hic a tenetur! Quis rem aut qui expedita ut aspernatur nisi officiis.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 7,
+        "categoriasId": 4,
         "imagenes": [
             "arturia-midi-1.jpg",
             "arturia-midi-2.jpg",
@@ -134,8 +134,8 @@
         "precio": 126270,
         "descuento": 0,
         "descripcion": "Compatible con bajo, guitarra eléctrica. Incluye 306 efectos. Tipos de efectos: multi-efectos. Incluye pedal de expresión. Posee pantalla LCD. Trae conector de entrada dc jack, jack, jack 6.3 mm stereo, usb. Trae conector de salida jack 6.3 mm stereo, usb. Sonidos de alta calidad.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 8,
+        "categoriasId": 3,
         "imagenes": [
             "Line6-POD-1.jpg",
             "Line6-POD-2.jpg",
@@ -150,8 +150,8 @@
         "precio": 103368,
         "descuento": 10,
         "descripcion": "Set de 4 Platillos - incluye Par 13» HiHat + 14» Crash + 18» Crash Ride - ZBT SeriesLos platillos ZBT (Zildjian Bronze Technology) están hechos de aleación B8, utilizando tornos extensos y un acabado tradicional que les da textura y carácter. Ofreciendo un buen sonido y rendimiento, este set es muy adecuado para los bateristas principiantes que tocan en dormitorios, sótanos, salas de práctica y conciertos.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 9,
+        "categoriasId": 2,
         "imagenes": [
             "Set-Zildjian-1.jpg",
             "Set-Zildjian-2.jpg",
@@ -166,8 +166,8 @@
         "precio": 58903,
         "descuento": 0,
         "descripcion": "amplificador combo. Potencia de salida 25 W. Tipo de conector de entrada: Jack 3.5 mm. Tipo de conector de salida: Jack 6.35 mm. Cuenta con una frecuencia mínima de 300 Hz y máxima de 2700 Hz. Conseguí un sonido con características naturales y propias del instrumento. Pesa 8.3 kg. Dimensiones: 36.5 cm de alto x 32.5 cm de ancho x 23.5 cm de profundidad.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 10,
+        "categoriasId": 3,
         "imagenes": [
             "Ampli-orange-1.jpg",
             "Ampli-orange-2.jpg",
@@ -182,8 +182,8 @@
         "precio": 28000,
         "descuento": 0,
         "descripcion": "- Láser Led con luces dinámicas y movimientos animados -Traza más de 3000 Puntos de distinta intensidad. Los puntos se desplazan, expanden y agrupan en patrones aleatorios, similar a los fuegos artificiales - Modo audio rítmico (Micrófono incorporado) - Modo automático - Modo Strobo (DESTELLOS) - Regulador de velocidad de efectos - Control de sensibilidad - Cooler trasero - Regulador de Velocidad - Alimentación a 110/240 V - MEDIDAS: LARGO 11 cm - ANCHO 9 cm - ALTO 3,5 cm.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 11,
+        "categoriasId": 5,
         "imagenes": [
             "proyector-laser-1.jpg",
             "proyector-laser-2.jpg",
@@ -198,13 +198,12 @@
         "precio": 2878123,
         "descuento": 15,
         "descripcion": "-Teclado contrapesado Hammered Portable de 76 teclas -Secciones Piano, Synth y Órgano -2 pantallas OLED",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 12,
+        "categoriasId": 4,
         "imagenes": [
-            "Ampli-orange-1.jpg",
-            "Ampli-orange-2.jpg",
-            "Ampli-orange-3.jpg",
-            "Ampli-orange-4.jpg"
+            "nord-1.jpg",
+            "nord-2.jpg",
+            "nord-3.jpg" 
         ]
         },
         {
@@ -214,13 +213,13 @@
         "precio": 2801378,
         "descuento": 10,
         "descripcion": "El Prophet-6 es el tributo de Dave Smith al sintetizador polifónico que lo comenzó todo, el Prophet-5, y el resultado del desarrollo intensivo de Sequential para crear el más destacado sintetizador polifónico analógico vintage.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 13,
+        "categoriasId": 4,
         "imagenes": [
-            "Ampli-orange-1.jpg",
-            "Ampli-orange-2.jpg",
-            "Ampli-orange-3.jpg",
-            "Ampli-orange-4.jpg"
+            "prophet6-1.jpg",
+            "prophet6-2.jpg",
+            "prophet6-3.jpg",
+            "prophet6-4.jpg"
         ]
         },
         {
@@ -229,14 +228,13 @@
         "stock": 10,
         "precio": 1584785,
         "descuento": 0,
-        "descripcion": "NSTRUMENTO: CABEZAL PARA BAJO MARCA: MESA BOOGIE MODELO: 2.STRATX ESTADO: NUEVO OBSERVACIONES: CABEZAL PARA BAJO 100% VALVULAR MADE IN USA BASS STRATEGY EIGHT88",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "descripcion": "NSTRUMENTO: CABEZAL PARA BAJO marcasId: MESA BOOGIE MODELO: 2.STRATX ESTADO: NUEVO OBSERVACIONES: CABEZAL PARA BAJO 100% VALVULAR MADE IN USA BASS STRATEGY EIGHT88",
+        "marcasId": 14,
+        "categoriasId": 3,
         "imagenes": [
-            "Ampli-orange-1.jpg",
-            "Ampli-orange-2.jpg",
-            "Ampli-orange-3.jpg",
-            "Ampli-orange-4.jpg"
+            "mesa1.jpg",
+            "mesa2.jpg",
+            "mesa3.jpg"
         ]
         },
         {
@@ -246,13 +244,13 @@
         "precio": 1013195,
         "descuento": 0,
         "descripcion": "• Polifonía Máxima 120 voces (120 Osciladores) / Modo Single, 60 voces (120 Osciladores) / Modo Doble • La polifonía máxima simultánea variará dependiendo de los ajustes de oscilador.",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "marcasId": 15,
+        "categoriasId": 4,
         "imagenes": [
-            "Ampli-orange-1.jpg",
-            "Ampli-orange-2.jpg",
-            "Ampli-orange-3.jpg",
-            "Ampli-orange-4.jpg"
+            "korg1.jpg",
+            "korg2.jpg",
+            "korg3.jpg",
+            "korg4.jpg"
         ]
         },
         {
@@ -261,14 +259,14 @@
         "stock": 10,
         "precio": 915000,
         "descuento": 15,
-        "descripcion": "presentamos este clásico instrumento fabricado en New York, en el año 1991. un instrumento con cuerpo de alder y tapa de maple. El diapasón es de fibra de carbono y la tastiera es de fenólico. Posee tres pickups activos EMG 85 (humbucker).",
-        "marca": "Yamaha",
-        "categoria": "Percusion",
+        "descripcion": "Presentamos este clásico instrumento fabricado en New York, en el año 1991. un instrumento con cuerpo de alder y tapa de maple. El diapasón es de fibra de carbono y la tastiera es de fenólico. Posee tres pickups activos EMG 85 (humbucker).",
+        "marcasId": 16,
+        "categoriasId": 1,
         "imagenes": [
-            "Ampli-orange-1.jpg",
-            "Ampli-orange-2.jpg",
-            "Ampli-orange-3.jpg",
-            "Ampli-orange-4.jpg"
+            "Steinberger -1.jpg",
+            "Steinberger -2.jpg",
+            "Steinberger -3.jpg",
+            "Steinberger -4.jpg"
         ]
         }
 ]

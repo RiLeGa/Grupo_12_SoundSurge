@@ -16,147 +16,159 @@
                 <section>
                     <form action="/admin/editar/<%= producto.id %>?_method=put" method="post"
                         enctype="multipart/form-data">
-                        <section>
-                            <article class="articulo1">
-                                <div class="caja1">
-                                    
-                                    <div class="mb-3">
-                                        <label for="marcas" class="form-label">MARCAS</label>
-                                        <select class="form-select" name="marcas" id="marcas"
-                                            aria-label="select example">
+                        <section class="cajita">
+                            <section>
+                                <article class="articulo1">
+                                    <div class="caja1">
 
-                                            <option selected hidden value="">Selecciona una opcion</option>
-                                            <% marcas.forEach(marca=> { %>
-                                                <option value="<%= marca.id %>" <%=producto.marcasId===marca.id
-                                                    ? "selected" : null %>><%= marca.nombre %>
-                                                </option>
-                                                <% }) %>
-                                        </select>
-                                        <p class="error" id="marcaError">
-                                            <%= locals.errors && errors.marcas ? errors.marcas.msg : null %>
-                                        </p>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Titulo</label>
-                                        <input type="text" class="form-control" name="titulo" id="titulo"
-                                            placeholder="Ingrese marca del producto" value="<%= producto.titulo %> ">
-                                        <p class="error" id="tituloError">
-                                            <%= locals.errors && errors.titulo ? errors.titulo.msg : null %>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="caja2">
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Precio</label>
-                                        <input type="text" class="form-control" name="precio" id="precio"
-                                            placeholder="Ingrese precio del producto" value="<%= producto.precio %>">
-                                        <p class="error" id="precioError">
-                                            <%= locals.errors && errors.precio ? errors.precio.msg : null %>
-                                        </p>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Descuento</label>
-                                        <input type="text" class="form-control" name="descuento" id="descuento"
-                                            placeholder="Ingrese su descuento" value="<%= producto.descuento %>">
-                                        <p class="error" id="descuentoError">
-                                            <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="articulo2">
-                                <div class="caja3">
-                                <div class="mb-3" id="descripcion">
-                                    <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
-                                    
-                                        <textarea value="<%= producto.descripcion %>" name="descripcion" id="descripcion" cols="30" rows="6" class="form-control" placeholder="Ingrese descripcion" style="resize: none;"><%= producto.descripcion %></textarea>
-                                    <p class="error" id="descripcionError">
-                                        <%= locals.errors && errors.descripcion ? errors.descripcion.msg : null %>
-                                    </p>
-                                </div>
-                            </div>
-                                <div class="caja3">
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2" class="form-label">Stock</label>
-                                        <input type="text" class="form-control" name="stock" id="stock"
-                                            placeholder="Stock disponible" value="<%= producto.stock %>">
-                                        <p class="error" id="stockError">
-                                            <%= locals.errors && errors.stock ? errors.stock.msg : null %>
-                                        </p>
-                                    </div>
+                                        <div class="mb-3">
+                                            <label for="marcas" class="form-label">MARCAS</label>
+                                            <select class="form-select" name="marcas" id="marcas"
+                                                aria-label="select example">
 
-                                    <div class="mb-3">
-                                        <label for="categorias" class="form-label">CATEGORIAS</label>
-                                        <select class="form-select" name="categorias" id="categorias"
-                                            aria-label="select example">
-
-                                            <option selected hidden value="">Selecciona una opcion</option>
-                                            <% categorias.forEach(categoria=> { %>
-                                                <option value="<%= categoria.id %>"
-                                                    <%=producto.categoriasId===categoria.id ? "selected" : null %>><%=
-                                                        categoria.nombre %>
-                                                </option>
-                                                <% }) %>
-                                        </select>
-                                        <p class="error" id="categoriaError">
-                                            <%= locals.errors && errors.categorias ? errors.categorias.msg : null %>
-                                        </p>
+                                                <option selected hidden value="">Selecciona una opcion</option>
+                                                <% marcas.forEach(marca=> { %>
+                                                    <option value="<%= marca.id %>" <%=producto.marcasId===marca.id
+                                                        ? "selected" : null %>><%= marca.nombre %>
+                                                    </option>
+                                                    <% }) %>
+                                            </select>
+                                            <p class="error" id="marcaError">
+                                                <%= locals.errors && errors.marcas ? errors.marcas.msg : null %>
+                                            </p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formGroupExampleInput2" class="form-label">Titulo</label>
+                                            <input type="text" class="form-control" name="titulo" id="titulo"
+                                                placeholder="Ingrese marca del producto"
+                                                value="<%= producto.titulo %> ">
+                                            <p class="error" id="tituloError">
+                                                <%= locals.errors && errors.titulo ? errors.titulo.msg : null %>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                </div>
-                            </article>
-                        </section>
-                        <section class="section-imagenes">
-                            <div class="imagenes-sec">
-                                <% producto.imagenes.forEach(img=> { %>
-                                    <img class="secundarias" src="/images/<%= img.nombre %>" alt="Imagen secundaria"
-                                        onclick="document.getElementById('imgMain').setAttribute('src','/images/<%= img.nombre %>')">
-                                    <% }) %>
+                                    <div class="caja2">
+                                        <div class="mb-3">
+                                            <label for="formGroupExampleInput2" class="form-label">Precio</label>
+                                            <input type="text" class="form-control" name="precio" id="precio"
+                                                placeholder="Ingrese precio del producto"
+                                                value="<%= producto.precio %>">
+                                            <p class="error" id="precioError">
+                                                <%= locals.errors && errors.precio ? errors.precio.msg : null %>
+                                            </p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="formGroupExampleInput2" class="form-label">Descuento</label>
+                                            <input type="text" class="form-control" name="descuento" id="descuento"
+                                                placeholder="Ingrese su descuento" value="<%= producto.descuento %>">
+                                            <p class="error" id="descuentoError">
+                                                <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="articulo2">
+                                    <div class="caja33">
+                                        <div class="mb-3" id="descripcion">
+                                            <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
 
-                            </div>
-                            <div class="mb-33">
-                              <div>
-                                <label for="imagen" class="form-label">Imagen 1</label>
-                                <input type="file" class="form-control" id="imagen" name="imagen1"
-                                    placeholder="Introduzca la imagen del producto">
-                                <p class="error" id="imagenError">
-                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                </p>
-                            </div>
-                            <div>
-                                <label for="imagen2" class="form-label">Imagen 2</label>
-                                <input type="file" class="form-control" name="imagen2" id="imagen2"
-                                    placeholder="Introduzca la imagen del producto">
-                                <p class="error" id="imagenError2">
-                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                </p>
-                            </div>
-                            <div>
-                                <label for="imagen3" class="form-label">Imagen 3</label>
-                                <input type="file" class="form-control" id="imagen3" name="imagen3"
-                                    placeholder="Introduzca la imagen del producto">
-                                <p class="error" id="imagenError3">
-                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                </p>
-                            </div>
-                            <div>
-                                <label for="imagen4" class="form-label">Imagen 4</label>
-                                <input type="file" class="form-control" id="imagen4" name="imagen4"
-                                    placeholder="Introduzca la imagen del producto">
-                                <p class="error" id="imagenError4">
-                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                </p>
-                            </div>
+                                            <textarea value="<%= producto.descripcion %>" name="descripcion"
+                                                id="descripcion" cols="1" rows="6" class="form-control"
+                                                placeholder="Ingrese descripcion"
+                                                style="resize: none;"><%= producto.descripcion %></textarea>
+                                            <p class="error" id="descripcionError">
+                                                <%= locals.errors && errors.descripcion ? errors.descripcion.msg : null
+                                                    %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="caja3">
+                                        <div class="mb-3">
+                                            <label for="formGroupExampleInput2" class="form-label">Stock</label>
+                                            <input type="text" class="form-control" name="stock" id="stock"
+                                                placeholder="Stock disponible" value="<%= producto.stock %>">
+                                            <p class="error" id="stockError">
+                                                <%= locals.errors && errors.stock ? errors.stock.msg : null %>
+                                            </p>
+                                        </div>
 
+                                        <div class="mb-3">
+                                            <label for="categorias" class="form-label">CATEGORIAS</label>
+                                            <select class="form-select" name="categorias" id="categorias"
+                                                aria-label="select example">
 
-                            </div>
-                        </section>
-                        <div class="botones">
-                            <button class="btn btn-primary" id='#btn-submit' type="submit">Confirma</button>
-                            <button class="btn btn-secundary"><a href="/admin/lista">Cancelar</a></button>
+                                                <option selected hidden value="">Selecciona una opcion</option>
+                                                <% categorias.forEach(categoria=> { %>
+                                                    <option value="<%= categoria.id %>"
+                                                        <%=producto.categoriasId===categoria.id ? "selected" : null %>>
+                                                        <%= categoria.nombre %>
+                                                    </option>
+                                                    <% }) %>
+                                            </select>
+                                            <p class="error" id="categoriaError">
+                                                <%= locals.errors && errors.categorias ? errors.categorias.msg : null %>
+                                            </p>
+                                        </div>
+                                    </div>
                         </div>
+                        </article>
+                </section>
+                <section class="section-imagenes">
+                    <div class="imagenes-sec">
+                        <% producto.imagenes.forEach(img=> { %>
+                            <img class="secundarias" src="/images/<%= img.nombre %>" alt="Imagen secundaria"
+                                >
+                            <% }) %>
+                         
 
-                    </form>
+                    </div>
+                    <div class="mb-33">
+                        
+                        <div class="cajitas-imagenes">
+                            <label for="imagen" class="form-label">Imagen 1</label>
+                            <input type="file" class="form-control" id="imagen" name="imagen1"
+                                placeholder="Introduzca la imagen del producto">
+                            <p class="error" id="imagenError">
+                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                            </p>
+                        </div>
+                        <div class="cajitas-imagenes">
+                            <label for="imagen2" class="form-label">Imagen 2</label>
+                            <input type="file" class="form-control" name="imagen2" id="imagen2"
+                                placeholder="Introduzca la imagen del producto">
+                            <p class="error" id="imagenError2">
+                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                            </p>
+                        </div>
+                    
+                   
+                        <div class="cajitas-imagenes">
+                            <label for="imagen3" class="form-label">Imagen 3</label>
+                            <input type="file" class="form-control" id="imagen3" name="imagen3"
+                                placeholder="Introduzca la imagen del producto">
+                            <p class="error" id="imagenError3">
+                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                            </p>
+                        </div>
+                        <div class="cajitas-imagenes">
+                            <label for="imagen4" class="form-label">Imagen 4</label>
+                            <input type="file" class="form-control" id="imagen4" name="imagen4"
+                                placeholder="Introduzca la imagen del producto">
+                            <p class="error" id="imagenError4">
+                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                </div>
+                </section>
+                <div class="botones">
+                    <button class="btn btn-primary" id='#btn-submit' type="submit">Confirma</button>
+                    <button class="btn btn-secundary"><a href="/admin/lista">Cancelar</a></button>
+                </div>
+
+                </form>
                 </section>
             </main>
             <script src="/javascript/validacionProductos.js"></script>

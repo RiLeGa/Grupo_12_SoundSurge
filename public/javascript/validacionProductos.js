@@ -94,7 +94,7 @@ window.addEventListener('load', () => {
                 this.style.border='2px solid red'
                 validate.discount = false
                 break;
-                case !(this.value.trim() > 0):
+                case !(this.value.trim() >= 0):
                     $('#descuentoError').innerHTML = "Solo se permiten numeros positivos"
                     this.style.border='2px solid red'
                     validate.titulo = false

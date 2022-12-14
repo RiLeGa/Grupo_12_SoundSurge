@@ -29,9 +29,15 @@
     margin-left: 3%;
 
 }
-
 .editar form{
+    display: flex;
+    justify-content: center;
     width: 80%;
+    flex-direction: column;
+    align-items: center;
+}
+.editar form div{
+    width: 100%;
    
     display: flex;
     flex-direction: column;
@@ -149,7 +155,7 @@
 
 .editar main section .botones{
     width: 30vw;
-    
+    flex-direction: row;
     margin-top: 25px;
     display: flex;
     justify-content: space-around;
@@ -175,6 +181,12 @@
     margin-bottom: 50px;
     
 }
+.editar main section #descripcion textarea {
+    width: 68%;
+    margin-top: 5px;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 10px;}
 
 
 @media (min-width: 461px) {
@@ -201,7 +213,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #000000b5;
+        background-color: #000000d1;
         margin: 5px;
         border: 2px solid #b7b324;
         height: 143px;
@@ -250,6 +262,9 @@ margin-left: 4%;
 }
 .editar main section .articulo1,.articulo2{
     width: 130%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .editar main section .articulo2{
     display: flex;
@@ -311,14 +326,23 @@ justify-content: space-between;
     color: black;
     border-radius: 10px;
     margin-bottom: 50px;
-    width: 40%;
+    width: 44%;
     box-shadow: 5px 3px 10px pink;
 }
 .editar main section .botones{
     padding-right: 4%;
     padding-left: 4%;
 }
-
+.editar main section .caja33 {
+    width: 90%;
+    margin-left: 4%;
+}
+.editar .cajitas-imagenes{
+    margin: 2%;
+}
+.editar main section .mb-33 label.form-label {
+    width: 110%;
+}
 
 }
 
@@ -353,30 +377,33 @@ justify-content: space-between;
             align-items: center;
             background-color: #00000096;
             margin: 5px;
-            width: 90%;
+            width: 134%;
             border: 1px solid white;
             border-radius: 10px;
         }
         .editar form {
             background-color: #000000bf;
             padding-top: 2%;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
         }
         .editar main section .mb-3 label.form-label {
-            width: 40%;
+            width: 100%;
             border: 2px solid yellow;
             border-radius: 16px;
         }
         .editar main section .mb-3 select.form-select {
-            width: 50vw;
+            width: 15vw;
             height: 38px;
             border: 3px solid black;
             background-color: #ffcc81;
             border-radius: 5px;
-            margin-top: 8px;
+            
             font-size: 20px;
         }
         .editar main section .mb-3 input.form-control {
-            width: 50vw;
+            width: 15vw;
             height: 38px;
             border: 3px solid black;
             background-color: #ffcc81;
@@ -386,4 +413,67 @@ justify-content: space-between;
         .editar .error {
             font-size: 20px;
         }
+        .editar .secundarias {
+            width: 40%;
+            margin: 5px;
+            padding: 1%;
+            background-color: black;
+            box-shadow: 5px 5px 10px yellow;
+            
+        }
+        .editar main section .mb-33 {
+            width: 50%;
+        }
+        .editar main section .articulo1,.articulo2{
+            width: 130%;
+            display: flex;
+            flex-direction: row;
+          
+        }
+        .editar main section .articulo1{
+            width: 70%;
+        }
+        .editar main section .caja3{
+            display: flex;
+            flex-direction: row;
+            width: 55%;
+            margin-left: 8%;
+            
+        }
+        .editar main section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .editar main section .caja1{
+            margin-left: 6%;
+        margin-right: 18%;
+        }
+        .editar main section #descripcion textarea {
+            width: 78%;
+            margin-left: 1%;
+        }
+        .editar main section #descripcion{
+            padding: 1%;
+            width: 80%;
+            margin-left: 19%;
+        }
+        .editar main section #descripcion label.form-label {
+            width: 90%;
     }
+    .editar main .section-imagenes {
+        margin-top: 7%;
+    }
+    .editar .imagenes-sec {
+        width: 50%;
+    }
+    .editar .cajita{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+}

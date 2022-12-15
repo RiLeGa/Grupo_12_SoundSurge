@@ -1,5 +1,6 @@
 .marcas{
     display: flex;
+    flex-direction: column;
     width: 100vw;
     align-items: baseline;
     background-color: black;
@@ -13,13 +14,12 @@
 }
 
 .marcas .indice{
-    width: 20vw;
-    margin-left: 1vw;
+    width: 98vw;
     margin-bottom: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .marcas .muestra{
@@ -39,7 +39,8 @@
 .marcas a.category_item{
     background-color: rgb(255, 255, 255);
     display: flex;
-    width: 19.8vw;
+    font-size: 10px;
+    width: 200px;
     height: 40px;
     margin-bottom: 5px;
     flex-direction: row;
@@ -82,3 +83,101 @@
         border-radius: 5px;
 
 }
+
+.marcas h1.todos{
+  font-size: 2em;
+  text-align: center;
+  padding-top: 25px;
+  margin: 0;
+}
+
+.marcas .busqueda {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  width: 98vw;
+  height: fit-content;
+}
+
+.marcas .busqueda li.producto-buscador:hover{
+  transform: scale(1.1);
+}
+.marcas .busqueda li.producto-buscador{
+  margin: 20px;
+  width: 20vw;
+  height: 300px;
+  background-color: white;
+  border: 1px solid black;
+  transition: 0.5s;
+  box-shadow: 0 0 15px rgb(0 0 0 / 95%);
+}
+
+
+.marcas .busqueda input{
+  margin-top: 25px;
+  margin-left: 10vw;
+  width: 80vw;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 15px;;
+  padding: 15px;
+}
+
+.marcas .busqueda .filtrado{
+  width: 98vw;
+  height: auto;
+}
+
+.marcas .busqueda .filtrado ul.list-result{
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  margin-left: 5vw;
+  height: fit-content;
+  background-color: transparent;
+  border-radius: 15px;
+}
+.filtro{
+  display: none;
+}
+
+.marcas .busqueda .filtrado ul li.producto-buscador .agregar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.marcas .busqueda .filtrado ul li.producto-buscador .agregar button{
+  width: fit-content;
+}
+
+
+
+.marcas .busqueda .filtrado ul li.producto-buscador a{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; 
+}
+
+.marcas .busqueda .filtrado ul li.producto-buscador h4{
+  font-size: 20px;
+  color: black;
+}
+
+.marcas .busqueda .filtrado ul .imagen-filtrado{
+  width: 150px;
+  height: 150px;
+}
+.marcas .busqueda li.producto-buscador .info-find{
+  display: none;
+}
+
+

@@ -3,33 +3,41 @@
     <%- include ("./partials/head",{title: locals.userLogin.nombre}) %>
 <body>
     <%- include ("./partials/header") %> 
-    <main class="perfil">
-            <div class="credencial">
-                <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
-                <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
-                
-                <% if (locals.userLogin && locals.userLogin.rol === 1 ) { %>
-                    <h1><%= `Admin` %></h1>
-                    <h2>All Access</h2>
-                <% } else { %>
-                    <h1><%= "Invitado" %></h1>
-                <% } %>
-                
-                <div class="logo">
-                    <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
-                </div>
-            </div> 
-            <div class="backCredencial credencial">
-                <h2><%= "Nombre:" + " " + `${locals.userLogin.nombre}`%> </h2>
-                <h2> <%= "Apellido:" + " " + `${locals.userLogin.apellido}`%> </h2>
-                <h2> <%= "Direccion:" + " " + `${locals.userLogin.direccion}`%> </h2>
-                <h2> <%= "Telefono:" + " " + `${locals.userLogin.telefono}`%> </h2>
-                <h2> <%= "Email:" + " " + `${locals.userLogin.email}`%> </h2>
+        <main class="perfil">
 
-                <div class="logo">
-                    <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
+            <div class="card">
+                <div class="credencial">
+                    <img src="/images/users/<%= locals.userLogin.imagen %> " alt="">
+                    <h2>Hola <%= `${locals.userLogin.nombre}` %></h2>
+                    
+                    <% if (locals.userLogin && locals.userLogin.rol === 1 ) { %>
+                        <h1><%= `Admin` %></h1>
+                        <h2>All Access</h2>
+                    <% } else { %>
+                        <h1><%= "Invitado" %></h1>
+                    <% } %>
+                    <div class="logo">
+                        <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
+                    </div>
+                </div> 
+
+                <!-- division entre caras de la card -->
+
+                <div class="backCredencial credencial">
+                    <p> <%= "Nombre:" + " " + `${locals.userLogin.nombre}`%> </p>
+                    <p> <%= "Apellido:" + " " + `${locals.userLogin.apellido}`%> </p>
+                    <p> <%= "Direccion:" + " " + `${locals.userLogin.direccion}`%> </p>
+                    <p> <%= "Telefono:" + " " + `${locals.userLogin.telefono}`%> </p>
+                    <p> <%= "Email:" + " " + `${locals.userLogin.email}`%> </p>
+
+                    <div class="logo">
+                        <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
+                    </div>
                 </div>
             </div> 
+
+
+
             <section class="edit-delete-logout">
                 
                 <form id="del" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
@@ -43,12 +51,12 @@
                 <form class="exit" action="/users/logout?_method=DELETE" method="post">
                     <button  class="btn btn-del" type="submit"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</button>
                 </form>
-            
             </section>
             <section class="video-promo">
                 <video muted autoplay loop><source src="/videos/fondo-perfil.mp4" type="video/mp4"></video>
             </section>
-    </main>
+        </main>
+
     <%- include ("./partials/footer") %> 
     <script src="/javascript/eliminarU.js"></script>
     

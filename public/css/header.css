@@ -328,7 +328,8 @@ header .navegacion div.usuario{
         align-items: center;
         justify-content: center;
         width: 64vw;
-        padding-left: 5px;
+        padding-left: 0px;
+        margin-left: 0px;
     }
     header .navegacion .busqueda .form-search{
         display: flex;

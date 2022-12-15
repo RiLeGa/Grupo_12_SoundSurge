@@ -188,10 +188,10 @@ window.addEventListener('load', () => {
     img.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(img.value):
-                $('#imagenError').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError').innerHTML = "Solo se permite <br> ingresar una imagen <br> valida fomato <br> (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img = false
                 break;
-               
+
             default:
                 $('#imagenError').innerHTML = null
                 validate.img = true
@@ -203,7 +203,7 @@ window.addEventListener('load', () => {
     img2.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(img2.value):
-                $('#imagenError2').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError2').innerHTML = "Solo se permite <br> ingresar una imagen <br> valida fomato <br> (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img2 = false
                 break;
             default:
@@ -216,7 +216,7 @@ window.addEventListener('load', () => {
     img3.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(img3.value):
-                $('#imagenError3').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError3').innerHTML = "Solo se permite <br> ingresar una imagen <br> valida fomato <br> (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img3 = false
                 break;
             default:
@@ -229,7 +229,7 @@ window.addEventListener('load', () => {
     img4.addEventListener('change', function() {
         switch (true) {
             case !regExExt.exec(img4.value):
-                $('#imagenError4').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError4').innerHTML = "Solo se permite <br> ingresar una imagen <br> valida fomato <br> (jpg|jpeg|png|jfif|gif|webp)"
                 validate.img4 = false
                 break;
             default:

@@ -5,10 +5,19 @@
     text-align: center;
     text-shadow: 2px 2px 7px #979700;
 }
+.editar .input-invisible{
+    display: none;
+}
 .editar main .section-imagenes{
     display: flex;
-   
+   width: 100%;
     flex-direction: row-reverse;
+}
+.editar .imagenes-secc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 .editar main .section-imagenes #imagen,#imagen2,#imagen3,#imagen4{
    display: none;
@@ -53,7 +62,7 @@
 .editar .error{
     margin: 10px;
     color: white;
-    width: 50%;
+    font-size: 13px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -66,6 +75,26 @@
     padding: 3%;
     background-color: black;
     box-shadow: 5px 5px 10px yellow;
+}
+.editar .secundarias2{
+    height: 167px;
+    /* margin: 20px; */
+    /* padding: 3%; */
+    background-color: white;
+    box-shadow: 5px 5px 10px yellow;
+    background-repeat: no-repeat;
+    width: 87%;
+    background-size: 51vw 19vh;
+    border: 1px solid black;
+    margin: 6%;
+}
+.editar .p-imagen{
+    color: white;
+    font-size: 15px;
+    text-shadow: 4px 3px 10px black
+}
+.editar .label-imagen{
+    width: 95%;
 }
 .editar main section {
     
@@ -191,8 +220,7 @@
 
 @media (min-width: 461px) {
     .editar {
-        background-image: url(/images/guitarra-fondo-detalle.png);
-        background-repeat: repeat;
+      
         
        
         display: flex;
@@ -276,6 +304,7 @@ margin-left: 4%;
 .editar main .section-imagenes {
     display: flex;
     flex-direction: column;
+    margin-left: 4%;
 }
 .editar .imagenes-sec {
     display: flex;
@@ -297,15 +326,18 @@ width: 100%;
 justify-content: space-between;
 }
 .editar main section .botones {
-    width: 49vw;
+    width: 126%;
     /* margin-top: 25px; */
     display: flex;
     justify-content: space-around;
     background-color: #000000d9;
-    margin-bottom: 3%;
-    padding-top: 8%;
-    border: 2px solid wheat;
-    border-radius: 10px;
+    padding-right: 4%;
+    padding-left: 4%;
+   margin-bottom: 5%;
+    border-top: 2px solid wheat;
+    border-bottom: 2px solid wheat;
+    padding-top: 3%;
+    padding-bottom: 3%;
     /* box-shadow: 9px 6px 16px #d7971f; */
 }
 .editar main section .botones .btn.btn-primary {
@@ -313,11 +345,11 @@ justify-content: space-between;
     padding: 15px;
     color: black;
     border-radius: 10px;
-    margin-bottom: 50px;
+   margin-bottom: 0px;
     background-color: yellow;
     border: 2px solid black;
-    margin-right: 25%;
-    width: 45%;
+  margin-right: 0px;
+    width: 40%;
     box-shadow: 4px 3px 9px white;
 }
 .editar main section .botones .btn.btn-secundary {
@@ -325,14 +357,11 @@ justify-content: space-between;
     padding: 15px;
     color: black;
     border-radius: 10px;
-    margin-bottom: 50px;
-    width: 44%;
+  margin-bottom: 0px;
+    width: 39%;
     box-shadow: 5px 3px 10px pink;
 }
-.editar main section .botones{
-    padding-right: 4%;
-    padding-left: 4%;
-}
+
 .editar main section .caja33 {
     width: 90%;
     margin-left: 4%;
@@ -342,6 +371,21 @@ justify-content: space-between;
 }
 .editar main section .mb-33 label.form-label {
     width: 110%;
+}
+.editar .divisor-label{
+    display: flex;
+    flex-direction: row;
+}
+.editar .p-imagen {
+    color: white;
+    font-size: 15px;
+    text-shadow: 4px 3px 10px black;
+    /* width: 92%; */
+    text-align: center;
+}
+.editar .secundarias2 {
+    background-size: 27vw 19vh;
+    background-position-x: 30%;
 }
 
 }
@@ -415,14 +459,14 @@ justify-content: space-between;
         }
         .editar .secundarias {
             width: 40%;
-            margin: 5px;
+            margin: 10px;
             padding: 1%;
             background-color: black;
             box-shadow: 5px 5px 10px yellow;
             
         }
         .editar main section .mb-33 {
-            width: 50%;
+            width: 80%;
         }
         .editar main section .articulo1,.articulo2{
             width: 130%;
@@ -465,15 +509,31 @@ justify-content: space-between;
             width: 90%;
     }
     .editar main .section-imagenes {
-        margin-top: 7%;
+       
+    padding-left: 3%;
     }
     .editar .imagenes-sec {
         width: 50%;
+    }
+    .editar .imagenes-secc {
+        width: 100%;
     }
     .editar .cajita{
         display: flex;
         flex-direction: row;
     }
+    .editar .divisor-label{
+        width: 95%;
+    }
+    .editar .secundarias2 {
+        background-size: 15vw 20vh;
+        background-position-x: 30%;
+    }
+    .editar .secundarias2 {
+        height: 190px;
+    }
 
+    .a {display: flex;
+    flex-wrap: wrap;}
 
 }

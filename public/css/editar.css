@@ -1,14 +1,18 @@
-.editar main h2{
+.editar  h2{
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 45px;
     text-align: center;
-    text-shadow: 2px 2px 7px #979700;
+    text-shadow: 2px 2px 7px #14d0ff;
+    color: #14d0ff;
 }
 .editar .input-invisible{
     display: none;
 }
-.editar main .section-imagenes{
+.editar  section #descripcion2{
+    display: none;
+}
+.editar  .section-imagenes{
     display: flex;
    width: 100%;
     flex-direction: row-reverse;
@@ -19,13 +23,13 @@
     justify-content: center;
     
 }
-.editar main .section-imagenes #imagen,#imagen2,#imagen3,#imagen4{
+.editar  .section-imagenes #imagen,#imagen2,#imagen3,#imagen4{
    display: none;
 }
 .editar{
     display: flex;
     flex-direction: column;
-    background: linear-gradient(rgb(245, 242, 219),hsl(46, 99%, 50%), #333333);
+    background: linear-gradient(black,blueviolet, black);
     
     
 }
@@ -33,7 +37,7 @@
     display: none;
 }
 .editar .direct-lista-flecha{
-    color: #000000;
+    color: white;
     font-size: 25px;
     margin-left: 3%;
 
@@ -74,14 +78,15 @@
     margin: 20px;
     padding: 3%;
     background-color: black;
-    box-shadow: 5px 5px 10px yellow;
+    box-shadow: 5px 5px 10px #dd55ff;
 }
 .editar .secundarias2{
     height: 167px;
     /* margin: 20px; */
     /* padding: 3%; */
     background-color: white;
-    box-shadow: 5px 5px 10px yellow;
+    box-shadow: 5px 5px 10px      #dd55ff;
+    ;
     background-repeat: no-repeat;
     width: 87%;
     background-size: 51vw 19vh;
@@ -96,7 +101,7 @@
 .editar .label-imagen{
     width: 95%;
 }
-.editar main section {
+.editar  section {
     
     display: flex;
     flex-direction: column;
@@ -107,16 +112,17 @@
     width: 60vw;
     margin-left: 20vw;
 }
-.editar main section .mb-3{
+.editar  section .mb-3{
     display: flex;
    flex-direction: column;
    align-items: center;
-   background-color: #00000047;
+   background-color: black;
    margin: 5px;
    width: 103%;
-   border: 2px solid black;
+   border: 2px solid #14d0ff;
+   border-radius: 10px;
 }
-.editar main section .mb-33 {
+.editar  section .mb-33 {
     display: flex;
     flex-direction: column;
     align-items: normal;
@@ -125,38 +131,39 @@
     width: 35%;
    
 }
-.editar main section .mb-33 label.form-label {
+.editar  section .mb-33 label.form-label {
     display: flex;
     flex-direction: column;
     padding: 7px;
     width: 100%;
     font-size: 19px;
-    text-shadow: 2px 2px 7px #ffff00;
-    color: yellow;
+    text-shadow: 2px 2px 7px #dd55ff;
+    color: #dd55ff;
     background-color: black;
     text-align: center;
     margin-bottom: 5px;
-    
-    box-shadow: 4px 2px 2px yellow;
+    border: 1px solid #dd55ff;
+    box-shadow: 4px 2px 2px #dd55ff;
 }
   
 
-.editar main section .mb-3 label.form-label{
+.editar  section .mb-3 label.form-label{
     display: flex;
     flex-direction: column;
     padding: 7px;
     width: 70%;
     font-size: 25px;
-    text-shadow: 2px 2px 7px #ffff00;
-    color: yellow;
+    text-shadow: 2px 2px 7px #14d0ff;
+    color: #14d0ff;
     background-color: black;
     text-align: center;
     margin-bottom: 5px;
     margin-top: 10px;
-    box-shadow: 4px 2px 2px yellow;
+    box-shadow: 4px 2px 2px #14d0ff;
+    border: 1px solid #14d0ff;
 }
 
-.editar main section .mb-3 .invalid-feedback{
+.editar  section .mb-3 .invalid-feedback{
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -166,7 +173,7 @@
     color: red;
 }
 
-.editar main section .mb-3 input.form-control{
+.editar  section .mb-3 input.form-control{
     width: 60vw;
     height: 30px;
     text-align: center;
@@ -175,14 +182,14 @@
     border-radius: 5px;
 }
 
-.editar main section .mb-3 select.form-select{
+.editar  section .mb-3 select.form-select{
     width: 60vw;
     height: 30px;
    text-align: center;
     border: 2px solid black;
 }
 
-.editar main section .botones{
+.editar  section .botones{
     width: 30vw;
     flex-direction: row;
     margin-top: 25px;
@@ -190,19 +197,19 @@
     justify-content: space-around;
 }
 
-.editar main section .botones .btn.btn-primary{
+.editar  section .botones .btn.btn-primary{
     background-color: rgb(74, 82, 74);
     padding: 15px;
     color:black;
-    border-radius: 15%;
+    border-radius: 10px;
     margin-bottom: 50px;
-    background-color: yellow;
-    border: 2px solid black;
+    background-color: #14d0ff;
+    border: 2px solid blue;
     margin-right: 25%;
     
 }
 
-.editar main section .botones .btn.btn-secundary{
+.editar  section .botones .btn.btn-secundary{
     background-color: rgb(186, 3, 3);
     padding: 15px;
     color:black;
@@ -210,7 +217,7 @@
     margin-bottom: 50px;
     
 }
-.editar main section #descripcion textarea {
+.editar  section #descripcion textarea {
     width: 68%;
     margin-top: 5px;
     padding: 2%;
@@ -226,82 +233,87 @@
         display: flex;
         justify-content: center;
     }
-    .editar main h2 {
+    .editar  h2 {
         text-shadow: 3px 2px 35px #ffffff;
         background-color: #000000d9;
-        color: yellow;
+        color: #dd55ff;
         height: 100px;
         padding-top: 4%;
         text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .editar .direct-lista{
         display: block;
     }
-    .editar main section .mb-3 {
+    .editar  section .mb-3 {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #000000d1;
         margin: 5px;
-        border: 2px solid #b7b324;
+        border: 2px solid  #dd55ff;
+        ;
         height: 143px;
-        padding-top: 5%;
+       
         padding: 5%;
     }
-    .editar main section #descripcion{
-        height: 260px;
+    .editar  section #descripcion{
+        height: 210px;
+        padding: 0%;
+        width: 145%;
     }
-    .editar main section #descripcion textarea{
+    .editar  section #descripcion textarea{
         width: 68%;
         margin-top: 5px;
-        padding: 2%;
+        padding: 4%;
         border: 2px solid black;
         border-radius: 10px;
-        background-color: #ffd8b6;
+        background-color: #ffc9f3;
     }
-    .editar main section .mb-3 input.form-control{
+    .editar  section .mb-3 input.form-control{
         width: 60vw;
         height: 30px;
-        background-color: #ffd8b6
+        background-color: #ffc9f3
         
 
 }
-.editar main section .mb-3 select.form-select {
-  background-color: #ffd8b6 ;
+.editar  section .mb-3 select.form-select {
+  background-color: #f8d3f0 ;
   width: 90%;
 }
 .editar .direct-lista{
-margin-top: 4%;
+margin-top: 2%;
 width: 28%;
 margin-left: 4%;
 }
 .editar .direct-lista #boton{
     padding: 3px;
     background: black;
-    color: yellow;
-    box-shadow: 5px 4px 36px white;
+    color: #14d0ff;
+    box-shadow: 2px 2px 4px #14d0ff;
     }
 .editar .direct-lista-flecha{
     display: none;
 }
-.editar main section .caja1,.caja2,.caja3 {
-width: 90%;
-margin-left: 4%;
+.editar  section .caja1,.caja2,.caja3 {
+width: 100%;
+
 }
-.editar main section .articulo1,.articulo2{
+.editar  section .articulo1,.articulo2{
     width: 130%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.editar main section .articulo2{
+.editar  section .articulo2{
     display: flex;
     flex-direction: column-reverse;
     
     
 
 }
-.editar main .section-imagenes {
+.editar  .section-imagenes {
     display: flex;
     flex-direction: column;
     margin-left: 4%;
@@ -315,9 +327,9 @@ margin-left: 4%;
     margin: 5px;
     padding: 3%;
     background-color: black;
-    box-shadow: 5px 5px 10px yellow;
+    box-shadow: 5px 5px 10px #dd55ff;
 }
-.editar main section .mb-33 {
+.editar  section .mb-33 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -325,7 +337,7 @@ margin-left: 4%;
 width: 100%;
 justify-content: space-between;
 }
-.editar main section .botones {
+.editar  section .botones {
     width: 126%;
     /* margin-top: 25px; */
     display: flex;
@@ -340,7 +352,7 @@ justify-content: space-between;
     padding-bottom: 3%;
     /* box-shadow: 9px 6px 16px #d7971f; */
 }
-.editar main section .botones .btn.btn-primary {
+.editar  section .botones .btn.btn-primary {
     background-color: rgb(74, 82, 74);
     padding: 15px;
     color: black;
@@ -349,27 +361,27 @@ justify-content: space-between;
     background-color: yellow;
     border: 2px solid black;
   margin-right: 0px;
-    width: 40%;
+    width: 30%;
     box-shadow: 4px 3px 9px white;
 }
-.editar main section .botones .btn.btn-secundary {
+.editar  section .botones .btn.btn-secundary {
     background-color: rgb(186, 3, 3);
     padding: 15px;
     color: black;
     border-radius: 10px;
   margin-bottom: 0px;
-    width: 39%;
+    width: 30%;
     box-shadow: 5px 3px 10px pink;
 }
 
-.editar main section .caja33 {
-    width: 90%;
+.editar  section .caja33 {
+    width: 70%;
     margin-left: 4%;
 }
 .editar .cajitas-imagenes{
     margin: 2%;
 }
-.editar main section .mb-33 label.form-label {
+.editar  section .mb-33 label.form-label {
     width: 110%;
 }
 .editar .divisor-label{
@@ -392,65 +404,66 @@ justify-content: space-between;
 
     @media (min-width: 791px){
         
-        .editar main h2 {
-            text-shadow: 2px 2px 7px #ffff01;
+        .editar  h2 {
+            text-shadow: 2px 2px 7px rgb(255, 85, 241);
             background: #00000080;
-            width: 40%;
+            width: 56%;
             margin: 0%;
             display: flex;
             justify-content: center;
-            margin-left: 32%;
-            margin-bottom: 2%;
-            padding: 7px;
+            margin-left: 22%;
+            margin-bottom: 1%;
+            margin-top: 1%;
+            padding-top: 1%;
+            padding-bottom: 1%;
             border-radius: 10px;
-            box-shadow: 0px 0px 11px yellow;
+            box-shadow: 0px 0px 11px #dd55ff;
+            height: 100%;
         }
-        .editar main section .mb-3 input.form-control {
+        .editar  section .mb-3 input.form-control {
             width: 60vw;
             height: 30px;
             border: 3px solid black;
-            background-color: #e5b46c;
+            
             border-radius: 5px;
         }
         .editar .direct-lista {
             margin-top: 2%;
         }
-        .editar main section .mb-3 {
+        .editar  section .mb-3 {
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: #00000096;
             margin: 5px;
             width: 134%;
-            border: 1px solid white;
+            border: 1px solid #14d0ff;
             border-radius: 10px;
         }
         .editar form {
             background-color: #000000bf;
-            padding-top: 2%;
+            
             width: 95%;
             display: flex;
             flex-direction: column;
         }
-        .editar main section .mb-3 label.form-label {
+        .editar  section .mb-3 label.form-label {
             width: 100%;
-            border: 2px solid yellow;
+            border: 2px solid #dd55ff;
             border-radius: 16px;
         }
-        .editar main section .mb-3 select.form-select {
+        .editar  section .mb-3 select.form-select {
             width: 15vw;
             height: 38px;
             border: 3px solid black;
-            background-color: #ffcc81;
+           
             border-radius: 5px;
-            
-            font-size: 20px;
         }
-        .editar main section .mb-3 input.form-control {
+        .editar  section .mb-3 input.form-control {
             width: 15vw;
             height: 38px;
             border: 3px solid black;
-            background-color: #ffcc81;
+            
             border-radius: 5px;
             margin-top: 8px;
         }
@@ -462,29 +475,30 @@ justify-content: space-between;
             margin: 10px;
             padding: 1%;
             background-color: black;
-            box-shadow: 5px 5px 10px yellow;
+            box-shadow: 5px 5px 10px  #dd55ff;
+            ;
             
         }
-        .editar main section .mb-33 {
+        .editar  section .mb-33 {
             width: 80%;
         }
-        .editar main section .articulo1,.articulo2{
+        .editar  section .articulo1,.articulo2{
             width: 130%;
             display: flex;
             flex-direction: row;
           
         }
-        .editar main section .articulo1{
+        .editar  section .articulo1{
             width: 70%;
         }
-        .editar main section .caja3{
+        .editar  section .caja3{
             display: flex;
             flex-direction: row;
             width: 55%;
             margin-left: 8%;
-            
+           
         }
-        .editar main section {
+        .editar  section {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -492,31 +506,33 @@ justify-content: space-between;
             flex-direction: column;
             width: 100%;
         }
-        .editar main section .caja1{
+        .editar  section .caja1{
             margin-left: 6%;
         margin-right: 18%;
         }
-        .editar main section #descripcion textarea {
+        .editar  section #descripcion textarea {
             width: 78%;
             margin-left: 1%;
         }
-        .editar main section #descripcion{
+        .editar  section #descripcion{
             padding: 1%;
             width: 80%;
             margin-left: 19%;
+            height: 220px;
         }
-        .editar main section #descripcion label.form-label {
+        .editar  section #descripcion label.form-label {
             width: 90%;
     }
-    .editar main .section-imagenes {
-       
+    .editar  .section-imagenes {
+      
     padding-left: 3%;
     }
     .editar .imagenes-sec {
-        width: 50%;
+        width:65%;
     }
     .editar .imagenes-secc {
-        width: 100%;
+        width: 90%;
+       
     }
     .editar .cajita{
         display: flex;
@@ -532,7 +548,67 @@ justify-content: space-between;
     .editar .secundarias2 {
         height: 190px;
     }
+    .editar  section .botones {
+       
+        width: 100%;
+    }
+    
+    .editar .p-imagen {
+        font-size: 13px;
+    }
+    .editar #contenedores{
+        margin-top: 3%;
+    }
+    .editar  section #descripcion{
+        display: none;
+    }
 
+    .editar  section #descripcion2{
+        display: inline-table;
+        width: 70%;
+        padding: 0%;
+    }
+    .editar .articulo22{
+        width: 100%;
+    }
+    .editar section .caja33 {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .editar section .caja33 .label-descripcion{
+        width: 80%;
+        border: 2px solid #dd55ff;
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
+        width: 70%;
+        font-size: 25px;
+        text-shadow: 2px 2px 7px #14d0ff;
+        color: #14d0ff;
+        background-color: black;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        box-shadow: 4px 2px 2px #14d0ff;
+        margin-left: 14%;
+        border-radius: 16px;
+    }
+    .editar #descripcion22{
+        margin-top: 5px;
+        padding: 1%;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: #ffc9f3;
+        width: 80%;
+        height: 100px;
+    margin-left: 10%;
+        
+    }
+    .editar section .botones {
+        padding: 2%;
+        margin-top: 4%;
+    }
+    
     .a {display: flex;
     flex-wrap: wrap;}
 

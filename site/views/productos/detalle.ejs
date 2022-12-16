@@ -37,6 +37,12 @@
                         <p class="descuento">$<%= producto.precio %></p>
                     <% } %>
                 </div>
+                <div class="sumar-carrito">
+                    <input value="<%= producto.stock %>" id="stockOculto" />
+                    <div class="decrease" id="decrease">-</div>
+                    <input class="contador" type="number" id="contador" value="1">
+                    <div class="increase" id="increase">+</div>
+                </div>
                 
                 <div class="agregar">
                     <% if (locals.userLogin) { %>

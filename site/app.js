@@ -45,6 +45,7 @@ const indexRouter = require('./routes/index');
 const productosRouter = require('./routes/productos');
 const adminController = require('./routes/admin');
 const usuariosRouter = require('./routes/usuarios');
+/* const apiRouter = require('./routes/api/apiProductos'); */
 const apiCarrito = require('./routes/api/apiCarrito');
 
 dbConnectionTest()
@@ -53,6 +54,7 @@ app.use('/', indexRouter);
 app.use('/admin', adminController);
 app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
+/* app.use('/api', apiRouter); */
 app.use('/api/carrito',apiCarrito);
 
 app.use((req, res, next) => {

@@ -134,23 +134,28 @@ margin: 5px;
     padding: 3px;
 }
 
-.detalle main.detalleDeProd .sectionDetail div.detalle .botones{
-    width: 100%;
+.detalle main.detalleDeProd .sectionDetail div.detalle .sumar-carrito{
+    width: 20%;
     margin-top: 10px;
     margin-bottom: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
-.detalle main.detalleDeProd .sectionDetail div.detalle .botones .sumar, .restar{
+.detalle main.detalleDeProd .sectionDetail div.detalle .sumar-carrito .increase, .decrease{
     width: 25px;
     height: 25px;
+    border: 2px black solid;
+    border-radius: 5px;
+    background: blueviolet;
+    box-shadow: 4px 4px 8px rgba(212, 0, 255, 0.664);
+    text-align: center;
 }
-.detalle main.detalleDeProd .sectionDetail div.detalle .botones .cantidad{
+.detalle main.detalleDeProd .sectionDetail div.detalle .sumar-carrito .contador{
     width: 30px;
     height: 25px;
-
+    text-align: center;
 }
 
 .detalle main.detalleDeProd h1, h2, span{
@@ -442,7 +447,6 @@ color: white;
         border: white 2px solid;
         padding: 5px;
         position: absolute;
-        bottom: 26%;
         left: 0%;
         width: 100%;
     }

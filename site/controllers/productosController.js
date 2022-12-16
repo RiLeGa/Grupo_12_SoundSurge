@@ -53,21 +53,7 @@ module.exports = {
     },
 
     carrito : (req,res) => {
-        let compra = []
-        let idParams = +req.params.id
-        db.Productos.findByPk(idParams, {
-            include: [{ all: true}]
-        })
-         .then(producto => {
-                    
-                        return res.render('carrito', {
-                            producto
-                            
-                        })
-                        
-                    })
-                    return compra.push(producto)
-            .catch(error => res.send(error))
+        return res.render('productos/carrito')
     },
     listarCategorias : (req,res) => {
         let categorias = db.Categorias.findAll({

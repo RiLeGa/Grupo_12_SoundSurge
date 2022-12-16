@@ -1,42 +1,149 @@
-<div class="categorias-home">
-    <h3 class="secciones"> Ofertas </h3>
-</div>
-<section class="contenedor-2">
-    <ul>
-        <% for( let i = 0; i <= productos.lenght; i++ ) { %>
-            <% if (productos[i].descuento !== 0) { %>
-            <article>
-                <a href="/productos/detalle/<%= productos[i].id %>">
-                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
-                    <i class="fas fa-percentage"><%= productos[i].descuento %></i>
-                    <div class="precio">
-                        <h3><%= productos[i].titulo %></h3>
-                        <span class="precioSinDesc">$<%= productos[i].precio %></span>
-                        <span>$<%= productos[i].precio - (productos[i].precio * productos[i].descuento / 100)%></span>
+<!-- borrador carrito -->
+
+<main>
+    <% if (producto.stock !==0) { %>
+        <section>
+            <h1>Mi carrito</h1>
+        </section>
+        <!-- Producto, precio, etc -->
+        <section>
+
+        </section>
+        <!-- Productos -->
+        <section class="caja-principal-carrito">
+
+            <div class="caja-carrito">
+                <article>
+                    <div class="caja-guitarra">
+                        <h2>PRODUCTO</h2>
+                        <img class="guitarra" src="/images/<%= producto.imagenes[0].nombre %>"
+                            alt="Imagen principal">
+                        <p>
+                            <%= producto.titulo %>
+                        </p>
+                    </div>
+
+
+                    <div class="caja-secundaria" id="contador">
+                        <h2 id="cantidad">CANTIDAD</h2>
+                        <div class="contador">
+                            <button class="restar">-</button>
+                            <input class="numero" type="number">
+                            <button class="sumar">+</button>
+                        </div>
+                    </div>
+
+
+                    <div class="caja-secundaria">
+                        <h2>PRECIO</h2>
+                        <span class="primerprecio">$<%= producto.precio %></span>
+                    </div>
+                    <% if (producto.descuento>0 ) { %>
+                    <div class="caja-secundaria">
+                        <h2>DESCUENTO</h2>
+                        <span class="primer-descuento">-$<%= (producto.precio * producto.descuento / 100) %>
+                                </span>
+                    </div>
+                    <% } %>
+
+
+                    <div class="caja-secundaria">
+                        <h2>TOTAL</h2>
+                        <% if (producto.descuento>0 ) { %>
+                            <span class="precio">$<%= producto.precio - (producto.precio *
+                                    producto.descuento / 100)%></span>
+                            <% }else { %>
+                                <span class="precio">$<%= producto.precio %></span>
+                                <% } %>
+                    </div>
+
+
+                </article>
+
+            </div>
+            <div class="caja-carrito2">
+                <article>
+                    <div class="caja-guitarra">
+                        <h2>PRODUCTO</h2>
+                        <img class="guitarra" src="/images/<%= producto.imagenes[0].nombre %>"
+                            alt="Imagen principal">
+                        <p>
+                            <%= producto.titulo %>
+                        </p>
+                        <div class="caja-secundaria" id="contador">
+                            <h2 id="cantidad">CANTIDAD</h2>
+                            <div class="contador">
+                                <button class="restar">-</button>
+                                <input class="numero" type="number">
+                                <button class="sumar">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                 <div class="separador">
+                    
+
+
+                    <div class="caja-secundaria">
+                        <h2>PRECIO</h2>
+                        <span class="primerprecio">$<%= producto.precio %></span>
+                    </div>
+                    <% if (producto.descuento>0 ) { %>
+                    <div class="caja-secundaria">
+                        <h2>DESCUENTO</h2>
+                        <span class="primer-descuento">-$<%= (producto.precio * producto.descuento / 100) %>
+                                </span>
+                    </div>
+                    <% } %>
+
+                    <div class="caja-secundaria">
+                        <h2>TOTAL</h2>
+                        <% if (producto.descuento>0 ) { %>
+                            <span class="precio">$<%= producto.precio - (producto.precio *
+                                    producto.descuento / 100)%></span>
+                            <% }else { %>
+                                <span class="precio">$<%= producto.precio %></span>
+                                <% } %>
                     </div>
                 </div>
-                </a>
-            </article>
-            <% } %>
-        <% } %>
-    </ul>
-</section>
-<div class="categorias-home">
-    <h3 class="secciones"> Surge Selection </h3>
-</div>
-<section class="contenedor-2">
-    <ul>
-        <% for( let i = 0; i <= 9; i++ ) { %>
-            <article>
-                <a href="/productos/detalle/<%= productos[i].id %>">
-                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0] %>')">
-                    <div class="precio-1">
-                        <h3><%= productos[i].titulo %></h3>
-                        <span>$<%= productos[i].precio %></span>
-                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Subtotal, Total -->
+        <section>
+            <ul class="cuenta">
+
+                <h4 class="total">TOTAL : </h4>
+                <div>
+                    <h3 class="precio-final">$<%= producto.precio - (producto.precio * producto.descuento /
+                            100)%>
+                    </h3>
+                    <% if (producto.descuento !==0) { %>
+                        <p class="precio-final">$<%= producto.precio %>
+                        </p>
+                        <% } %>
                 </div>
+
+            </ul>
+        </section>
+        <section class="botones">
+            <div>
+                <button class="comprar">FINALIZAR COMPRA</button>
+            </div>
+            <div>
+                <a href="/">
+                    <button class="mas">BUSCAR MAS PRODUCTOS</button>
                 </a>
-            </article>
-        <% } %>
-    </ul>
-</section>
+            </div>
+        </section>
+        </section>
+        <% } else{%>
+            <div class="sin-stock">
+                <img src="/images/dinosaurio.png" alt="">
+                <h3>Por el momento no hay stock de este producto.</h3>
+                <% } %>
+</main>

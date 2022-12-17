@@ -32,7 +32,7 @@ module.exports = {
                 },
                 data: req.session.carrito
             }
-            return res.status(200).json(response)
+            return res.send(response)
 
         } catch (error) {
             res.status(500).json(error)
@@ -64,7 +64,7 @@ module.exports = {
             include: [
                 {
                     association: 'imagenes',
-                    attributes: ['nombre']
+                    attributes: ['titulo']
                 }
             ]
         })
@@ -72,7 +72,7 @@ module.exports = {
         // creamos el objeto/item que se agregara que se pasara a la session
         let item = {
             id: producto.id,
-            nombre: producto.nombre,
+            nombre: producto.titulo,
             precio: producto.precio,
             descuento: producto.descuento,
             imagen: producto.imagenes[0].nombre,

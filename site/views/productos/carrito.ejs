@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include ("./partials/head",{title: "Tu carrito" }) %>
+<%- include ("../partials/head",{title: "Tu carrito" }) %>
     </head>
 
     <body class="carrito">
-        <%- include ("./partials/header") %>
+        <%- include ("../partials/header") %>
             <!--  M A I N  -->
             <main >
                 <h1>Carrito de compras</h1>
-                <section id="carrito">
+                <section id="secCarrito">
                     
-                </section>
-                <section class="Numeros" id="Numeros">
-                   <!-- <form action="" method="post">
-                        <h3>Subtotal</h3>
-                        <div class="valor-productos">
+                    <section class="Numeros" id="Numeros">
+                        <!-- <form action="" method="post">
+                            <h3>Subtotal</h3>
+                            <div class="valor-productos">
                             <p>$190000</p>
                             <p>$190000</p>
                             <p>$190000</p>
@@ -69,14 +68,15 @@
                             <a href="">Continuar comprando</a>
                         </div>
                     </form>
+                    </section>
                 </section>
             </main>
             <!--  F O O T E R  -->
 
-            <%- include ("./partials/footer") %>
+            <%- include ("../partials/footer") %>
             <script src="/javascript/carrito.js"></script>
         </body>
 
         
 
-</html>
+        </html>

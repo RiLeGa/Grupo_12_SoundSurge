@@ -401,6 +401,18 @@ padding: 5px;
 /* DESKTOP */
 @media (min-width: 925px) {
 
+    .carrito article{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+    }
+    .carrito img.prodEnCarrito{
+        width: 150px;
+        height: 150px;
+    }
+
     .carrito .caja-secundaria h2#cantidad{
         display: block;
       }

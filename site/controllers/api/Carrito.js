@@ -64,7 +64,7 @@ module.exports = {
             include: [
                 {
                     association: 'imagenes',
-                    attributes: ['titulo']
+                    attributes: ['nombre']
                 }
             ]
         })

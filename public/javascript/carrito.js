@@ -8,7 +8,7 @@ const iconCart = $('#cart-btn');
 const cart = $('.cart-container');
 
 // captura el elemento con id carrito
-const carrito = $("#carrito");
+const carrito = $("#secCarrito");
 
 const getVentanaCarrito = async () => {
 
@@ -121,10 +121,10 @@ const cargarCarrito = (data) => {
             let item = `
             <article>
                 <div class="imagenes">
-                    <img id="img" src="/images/productos/${producto.imagen}" alt="${producto.titulo}">
+                    <img class="prodEnCarrito" id="img" src="/images/${producto.imagen}" alt="${producto.nombre}">
                 </div>
                 <div class="detail">
-                    <h4><a id="nombre" href="/productos/detalle/${producto.id}">${producto.titulo}</a></h4>
+                    <h4><a id="titulo" href="/productos/detalle/${producto.id}">${producto.nombre}</a></h4>
                     <div class="añadir-elementos">
                         <button class="restar" onClick="modifyItem('${producto.id}')">-</button>
                         <span ">${producto.cantidad}</span>

@@ -46,7 +46,7 @@
                 
                 <div class="agregar">
                     <% if (locals.userLogin) { %>
-                    <button class="a-carrito" onclick="addItem('<%= producto.id %>')"> Agregar al carrito</a></button>
+                    <button class="a-carrito" type="submit" onclick="addItem('<%= producto.id %>')"><a href="/productos/carrito">Agregar al carrito</a></button>
                     <% }else{ %> 
                         <button class="a-carrito" id="carrito" type="submit"><a id="carrito" href=""> Agregar al carrito</a></button>
                     

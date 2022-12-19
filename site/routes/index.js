@@ -1,7 +1,7 @@
 const express = require('express');
 const { usuarios, productos } = require('../controllers/api/apiController');
 const router = express.Router();
-const {home, search} = require('../controllers/indexController');
+const {home, search, aboutUs} = require('../controllers/indexController');
 
 const db = require("../database/models")
 
@@ -12,16 +12,18 @@ router.get('/busqueda', search);
 
 router.get('/productos', productos);
 
-router.get('/prueba', (req, res) => {
-    db.Ordenes.findAll({
-        include: [/* 
+router.get('/aboutUs', aboutUs)
+
+/* router.get('/prueba', (req, res) => {
+   /*  db.Ordenes.findAll({
+        include: [
             {all: true}
         ] */
 
-        /* usuariosId: req.session.userLogin.id,
-        status: 'pending',*/
+       /*  usuariosId: req.session.userLogin.id,
+        status: 'pending', */
         
-            {
+       /*      {
                 association : 'carrito',
                 attributes: ['productosId', 'cantidad'],
                 include: [
@@ -44,7 +46,7 @@ router.get('/prueba', (req, res) => {
         res.send(data)
     })
     .catch(err => res.send(err))
-})
+})  */
 
 
 

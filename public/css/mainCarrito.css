@@ -3,12 +3,16 @@
     background-image:url(/images/fondo-carrito.jpg); 
     background-repeat: no-repeat;
     background-size: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .carrito h1{
     color: rgb(255 255 255);
-    text-align: center;
     font-size: 30px;
-    margin-top: 0;
+    width: 100vw;
+    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     background-color: #c51dbe;
@@ -56,19 +60,20 @@
     padding: 2px;
     margin-top: 130%;
     }
-    .carrito section div article .contador{
-        font-size: 24px;
-        background-color:#5b5b5bbd;   
+
+    .carrito .añadir-elementos{
         display: flex;
-        flex-direction: row;
-        align-items: center; 
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
-    .carrito section div article .contador .restar{
+    
+    .carrito .añadir-elementos .restar{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .carrito section div article .contador .sumar{
+    .carrito .añadir-elementos .agregar{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -207,8 +212,8 @@ padding: 5px;
     font-size: 15px;
 
 }
-.carrito section div article .sumar,
-.carrito section div article .restar{
+.carrito  .añadir-elementos .agregar,
+.carrito .añadir-elementos .restar{
     background-color: #c51dbe;
     color: white;
     width: 20px;
@@ -406,18 +411,20 @@ padding: 5px;
     .carrito article{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        width: 90vw;
+        width: 45vw;
     }
     
     .carrito .all-cart{
         display: flex;
+        width: 63vw;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgba(112, 128, 144, 0.505);
-        
+        background-color: rgb(61 81 100 / 51%);
+        margin-bottom: 25px;
+        padding: 20px; 
     }
 
     .carrito img.prodEnCarrito{
@@ -475,11 +482,18 @@ padding: 5px;
         
         height: 100%;
     }
-    .carrito section div .cantidad .sumar{
-        width: 40%;
+    .carrito .añadir-elementos .agregar{
+        width: 20%;
+        padding: 15px;
     }
-    .carrito section div .cantidad .restar{
-        width: 40%;
+    .carrito  .añadir-elementos .restar{
+        width: 20%;
+        padding: 15px;
+    }
+    .carrito  .añadir-elementos span{
+        text-align: center;
+        font-size: 30px;
+        padding: 15px;
     }
     .carrito section div .cantidad .numero{
         width: 40%;
@@ -519,14 +533,7 @@ padding: 5px;
         padding: 2px;
         margin-top: 50%;
         }
-        .carrito section div article .contador{
-            font-size: 24px;
-            background-color: #5b5b5bbd;
-            color: #000000;
-            padding: 2px;
-            margin-top: 57%;
-            }
-
+        
     .carrito section div article section{
         width: 6vw;
     }
@@ -601,30 +608,24 @@ padding: 5px;
 font-size: 24px;
 }
 
-    .carrito section div article .contador{
-        font-size: 24px;
-        background-color:#5b5b5bbd;   
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-    }
-    .carrito section div article .primer-descuento{
-        background-color: #c51dbe;
-        color: #ffffff;
-        border: solid 2px #ffffff;
-        border-radius: 10px;
-        padding: 2px;
-        margin-top: 50%;
-    }
-    .carrito .precio{
-        font-size: 24px;
-        background-color: #ffffff;
-        color: #000000;
-        border: #c51dbe solid 4px;
-        border-radius: 10px;
-        padding: 4px;
-        margin-top: 50%;
-    }
+
+.carrito section div article .primer-descuento{
+    background-color: #c51dbe;
+    color: #ffffff;
+    border: solid 2px #ffffff;
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: 50%;
+}
+.carrito .precio{
+    font-size: 24px;
+    background-color: #ffffff;
+    color: #000000;
+    border: #c51dbe solid 4px;
+    border-radius: 10px;
+    padding: 4px;
+    margin-top: 50%;
+}
 }
 /* @media (min-width: 1443px) {
 .carrito section div article span.primerprecio {

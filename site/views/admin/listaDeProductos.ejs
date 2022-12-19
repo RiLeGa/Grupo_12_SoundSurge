@@ -29,7 +29,7 @@
                 <th scope="col">Marca</th>
                 <th scope="col">stock</th>
                 <th scope="col">Precio</th>
-                <th scope="col">Des</th>
+                <th scope="col" class="desc">Des</th>
                 <th scope="col">Accion</th>
               </tr>
             </thead>
@@ -43,7 +43,7 @@
                         <td><a href="/productos/detalle/<%= producto.id %>"><%= producto.marca.nombre %></a></td>
                         <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.stock %></a></td>
                         <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.precio %></a></td>
-                        <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.descuento %></a></td>
+                        <td class="desc"><a href="/productos/detalle/<%= producto.id %> "><%= producto.descuento %></a></td>
                         <td>
                             <div class="edicion">
                                 <a href="/admin/editar/<%= producto.id%>">

@@ -103,9 +103,18 @@
 }
 
 .home main .secciones{
-    text-align: center;
-    font-size: 45px;
-    margin-top: 1.5em;
+    display: flex;
+    color: rgb(255 255 255);
+    font-size: 30px;
+    width: 100vw;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    background-color: #c51dbe;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .home main span{

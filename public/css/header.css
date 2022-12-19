@@ -86,6 +86,7 @@ header .navegacion nav.opcionesDePerfil-Movil{
     align-items: center;
     margin-top: 60px;
     position: absolute;
+    left: 0;
 }
 
 header .navegacion nav.opcionesDePerfil-Movil ul{

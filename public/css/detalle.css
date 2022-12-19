@@ -31,7 +31,6 @@
 .detalle .detalleDeProd{
     background-repeat: repeat;
     background-size: 90px;
-    height:850px;
 
 }
 .detalle .sin-stock img{
@@ -87,7 +86,6 @@
     flex-direction: column;
     color: rgb(0, 0, 0);
     width: 100%;
-    height: 365px;
     margin: 10px 10px 50px 0;
     align-items: center;
 }
@@ -203,7 +201,10 @@ color: white;
     display: none;
 }
 .detalle main.detalleDeProd .similares{
-    display: none;
+    display: block;
+    color: white;
+    padding: 5px;
+    width: 100%;
 }
 
 .detalle main.detalleDeProd .similares ul{
@@ -256,7 +257,6 @@ color: white;
     align-items: center;
     flex-wrap: nowrap;
     overflow-y: auto;
-    margin-top: 60px;
     
 }
 
@@ -282,7 +282,14 @@ color: white;
         display: block;
     }
     .detalle main.detalleDeProd h2.similares{
-        display: none;
+        display: block;
+        background-color: rgb(245, 163, 176);
+        color: white;
+        border: white 2px solid;
+        padding: 5px;
+        position: absolute;
+        left: 0%;
+        width: 100%;
     }
     .detalle main.detalleDeProd .sectionDetail div.vistas .detallado .principal {
         height: 294px;
@@ -290,7 +297,6 @@ color: white;
     .detalle .detalleDeProd {
         background-repeat: repeat;
         background-size: 38px;
-        height: 1050px;
     }
     .detalle main.detalleDeProd .similares article .tarjeta-detalle{
         text-decoration: none;
@@ -338,7 +344,6 @@ color: white;
     .detalle main.detalleDeProd .sectionDetail {
         display: flex;
         width: 98vw;
-        height: 395px;
         
        
     }
@@ -351,8 +356,8 @@ color: white;
     .detalle main.detalleDeProd .sectionDetail div.vistas{
         display: flex;
         width: 52%;
-       justify-content: center;
-        height: 520px;
+        justify-content: center;
+        height: 665px;
         flex-direction: column-reverse;
         align-items: center;
         
@@ -373,7 +378,7 @@ color: white;
         display: flex;
         flex-direction: column;
         width: 46%;
-        height: 475px;
+        height: fit-content;
         margin-top: 30px;
         padding: 2%;
         border: 2px solid blueviolet;
@@ -442,11 +447,8 @@ color: white;
 
     .detalle main.detalleDeProd h2.similares {
         display: block;
-        background-color: rgb(245, 163, 176);
         color: white;
-        border: white 2px solid;
         padding: 5px;
-        position: absolute;
         left: 0%;
         width: 100%;
     }
@@ -454,6 +456,5 @@ color: white;
         width: 94vw;
         height: 20rem;
         margin-left: 3vw;
-       margin-top: 15%;
     }
 }

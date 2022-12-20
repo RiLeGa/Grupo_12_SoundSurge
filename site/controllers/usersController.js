@@ -76,26 +76,88 @@ module.exports = {
           req.session.userLogin = {
             id: usuario.id,
             nombre: usuario.nombre,
+            apellido: usuario.apellido,
+            direccion: usuario.direccion,
+            telefono: usuario.telefono,
+            email: usuario.email,
             imagen: usuario.imagen,
             rol: usuario.rolId,
           };
           if (recordarme) {
-            res.cookie("SoundSurge", req.session.userLogin, {
-              maxAge: 1000 * 60 * 60,
-            });
+            res.cookie("SoundSurge", req.session.userLogin, {maxAge: 1000 * 60 * 60});
           }
-          return res.redirect("/users/perfil");
-        })
-        .catch((error) => {
-          return res.send(error);
-        });
-    } else {
-      /*       return res.send(errors.mapped())
-       */ return res.render("login", {
+          /* if (recordarme) {
+            res.cookie('Crafsy', req.session.userLogin, { maxAge: 1000 * 60 * 60 * 24 })
+          } */
+
+          req.session.carrito = []
+
+          db.Ordenes.findOne({
+              where: {
+                  usuariosId: req.session.userLogin.id,
+                  status: 'pending'
+              },
+                  include: [
+                      {
+                          association : 'carrito',
+                          attributes: ['productosId', 'cantidad'],
+                          include: [
+                              {
+                                  association : 'producto',
+                                  attributes: ['id', 'titulo', 'precio', 'descuento', 'stock'],
+                                  include: [
+                                      {
+                                          association : 'imagenes',
+                                          attributes: ['nombre']
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              
+          })
+          .then(orden => {
+
+              if(!orden) {
+                  console.log("El usuario logueado no tiene una orden pendiente")
+                  return res.redirect('/users/perfil')
+
+              } else {
+                  console.log("El usuario logueado tiene una orden pendiente")
+                  orden.carrito.forEach(item => {
+
+                      let producto = {
+                          id: item.producto.id,
+                          nombre: item.producto.titulo,
+                          precio: item.producto.precio,
+                          descuento: item.producto.descuento,
+                          imagen: item.producto.imagenes[0].nombre,
+                          stock: item.producto.stock,
+                          cantidad: +item.cantidad,
+                          subtotal: ( +item.producto.precio - ( +item.producto.precio * +item.producto.descuento / 100 )) * item.cantidad,
+                          ordenId: orden.id ,
+                      }
+                      req.session.carrito.push(producto)
+                      
+                  })
+                  console.log(req.session.carrito)
+                  return res.redirect('/users/perfil')
+              }
+          })
+          .catch(err => res.send(err))
+
+          /* return res.send(req.body) */
+      })
+      .catch(errores => res.send(errores))
+
+} else {
+  /* return res.send(errors.mapped()) */
+  return res.render('users/login', {
       errors: errors.mapped(),
-      old: req.body,
-    });
-    }
+      old: req.body
+  })
+}
   },
   logout: (req, res) => {
     req.session.destroy();

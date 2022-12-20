@@ -20,7 +20,7 @@
                     <ul class="list-result">
 
                       <% productos.forEach(producto => { %>
-                        <% if (producto.stock <= 10) { %>
+                        <% if (producto.stock > 0 && producto.stock <= 10) { %>
                           <li class="producto-buscador">
                             <div class="loMasV" >
                               <img src="/images/100Quality.png" alt="">

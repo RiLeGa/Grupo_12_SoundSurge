@@ -21,8 +21,8 @@
     <section id="muestra" class="muestra">
         <% productos.forEach(producto => { %>
             <% if (producto.stock !== 0) { %>
-                <a id="producto" href="/productos/detalle/<%= producto.id %>">
-                <div category="<%-producto.marca.nombre%>" class="producto" style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')">
+                <a class="prueba" category=" all <%-producto.marca.nombre%>" href="/productos/detalle/<%= producto.id %>">
+                <div class="producto"  style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')">
                     <div class="precio-1">
                         <h3><%= producto.titulo %></h3>
                         <span >$<%= producto.precio %></span>

@@ -1,6 +1,6 @@
 'use strict';
 
-let listado = ["Epiphone","Yamaha","Gibson","Marshall","Ibanez","Behringer","Arturia","Line6","Zildjian","Orange ","MERCADOFLASH "]
+let listado = ["Epiphone", "Yamaha", "Gibson", "Marshall", "Ibanez", "Behringer", "Arturia", "Line6", "Zildjian", "Orange", "Mercado-Flash", "Nord", "Sequential", "Mesa-Boogie", "Korg", "Steinberger"]
 let marcas = listado.map(marca => {
   let elemento = {
     nombre: marca,

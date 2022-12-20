@@ -2,11 +2,13 @@
     background-image: url(/images/FondoMovil.jpg);
     background-color: #221d1da8;
     background-attachment: fixed;
-    background-size: 100vw;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .home .glider-contain {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100px;
     margin: 0 auto;
@@ -101,8 +103,18 @@
 }
 
 .home main .secciones{
-    text-align: center;
-    font-size: 45px;
+    display: flex;
+    color: rgb(255 255 255);
+    font-size: 30px;
+    width: 100vw;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    background-color: #c51dbe;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .home main span{
@@ -272,12 +284,6 @@
         height: 400px;
     }
       
-
-    
-    .home main .contenedor-2{
-        display: block;
-        
-    }
 
     .home main .contenedor{
         display: flex;

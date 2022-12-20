@@ -35,10 +35,12 @@
             </div>
         </section>
             
-
-        <div class="carrito1">
-            <a href="/productos/carrito" target="_blank" class="btn-neon"><i class="fas fa-shopping-cart"></i></a>
-        </div>
+        <% if (locals.userLogin) { %>
+            <div class="carrito1">
+                <a href="/productos/carrito" target="_blank" class="btn-neon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        <% } %>
+       
                 
        
         <div class="usuario">
@@ -83,5 +85,7 @@
         </ul>
         
     </section>
+    
+    
     
 </header>

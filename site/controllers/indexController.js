@@ -61,5 +61,8 @@ module.exports = {
             categorias
         });
     })
+   },
+   aboutUs:(req,res)=>{
+    return res.render("aboutSound")
    }
 }

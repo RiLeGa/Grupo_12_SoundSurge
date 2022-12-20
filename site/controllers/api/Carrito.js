@@ -99,9 +99,9 @@ module.exports = {
                 ]
             })
 
-            // en caso de que el usuario no tenga tenga ninguna orden de compra 'pendiente' asociada 
+            // en caso de que el usuario no tenga ninguna orden de compra 'pendiente' asociada 
             if (!orden) {
-
+                console.log("hola")
                 // creamos un nuevo registro asociado al usuario
                 let newOrden = await db.Ordenes.create({
                     usuariosId: req.session.userLogin.id,

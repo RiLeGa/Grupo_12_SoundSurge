@@ -49,8 +49,8 @@ const addItem = async (id) => {
         })
         const result = await response.json()
 
-        if (result.status === 200) {/* 
-            cargarVentanaCarrito(result.data) */
+        if (result.status === 200) {
+            cargarVentanaCarrito(result.data)
             cargarCarrito(result.data)
         }
 
@@ -68,8 +68,8 @@ const removeItem = async (id) => {
         })
         const result = await response.json()
 
-        if (result.status === 200) {/* 
-            cargarVentanaCarrito(result.data) */
+        if (result.status === 200) {
+            cargarVentanaCarrito(result.data)
             cargarCarrito(result.data)
         }
 
@@ -86,8 +86,8 @@ const modifyItem = async (id) => {
         })
         const result = await response.json()
 
-        if (result.status === 200) {/* 
-            cargarVentanaCarrito(result.data) */
+        if (result.status === 200) {
+            cargarVentanaCarrito(result.data)
             cargarCarrito(result.data)
         }
 
@@ -181,7 +181,7 @@ const cargarVentanaCarrito = (data) => {
                     <div class="price">$ ${toThousand(Math.round(producto.precio - (producto.precio * producto.descuento / 100)))}</div>
                     <div class="añadir-elementos">
                         <button class="restar" onClick="modifyItem('${producto.id}')">--</button>
-                        <span ">${producto.cantidad}</span>
+                        <span ">${p2roducto.cantidad}</span>
                         <button class="agregar" onClick="addItem('${producto.id}')">++</button>
                     </div>
                 </div>

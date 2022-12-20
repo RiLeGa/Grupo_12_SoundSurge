@@ -32,6 +32,7 @@ window.addEventListener('load', () => {
     let img4 = $('#imagen4')
 
     let btn = $('#btn btn-primary')
+    
 
     /* Expresiones regulares para utilizar */
     let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/
@@ -257,4 +258,6 @@ window.addEventListener('load', () => {
     }
 
     funcValidate(validate)
+
+   
 })

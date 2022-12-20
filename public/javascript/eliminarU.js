@@ -11,27 +11,26 @@ window.addEventListener('load', () => {
                     confirmButton: 'swalBtnColor',
                     cancelButton: 'swalBtnColor'
                 },
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: 'Deses eliminar tu usuario?',
+      text: "Si eliminas tu usuario perderas todas tus ordenes de compra!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Eliminar usuario',
+      cancelButtonText: 'Cancelar',
+      background: 'black',
+      color:'white'
     })
     .then((result) => {
       if (result.isConfirmed) {
         forms[i].submit();
         Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
+          'Has eliminado tu usuario, te echaremos de menos! :c'
         )
       }else{
         Swal.fire(
-          'no Deleted!',
-          'Your file hasn´t been deleted.',
-          'error')
+          'No se elmino tu usuario :D')
         }
       })
     })

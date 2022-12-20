@@ -32,7 +32,7 @@
                 </section>
                
                 <div class="precio-descuento">
-                    <h3 class="precio-detalle">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></h3>
+                    <p class="precio-detalle">$<%= producto.precio - (producto.precio * producto.descuento / 100)%></p>
                     <% if (producto.descuento !== 0) { %>
                         <p class="descuento">$<%= producto.precio %></p>
                     <% } %>

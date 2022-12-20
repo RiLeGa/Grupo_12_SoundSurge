@@ -59,6 +59,8 @@
   user-select: none;
   cursor: -webkit-grab;
   cursor: grab;
+  border: 5px solid black;
+  border-radius: 15px;
 }
 .glider.draggable .glider-slide img {
   user-select: none;

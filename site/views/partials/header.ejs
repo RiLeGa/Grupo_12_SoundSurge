@@ -47,7 +47,7 @@
             <input type="checkbox" name="perfil" id="perfil">   
             <% if (locals.userLogin) { %>
                 <input type="checkbox" name="perfil" id="perfil">
-                <label class="perfilU btn-neon" for="perfil"><img class="usuario"  src="/images/users/<%= locals.userLogin.imagen %>" alt=""><h2>Hola! <%= locals.userLogin.nombre %></h2>
+                <label class="perfilU btn-neon" for="perfil"><img class="usuario"  src="/images/users/<%= locals.userLogin.imagen %>" alt="miniatura-perfil"><h2>Hola! <%= locals.userLogin.nombre %></h2>
                 </label>
             <% } else { %>
                 <input type="checkbox" name="perfil" id="perfil">

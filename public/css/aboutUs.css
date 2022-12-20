@@ -4,7 +4,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    background-color: black;
+    background: linear-gradient(#3a1239, #62c8ff);
     border-bottom: 2px white solid ;
     border-top: 2px white solid  ;
 }

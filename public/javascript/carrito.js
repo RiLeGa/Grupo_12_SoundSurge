@@ -17,7 +17,7 @@ const getVentanaCarrito = async () => {
         const result = await response.json()
 
         if (result.status === 200) {
-            cargarVentanaCarrito(result.data)
+            /* cargarVentanaCarrito(result.data) */
         }
 
     } catch (error) {
@@ -50,7 +50,7 @@ const addItem = async (id) => {
         const result = await response.json()
 
         if (result.status === 200) {
-            cargarVentanaCarrito(result.data)
+            /* cargarVentanaCarrito(result.data) */
             cargarCarrito(result.data)
         }
 
@@ -69,7 +69,7 @@ const removeItem = async (id) => {
         const result = await response.json()
 
         if (result.status === 200) {
-            cargarVentanaCarrito(result.data)
+            /* cargarVentanaCarrito(result.data) */
             cargarCarrito(result.data)
         }
 
@@ -87,7 +87,7 @@ const modifyItem = async (id) => {
         const result = await response.json()
 
         if (result.status === 200) {
-            cargarVentanaCarrito(result.data)
+            /* cargarVentanaCarrito(result.data) */
             cargarCarrito(result.data)
         }
 

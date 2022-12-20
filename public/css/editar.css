@@ -254,7 +254,7 @@
         margin: 5px;
         border: 2px solid  #dd55ff;
         ;
-        height: 143px;
+        height: 160px;
        
         padding: 5%;
     }
@@ -280,7 +280,8 @@
 }
 .editar  section .mb-3 select.form-select {
   background-color: #f8d3f0 ;
-  width: 90%;
+  width: 60vw;
+  height: 30px;
 }
 .editar .direct-lista{
 margin-top: 2%;
@@ -376,7 +377,7 @@ justify-content: space-between;
 
 .editar  section .caja33 {
     width: 70%;
-    margin-left: 4%;
+ 
 }
 .editar .cajitas-imagenes{
     margin: 2%;
@@ -454,7 +455,7 @@ justify-content: space-between;
         }
         .editar  section .mb-3 select.form-select {
             width: 15vw;
-            height: 38px;
+            margin-top: 8px;
             border: 3px solid black;
            
             border-radius: 5px;
@@ -468,7 +469,7 @@ justify-content: space-between;
             margin-top: 8px;
         }
         .editar .error {
-            font-size: 20px;
+            font-size: 86%;
         }
         .editar .secundarias {
             width: 40%;
@@ -516,9 +517,14 @@ justify-content: space-between;
         }
         .editar  section #descripcion{
             padding: 1%;
-            width: 80%;
-            margin-left: 19%;
-            height: 220px;
+           
+            
+            width: 68%;
+            margin-top: 5px;
+    
+            border: 2px solid black;
+            border-radius: 10px;
+         background-color: #ffc9f3;
         }
         .editar  section #descripcion label.form-label {
             width: 90%;
@@ -559,14 +565,16 @@ justify-content: space-between;
     .editar #contenedores{
         margin-top: 3%;
     }
-    .editar  section #descripcion{
+    .editar  section #desaparecer{
         display: none;
     }
 
     .editar  section #descripcion2{
-        display: inline-table;
+        display: flex;
+        justify-content: center;
         width: 70%;
         padding: 0%;
+        height: 180px;
     }
     .editar .articulo22{
         width: 100%;
@@ -590,7 +598,7 @@ justify-content: space-between;
         margin-bottom: 5px;
         margin-top: 10px;
         box-shadow: 4px 2px 2px #14d0ff;
-        margin-left: 14%;
+       
         border-radius: 16px;
     }
     .editar #descripcion22{
@@ -609,7 +617,12 @@ justify-content: space-between;
         margin-top: 4%;
     }
     
+    
     .a {display: flex;
     flex-wrap: wrap;}
 
 }
+@media (min-width: 1000px){
+.editar #imagenError,#imagenError2,#imagenError3,#imagenError4 {
+    font-size: 110%;
+} }

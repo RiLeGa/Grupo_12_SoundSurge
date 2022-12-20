@@ -83,7 +83,7 @@
                                     </div>
                                 </article>
                                 <article class="articulo2">
-                                    <div class="caja33">
+                                    <div class="caja33" id="desaparecer">
                                         <div class="mb-3" id="descripcion">
                                             <label for="descripcion" class="form-label">Descripcion</label>
 
@@ -199,7 +199,7 @@
             
                                             <textarea
                                                 value="<%= locals.old && old.descripcion ? old.descripcion : null%>"
-                                                name="descripcion" id="descripcion22" cols="1" rows="6"
+                                                name="descripcion" id="descripcion" cols="1" rows="6"
                                                 class="form-control" placeholder="Ingrese descripcion"
                                                 style="resize: none;"><%= locals.old && old.descripcion ? old.descripcion : null%></textarea>
                                             <p class="error" id="descripcionError">

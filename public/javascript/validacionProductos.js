@@ -189,6 +189,7 @@ window.addEventListener('load', () => {
         switch (true) {
             case !regExExt.exec(img.value):
                 $('#imagenError').innerHTML = "Solo se permite <br> ingresar una imagen <br> valida fomato <br> (jpg|jpeg|png|jfif|gif|webp)"
+                $('#imagenError').border="2px solid red"
                 validate.img = false
                 break;
 

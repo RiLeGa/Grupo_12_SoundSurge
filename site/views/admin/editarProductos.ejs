@@ -68,7 +68,7 @@
                                     </div>
                                 </article>
                                 <article class="articulo2">
-                                    <div class="caja33">
+                                    <div class="caja33" id="desaparecer">
                                         <div class="mb-3" id="descripcion">
                                             <label for="formGroupExampleInput2" class="form-label">Descripcion</label>
 
@@ -119,56 +119,7 @@
                 </section>
                 
                 <section class="section-imagenes">
-                    <% if(producto.imagenes.length < 4){ %>
-                    <div class="imagenes-sec">
-                        
-                            
-                            <% producto.imagenes.forEach(img=> { %>
-                            
-                                <img class="secundarias" src="/images/<%= img.nombre %>" alt="Imagen secundaria">
-                                <% }) %>
-                    </div>
-                    <div class="mb-33">
-                        
-                        <div class="cajitas-imagenes">
-                            <label for="imagen" class="form-label">Imagen 1</label>
-                            <input type="file" class="form-control" id="imagen" name="imagen1"
-                                placeholder="Introduzca la imagen del producto">
-                            <p class="error" id="imagenError">
-                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                            </p>
-                        </div>
-                        <div class="cajitas-imagenes">
-                            <label for="imagen2" class="form-label">Imagen 2</label>
-                            <input type="file"  class="form-control" name="imagen2" id="imagen2"
-                                placeholder="Introduzca la imagen del producto">
-                            <p class="error" id="imagenError2">
-                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                            </p>
-                        </div>
-                    
-                   
-                        <div class="cajitas-imagenes">
-                            <label for="imagen3" class="form-label">Imagen 3</label>
-                            <input type="file" class="form-control" id="imagen3" name="imagen3"
-                                placeholder="Introduzca la imagen del producto">
-                            <p class="error" id="imagenError3">
-                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                            </p>
-                        </div>
-                        <div class="cajitas-imagenes">
-                            <label for="imagen4" class="form-label">Imagen 4</label>
-                            <input type="file" class="form-control" id="imagen4" name="imagen4"
-                                placeholder="Introduzca la imagen del producto">
-                            <p class="error" id="imagenError4">
-                                <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                            </p>
-                        </div>
-                    </div>
-                    </div>
-                    
-                        
-                    <% } else { %>
+                  
                         
                         <div class="imagenes-secc">
                               <div class="divisor-label">     
@@ -181,9 +132,14 @@
                                     <p class="error" id="imagenError"></p>
                             </label>
                             <label class="label-imagen" for="imagen2">
+                                
                                 <input type="file" class="input-invisible" name="imagen2" id="imagen2">
+                                <% if(producto.imagenes.length <2){ %> 
+                                    <img class="secundarias2" id="sub-img-preview-1" style="background-color:white">
+                                
+                               <% }else{ %>
                                 <img class="secundarias2" id="sub-img-preview-1" style="background-image:url('/images/<%= producto.imagenes[1].nombre %>')">
-                               
+                                <% } %>
                                 </img>
                                 <p class="p-imagen">Toca para seleccionar una imagen</p>
                                     <p class="error" id="imagenError2"></p>
@@ -192,16 +148,25 @@
                         <div class="divisor-label">
                             <label class="label-imagen" for="imagen3">
                                 <input type="file" class="input-invisible" id="imagen3" name="imagen3">
+                                <% if(producto.imagenes.length <3){ %> 
+                                    <img class="secundarias2" id="sub-img-preview-2" style="background-color:white">
+                                
+                               <% }else{ %>
                                 <img class="secundarias2" id="sub-img-preview-2" style="background-image:url('/images/<%= producto.imagenes[2].nombre %>')">
-                               
+                                <% }%>
                                 </img>
                                 <p class="p-imagen">Toca para seleccionar una imagen</p>
                                     <p class="error" id="imagenError3"></p>
                             </label>
                             <label class="label-imagen" for="imagen4">
                                 <input type="file" class="input-invisible" id="imagen4" name="imagen4">
+                                <% if(producto.imagenes.length <4){ %> 
+                                    <img class="secundarias2" id="sub-img-preview-3" style="background-color:white">
+                                
+                               <% }else{ %>
                                 <img class="secundarias2" id="sub-img-preview-3" style="background-image:url('/images/<%= producto.imagenes[3].nombre %>')">
-                               
+                                
+                                <% } %>  
                                 </img>
                                 <p class="p-imagen">Toca para seleccionar una imagen</p>
                                     <p class="error" id="imagenError4"></p>
@@ -210,7 +175,7 @@
                         </div>
                         </div>
 
-                    <% } %>
+                    
                 </section>
                 </div>
                 </section>
@@ -221,8 +186,8 @@
                             <div class="mb-3" id="descripcion2">
                                 <label for="formGroupExampleInput2" class="label-descripcion">Descripcion</label>
 
-                                <textarea value="<%= producto.descripcion %>" name="descripcion"
-                                    id="descripcion22" cols="1" rows="6" class="form-control"
+                                <textarea value="<%= producto.descripcion %>" name="descripcion" for="descripcion"
+                                    id="descripcion" cols="1" rows="6" class="form-control"
                                     placeholder="Ingrese descripcion"
                                     style="resize: none;"><%= producto.descripcion %></textarea>
                                 <p class="error" id="descripcionError">

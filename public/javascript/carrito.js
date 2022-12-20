@@ -175,13 +175,13 @@ const cargarVentanaCarrito = (data) => {
             let item = `
             <div class="cart-item">
                 <span class="fas fa-times" onClick="removeItem('${producto.id}')"></span>
-                <img src="/images/productos/${producto.imagen}"  alt="">
+                <img src="/images/${producto.imagen}"  alt="">
                 <div class="content">
-                    <h3>${producto.nombre}</h3>
+                    <h3>${producto.titulo}</h3>
                     <div class="price">$ ${toThousand(Math.round(producto.precio - (producto.precio * producto.descuento / 100)))}</div>
                     <div class="añadir-elementos">
                         <button class="restar" onClick="modifyItem('${producto.id}')">--</button>
-                        <span ">${p2roducto.cantidad}</span>
+                        <span ">${producto.cantidad}</span>
                         <button class="agregar" onClick="addItem('${producto.id}')">++</button>
                     </div>
                 </div>
@@ -194,7 +194,7 @@ const cargarVentanaCarrito = (data) => {
         <div class="cart-puy">
             <span>Subtotal:</span>
             <span>$ ${toThousand(Math.round(totalCarrito))}</span>
-            <a class="" href="/products/cart">Ir a mi carrito</a>
+            <a class="" href="/productos/carrito">Ir a mi carrito</a>
         </div>
         `
     } else {

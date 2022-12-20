@@ -34,7 +34,6 @@ footer .ubicacion .mapa{
     height: 300px;
     margin-top: 50px;
     justify-content: space-around;
-    display: none;
 }
 
 footer .ubicacion .mapa iframe{

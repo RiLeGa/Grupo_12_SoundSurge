@@ -46,13 +46,13 @@
                 <% productos.forEach(producto => { %>
                   <% if(producto.stock == 0) {%> 
                  
-                  <tr class="producto-buscador2">
+                  <tr id="producto-buscador2" class="producto-buscador">
                       
                         <th scope="row"><a href="/productos/detalle/<%= producto.id %>"><%= producto.id %> </a></th>
                         <td class="titulo-nombre"><a href="/productos/detalle/<%= producto.id %>"><%= producto.titulo %></a></td>
                         <td class="category"><a href="/productos/detalle/<%= producto.id %>"><%= producto.category.nombre %></a></td>
                         <td id="marca"><a href="/productos/detalle/<%= producto.id %>"><%= producto.marca.nombre %></a></td>
-                        <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.stock %></a></td>
+                        <td id="stock"><a href="/productos/detalle/<%= producto.id %> "><%= producto.stock %></a></td>
                         <td><a href="/productos/detalle/<%= producto.id %> "><%= producto.precio %></a></td>
                         <td class="desc"><a href="/productos/detalle/<%= producto.id %> "><%= producto.descuento %></a></td>
                         <td>

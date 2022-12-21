@@ -133,14 +133,14 @@
 .lista li a{
     color: white;
 }
-.lista .producto-buscador2{
+.lista #producto-buscador2{
     background-color: #ff94ed;
     color: black;
 }
 .lista #columna{
    /* border-bottom: 1px solid #8d1888 ;*/
 }
-.lista .producto-buscador2 td a{
+.lista #producto-buscador2 td a{
    
     color: white;
 }
@@ -311,7 +311,7 @@
         border-radius: 50%;
     
     }
-    .lista .producto-buscador2 td a{
+    .lista #producto-buscador2 td a{
    
         color: white;
     }
@@ -332,7 +332,7 @@
     
 }
 @media (min-width: 759px){
-    .lista .producto-buscador2 td a{
+    .lista #producto-buscador2 td a{
      font-size: 16px;
     }
     .lista #marca2 {

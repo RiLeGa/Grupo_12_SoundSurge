@@ -273,9 +273,10 @@
     }
 
     .home .glider-contain {
-        width: 100%;
+        width: 96%;
         height: 400px;
-        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
         position: relative;
       }
     

@@ -23,7 +23,7 @@ header .navegacion .logo{
     justify-content: center;
     display: flex;
     margin-left: 20px;
-    width: 100px;
+    width: 110px;
 }
 header .navegacion label.burguer i{
     width: 2vw;

@@ -6,25 +6,11 @@
   <%- include('../partials/header') %> 
     <main class="lista">
         <h1>Lista de productos</h1>
-        <section class="busqueda">
-          <i class="fas fa-search" id="lupa"></i> <input type="text" name="search" id="inputSearch" placeholder="¿Que estas Buscando?">
-        </section>
         <div  class="etiquetas">
-          <div class="contenedor">
-        <a  class="direct-crear" href="crear">
-            Crear Producto
-        </a>
+       <div class="contenedor">
+        <a  class="direct-crear" href="/admin/lista">Lista de productos</a>
       </div>
-      <div class="contenedor">
-        <a  class="direct-stock" href="/admin/stock">
-            Productos sin stock
-        </a>
-      </div>
-        <div class="contenedor">
-        <a  class="direct-crear" href="usersList">
-          Lista de usuarios
-      </a>
-    </div>
+        
     </div>
       
         <div class="table-responsive">
@@ -67,29 +53,7 @@
                         </td>
                       
                       </tr>
-                      <% }else{ %>
-                        <tr class="producto-buscador">
-                      
-                          <th  scope="row"><a href="/productos/detalle/<%= producto.id %>"><%= producto.id %> </a></th>
-                          <td   class="titulo-nombre"><a href="/productos/detalle/<%= producto.id %>"><%= producto.titulo %></a></td>
-                          <td  class="category"><a href="/productos/detalle/<%= producto.id %>"><%= producto.category.nombre %></a></td>
-                          <td id="marca"><a href="/productos/detalle/<%= producto.id %>"><%= producto.marca.nombre %></a></td>
-                          <td ><a href="/productos/detalle/<%= producto.id %> "><%= producto.stock %></a></td>
-                          <td ><a href="/productos/detalle/<%= producto.id %> "><%= producto.precio %></a></td>
-                          <td  class="desc"><a href="/productos/detalle/<%= producto.id %> "><%= producto.descuento %></a></td>
-                          <td >
-                              <div class="edicion">
-                                  <a href="/admin/editar/<%= producto.id%>">
-                                      <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                  </a>
-                                  <form id="formula" action="/admin/borrar/<%= producto.id%>?_method=DELETE" method="post">
-                                    <button type="submit" id="eliminar-producto" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                                  </form>
-                              </div>
-                          </td>
-                        
-                        </tr>
-                        <% } %>  
+                      <% } %>
                 <% }) %>
                 
             </tbody>

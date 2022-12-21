@@ -1,13 +1,147 @@
 .lista{
-    width: 98vw;
-    margin-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(black,blueviolet,black);
 } 
+.lista #botones{
+    width: 100%;
+}
+.lista #inputSearch{
+    padding: 2%;
+}
 
+
+.lista .contenedor{
+    display: flex;
+   justify-content: center;
+   width: 65%;
+   margin: 2%;
+}
+.lista  .direct-crear{
+    position: relative;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    z-index: 2;
+    height: 35px;
+}
+.lista  .direct-stock{
+    position: relative;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    z-index: 2;
+    height: 35px;
+    color: black;
+}
+
+
+/*-----------boton 4----------*/
+
+.lista  .direct-crear::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg,  rgb(255, 30, 143), rgb(19, 227, 255), #12e3ff, rgb(255, 30, 143));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.lista  .direct-crear:hover::after{
+    background-position: 100%;
+    filter: blur(15px);
+}
+
+.lista  .direct-crear::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(255, 30, 143), rgb(19, 227, 255), rgb(19, 227, 255), rgb(255, 30, 143));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.lista  .direct-crear:hover::before{
+    background-position: 100%;
+}
+
+.lista  .direct-stock:hover::before{
+    background-position: 100%;
+}
+.lista  .direct-stock::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.4s ease;
+    background-image: linear-gradient(90deg,#ff94ed,white,white,#ff94ed )
+}
+.lista  .direct-stock:hover::after{
+    background-position: 100%;
+    filter: blur(15px);
+}
+.lista  .direct-stock::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    z-index: -1;
+    background-image: linear-gradient(90deg,#ff94ed,white,white,#ff94ed  )}   
+
+
+    
 .lista h1{
     text-align: center;
+    text-shadow: 2px 2px 7px #12e3ff;
+    background: #000000ad;
+    width: 80%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-bottom: 6%;
+   
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 11px #12e3ff;
+    height: 100%;
+    color: white;
+    font-size: 177%;
 }
 
 .lista li a{
+    color: white;
+}
+.lista .producto-buscador2{
+    background-color: #ff94ed;
+    color: black;
+}
+.lista #columna{
+   /* border-bottom: 1px solid #8d1888 ;*/
+}
+.lista .producto-buscador2 td a{
+   
     color: white;
 }
 
@@ -16,6 +150,7 @@
     margin-left: 5vw;
     border: 2px solid black;
     margin-top: 15px;
+    
 }
 
 .lista .desc{
@@ -25,7 +160,10 @@
 .lista .busqueda{
     width: 80vw;
     margin-left: 10vw;
-    margin-top: 25px;
+    margin-top: 5px;
+}
+.lista .busqueda #lupa{
+    display: none;
 }
 .lista .category{
     display: none;
@@ -33,19 +171,28 @@
 .lista .titulo-nombre{
     overflow: hidden;
 }
-
-.lista .direct-crear{
-    width: 80vw;
-    margin-left: 10vw;
+.lista #eliminar-producto{
+    background: black;
+    color: white;
+    padding: 10%;
+    font-size: 90%;
+    margin-left: 10%;
 }
+
+
 
 .lista .direct-papelera{
     width: 80vw;
-    margin-left: 2vw;
+   text-align: center;
 }
 
 .lista .table.table-hover{
     width: 100%;
+    background-color: #ffffffe8;
+    padding: 1%;
+    margin-bottom: 10%;
+    border: solid 2px black;
+    box-shadow: 0px -1px 11px 1px #ff94ed;
 }
 
 .lista .table.table-hover tbody{
@@ -69,12 +216,32 @@
     border-radius: 50%;
 
 }
+.lista #marca{
+    display: none;
+}
+.lista .etiquetas{
+    display: flex;
+    flex-direction: column-reverse;
+   width: 100%;
+    align-items: center;
+}
+.lista #marca2 {
+    display: none;
+}
+
 
 @media (min-width: 461px){
     .lista{
         width: 98vw;
         margin-bottom: 50px;
     } 
+    .lista #marca{
+        display: block;
+    }
+    .lista .direct-stock {
+        height: 60px;
+        padding-top: 9%;
+    }
     
     .lista h1{
         text-align: center;
@@ -92,9 +259,14 @@
     }
     
     .lista .busqueda{
-        width: 80vw;
-        margin-left: 10vw;
-        margin-top: 25px;
+        width: 40vw;
+        margin-left: 31vw;
+        
+        background: #000000eb;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        border-radius: 10px;
+        border: 1px solid #ff94ed;
     }
     .lista .category{
         display: none;
@@ -104,8 +276,8 @@
     }
     
     .lista .direct-crear{
-        width: 80vw;
-        margin-left: 10vw;
+        height: 60px;
+        padding-top: 9%;
     }
     
     .lista .direct-papelera{
@@ -115,6 +287,7 @@
     
     .lista .table.table-hover{
         width: 100%;
+        background-color: #ffffffe0;
     }
     
     .lista .table.table-hover tbody{
@@ -138,15 +311,59 @@
         border-radius: 50%;
     
     }
+    .lista .producto-buscador2 td a{
+   
+        color: white;
+    }
+    .lista{
+        width: 100%;
+       margin-bottom: 0px;
+        background-image:url(/images/fondo-admin.png); 
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding-top: 1%;
+    } 
+    .lista .etiquetas {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        
+    }
+    
 }
 @media (min-width: 759px){
-    .lista{
-        width: 98vw;
-        margin-bottom: 50px;
-    } 
+    .lista .producto-buscador2 td a{
+     font-size: 16px;
+    }
+    .lista #marca2 {
+        display: revert;
+    }
+    .lista .direct-stock {
+        padding-top: 14px;
+        width: 55%;
+        text-align: center;
+        font-size: 17px;
+        height: 72px;
+        margin-top: 3%;
+    }
     
     .lista h1{
         text-align: center;
+        text-shadow: 2px 2px 7px #12e3ff;
+        background: #000000ad;
+        width: 56%;
+        margin: 0%;
+        display: flex;
+        justify-content: center;
+        margin-left: 22%;
+        margin-bottom: 1%;
+        margin-top: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 11px #12e3ff;
+        height: 100%;
+        color: white;
     }
     
     .lista li a{
@@ -160,11 +377,7 @@
         margin-top: 15px;
     }
     
-    .lista .busqueda{
-        width: 80vw;
-        margin-left: 10vw;
-        margin-top: 25px;
-    }
+   
     .lista .category{
         display: none;
     }
@@ -173,17 +386,22 @@
     }
     
     .lista .direct-crear{
-        width: 80vw;
-        margin-left: 10vw;
+       padding-top: 13px;
+       width: 90%;
+    text-align: center;
+    font-size: 20px;
+    height: 60px;
     }
     
-    .lista .direct-papelera{
-        width: 80vw;
-        margin-left: 2vw;
-    }
+    
     
     .lista .table.table-hover{
         width: 100%;
+        background: #ffffffe0;
+        margin-bottom: 5%;
+        border: solid 2px black;
+        box-shadow: 0px -1px 11px 1px #ff94ed;
+        padding: 1%;
     }
     
     .lista .table.table-hover tbody{
@@ -207,4 +425,32 @@
         border-radius: 50%;
     
     }
+    .lista{
+        width: 100%;
+       margin-bottom: 0px;
+        background-image:url(/images/fondo-admin.png); 
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding-top: 1%;
+    } 
+    .lista .busqueda #lupa{
+        display: block;
+        color: white;
+        margin-right: 1%;
+        font-size: 150%;
+    }
+    .lista #inputSearch {
+        padding: 1%;
+    }
+    .lista .busqueda {
+        display: flex;
+        flex-direction: row;
+        width: 26%;
+        margin-left: 37%;
+    }
+    .lista .etiquetas {
+        
+        height: 70px;
+    }
+    
 }

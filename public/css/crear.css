@@ -6,11 +6,14 @@
     text-shadow: 2px 2px 7px #14d0ff;
     color: #14d0ff;
 }
+
 .crear .input-invisible{
     display: none;
 }
 .crear .img-crear{
     width: 100%;
+    background-size: 15vw 20vh;
+    height: 160px;
 }
 .crear section label.mb-3 {
     width: 80%;
@@ -203,23 +206,120 @@
     display: flex;
     justify-content: space-around;
 }
+.crear section .botones .boton{
+    display: flex;
+   margin: 20%;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.crear section .botones .boton .btn{
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 4px;
+    
+    z-index: 2;
+}
+.crear section .botones .boton .btn-primary::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(255, 30, 143), rgb(19, 227, 255),white,rgb(4, 1, 187));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
 
+.crear section .botones .boton .btn-primary:hover::after{
+    background-position: 100%;
+    filter: blur(15px);
+}
+
+.crear section .botones .boton .btn-primary::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(255, 30, 143), rgb(19, 227, 255), white, rgb(4, 1, 187));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.crear section .botones .boton .btn-primary:hover::before{
+    background-position: 100%;
+}
 .crear  section .botones .btn.btn-primary{
-    background-color: rgb(74, 82, 74);
+   
     padding: 15px;
-    color:black;
+    color:white;
     border-radius: 10px;
     margin-bottom: 50px;
-    background-color: #14d0ff;
-    border: 2px solid blue;
+    text-shadow: 2px 1px 3px #000000ad;
+    border: 2px solid black;
     margin-right: 25%;
     
 }
 
+.crear section .botones .boton .btn-secundary::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg,  rgb(255, 30, 143), rgb(255, 15, 15),rgb(255, 15, 15),rgb(255, 30, 143));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.crear section .botones .boton .btn-secundary:hover::after{
+    background-position: 100%;
+    filter: blur(15px);
+}
+
+.crear section .botones .boton .btn-secundary::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(255, 30, 143), rgb(255, 15, 15),rgb(255, 15, 15),rgb(255, 30, 143));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.crear section .botones .boton .btn-secundary:hover::before{
+    background-position: 100%;
+}
+
+
 .crear  section .botones .btn.btn-secundary{
-    background-color: rgb(186, 3, 3);
+   
     padding: 15px;
     color:black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+   
+    border: 2px solid black;
+    margin-right: 25%;
+    
+}
+.crear  section .botones .btn.btn-secundary{
+   
     border-radius: 15%;
     margin-bottom: 50px;
     
@@ -234,11 +334,17 @@
 
 @media (min-width: 461px) {
     .crear {
-      
-        
-       
         display: flex;
         justify-content: center;
+    }
+    .crear  section .botones .btn.btn-primary{
+        margin-right: 0px;
+    }
+    .crear  section .botones .btn.btn.btn-secundary{
+        margin-right: 0px;
+    }
+    .crear .img-crear {
+        width: 110%;
     }
     .crear  h2 {
         text-shadow: 3px 2px 35px #ffffff;
@@ -258,7 +364,7 @@
         flex-direction: column;
         align-items: center;
         border: 2px solid #dd55ff;
-        padding: 5%;
+        padding: 3%;
     }
     .crear  section #descripcion{
         height: 210px;
@@ -341,7 +447,7 @@ width: 100%;
 justify-content: space-between;
 }
 .crear  section .botones {
-    width: 126%;
+    width: 100%;
     /* margin-top: 25px; */
     display: flex;
     justify-content: space-around;
@@ -349,33 +455,24 @@ justify-content: space-between;
     padding-right: 4%;
     padding-left: 4%;
    margin-bottom: 5%;
-    border-top: 2px solid wheat;
-    border-bottom: 2px solid wheat;
+    border-top: 2px solid #00c3d7;
+    border-bottom: 2px solid #00c3d7;
     padding-top: 3%;
     padding-bottom: 3%;
     /* box-shadow: 9px 6px 16px #d7971f; */
 }
-.crear  section .botones .btn.btn-primary {
-    background-color: rgb(74, 82, 74);
-    padding: 15px;
-    color: black;
-    border-radius: 10px;
-   margin-bottom: 0px;
-    background-color: yellow;
-    border: 2px solid black;
-  margin-right: 0px;
-    width: 30%;
-    box-shadow: 4px 3px 9px white;
+
+.crear section .botones .boton {
+    margin: 5px;
 }
-.crear  section .botones .btn.btn-secundary {
-    background-color: rgb(186, 3, 3);
-    padding: 15px;
-    color: black;
-    border-radius: 10px;
-  margin-bottom: 0px;
-    width: 30%;
-    box-shadow: 5px 3px 10px pink;
+.crear section .botones .btn.btn-primary {
+    margin-bottom: 0px;
+}    
+.crear section .botones .btn.btn-secundary {
+    margin-bottom: 0px;
 }
+
+
 
 .crear  section .caja33 {
     width: 70%;
@@ -423,6 +520,12 @@ justify-content: space-between;
             box-shadow: 0px 0px 11px #dd55ff;
             height: 100%;
         }
+        .crear section .botones .btn.btn-primary {
+            width: 80%;
+        }
+        .crear section .botones .btn.btn-secundary{
+            width: 80%;
+        }
         .crear  section .mb-3 input.form-control {
             width: 60vw;
             height: 30px;
@@ -438,7 +541,7 @@ justify-content: space-between;
             flex-direction: column;
             align-items: center;
             background-color: #00000096;
-            margin: 5px;
+            margin: 18px;
             width: 134%;
             border: 1px solid #14d0ff;
             border-radius: 10px;
@@ -454,6 +557,7 @@ justify-content: space-between;
             width: 100%;
             border: 2px solid #dd55ff;
             border-radius: 16px;
+            margin-top: 5px;
         }
         .crear  section .mb-3 select.form-select {
             width: 15vw;
@@ -487,33 +591,44 @@ justify-content: space-between;
         .crear  section .mb-33 {
             width: 80%;
         }
-        .crear  section .articulo1,.articulo2{
-            width: 130%;
+        .crear  section .articulo1{
+            width: 90%;
             display: flex;
             flex-direction: row;
-          
+          padding-left: 1.5%;
         }
-        .crear  section .articulo1{
-            width: 70%;
+        .crear section .articulo2 {
+            display: flex;
+            flex-direction: column;
+            width: 53%;
+            margin-left: 4%;
         }
+       
+       
         .crear  section .caja3{
             display: flex;
-            flex-direction: row;
-            width: 55%;
-            margin-left: 8%;
+            flex-direction: column;
+            width: 70%;
+            
            
         }
+        .crear .section-imagenes {
+            display: flex;
+            flex-direction: row;
+        }
+        
         .crear  section {
             display: flex;
             flex-direction: column;
             align-items: center;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             width: 100%;
+            justify-content: center;
         }
         .crear  section .caja1{
             margin-left: 6%;
-        margin-right: 18%;
+        margin-right: 16%;
         }
         .crear  section #descripcion textarea {
             width: 78%;
@@ -533,8 +648,8 @@ justify-content: space-between;
             width: 90%;
     }
     .crear  .section-imagenes {
-      width: 80%;
-   margin-left: 0%;
+      width: 100%;
+      margin-left: 0%;
     }
     .crear .imagenes-sec {
         width:65%;
@@ -545,14 +660,14 @@ justify-content: space-between;
     }
     .crear .cajita{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 98%;
     }
     .crear .divisor-label{
         width: 100%;
         display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: space-around;
     }
     .crear .secundarias2 {
         background-size: 15vw 20vh;
@@ -623,12 +738,13 @@ justify-content: space-between;
     }
     
     .crear section label.mb-3 {
-        width: 36%;
+        width: 35%;
         margin: 1%;
         
     }
     .crear .img-crear {
-        width: 100%;
+        width: 120%;
+        margin-top: 3%;
     }
     .crear #imagenError {
         font-size: 64%;

@@ -153,7 +153,7 @@
                                     <label for="imagen" class="form-label">imagen 1</label>
                                     <input type="file" class="form-control" id="imagen" name="imagen"
                                         aria-label="file example">
-                                        <img src="/images/Color-negro.jpg" id="img-preview" alt="" class="img-crear">
+                                        <img  style="background-image:url('/images/Color-negro.jpg')" id="img-preview" alt="" class="img-crear">
                                     <p class="error" id="imagenError">
                                         <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                                     </p>
@@ -162,7 +162,7 @@
                                     <label for="imagen2" class="form-label">imagen 2</label>
                                     <input type="file" class="form-control" id="imagen2" name="imagen"
                                         aria-label="file example">
-                                        <img src="/images/Color-negro.jpg" id="sub-img-preview-1" alt="" class="img-crear">
+                                        <img style="background-image:url('/images/Color-negro.jpg')" id="sub-img-preview-1" alt="" class="img-crear">
                                     <p class="error" id="imagenError2">
                                         <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                                     </p>
@@ -173,7 +173,7 @@
                                     <label for="imagen3" class="form-label">imagen 3</label>
                                     <input type="file" class="form-control" id="imagen3" name="imagen"
                                         aria-label="file example">
-                                        <img src="/images/Color-negro.jpg" id="sub-img-preview-2" alt="" class="img-crear">
+                                        <img style="background-image:url('/images/Color-negro.jpg')" id="sub-img-preview-2" alt="" class="img-crear">
                                     <p class="error" id="imagenError3">
                                         <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                                     </p>
@@ -182,7 +182,7 @@
                                     <label for="imagen4" class="form-label">imagen 4</label>
                                     <input type="file" class="form-control" id="imagen4" name="imagen"
                                         aria-label="file example">
-                                        <img src="/images/Color-negro.jpg" id="sub-img-preview-3" alt="" class="img-crear">
+                                        <img style="background-image:url('/images/Color-negro.jpg')" id="sub-img-preview-3" alt="" class="img-crear">
                                     <p class="error" id="imagenError4">
                                         <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                                     </p>
@@ -217,9 +217,13 @@
 
 
                             <div class="botones">
+                                <div class="boton">
                                 <button class="btn btn-primary" id='#btn-submit' type="submit">Confirma</button>
+                            </div>
+                            <div class="boton">
                                 <button class="btn btn-secundary" type="reset"><a
                                         href="/admin/lista">Cancelar</a></button>
+                                    </div>
                             </div>
 
                     </form>

@@ -6,27 +6,28 @@
   <%- include('../partials/header') %> 
     <main class="lista">
         <h1>Lista de productos</h1>
-        <section class="busqueda">
-          <i class="fas fa-search" id="lupa"></i> <input type="text" name="search" id="inputSearch" placeholder="¿Que estas Buscando?">
-        </section>
+        
         <div  class="etiquetas">
+          <div class="contenedor">
+            <a  class="direct-stock" href="/admin/stock">
+                Productos sin stock
+            </a>
+          </div>
           <div class="contenedor">
         <a  class="direct-crear" href="crear">
             Crear Producto
         </a>
       </div>
-      <div class="contenedor">
-        <a  class="direct-stock" href="/admin/stock">
-            Productos sin stock
-        </a>
-      </div>
+      
         <div class="contenedor">
         <a  class="direct-crear" href="usersList">
           Lista de usuarios
       </a>
     </div>
     </div>
-      
+    <section class="busqueda">
+      <i class="fas fa-search" id="lupa"></i> <input type="text" name="search" id="inputSearch" placeholder="¿Que estas Buscando?">
+    </section>
         <div class="table-responsive">
         <table class="table table-hover">
             <thead>

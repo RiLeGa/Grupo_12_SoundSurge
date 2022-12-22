@@ -78,8 +78,27 @@
             <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
                 <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
             <% } %>
-            <!-- <li><a class="btn-neon" href="/productos/categorias">Categorias</a></li>
-            <li><a class="btn-neon" href="/productos/marcas">Marcas</a></li>  -->
+            <div >
+                <input type="checkbox" name="categorias" id="categorias">  
+                <label for="categorias"> <a class="btn-neon" >Categorias</a></label>
+                
+                <ul class="opcionesDeCat">
+                    <% categorias.forEach(categoria => { %> 
+                        <li><a class="btn-neon" href="/productos/<%= categoria.nombre %>"> <%= categoria.nombre %> </a></li>
+                    <% }) %>
+                </ul>
+            </div>
+            <div>
+                <input type="checkbox" name="marcas" id="marcas">  
+                <label for="marcas"> <a class="btn-neon" >Marcas</a></label>
+                
+                <ul class="opcionesDeMarc">
+                    <% marcas.forEach(marca => { %> 
+                        <li><a class="btn-neon" href="/productos/<%= marca.nombre %>"> <%= marca.nombre %> </a></li>
+                    <% }) %>
+                </ul>
+            </div>
+
             <li><a class="btn-neon" href="/productos/todos">To2 los productos</a></li>
             <li><a class="btn-neon" href="/AboutUs">Somos SoudSurge</a></li>
             <li><a class="btn-neon" href="/productos/loMasVendido">Lo + Vendido</a></li>

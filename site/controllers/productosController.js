@@ -56,22 +56,32 @@ module.exports = {
         return res.render('productos/carrito')
     },
     listarCategorias : (req,res) => {
-        let categorias = db.Categorias.findAll({
-            include:[{ all: true}]
-        })
+        /* return res.send(req.params.categoria) */
+        let categoriaSeleccionada = req.params.categoria
+        /* return res.send(categoriaSeleccionada) */
         let productos = db.Productos.findAll({
+            include:['category','imagenes',]
+        })
+        let categorias = db.Categorias.findAll({
+            where: {
+                nombre: categoriaSeleccionada
+            },
+
             include:[{ all: true}]
         })
-
-        Promise.all([categorias, productos])
-        .then(([categorias, productos])=> {
+        Promise.all([productos,categorias])
+        .then(([productos,categorias])=> {
             
             return res.render('productos/categorias', {
                 categorias,
                 productos
+
             })
+            
+
         })
         .catch(error => res.send(error))
+        
     },
     listarMarcas : (req,res) => {
         let marcas = db.Marcas.findAll({
@@ -95,12 +105,21 @@ module.exports = {
         let productos = db.Productos.findAll({
             include:['category','marca','imagenes',]
         })
+        let marcas = db.Marcas.findAll({
+            include:[{ all: true}]
+        })
+        let categorias = db.Categorias.findAll({
+            include:[{ all: true}]
+        })
         
-        Promise.all([productos])
-        .then(([productos])=> {
+        Promise.all([productos,marcas,categorias])
+        .then(([productos,marcas,categorias])=> {
             
             return res.render('productos/todosLosProductos', {
-                productos
+                productos,
+                marcas,
+                categorias
+
             })
             
 

@@ -6,7 +6,7 @@ const {detalle, carrito, listarCategorias, listarMarcas, listarTodos, listarMasV
 
 router.get('/detalle/:id', detalle);
 router.get('/carrito', carrito);
-router.get('/categorias', listarCategorias);
+router.get('/:categorias?', listarCategorias);
 router.get('/marcas', listarMarcas);
 router.get('/todos', listarTodos);
 router.get('/loMasVendido', listarMasVendidos);

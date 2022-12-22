@@ -7,17 +7,27 @@ module.exports = {
         let productos = db.Productos.findAll({
             include:['category','marca','imagenes',]
         })
-        Promise.all([productos])
-        .then(([productos])=> {
-            
+        let marcas = db.Marcas.findAll({
+            include:[{ all: true}]
+        })
+        let categorias = db.Categorias.findAll({
+            include:[{ all: true}]
+        })
+        
+        Promise.all([productos,marcas,categorias])
+        .then(([productos,marcas,categorias])=> {
             
             return res.render('home', {
-                productos
+                productos,
+                marcas,
+                categorias
+
             })
+            
 
         })
         .catch(error => res.send(error))
-        
+         
     },
     search : (req,res) => {
         let elemento = req.query.search

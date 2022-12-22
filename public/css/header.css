@@ -349,6 +349,17 @@ header .navegacion div.usuario{
         margin-top: 5px;
         border: none;
     }
+
+    /* .opcionesDeCat{
+        display: flex;
+        width: 14%;
+        flex-direction: column;
+        position: absolute;
+        background: black;
+        left: 18vw;
+        top: 6em;
+        z-index: 1;
+    } */
     
 
     header .navegacion nav.opcionesDePerfil{
@@ -362,6 +373,8 @@ header .navegacion div.usuario{
         justify-content: space-around;
         align-items: center;
     }
+
+
     header .opcionesDeProductos a{
         position: relative;
         display: block;
@@ -533,6 +546,43 @@ header .navegacion div.usuario{
     header .navegacion input#perfil{
         display: none;
     }
+
+    header .opcionesDeProductos ul.opcionesDeCat{
+        display: none;
+    }
+    header .opcionesDeProductos ul.opcionesDeMarc{
+        display: none;
+    }
+
+    header .opcionesDeProductos input#categorias{
+        display: none;
+    }
+
+    header .opcionesDeProductos input#categorias:checked ~ .opcionesDeCat {
+        display: flex;
+        width: 14%;
+        flex-direction: column;
+        position: absolute;
+        background: black;
+        left: 18vw;
+        top: 6.2em;
+        z-index: 1;
+    }
+    header .opcionesDeProductos input#marcas{
+        display: none;
+    }
+
+    header .opcionesDeProductos input#marcas:checked ~ .opcionesDeMarc {
+        display: flex;
+        width: 13%;
+        flex-direction: column;
+        position: absolute;
+        background: black;
+        left: 29.7vw;
+        top: 6.2em;
+        z-index: 1;
+    }
+
     header .navegacion input#perfil:checked ~ nav.opcionesDePerfil {
         display: flex;
         position: absolute;

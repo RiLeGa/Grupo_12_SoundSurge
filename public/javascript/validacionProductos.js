@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
         }
     }
 
-    
+    let form =$('#formulario')
 
     /* Elementos que se trabajan para validar */
     let titulo = $('#titulo')
@@ -247,7 +247,7 @@ window.addEventListener('load', () => {
         titulo : false,
         precio : false,
         descuento : true ,
-        stock : false ,
+        stock : true ,
         categorias : false ,
         marcas : false ,
         descripcion : false ,
@@ -259,5 +259,16 @@ window.addEventListener('load', () => {
 
     funcValidate(validate)
 
+
+
+    form.addEventListener('submit',(e) => {
+        
+        console.log(form.elements);
+      /*  if(validate.length > 0){*/
+            e.preventDefault();
+       /*  }else{
+            form.submit()
+        } */
+    })
    
 })

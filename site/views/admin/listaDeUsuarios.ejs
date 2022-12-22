@@ -5,15 +5,20 @@
     <%- include ("../partials/header") %>
     <main class="lista">
       <h1>Lista de usuarios</h1>
+      <div class="etiquetas">
+        <div class="contenedor">
+          <a  class="direct-crear" href="/admin/lista">Lista de productos</a>
+        </div>
+  </div>
       <div class="table-responsive">
         <table class="table table-hover">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Apellido</th>
-              <th scope="col">Direccion</th>
-              <th scope="col">Telefono</th>
+              <th id="marca2" scope="col">Apellido</th>
+              <th id="marca2" scope="col">Direccion</th>
+              <th id="marca2" scope="col">Telefono</th>
               <th scope="col">Email</th>
               <th scope="col">Rol</th>
               <th scope="col">Imagen</th>
@@ -24,10 +29,10 @@
             <tr>
               <th scope="row"><%= usuario.id %></th>
               <td><%= usuario.nombre %></td>
-              <td colspan="1"><%= usuario.apellido %></td>
-              <td><%= usuario.direccion %></td>
-              <td><%= usuario.telefono %></td>
-              <td><%= usuario.email %></td>
+              <td id="marca2" colspan="1"><%= usuario.apellido %></td>
+              <td id="marca2"><%= usuario.direccion %></td>
+              <td id="marca2"><%= usuario.telefono %></td>
+              <td id="marca2"><%= usuario.email %></td>
               <td><%= usuario.rolId %></td>
               <td>
                 <img
@@ -55,5 +60,7 @@
         </table>
       </div>
     </main>
+    <%- include ("../partials/footer") %>
+    <script src="../javascript/sweetAlert.js"></script> 
   </body>
 </html>

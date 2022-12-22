@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
 
                 title: '¿Estas seguro que quieres eliminar el producto?',
                 text: "Esta accion es irreversible!",
+                color:'white',
                 icon: 'warning',
                 background: "#271177",
                 showCancelButton: true,

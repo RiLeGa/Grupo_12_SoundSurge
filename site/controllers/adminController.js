@@ -34,6 +34,18 @@ module.exports = {
         })
         .catch(error => res.send(error))
     },
+    stock : (req,res) => {
+        let productos = db.Productos.findAll({
+            include:[{ all: true}]
+        })
+        Promise.all([productos])
+        .then(([productos])=> {
+            return res.render('admin/sinStock', {
+                productos
+            })
+        })
+        .catch(error => res.send(error))
+    },
     crear : (req,res) => {
         let categorias = db.Categorias.findAll()
         let marcas = db.Marcas.findAll()

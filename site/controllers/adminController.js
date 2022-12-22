@@ -7,7 +7,6 @@ let usuarios = require('../data/usuarios.json')
 
 let db = require('../database/models')
 let Sequelize = require('sequelize')
-const { all } = require('../routes')
 
 
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')

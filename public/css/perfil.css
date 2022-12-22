@@ -98,6 +98,7 @@
         z-index: 3;
         width: 310px;
         height: 450px;
+        left: -36px;
         backface-visibility: hidden;
         border-radius: 10%;
         overflow: hidden;
@@ -110,6 +111,11 @@
         margin-top: 20px;
         transition: .5s;
         transform: perspective(600px) rotateY(0deg);
+    }
+
+    .perfil p{
+        margin-top: 10px ;
+        text-align: center;
     }
 
     .perfil a button{

@@ -16,6 +16,7 @@
                     <% } else { %>
                         <h1><%= "Invitado" %></h1>
                     <% } %>
+                    <p>mantene presionado el click <br> para verificar tus datos</p>
                     <div class="logo">
                         <img src="/images/LogoSoundSurge.png" alt="logoSoundSurge">
                     </div>
@@ -44,7 +45,7 @@
                     <button class="logout" id="tn btn-del" type="submit"><i class="fas fa-user-times"></i>Eliminar usuario</button>
                 </form>
         
-                <a href="/users/editar/<%= locals.userLogin.id%>">
+                <a  href="/users/editar/<%= locals.userLogin.id%>">
                     <button type="button" class="btn btn-success"><i class="fas fa-edit"> </i>Editar usuario</button>
                 </a>
         

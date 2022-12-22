@@ -25,6 +25,9 @@ header .navegacion .logo{
     margin-left: 20px;
     width: 110px;
 }
+header .navegacion .logo .gorrito{
+    display: none;
+}
 header .navegacion label.burguer i{
     width: 2vw;
     color: #8d1888;
@@ -194,6 +197,9 @@ header .navegacion div.usuario{
         justify-content: center;
         width: 100px;
     }
+    header .navegacion .logo .gorrito{
+        display: none;
+    }
 
     header .navegacion img{
         display: block;
@@ -297,6 +303,13 @@ header .navegacion div.usuario{
         margin-top: 40px;
     }
 
+    header .navegacion .logo .gorrito{
+        display: block;
+        position: absolute;
+        width: 90px;
+        top: 0;
+        left: 8px;
+    }
     header section{
         background-color: black;
         width:  50%;

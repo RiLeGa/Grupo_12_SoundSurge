@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const {crear,stock, editar, lista, store, actualizar, borrar, userlist, borrarUsuario} = require('../controllers/adminController');
-const { usuarios, productos } = require('../controllers/api/apiController');
 const adminCheck = require('../middlewares/adminCheck')
 const upload = require('../middlewares/multerProductos')
 const productValidator = require("../validations/productsValidation")
@@ -30,7 +29,6 @@ router.get('/stock', adminCheck, stock);
 
 router.get('/usersList', adminCheck, userlist);
 
-router.get('/todos', productos);
 
 
 module.exports = router;

@@ -66,7 +66,7 @@
     color: rgb(248 248 248);
     position: absolute;
     left: 7%;
-    bottom: 75%;
+    bottom: 65%;
 }
 
 .detalle main.detalleDeProd .sectionDetail div.vistas .detallado .principal{
@@ -278,7 +278,7 @@ color: white;
         color: rgb(248 248 248);
         position: absolute;
         left: 8%;
-        bottom: 70%;
+        bottom: 60%;
     }
     
     .detalle main.detalleDeProd .caja-descripcion h2{
@@ -395,7 +395,7 @@ color: white;
         color: rgb(248 248 248);
         position: absolute;
         left: 10%;
-        bottom: 64%;
+        bottom: 50%;
     }
     .detalle main.detalleDeProd .sectionDetail div.detalle {
         display: flex;

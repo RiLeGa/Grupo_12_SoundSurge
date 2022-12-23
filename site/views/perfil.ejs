@@ -41,15 +41,22 @@
             <section class="edit-delete-logout">
                 
                 <form id="del" action="/users/eliminarUsuario/<%= locals.userLogin.id%>?_method=DELETE" method="post">
+                    <div class="boton">
                     <button class="logout" id="tn btn-del" type="submit"><i class="fas fa-user-times"></i>Eliminar usuario</button>
+                </div>
                 </form>
-        
-                <a href="/users/editar/<%= locals.userLogin.id%>">
-                    <button type="button" class="btn btn-success"><i class="fas fa-edit"> </i>Editar usuario</button>
+                <div class="del">
+                  <div class="boton" id="edit">
+                <a class="editarr" href="/users/editar/<%= locals.userLogin.id%>">
+                    <i class="fas fa-edit"> </i>Editar usuario
                 </a>
+            </div>
+        </div>
         
                 <form class="exit" action="/users/logout?_method=DELETE" method="post">
+                    <div class="boton">
                     <button  class="btn btn-del" type="submit"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</button>
+                </div>
                 </form>
             </section>
             <section class="video-promo">

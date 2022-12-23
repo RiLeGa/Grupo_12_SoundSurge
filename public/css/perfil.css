@@ -10,18 +10,73 @@
     display: none;
 }
 
+.perfil .card{
+    position: relative;
+    width: 252px;
+    height: 500px;
+}
+
 .perfil .credencial{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    width: 265px;
+    height: 450px;
+    left: 0px;
+    backface-visibility: hidden;
+    border-radius: 10%;
+    overflow: hidden;
+    background: linear-gradient(#6487e6, #9437b1);
+    /* flex-direction: column;
+    justify-content: space-around;
+    align-items: center; */
+    border: 6px solid black;
+    box-shadow: 0 0 20px rgb(0 0 0 / 95%);
+    margin-top: 20px;
+    transition: .5s;
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.perfil p{
+    margin-top: 10px ;
+    text-align: center;
+}
+
+.perfil a button{
+    font-family: var(--fuenteGral);
+    height: 50px;
+}
+
+.perfil .credencial img{
+    width: 200px;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 10%;
+}
+
+.perfil .backCredencial{
+    display: flex;
+    transform: perspective(600px) rotateY(180deg);
     background: linear-gradient(#6487e6, #9437b1);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border: 6px solid black;
-    box-shadow: 0 0 15px rgb(0 0 0 / 95%);
-    width: 252px;
-    height: 500px;
-    margin-top: 20px;
-    border-radius: 10%;
+    box-shadow: 0 0 20px rgb(0 0 0 / 95%);
+    width: 265px;
+    height: 450px;
+    top: 20px;
+    border-radius: 5%;
+}
+
+.card:active .credencial{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:active .backCredencial{
+    transform: perspective(600px) rotateY(360deg);
 }
 .perfil .del{
     display: flex;
@@ -328,7 +383,7 @@
         z-index: 3;
         width: 310px;
         height: 450px;
-        left: -36px;
+        left: -19px;
         backface-visibility: hidden;
         border-radius: 10%;
         overflow: hidden;

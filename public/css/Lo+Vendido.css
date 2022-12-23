@@ -28,6 +28,10 @@ main.loMas .loMasV img  {
     margin-left: -35px;
 }
 
+main.loMas .etiqueta-a{
+    color: black;
+}
+
 main.loMas .contenedor {
     display: flex;
     flex-wrap: nowrap;

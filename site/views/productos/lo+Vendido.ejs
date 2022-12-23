@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include ("../partials/head",{title: "Detalle de producto"}) %>
+  <%- include ("../partials/head",{title: "Lo + Vendido "}) %>
   <body>
     <%- include ("../partials/header") %>
 
@@ -33,7 +33,7 @@
                               <div class="agregar">
                                 <button class="a-favorito" type="submit">Agregar a favoritos</button>
                                 <% if (locals.userLogin) { %>
-                                  <button class="a-carrito" type="submit"><a href="/productos/carrito/<%= producto.id %>"> Agregar al carrito</a></button>
+                                  <button class="a-carrito" type="submit" onclick="addItem('<%= producto.id %>')"><a class="etiqueta-a" href="/productos/carrito">Agregar al carrito</a></button>
                                   <% }else{ %>
                                     <button class="a-carrito" type="submit"><a href="#"> Agregar al carrito</a></button>
                                     <% } %>

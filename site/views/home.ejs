@@ -22,20 +22,22 @@
             </div>
             <section class="contenedor">
                 <ul>
-                    <% for( let i = 0; i <= 7; i++ ) { %>
-                        <% if (productos[i].stock !== 0) { %>
+                    <% productos.forEach( producto => { %>
+
+                        <% if (productos.stock !== 0) { %>
+                        
                         <article>
-                            <a href="/productos/detalle/<%= productos[i].id %>">
-                            <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
+                            <a href="/productos/detalle/<%= producto.id %>">
+                            <div class="producto"  style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')">
                                 <div class="precio-1">
-                                    <h3><%= productos[i].titulo %></h3>
-                                    <span >$<%= productos[i].precio %></span>
+                                    <h3><%= producto.titulo %></h3>
+                                    <span >$<%= producto.precio %></span>
                                 </div>
                             </div>
                             </a>
                         </article>
-                    <% } %>
-                    <% } %>
+                        <% } %>
+                    <% }) %>
                 </ul>
             </section>
 

@@ -415,6 +415,7 @@ header .navegacion div.usuario{
         transform: scaleY(2);
         opacity: 0;
         transition: 0.3s;
+        border-radius: 10px;
       }
     header .opcionesDeProductos a:after {
         content: "";
@@ -428,6 +429,7 @@ header .navegacion div.usuario{
         opacity: 0;
         transition: 0.3s;
         z-index: -1;
+        border-radius: 10px;
       }
     header .opcionesDeProductos a:hover {
         color: #fff;
@@ -526,6 +528,7 @@ header .navegacion div.usuario{
     header .navegacion .btn-neon:hover,
     header .opcionesDeProductos .btn-neon:hover{
         background: #8d1888;
+        border-radius: 10px;
     }
 
     /*usuario*/

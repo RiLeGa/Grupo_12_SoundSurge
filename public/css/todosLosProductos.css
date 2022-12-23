@@ -15,6 +15,9 @@ main.todosLosProductos h3{
     text-shadow: 2px 2px 7px #ff00de;
     padding: 3%;
 }
+main.todosLosProductos .etiqueta-a{
+    color: black;
+}
 main.todosLosProductos h4{
     color: white;
     text-align: center;

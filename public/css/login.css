@@ -11,6 +11,15 @@
 .login::-webkit-scrollbar{
     display: none;
 }
+.login h1{
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 3%;
+    background: #000000cf;
+    color: #e38cd8;
+    text-shadow: 2px 2px 7px #ff00de;
+    padding: 3%;
+}
 
 .login .logo-login{
     text-align: center;

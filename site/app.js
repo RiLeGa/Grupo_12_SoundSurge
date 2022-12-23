@@ -45,9 +45,9 @@ const indexRouter = require('./routes/index');
 const adminController = require('./routes/admin');
 const productosRouter = require('./routes/productos');
 const usuariosRouter = require('./routes/usuarios');
-const apiCategorias = require('./routes/api/categorias');
+
 const apiCarrito = require('./routes/api/carrito');
-const apiMarca = require('./routes/api/marcas')
+
 
 dbConnectionTest()
 
@@ -55,9 +55,9 @@ app.use('/', indexRouter);
 app.use('/admin', adminController);
 app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
-app.use('/api/categorias', apiCategorias);
+
 app.use('/api/carrito',apiCarrito);
-app.use('/api/marca',apiMarca);
+
 
 app.use((req, res, next) => {
     res.status(404).render("error404")

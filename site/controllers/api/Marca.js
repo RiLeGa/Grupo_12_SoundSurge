@@ -2,7 +2,7 @@ let db = require('../../database/models')
 const { Op } = require("sequelize");
 
 module.exports = {
-    categoria: async (req, res) => {
+    marca: async (req, res) => {
         db.Marcas.findAll()
         .then(marcas => {
         let response = {

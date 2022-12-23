@@ -24,7 +24,7 @@
                 <% } %>
             </ul>
         </nav>
-        <a class="logo" href="/"><img class="gorrito" src="images/gorrito.png" alt=""><img src="/images/LogoSoundSurge.png" alt="logoSoundSurge"></a>
+        <a class="logo" href="/"><img class="gorrito" src="/images/gorrito.png" alt=""><img src="/images/LogoSoundSurge.png" alt="logoSoundSurge"></a>
 
         <section class="busqueda">
             <div>
@@ -78,7 +78,23 @@
             <% if (locals.userLogin && locals.userLogin.rol === 1) { %>
                 <li><a class="btn-neon" href="/admin/lista">Admin</a></li>
             <% } %>
-            
+
+            <div >
+                <input type="checkbox" name="categorias" id="categorias">  
+                <label for="categorias"> <a class="btn-neon" >Categorias</a></label>
+
+                <ul class="opcionesDeCat" id="secCat">
+                    
+                </ul>
+            </div>
+            <div>
+                <input type="checkbox" name="marcas" id="marcas">  
+                <label for="marcas"> <a class="btn-neon" >Marcas</a></label>
+
+                <ul class="opcionesDeMarc" id="secMarc">
+                    
+                </ul>
+            </div>
             <li><a class="btn-neon" href="/productos/todos">To2 los productos</a></li>
             <li><a class="btn-neon" href="/AboutUs">Somos SoudSurge</a></li>
             <li><a class="btn-neon" href="/productos/loMasVendido">Lo + Vendido</a></li>

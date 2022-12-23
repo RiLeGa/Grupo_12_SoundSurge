@@ -8,6 +8,9 @@
     justify-content: center;
     align-items: center;
 }
+.carrito #titulo{
+    color: black;
+}
 .carrito h1{
     color: rgb(255 255 255);
     font-size: 30px;
@@ -422,7 +425,7 @@ padding: 5px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgb(61 81 100 / 51%);
+        background-color: white;
         margin-bottom: 25px;
         padding: 20px; 
     }

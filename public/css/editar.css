@@ -629,6 +629,7 @@ justify-content: space-between;
             flex-direction: column;
             width: 53%;
             margin-left: 4%;
+            position: relative;
         }
         .editar  section {
             align-items: center;
@@ -642,19 +643,18 @@ justify-content: space-between;
             margin-right: 16%;
         }
         .editar  section #descripcion textarea {
-            width: 78%;
             margin-left: 1%;
+            width: 80%;
+            padding: 1%;
         }
         .editar  section #descripcion{
             padding: 1%;
-           
-            
-            width: 68%;
-            margin-top: 5px;
-    
             border: 2px solid black;
             border-radius: 10px;
-         background-color: #ffc9f3;
+            border: 1px solid #14d0ff;
+            width: 170%;
+            height: 190px;
+            margin: 0;
         }
         .editar  section #descripcion label.form-label {
             width: 90%;
@@ -700,7 +700,10 @@ justify-content: space-between;
         margin-top: 3%;
     }
     .editar  section #desaparecer{
-        display: none;
+        display: block;
+        position: absolute;
+        bottom: -130%;
+        left: -134%;
     }
 
     .editar  section #descripcion2{
@@ -748,7 +751,7 @@ justify-content: space-between;
     }
     .editar section .botones {
         padding: 2%;
-        margin-top: 4%;
+        margin-top: 210px;
     }
     
     

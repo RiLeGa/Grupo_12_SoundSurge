@@ -602,6 +602,7 @@ justify-content: space-between;
             flex-direction: column;
             width: 53%;
             margin-left: 4%;
+            position: relative;
         }
        
        
@@ -633,15 +634,19 @@ justify-content: space-between;
         .crear  section #descripcion textarea {
             width: 78%;
             margin-left: 1%;
+            width: 80%;
+            padding: 1%;
         }
         .crear  section #descripcion{
-            width: 68%;
-            margin-top: 5px;
-            padding: 2%;
-            border: 2px solid black;
-            border-radius: 10px;
-            background-color: #ffc9f3;
-            height: 120px;
+           
+        padding: 1%;
+        border: 2px solid black;
+        border-radius: 10px;
+       border: 1px solid #14d0ff;
+        width: 170%;
+        height: 150px;
+        margin: 0;
+    
         }
       
         .crear  section #descripcion label.form-label {
@@ -686,11 +691,14 @@ justify-content: space-between;
     }
    
     .crear  section #desaparecer{
-        display: none;
+       display: block;
+       position: absolute;
+       bottom: -138%;
+       left: -134%;
     }
 
     .crear  section #descripcion2{
-        display: flex;
+        display: none;
         width: 70%;
         padding: 0%;
         justify-content: center;
@@ -733,7 +741,7 @@ justify-content: space-between;
     }
     .crear section .botones {
         padding: 2%;
-        margin-top: 4%;
+        margin-top: 200px;
         
     }
     

@@ -25,7 +25,10 @@ window.addEventListener("load", () => {
 
       const cargarCategorias = async (data) =>{
 
-        
+         data.forEach(categoria => { 
+            cat.innerHTML =
+            <li><a class="btn-neon" href="/productos/categoria.nombre"> categoria.nombre </a></li>
+         }) 
             
                 
                 

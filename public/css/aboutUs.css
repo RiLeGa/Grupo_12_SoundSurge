@@ -49,4 +49,117 @@
 .aboutSound p{
     text-align: center;
     color: white;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 461px) {
+    .aboutSound{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        background: linear-gradient(#3a1239, #62c8ff);
+        border-bottom: 2px white solid ;
+        border-top: 2px white solid  ;
+    }
+    
+    .aboutSound h1,h2{
+        color: white;
+    }
+    
+    .aboutSound section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    
+    .aboutSound img{
+        width: 200px;
+        height: 350px;
+    }
+    .aboutSound video{
+        width: 200px;
+        height: 350px;
+        border-radius: 15%;
+    }
+    
+    .aboutSound .card-lean{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+    }
+    .aboutSound .card-lucas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+    }
+    
+    .aboutSound p{
+        text-align: center;
+        color: white;
+        margin-bottom: 25px;
+    }
+
+}
+@media (min-width: 791px) {
+    .aboutSound{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        background: linear-gradient(#3a1239, #62c8ff);
+        border-bottom: 2px white solid ;
+        border-top: 2px white solid  ;
+    }
+    
+    .aboutSound h1,h2{
+        color: white;
+    }
+    
+    .aboutSound section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    
+    .aboutSound img{
+        width: 200px;
+        height: 350px;
+    }
+    .aboutSound video{
+        width: 200px;
+        height: 350px;
+        border-radius: 15%;
+    }
+    
+    .aboutSound .card-lean{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+    }
+    .aboutSound .card-lucas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40vw;
+    }
+    
+    .aboutSound p{
+        text-align: center;
+        color: white;
+        margin-bottom: 25px;
+    }
 }

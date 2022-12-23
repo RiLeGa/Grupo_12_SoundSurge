@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+/* window.addEventListener("load", () => { */
   let $ = (elemento) => document.querySelector(elemento)
   console.log("Register vinculado"); 
 
@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
 
   const getMarca = async ( ) =>{
     try {
-        let urlCategorias = 'http://localhost:4000/api/marcas'
+        let urlCategorias = 'http://localhost:4000/api/marca'
         let response = await fetch(urlCategorias)
         let result = await response.json()
         console.log(result);
@@ -17,15 +17,20 @@ window.addEventListener("load", () => {
   }
 
   const cargarMarcas = async (data) =>{
-
+    marca.innerHTML = ""
     
-     marcas.forEach(marca => {  
-      <li><a class="btn-neon" href="/productos/<%= marca.nombre %>">  marca.nombre  </a></li>
-    }) 
-            
+    data.forEach(elemento => { 
+      let item = ` 
+      <li><a class="btn-neon" href="/productos/${elemento.nombre}"> ${elemento.nombre}  </a></li>`
+
+      marca.innerHTML += item
+   })    
             
 }
-getMarca()
-})
+
+marca&&getMarca()
+
+/* getMarca() */
+/* }) */
 
 

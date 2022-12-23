@@ -5,6 +5,27 @@ main.todosLosProductos{
 main.todosLosProductos h1{
     text-align: center;
 }
+main.todosLosProductos h3{
+    color: white;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 3%;
+    background: #000000cf;
+    color: #e38cd8;
+    text-shadow: 2px 2px 7px #ff00de;
+    padding: 3%;
+}
+main.todosLosProductos h4{
+    color: white;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 3%;
+    background: #000000cf;
+    color: #e38cd8;
+    text-shadow: 2px 2px 7px #ff00de;
+    padding: 3%;
+}
+
 
 main.todosLosProductos .busqueda {
     display: flex;
@@ -86,7 +107,7 @@ main.todosLosProductos .busqueda .filtrado ul li.producto-buscador a{
 
 main.todosLosProductos .busqueda .filtrado ul li.producto-buscador h4{
     font-size: 20px;
-    color: black;
+    color: white;
 }
 
 main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
@@ -194,7 +215,7 @@ main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{
     
     main.todosLosProductos .busqueda .filtrado ul li.producto-buscador h4{
         font-size: 20px;
-        color: black;
+        color: white;
     }
     
     main.todosLosProductos .busqueda .filtrado ul .imagen-filtrado{

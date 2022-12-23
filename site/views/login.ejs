@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
     <%- include ("./partials/head",{title: "Login"}) %>
-<body class="login">
-    <main>
+<body >
+    
+    <main class="login">
         <section class="cont-form">
         <section class="logo-login">
                 <img src="/images/LogoSoundSurge.png" alt="Logo de la empresa">
@@ -20,7 +21,7 @@
             </div>
             <div class="container">
                 <label for="contrasenia">Contraseña</label>
-                    <input type="password" name="contrasenia"    placeholder="Ingresa tu contraseña">
+                    <input type="password" name="contrasenia" id="clave"    placeholder="Ingresa tu contraseña">
                     <div id="passContainer"></div>
                     <% if (locals.errors && errors.contrasenia) { %>
                         <small><%= errors.contrasenia.msg %></small>
@@ -30,7 +31,7 @@
                 <input type="checkbox" name="recordarme" id="recordarme">
                     <label for="recordarme" >Recordarme</label>
             </div>
-            <div>
+            <div class="iniciar">
                 <button type="submit" class="inicio">Iniciar sesión</button>
             </div>
         </form>
@@ -44,15 +45,16 @@
             <h3>¿No tiene cuenta?<a href="/users/register">Registrate</a></h3>
 
             <div class="foot-log">
-                <a href="/">Soporte</a>
-                <a href="/">Home</a>
-                <a href="/">Contacto</a>
+                <a class="fin-login" href="/">Soporte</a>
+                <a class="fin-login"  href="/">Home</a>
+                <a class="fin-login"  href="/">Contacto</a>
             </div>
         </section>
             <section class="video-promo">
                 <video muted autoplay loop><source src="/videos/Guitar-Center-Showtime-Commercial.mp4"></video>
             </section>
     </main>
+    
     <script src="/javascript/login.js"></script>
 </body>
 </html>

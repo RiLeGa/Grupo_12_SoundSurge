@@ -101,11 +101,24 @@
 }
 
 .home main .precio h3{
-    font-family: var(--fuenteGral);
-    font-size: 15px;
+    color: white;
     text-align: center;
-    color: #000000;
-    margin-top: 35px; 
+    margin-top: 1px;
+    margin-bottom: 3%;
+    background: #000000cf;
+    color: #e38cd8;
+    text-shadow: 2px 2px 7px #ff00de;
+    padding: 3%;
+}
+.home main h3{
+    color: white;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 3%;
+    background: #000000cf;
+    
+    text-shadow: 2px 2px 7px #ff00de;
+    padding: 3%;
 }
 
 .home main .secciones{
@@ -374,7 +387,7 @@
         font-family: var(--fuenteGral);
         font-size: 15px;
         text-align: center;
-        color: #000000;
+        color: white;
         margin-top: 35px; 
     }
     

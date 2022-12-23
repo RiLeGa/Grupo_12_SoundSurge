@@ -3,7 +3,7 @@
     background-image:url(/images/FondoMovil.jpg) ;
     background-repeat: no-repeat;
     background-position: right 0;
-    background-size: 100vw;
+    background-size: 100% 100%;
     background-color: black;
     font-family: var(--fuenteGral);
 }
@@ -16,7 +16,7 @@
     text-align: center;
 }
 
-.login main .video-promo{
+.login  .video-promo{
     display: none;
 }
 
@@ -26,21 +26,37 @@
     margin-top: 10px;
 }
 
-.login main{
-    width: 350px;
-    margin: 0 auto;
-    padding-bottom: 50px;
+.login {
+ 
 }
 
-.login main h1,h3,h4{
-    color: var(--colorNegro);
+
+.login  h3{
+    /* color: var(--colorNegro); */
     text-align: center;
     margin-top: 1px;
-    margin-bottom: 1px;
-    
+    margin-bottom: 3%;
+    background: #000000cf;
+  
+    color: #e38cd8;
+    text-shadow: 2px 2px 7px #ff00de;
+    padding: 3%;
+ 
+}
+.login  h4{
+    /* color: var(--colorNegro); */
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 3%;
+    background: #000000cf;
+  
+    color: #e38cd8;
+    text-shadow: 2px 2px 7px #ff00de;
+    padding: 3%;
+ 
 }
 
-.login main button{
+.login  button{
     text-align: center;
     padding-bottom: 7px;
     margin-top: 15px;
@@ -54,78 +70,100 @@
    /* background-color: aqua; */
 }
 
-.login main .face{
+.login  .face{
     background-color: var(--colorVioleta);
     color:var(--colorBlanco);  
     
 }
 
-.login main .container{
+.login  .container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
     margin-bottom: 10px;
-    color: var(--colorBlanco);
+   background-color: #1c1c1ccf;
+   padding-bottom: 6%;
+   width: 85%;
 }
-
+.login #formularioLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
  
-.login main .container label{
+.login  .container label{
     text-align: center;
     width: 100%;
-    padding: 3px;
-    font-family: var(--fuenteGral);
-    font-weight: 400;
-    color: var(--colorNegro);
-
+   
+       
+       color: #e38cd8;
+       text-shadow: 2px 2px 2px #ff00de;
+       padding: 3%;
+    
 }
 
-.login main .container input{
+.login  .container input{
     width: 70%;
     margin-left: 15%;
 }
 
-.login main .container small{
+.login  .container small{
     margin-left: 7vw;
     font-size: 15px;
 }
 
 
-.login main .mostrar{
+.login  .mostrar{
     text-align: center;
     font-size: 15px;
     color: var(--colorBlanco);    
 }
 
-.login main .mostrar a{
+.login  .mostrar a{
     margin-left: 100px;
     color: var(--colorBlanco);
 }
 
-.login main .inicio{
-    background-color: var(--colorGris);
+.login  .inicio{
+    background-color: #00d0ff;
     color: var(--colorBlanco);
+    padding: 2%;
+    text-shadow: 1px 1px 4px black;
+    box-shadow: 2px 2px 2px #40878b;
     
 }
 
 .login h3{
-    color: var(--colorBlanco);
-    font-size: 15px;
+        margin-left: 15px;
+    border: 1px solid red;
+    padding: 2%;
+    border-radius: 10px;
 }
 
 .login h3 a{
     color: var(--colorRojo);
     margin-left: 15px;
 }
+.login .iniciar{
+    width: 100%;
+}
 
-.login main .foot-log{
+.login  .foot-log{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 80%;
     margin-left: 10%;
     margin-top: 20px;
+    background: #1c1c1ccf;
+    /* padding-bottom: 10%; */
+    padding: 7%;
+}
+.login .fin-login{
+    color: #e38cd8;
+       text-shadow: 2px 2px 2px #ff00de;
 }
 
 /* Tablet */
@@ -135,46 +173,103 @@
     .login{
         background-image: none;
     }
-
+.login .inicio{
+width: 200%;
+padding: 4%;
+}
     
     .login .logo-login img{
         width: 20%;
     }
 
-    .login main .cont-form{
+    .login  .cont-form{
         position: relative;
         z-index: 1;
-        width: fit-content;
-        /* display: none; */
-        
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 25%;
+        background-color: #343434c4;
+        margin-top: 3%;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+    .login .container {
+        background-color: black;
+        border: #ff00de 1px solid;
+        box-shadow: 2px 1px 8px #ff6fec ;
     }
     
+    .login .foot-log {
+        margin-left: 0px;
+        padding: 2%;
+    margin-bottom: 1%;
 
-    .login main .video-promo{
-        display: block;
-        width: 100vw;
-        position: absolute;
-        top: 0;
-        left: 0;
     }
 
-    .login main .video-promo video{
-        width: 100vw;
-        height: max-content ;
-    }
-
-    .login main{
+    .login {
         width: 100vw;
         margin: 0 1.5px;
         padding-bottom: 50px;
     }
 
-    .login main h1,h4{
+    .login  h1{
         color: var(--colorBlanco);
+        background-color: black;
+        width: 100%;
+        border-bottom: 1px solid #ff00de;
+        border-top: 1px solid #ff00de;
+    }
+    .login  h4{
+        color: var(--colorBlanco);
+        background-color: black;
+        width: 100%;
+        border-bottom: 1px solid #ff00de;
+        border-top: 1px solid #ff00de;
     }
 
-    .login main .container label{
+    .login  .container label{
         color: var(--colorBlanco);
     }
+    .login h3 a {
+        color: #20f3fd;
+    }
+
+
+    .login .container{
+        width: 200%;
+    }
+    .login button {
+        margin-left: 0px;
+        
+    }
+    .login .iniciar {
+        width: 100%;
+        text-align: center;
+        margin-right: 92%;
+    }
 }
-   
+
+
+
+@media(min-width:1490px){
+
+.login  .video-promo{
+    display: block;
+width: 100vw;
+position: absolute;
+top: 0%;
+}
+
+.login  .video-promo video{
+    width: 100vw ;
+    height: max-content ;
+}
+.login .foot-log {
+    padding: 2%;
+}
+.login h4{
+    padding: 1%;
+}
+}

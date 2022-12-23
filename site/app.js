@@ -42,11 +42,11 @@ app.use(logger('dev'));
 /* app.use(express.static("public")) */
 
 const indexRouter = require('./routes/index');
-const productosRouter = require('./routes/productos');
 const adminController = require('./routes/admin');
+const productosRouter = require('./routes/productos');
 const usuariosRouter = require('./routes/usuarios');
-/* const apiRouter = require('./routes/api/apiProductos'); */
-const apiCarrito = require('./routes/api/apiCarrito');
+const apiCategorias = require('./routes/api/categorias');
+const apiCarrito = require('./routes/api/carrito');
 
 dbConnectionTest()
 
@@ -54,7 +54,7 @@ app.use('/', indexRouter);
 app.use('/admin', adminController);
 app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
-/* app.use('/api', apiRouter); */
+app.use('/api/categorias', apiCategorias);
 app.use('/api/carrito',apiCarrito);
 
 app.use((req, res, next) => {

@@ -22,29 +22,24 @@
             </div>
             <section class="contenedor">
                 <ul>
-                    <% productos.forEach( producto => { %>
-
-                        <% if (productos.stock !== 0) { %>
+                    <% for( let i = 0; i <= 7; i++ ) { %>
+                        <% if (productos[i].stock !== 0) { %>
                         
                         <article>
-                            <a href="/productos/detalle/<%= producto.id %>">
-                            <div class="producto"  style="background-image:url('/images/<%= producto.imagenes[0].nombre %>')">
+                            <a href="/productos/detalle/<%= productos[i].id %>">
+                                <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
+                                    <img class="gorrito" src="images/gorrito.png" alt="">
                                 <div class="precio-1">
-                                    <h3><%= producto.titulo %></h3>
-                                    <span >$<%= producto.precio %></span>
+                                    <h3><%= productos[i].titulo %></h3>
+                                    <span >$<%= productos[i].precio %></span>
                                 </div>
                             </div>
                             </a>
                         </article>
                         <% } %>
-                    <% }) %>
+                        <% } %>
                 </ul>
             </section>
-
-            <!-- <div class="banner-medio">
-                <img src="/images/gc-md-hf-big-bang-2-07-13-22.jpg" alt=""> 
-            </div> -->
-
             
             <div class="categorias-home">
                 <h3 class="secciones"> ofertas </h3>
@@ -56,6 +51,7 @@
                         <article>
                             <a href="/productos/detalle/<%= productos[i].id %>">
                             <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
+                                <img class="gorrito" src="images/gorrito.png" alt="">
                                 <i class="fas fa-percentage"><%= productos[i].descuento %></i>
                                 <div class="precio">
                                     <h3><%= productos[i].titulo %></h3>
@@ -82,6 +78,7 @@
                             <article>
                                 <a href="/productos/detalle/<%= productos[i].id %>">
                                 <div class="producto"  style="background-image:url('/images/<%= productos[i].imagenes[0].nombre %>')">
+                                    <img class="gorrito" src="images/gorrito.png" alt="">
                                     <div class="precio-1">
                                         <h3><%= productos[i].titulo %></h3>
                                         <span >$<%= productos[i].precio %></span>

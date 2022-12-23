@@ -3,9 +3,6 @@ window.addEventListener('load', () => {
     let $ = (elemento) => document.querySelector(elemento)
     console.log("buscador vinculado");
 
-
-    let stock = $('#stock')
-
 document.addEventListener("keyup", e=>{
     console.log(e.target.value);
     if(e.target.matches("#inputSearch"))

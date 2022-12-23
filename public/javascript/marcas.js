@@ -2,26 +2,30 @@ window.addEventListener("load", () => {
   let $ = (elemento) => document.querySelector(elemento)
   console.log("Register vinculado"); 
 
-  
+  let marca = $("#secMarc")
 
-  
-  
-  let epiphone = $('.indice .category_item[category="Epiphone"]')
-  let muestra = $('.muestra .prueba[category=" all Yamaha"]')
-    epiphone.addEventListener("click", (e) => {
-    epiphone.style.backgroundColor = "red"
-    if(e=muestra){
-      muestra.style.display = "none"
-    }
-  })
+  const getMarca = async ( ) =>{
+    try {
+        let urlCategorias = 'http://localhost:4000/api/marcas'
+        let response = await fetch(urlCategorias)
+        let result = await response.json()
+        console.log(result);
+        cargarMarcas(result.data)
+    } catch (error) {/* 
+        console.log(error) */
+    }  
+  }
 
-  let todos = $('.indice .category_item[category="all"]')
-    if (todos.classList.contains("category_item")) {
-        todos.classList.remove("category_item");
-        todos.classList.add("category_tuneado");
-    }
-    todos.addEventListener("click", () => {
-        muestra.style.display = "block"
-    })
+  const cargarMarcas = async (data) =>{
 
-});
+    
+     marcas.forEach(marca => {  
+      <li><a class="btn-neon" href="/productos/<%= marca.nombre %>">  marca.nombre  </a></li>
+    }) 
+            
+            
+}
+getMarca()
+})
+
+

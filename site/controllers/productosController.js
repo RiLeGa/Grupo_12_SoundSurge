@@ -112,13 +112,14 @@ module.exports = {
             include:[{ all: true}]
         })
         
-        Promise.all([productos,marcas,categorias])
-        .then(([productos,marcas,categorias])=> {
+        Promise.all([productos, marcas, categorias])
+        .then(([productos, marcas, categorias])=> {
             
             return res.render('productos/todosLosProductos', {
                 productos,
-                marcas,
-                categorias
+                categorias,
+                marcas
+
 
             })
             
@@ -128,15 +129,25 @@ module.exports = {
         
     },
     listarMasVendidos : (req,res) => {
+        
         let productos = db.Productos.findAll({
             include:['category','marca','imagenes',]
         })
+        console.log(productos)
+        let marcas = db.Marcas.findAll({
+            include:[{ all: true}]
+        })
+        let categorias = db.Categorias.findAll({
+            include:[{ all: true}]
+        })
         
-        Promise.all([productos])
-        .then(([productos])=> {
+        Promise.all([productos, marcas, categorias])
+        .then(([productos, marcas, categorias])=> {
             
             return res.render('productos/lo+Vendido', {
-                productos
+                productos,
+                categorias,
+                marcas
             })
             
 

@@ -47,6 +47,7 @@ const productosRouter = require('./routes/productos');
 const usuariosRouter = require('./routes/usuarios');
 
 const apiCarrito = require('./routes/api/carrito');
+const apiProducto = require('./routes/api/productos');
 
 
 dbConnectionTest()
@@ -57,6 +58,7 @@ app.use('/productos', productosRouter);
 app.use('/users', usuariosRouter);
 
 app.use('/api/carrito',apiCarrito);
+app.use('/api/productos',apiProducto);
 
 
 app.use((req, res, next) => {

@@ -8,6 +8,20 @@ const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
+const cors = require("cors");
+var corsOptions = {
+  origin: "*"
+};
+
+app.use(cors(corsOptions));
+let allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header("Access-Control-Allow-Methods", "OPTIONS, POST, GET, PUT, DELETE");
+    res.header('Access-Control-Allow-Headers', "*");
+    res.header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With")
+    next();
+  }
+app.use(allowCrossDomain);
 
 const userLogin = require('./middlewares/userLoginCheck')
 const dbConnectionTest = require("./middlewares/dbConnectionTest")

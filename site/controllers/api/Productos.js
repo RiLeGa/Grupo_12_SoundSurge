@@ -9,7 +9,7 @@ module.exports = {
             status : 200,
             meta : {
                 length : productos.length,
-                url:"api/productos"
+                url:"http://localhost:4000/api/productos"
             },
             data : productos
         }

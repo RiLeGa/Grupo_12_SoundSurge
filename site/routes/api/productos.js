@@ -1,4 +1,4 @@
-const { listProduct } = require('../../controllers/api/Productos');
+const { listProduct, apiDetalle } = require('../../controllers/api/Productos');
 const express = require('express');
 const router = express.Router();
 
@@ -7,5 +7,8 @@ const router = express.Router();
 
 // 
 router.get("/", listProduct) // mostrarnos todos los productos que tiene el carrito
+
+router.get('/detalle/:id', apiDetalle);
+
 
 module.exports = router;
